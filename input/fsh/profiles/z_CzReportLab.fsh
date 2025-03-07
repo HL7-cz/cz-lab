@@ -1,3 +1,5 @@
+/*
+
 Profile: CZ_LaboratoryReport
 Parent: DiagnosticReport
 Id: cz-laboratory-report
@@ -28,6 +30,13 @@ Description: "Czech profile for a laboratory report"
 * identifier[DRID].system = "https://www.ehealth.fgov.be/lab-report/diagnostic-report-id" (exactly)
 * identifier[DRID].value 1..1
  */
+
+
+
+
+
+
+ /*
 * basedOn 1..1 MS
 * basedOn only Reference(ServiceRequest)
 * basedOn ^short = "A reference to a ServiceRequest SHALL be given here that minimally includes the time of prescription."
@@ -57,23 +66,30 @@ Description: "Czech profile for a laboratory report"
 * category.coding[MICREPORT].code = #MB (exactly)
 * category.coding[MICREPORT].display = "Microbiology" (exactly)
  */
+
+
+
+
+
+
+ /*
 * code MS
 * code from CZ_LabStudyTypesVS (preferred)
 //* code = $loinc#11502-2 or $loinc#11502-1 (exactly)
 * code 1..
 * subject 1.. MS
-* subject only Reference(CZ_PatientLab or Group or CZ_MedicalDevice or Location)
+* subject only Reference(CZ_PatientCore or Group or CZ_MedicalDevice or Location)
 * subject ^short = "In the initial iteration of the Czech interoperability project: this is CZ_PatientLab."
 * effective[x] MS
 * effective[x] ^short = "Time of the specimen collection - is overruled when collection time is given in .specimen element."
 * effective[x] ^definition = "The time or time-period the observed values are related to. This is the time specimen collection(s)"
 * issued 1.. MS
 * performer 1.. MS
-* performer only Reference(CZ_Organization or CZ_Practitioner or CareTeam or CZ_PractitionerRoleLab)
+* performer only Reference(CZ_OrganizationCore or CZ_PractitionerCore or CareTeam or CZ_PractitionerRoleCore)
 * performer ^short = "In the initial iteration of the Czech interoperability project: this is CZ_Organization."
 * performer ^definition = "The diagnostic service that is responsible for issuing the report. In the laboratory report, this is typically an organization (i.e. the laboratory)\r\nNote the Observation MAY have a different performer."
 * resultsInterpreter 1.. MS
-* resultsInterpreter only Reference(CZ_Practitioner or CZ_PractitionerRoleLab or CZ_Organization or CareTeam)
+* resultsInterpreter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
 * resultsInterpreter ^short = "In the initial iteration of the Czech interoperability project: this is CZ_Practitioner."
 * specimen only Reference(CZ_SpecimenLab)
 * specimen MS
@@ -83,3 +99,6 @@ Description: "Czech profile for a laboratory report"
 * conclusion MS
 * conclusionCode MS
 * presentedForm MS
+
+
+*/

@@ -1,3 +1,4 @@
+/*
 
 Instance: SimpleChemistryResultReport
 InstanceOf: CZ_Bundle_Lab
@@ -432,3 +433,5 @@ Usage: #inline
 * referenceRange.high.value = 144
 * referenceRange.high.unit = "umol/L"
 * referenceRange.type = $reference-range-meaning#normal "Normal Range"
+
+*/

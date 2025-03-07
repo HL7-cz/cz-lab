@@ -34,6 +34,8 @@ Alias: $Immunization-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Imm
 Alias: $clinicaldocument = http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
+Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+
 //----------- EU lab profiles
 Alias: $Observation-resultslab-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
 Alias: $Observation-results-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips
@@ -52,3 +54,4 @@ Alias: $ServiceRequest-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinitio
 
 //----------- Extensions
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient

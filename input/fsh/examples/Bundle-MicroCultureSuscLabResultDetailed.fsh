@@ -1,3 +1,5 @@
+/*
+
 Instance: BundleMicroCultureSuscLabResult
 InstanceOf: CZ_Bundle_Lab
 Title: "Bundle Microbiology Culture + Susceptibility Lab Result"
@@ -484,3 +486,5 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#264868006 "No growth"
+
+*/
