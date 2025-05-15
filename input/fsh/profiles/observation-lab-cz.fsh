@@ -23,7 +23,6 @@ This observation may represent the result of a simple laboratory test such as he
 * . ^comment = "Represents either a lab simple observation or the group of observations produced by a laboratory study."
 
 
-
 //* text.status = #empty
 * obeys cz-lab-2
 * language MS
@@ -34,28 +33,23 @@ This observation may represent the result of a simple laboratory test such as he
 
 * category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
 * category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
-// (LN) * category only CZ_CodeableConcept
+
+* category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
+* category ^definition = "A code that classifies the general type of observation being made."
 * category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
-// (LN) * category contains laboratory 1..1 MS
-// (LN) * category[laboratory] only CZ_CodeableConcept
-// (LN) * category[laboratory] = $observation-category#laboratory
-
-/*
-* category.coding MS
-* category.coding ^slicing.discriminator.type = #pattern
-* category.coding ^slicing.discriminator.path = "$this"
-* category.coding ^slicing.rules = #open
-
-* category.coding contains
-//    loinc-observation 1..1 MS and
-    observation-category 1..1 MS
-//* category.coding[loinc-observation] = $loinc#26436-6
-* category.coding[observation-category] = $observation-category#laboratory
-*/
+* category contains laboratory 1..1
+* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* category contains studyType 0..*
+* category[studyType] only $CodeableConcept-uv-ips
+* category[studyType] from LabStudyTypesEuVs
+* category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
+* category contains specialty 0..*
+* category[specialty] only $CodeableConcept-uv-ips
+* category[specialty] from LabSpecialtyEuVs
+* category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".\r\n\r\nThe implementer SHALL adhere to the preferred codes to use.\r\nThe recommended codification used is NCLP. It is allowed to use multiple codes within the FHIR CodeableConcept datatype. But the first code given must follow the following rules.(Other codes given will be for information purposes.)\r\n\r\nThe actual observation is preferably coded in NCLP \r\n\r\nIf that is not possible, laboratory may send its own local code plus obligatory a text element to further explain. \r\n\r\nIf that is not possible the kind of observation is expressed only in text (allowed but NOT RECOMMENDED)"
 * code from CZ_NclpLabpolVS (preferred)
