@@ -10,10 +10,15 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * . ^definition = "Laboratory Result Report Bundle. \r\nA container for a collection of resources in the laboratory result document."
 
 * insert ImposeProfile($Bundle-eu-lab)
-
 * insert SetFmmandStatusRule ( 0, draft )
 
-// TODO: invariants
+* obeys one-comp
+* obeys one-dr
+* obeys dr-comp-identifier
+* obeys dr-comp-type
+* obeys dr-comp-category
+* obeys dr-comp-subj
+* obeys dr-comp-enc
 
 * identifier ^short = "Business identifier for this Laboratory Report"
 * identifier 1..
@@ -42,7 +47,7 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry contains diagnosticReport 1..1
 * entry[diagnosticReport].resource only CZ_DiagnosticReportLab
 
-* entry contains patient 0..1
+* entry contains patient 0..*
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 
 * entry contains observation 0..*
@@ -63,26 +68,26 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry contains practitionerRole 0..*
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 
-//* entry contains bodyStructure 0..*
-//* entry[bodyStructure].resource only BodyStructureEuLab
+* entry contains bodyStructure 0..*
+* entry[bodyStructure].resource only BodyStructureCz
 
-//* entry contains encounter 0..*
-//* entry[encounter].resource only Encounter
+* entry contains encounter 0..*
+* entry[encounter].resource only Encounter
 
-//* entry contains location 0..*
-//* entry[location].resource only Location
+* entry contains location 0..*
+* entry[location].resource only CZ_LocationCore
 
-//* entry contains provenance 0..*
-//* entry[provenance].resource only Provenance
+* entry contains provenance 0..*
+* entry[provenance].resource only CZ_Provenance
 
-//* entry contains coverage 0..*
-//* entry[coverage].resource only Coverage
+* entry contains coverage 0..*
+* entry[coverage].resource only CZ_Coverage
 
 * entry contains device 0..*
 * entry[device].resource only CZ_DeviceObserver
 
 //* entry contains procedure 0..
-//* entry[procedure].resource only ProcedureUvIps // CZ 
+//* entry[procedure].resource only ProcedureUvIps // CZ
 
 //* entry contains condition 0..*
 //* entry[condition].resource 1..
@@ -97,3 +102,48 @@ Description: "This profile represents the constraints applied to the Bundle reso
 
 //* entry contains medicationstatement 0..*
 //* entry[medicationstatement].resource only CZ_MedicationStatement
+
+
+
+//===================================
+/// INVARIANTS
+//===================================
+
+Invariant: dr-comp-enc
+Description: "DiagnosticReport and Composition SHALL have the same encounter"
+/* Expression: "( (entry:composition.resource.encounter.empty() and entry:diagnosticReport.resource.encounter.empty() ) or entry:composition.resource.encounter = entry:diagnosticReport.resource.encounter )" */
+Expression: "( (entry.resource.ofType(Composition).encounter.empty() and entry.resource.ofType(DiagnosticReport).encounter.empty() ) or entry.resource.ofType(Composition).encounter = entry.resource.ofType(DiagnosticReport).encounter )"
+Severity:    #error
+
+Invariant: dr-comp-subj
+Description: "DiagnosticReport and Composition SHALL have the same subject"
+Expression: "( (entry.resource.ofType(Composition).subject.empty() and entry.resource.ofType(DiagnosticReport).subject.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
+Severity:    #error
+
+
+Invariant: dr-comp-type
+Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()"
+Severity:    #error
+
+Invariant: dr-comp-category
+Description: "At least one DiagnosticReport.category.coding and Composition.category.coding SHALL be equal"
+Expression: "(entry.resource.ofType(Composition).category.exists() or entry.resource.ofType(DiagnosticReport).category.exists()) implies entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()"
+Severity:    #error
+
+Invariant: dr-comp-identifier
+Description: "If one or more DiagnosticReport.identifiers are given, at least one of them SHALL be equal to the Composition.identifier"
+/* "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists" */
+Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"
+Severity:    #error
+
+Invariant: one-comp
+Description: "A laboratory report bundle SHALL include one and only one Composition"
+Expression: "entry.resource.ofType(Composition).count() = 1"
+Severity:    #error
+
+Invariant: one-dr
+Description: "A laboratory report SHALL include one and only one DiagnosticReport"
+Expression: "entry.resource.ofType(DiagnosticReport).count() = 1"
+Severity:    #error
+
