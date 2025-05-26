@@ -20,8 +20,8 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 // or have text repeated here and in the sections ?
 
 // TODO
-//* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
-//* extension[based-on-order-or-requisition].valueReference only Reference(CZ_ServiceRequestLab)
+* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+* extension[basedOn-order-or-requisition].valueReference only Reference(CZ_ServiceRequestLab)
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or RelatedPerson or CZ_PractitionerRoleCore or CZ_OrganizationCore)
