@@ -20,7 +20,7 @@ RuleSet: ReportEncounterRule
 RuleSet: ReportSubjectRule
 * subject 1..
 * subject /* obeys labRpt-subject */
-* subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group or Location or Device or CZ_MedicalDevice)
+* subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group or CZ_LocationCore or Device or CZ_MedicalDevice)
   * ^short = "Who and/or what this report is about"
   * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."
   * ^comment = "DiagnosticReport and Composition SHALL have the same subject"
