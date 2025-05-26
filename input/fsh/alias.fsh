@@ -25,6 +25,9 @@ Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referenc
 Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 Alias: $hl7CoverageType = http://terminology.hl7.org/CodeSystem/coverage-type
 
+//------- Value Sets
+Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
+Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
 //----------- Profiles
 Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
 Alias: ips_lab_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips
@@ -37,6 +40,8 @@ Alias: $clinicaldocument = http://hl7.org/fhir/StructureDefinition/clinicaldocum
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+Alias: $Range-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
+
 
 //----------- EU lab profiles
 Alias: $Observation-resultslab-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
@@ -57,3 +62,8 @@ Alias: $ServiceRequest-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinitio
 //----------- Extensions
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
+Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
+Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
+Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
+Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
