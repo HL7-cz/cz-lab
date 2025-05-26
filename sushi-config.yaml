@@ -15,7 +15,7 @@ copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#CZ "Czechia"
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#203 "Czechia"
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#203 "Czech Republic (CZE)"
 publisher:
   name: HL7 Czech Republic
   url: https://hl7.cz
