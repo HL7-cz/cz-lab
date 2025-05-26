@@ -8,7 +8,6 @@ This observation may represent the result of a simple laboratory test such as he
 """
 
 * insert ImposeProfile($Observation-resultslab-eu-lab)
-
 * insert SetFmmandStatusRule ( 0, draft )
 
 //* ^url = "https://ncez.mzcr.cz/standards/fhir/ig/lab/StructureDefinition/cz-observation-laboratory"
@@ -24,15 +23,28 @@ This observation may represent the result of a simple laboratory test such as he
 
 
 //* text.status = #empty
-* obeys cz-lab-2
-* language MS
-* identifier MS
-//* basedOn ^mustSupport = false
-* partOf ^mustSupport = false
-* status MS
+* status ^short = "Status of this observation (e.g. preliminary, final,...)"
+* category only $CodeableConcept-uv-ips
+* code only $CodeableConcept-uv-ips
+// * code MS
+* subject 1..
+* subject only Reference(CZ_PatientAnimal or CZ_PatientCore or Group or Device or CZ_LocationCore)
+* subject.reference 1..
 
-* category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
-* category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
+* obeys cz-lab-0
+* obeys cz-lab-2
+* extension contains $workflow-supportingInfo named supportingInfo 0..*
+
+* extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
+* extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
+* extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
+
+* extension contains ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..*
+* extension contains ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..*
+
+* extension contains DeviceLabTestKit named labTestKit 0..*
+  * ^short = "Laboratory Test Kit"
+  * ^definition = """The laboratory test kit used for this test."""
 
 * category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #pattern
@@ -44,60 +56,70 @@ This observation may represent the result of a simple laboratory test such as he
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
-* category[studyType] from LabStudyTypesEuVs
+* category[studyType] from CZ_LabStudyTypesVS
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
-* category[specialty] from LabSpecialtyEuVs
+* category[specialty] from CZ_LabSpecialityTypesVS
 * category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 
+* code
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".\r\n\r\nThe implementer SHALL adhere to the preferred codes to use.\r\nThe recommended codification used is NCLP. It is allowed to use multiple codes within the FHIR CodeableConcept datatype. But the first code given must follow the following rules.(Other codes given will be for information purposes.)\r\n\r\nThe actual observation is preferably coded in NCLP \r\n\r\nIf that is not possible, laboratory may send its own local code plus obligatory a text element to further explain. \r\n\r\nIf that is not possible the kind of observation is expressed only in text (allowed but NOT RECOMMENDED)"
+* code ^comment = "In the context of this Observation-laboratory profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
 * code from CZ_NclpLabpolVS (preferred)
 
-* subject ^short = "In the initial iteration of the Czech interoperability project: this is Patient (CZ)."
-
+* effective[x] 1..
+* effective[x] only dateTime or Period
 * effective[x] obeys cz-lab-1 // efective datetime musí být uveden s přesností alespoň na den
 * effective[x].extension ^slicing.discriminator.type = #value
 * effective[x].extension ^slicing.discriminator.path = "url"
 * effective[x].extension ^slicing.rules = #open
 * effective[x].extension contains CZ_LabClinicallyRelevantTime named ClinicallyRelevantTime 0..1 MS
-//----------
+* effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
+* effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
+* effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
 
 
-* issued MS
+* performer 1..
+* performer only Reference(CareTeam or CZ_RelatedPersonCore or CZ_PatientCore or CZ_OrganizationCore or CZ_PractitionerRoleCore or CZ_PractitionerCore)
 
-// TODO: add standard extension for different performer roles to support all roles in current DASTA standard
-* performer only Reference(CareTeam or RelatedPerson or CZ_PatientCore or CZ_OrganizationCore or CZ_PractitionerRoleCore or CZ_PractitionerCore)
-* performer MS
-* performer ^short = "In the initial iteration of the Czech interoperability project: this is Organization (CZ) or Practitioner (CZ)"
-* value[x] MS
-* dataAbsentReason MS
-* interpretation MS
+* performer.extension contains $event-performerFunction named performerFunction 0..*
+* performer.extension[performerFunction]
+// * performer.extension[performerFunction] ^meaningWhenMissing = """The Performer Function is Participant"""
 
-* note MS
-//* note only CZ_CodedAnnotation
+* dataAbsentReason ^short = "Provides a reason why the expected value is missing."
+* insert ObservationResultsValueCz
 
-//* bodySite MS  // MS flag is releavant for lab observation or not?
+* interpretation only $CodeableConcept-uv-ips
 
-* method MS  // doplnit binding na xeh-metod-VS - prodiskutovat s Mirkem
+* method ^definition = "Laboratory technigue that has been used"
+* method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.
+That's why it is important to explicitly include informaiton about measurement method is such cases."
+* method only $CodeableConcept-uv-ips
+* method from CZ_LabTechniqueVs (preferred) // added binding to an agreed eu lab measurement method value set
 
 * specimen only Reference(CZ_SpecimenLab)
-* specimen MS
-//* device ^mustSupport = false
-* device MS
-* device only Reference(CZ_DeviceObserver or  DeviceMetric)
-* referenceRange MS
+  * ^comment = "When the specimen is applicable and known it shall be documented"
+
+* device ^short = "Measuring instrument"
+* device only Reference(CZ_DeviceObserver or DeviceMetric)
 //* referenceRange.extension contains CZ_ReferenceRangeComment named Comment 0..*
 
-* hasMember only Reference(QuestionnaireResponse or MolecularSequence or CZ_ObservationResultLaboratory)
-* hasMember MS
-* hasMember ^short = "In the initial iteration of the Czech interoperability project: this is ObservationLaboratory (CZ)"
+* hasMember only Reference(CZ_ObservationResultLaboratory)
+* hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
+* hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
+* issued ^short = "Date/Time this result was made available"
+
 
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or MolecularSequence or CZ_ObservationResultLaboratory)
-* derivedFrom MS
 * derivedFrom ^short = "In the initial iteration of the Czech interoperability project: this can be ObservationLaboratory (CZ) or Media"
 
-* component MS
+* component
+  * code only $CodeableConcept-uv-ips
+  * code from CZ_NclpLabpolVS (preferred)
+  * insert ObservationResultsValueCz
+
+/*
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding.code"
 * component ^slicing.rules = #open
@@ -134,10 +156,8 @@ This observation may represent the result of a simple laboratory test such as he
 * component[productNameQualifier].code.coding.display = "Product name" (exactly)
 * component[productNameQualifier].value[x] 1..
 * component[productNameQualifier].value[x] only CodeableConcept or string
-//* subject only Reference(Patient or Group or Device or Location or BePatient)
-//* performer 1..
-//* performer only Reference(Practitioner or PractitionerRole or Organization or CareTeam or Patient or RelatedPerson or BePatient or BeOrganization or BePractitionerRole or BePractitioner)
-//* performer ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\nSpecial remarks for KMEHR users:\r\nIn a KMEHR context, this would be 'author'."
+*/
+
 
 // DE
 // * value[x] only Quantity or CodeableConcept or Range or Ratio
@@ -171,3 +191,14 @@ This observation may represent the result of a simple laboratory test such as he
 
 // ToDo: vyřešit urgentnost sdělení z rozhodnutí laboratoře viz blok ku_z_lab
 // ToDo: jak sdělovat výsledky funkčních testů viz položky sci a atribut ind_vazb_fv
+
+
+Invariant: cz-lab-0
+Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
+Severity: #error
+Expression: "(status in ('registered'|'cancelled')) or value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+
+Invariant: cz-lab-2
+Description: "If observation has components and observation status is other then \"registered\" or \"cancelled\", at least one of these Observation.component elements shall be provided:  \"value\" or \"dataAbsentReason\""
+Severity: #error
+Expression: "component.exists() implies (status in ('registered'|'cancelled')) or component.value.exists() or component.dataAbsentReason.exists()"
