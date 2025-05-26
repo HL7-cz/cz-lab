@@ -9,4 +9,3 @@ Description: "Typy laboratorních zpráv"
 //* ^status = #active
 //* ^date = "2022-08-11"
 * $loinc#11502-2 "Laboratorní nález"
-//* $loinc#CZ001-2 "Laboratory souhrnný nález"
