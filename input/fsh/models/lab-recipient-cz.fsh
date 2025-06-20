@@ -12,7 +12,7 @@ Either an internal identifier assigned by a healthcare provider institution or (
 In case when recipient is not a health professional, e.g. patient, appropriate personal identifier should be used."""				
 * name 0..1 HumanName "A.1.4.2 Recipient name" """Name and surname of the recipient."""		
 * organizationIdentifier 0..1 Identifier "A.1.4.3 Recipient organization" """Identifier of the recipient organization according to the NRPZS or IČO."""		 		
-* organization 0..1 Organization "A.1.4.4 Recipient organization" """Name and identification details of the recipient's healthcare facility, and, where applicable, the recipient's workplace."""		 		
+* organization 0..1 CZ_OrganizationCore "A.1.4.4 Recipient organization" """Name and identification details of the recipient's healthcare facility, and, where applicable, the recipient's workplace."""		 		
 
 //--- END				
 //--- END				
