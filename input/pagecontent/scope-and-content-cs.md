@@ -1,13 +1,16 @@
-### Struktura laboratorní zprávy
+### Oblasti řešení
+Tato implementační specifikace určuje způsob reprezentace laboratorní výsledkové zprávy (laboratorního nálezu) pomocí standardu HL7 FHIR.
 
+#### Zahrnuté oblasti
+Laboratorní výsledky v rámci stěžejních oborů in vitro diagnostiky jako jsou klinická biochemie, hematologie, transfuzní lékařství, mikrobiologie a imunologie prováděné na:
+•	lidských vzorcích (odebraných lidským subjektům); 
+•	vzorcích jiných než lidských, může se jednat buď o materiál nebo o živý subjekt; 
+•	vzorcích jiných než lidských, které s lidským subjektem souvisí (např. potravin či vzorků prostředí, jemuž byl pacient vystaven);
 
-laboratorní zpráva obsahuje níže uvedené základní informační bloky:
+#### Nezahrnuté oblasti
+Specializované laboratorní oblasti vyžadující specifickou strukturu výsledkových zpráv jako jsou histopatologie nebo lékařská genetika. Též nejsou zahrnuty testy (analýzy) prováděné samotnými pacienty.
 
-{% include img.html img="Lab-composition.png" caption="Figure 1: Obsah laboratorní zprávy" width="70%" %}
-
-<br/>
-
-### Popis sekcí laboratorní zprávy
+### Obsah laboratorní zprávy
 
 #### Administrativní údaje
 

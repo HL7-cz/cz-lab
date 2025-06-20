@@ -21,7 +21,7 @@ Description:  """Laboratory Report. eHN guideline model."""
 - Preferred system(s): hl7:DiagnosticReportStatus"""				
 * header.metadata.dateTime 1..1 dateTime "A.1.8.4 Report date and time" """Date and time of the result report creation."""				
 * header.metadata.title 1..1 string "A.1.8.5 Document title" """Document title, fixed value 'Laboratory Result report'"""					
-* header.metadata.custodian 1..1 Organization "A.1.8.6 Report custodian" """Name and identification of the entity that manages the document. Alias of the technical administrator of the document."""				
+* header.metadata.custodian 1..1 CZ_OrganizationCore "A.1.8.6 Report custodian" """Name and identification of the entity that manages the document. Alias of the technical administrator of the document."""				
 * header.metadata.confidentiality 1..1 CodeableConcept "A.1.8.7 Confidentiality" """Level of confidentiality of the document. Implicit value is normal. 
 - Preferred system(s): hl7:Confidentiality"""				
 * header.metadata.language 1..1 CodeableConcept "A.1.8.8 Language" """Language in which the document is written.

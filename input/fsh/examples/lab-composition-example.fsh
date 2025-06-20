@@ -9,9 +9,9 @@ Description: "An example of a laboratory report Composition for a glucose result
 * category = http://loinc.org#26436-6 "Laboratory Studies (set)"
 * date = "2025-04-25T10:00:00+01:00"
 
-* subject = Reference(Mracena2)
+* subject = Reference(Mracena)
 
-* author[0] = Reference(Practitioner-2) 
+* author[0] = Reference(Practitioner) 
 * title = "Laboratory Report"
 
 * extension[diagnosticReport-reference].valueReference.reference = "urn:uuid:diagnosticReport1"

@@ -1,6 +1,5 @@
-///Taken form CZ Core can be changed in the future
-
-Instance: Mracena2
+// Pacient
+Instance: Mracena
 InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Patient, contact information and practitioner"
@@ -86,6 +85,7 @@ Description: "Patient, contact information and practitioner"
 * extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Gynekologické a porodnické služby"
 
+// Registrující lékař
 Instance: RegisteringProviderExample
 InstanceOf: CZ_OrganizationCore
 Title: "Organization: Registering healthcare provider example"
@@ -97,7 +97,8 @@ Usage: #inline
 * type[+] = $drzar#320 "Samost. ordinace všeob. prakt. lékaře"
 * name = "MUDr. Stanislava Kubšová"
 
-Instance: Organization-1
+// 
+Instance: Organization
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "An example of the organization of a provider"
@@ -123,8 +124,8 @@ Description: "An example of the organization of a provider"
 * address[=].postalCode = "53701"
 * address[=].country = "CZ"
 
-
-Instance: Practitioner-2
+// 
+Instance: Practitioner
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Practitioner id(NRZP)=987654321"
@@ -141,7 +142,8 @@ Description: "Practitioner id(NRZP)=987654321"
 * communication[+] = urn:ietf:bcp:47#cs
 * communication[+] = urn:ietf:bcp:47#en
 
-Instance: Location-1
+// 
+Instance: Location
 InstanceOf: CZ_LocationCore
 Title: "Example Czech Location"
 Description: "Example instance of a location conforming to the CZ_LocationCore profile."
@@ -151,7 +153,7 @@ Usage: #example
 * status = #active
 * name = "Nemocnice Praha"
 * description = "Hlavní nemocnice v Praze"
-* managingOrganization = Reference(Organization-1)
+* managingOrganization = Reference(Organization)
 * address
   * use = #work
   * type = #both
@@ -162,6 +164,7 @@ Usage: #example
   * country = "CZ"
 * physicalType = #bu
 
+// 
 Instance: rodnecislo_7161264528
 InstanceOf: CZ_Rodcis_Identifier
 Usage: #inline
@@ -170,14 +173,3 @@ Description: "Birth (registration) number"
 * system = "https://ncez.mzcr.cz/fhir/sid/rcis"
 * value = "7161264528"
 * use = #official
-
-
-Instance: Pacemaker
-InstanceOf: CZ_MedicalDevice
-Usage: #example
-Description: "Heart pacemaker Medtronic W1DR01"
-
-* manufacturer = "Medtronic"
-* modelNumber = "W1DR01"
-* type = $sct#14106009 "Cardiac pacemaker"
-* patient = Reference(Patient/Mracena) "Pokusný Pacient"

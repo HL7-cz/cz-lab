@@ -1,31 +1,50 @@
-# Laboratorní nález
+{% include variable-definitions.md %}
 
-### Informace o projektu
-Tato implementační specifikace byla vypracována v rámci národního projektu interoperability MZČR.
+### Introduction
 
-### Účel dokumentu
-Tato implementační specifikace určuje způsob reprezentace laboratorní výsledkové zprávy (laboratorního nálezu) pomocí standardu HL7 FHIR.
+This implementation guide is based on [FHIR version R4](https://hl7.org/fhir/R4/). Specify a set of rules that will be used for HL7 FHIR to define how to represent Laboratory Report in the Czech national context, in line with European eHN guidelines.
 
-Alternativní reprezentací laboratorního nálezu je standard [DASTA](https://www.dastacr.cz/dasta/start.htm).
+Its main objective is to define the content components and the preferred structure to be used to construct a laboratory report. The purpose of this standard is to define the representation of the laboratory report as a patient's medical record for the purpose of electronic exchange of health information between individuals, healthcare providers and infrastructure in the Czech Republic. 
 
->⚠️ **Upozornění:** Vzhledem k rozhodnutí ukončit do roku 2027 další rozvoj a podporu standardu DASTA, doporučujeme všem implementátorům přechod k mezinárodnímu standardu HL7 FHIR.
+This guide does not describe how to exchange this message.
 
-### Rozsah specifikace
-Tato implementační specifikace vychází z dokumentu **Funkční specifikace laboratorního nálezu**, který stanovuje základní požadavky, obsah a strukturu laboratorního nálezu.
+### Content Overview
 
-**ZAHRNUTÉ OBLASTI:**
-Laboratorní výsledky v rámci stěžejních oborů in vitro diagnostiky jako jsou klinická biochemie, hematologie, transfuzní lékařství, mikrobiologie a imunologie.
+This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
-**NEZAHRNUTÉ OBLASTI:**
-Specializované laboratorní oblasti vyžadující specifickou strukturu výsledkových zpráv jako jsou histopatologie nebo lékařská genetika.
+- [Home](index.html): This page provides the introduction, scope short, references, dependencies, cross version analysis and IP statement for this guide.
+- Introduction:
+  - [Scope and content](scope-and-content-en.html): This segment contains general information about Laboratory Report.
+  - [Background](background-en.html): This segment contains background information about Laboratory Report. 
+- Functional:
+  - [Use cases](use-cases-en.html): This segment contains information about use cases. 
+  - [Workflow](workflow-en.html): This segment contains information about workflow. 
+  - [Logical models](logical-models-en.html): This segment contains information about logical models. 
+  - [Terminology considerations](terminology-considerations-en.html): This segment contains information about terminology. 
+- Implementation:
+  - [Mapping to profiles](model-map-en.html): This segment contains information about logical model maps to profiles.
+  - [Examples](examples-en.html): This segment contains information about examples.
+  - [Obligations](obligations-en.html): This segment contains information about obligations.
+- About:
+  - [Authors](authors-en.html): This segment contains informaction about authors.
+  - [Downloads](downloads-en.html): This segment contains informaction about downloads.
+  - [Dependencies](dependencies-en.html): This segment contains informaction about dependencies.
+  - [Copyright](copyright-en.html): This segment contains informaction about copyright.
+- [Artifacts](artifacts.html): This page provides a list of the FHIR artifacts defined as part of this implementation guide.
 
-Následující obrázek vyjadřuje základní informační bloky laboratorního nálezu.
+### References
 
-{% include img.html img="Lab-composition.png" caption="Obrázek 1: Obsah laboratorního nálezu" width="70%" %}
+* Related specifications:
+  * {{hl7XtEHR}}
+    * This specification has inspired many of the design patterns defined in this IG.
+  * {{czLabOrder}}
+    * This specification has many of together design patterns defined in this IG.
+  * {{hl7EuLab}}
+    * This specification has many of together design patterns defined in this IG.
+  * {{czCore}}
+    * Where possible this specification has been aligned with choices made in CZ core.
 
-### Souvislosti s dalšími specifikacemi
-
-Laboratorní nález obsahuje řadu obecných datových bloků, které jsou využitelné také v dalších typech zdravotnické dokumentace jako je pacientský souhrn, propouštěcí zpráva, ambulantní zpráva apod.
+### Dependencies
 
 {% include dependency-table.xhtml %}
 
@@ -33,6 +52,7 @@ Laboratorní nález obsahuje řadu obecných datových bloků, které jsou využ
 
 {% include cross-version-analysis.xhtml %}
 
-### Global Profiles
+### IP statements
 
-{% include globals-table.xhtml %}
+{% include ip-statements.xhtml %}
+
