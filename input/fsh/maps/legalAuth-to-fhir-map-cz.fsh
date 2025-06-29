@@ -11,8 +11,8 @@ Usage: #definition
 * experimental = true					
 * description = "eHN Legal Authenticator Model to this guide Map"					
 * purpose = "It shows how the Legal Authenticator Recipient data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/LegalAuthenticatorCz"					
-* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report"					
+//* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/LegalAuthenticatorCz"					
+//* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report"					
 					
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/LegalAuthenticatorCz"					
 * group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report"					

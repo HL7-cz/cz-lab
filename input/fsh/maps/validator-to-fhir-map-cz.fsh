@@ -11,8 +11,8 @@ Usage: #definition
 * experimental = true					
 * description = "eHN Validator Model to this guide Map"					
 * purpose = "It shows how the Validator Recipient data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/ValidatorCz"					
-* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report"					
+//* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/ValidatorCz"					
+//* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report"					
 					
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/ValidatorCz"					
 * group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report"					

@@ -5,16 +5,15 @@ Instance: author2FHIR-cz-lab
 InstanceOf: ConceptMap					
 Usage: #definition					
 
-* insert SetFmmandStatusRuleInstance ( 2, informative)					
+* insert SetFmmandStatusRuleInstance ( 2, informative)	
 * name = "LabRptAuthor2FHIR"					
 * title = "eHN Author to this guide Map"					
 * status = #draft					
 * experimental = true					
 * description = "eHN Author Model to this guide Map"					
 * purpose = "It shows how the Laboratory Report Author data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/AuthorCz"					
-* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-bundle-lab"					
-					
+//* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/AuthorCz"					
+//* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-bundle-lab"			
 					
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/AuthorCz"					
 * group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report"					

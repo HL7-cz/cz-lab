@@ -11,8 +11,8 @@ Usage: #definition
 * experimental = true					
 * description = "eHN Lab Report to this guide Map"					
 * purpose = "It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/LabReportCz"					
-* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-bundle-lab"					
+//* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/LabReportCz"					
+//* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-bundle-lab"					
 					
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/LabReportCz"					
 * group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-diagnostic-report-lab"					

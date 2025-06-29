@@ -2,7 +2,7 @@
 //  Logical Model				lab-report-cz.fsh
 // -------------------------------------------------------------------------------				
 Logical: LabReportEhnCz				
-Id: LabReport				
+Id: LabReportCz		
 Title: "A - Laboratory Report"				
 Description:  """Laboratory Report. eHN guideline model."""				
 * insert SetFmmandStatusRule( 2, informative)				

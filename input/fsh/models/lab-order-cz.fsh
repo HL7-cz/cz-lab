@@ -2,7 +2,7 @@
 //  Logical Model				lab-order-cz.fsh
 // -------------------------------------------------------------------------------				
 Logical: OrderLabEhnCz				
-Id: Order				
+Id: OrderCz			
 Title: "A2, A3 - Order"				
 Description:  """Order information and reason. Sections A2 and A3 of the eHN guideline."""				
 * insert SetFmmandStatusRule( 2, informative)				

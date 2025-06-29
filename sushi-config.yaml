@@ -32,7 +32,7 @@ dependencies:
 # hl7.fhir.eu.base.r4: current
   hl7.fhir.eu.laboratory: current 
   hl7.fhir.extensions.r5: 4.0.1
-  
+
   hl7.fhir.eu.base: current
   hl7.fhir.cz.core: current
 #
@@ -60,7 +60,7 @@ pages:
   index.md:
     title: Home
   index-cs.md:
-    title: Home
+    title: Domovská stránka
   scope-and-content-en.md:
     title: Scope and content
   scope-and-content-cs.md:
@@ -148,6 +148,44 @@ parameters:
   special-url:
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
     - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
+
+# see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+# path-resource:
+#    - input/resources
+#    - fsh-generated/resources
+#  path-pages:
+#    - input/pagecontent
+#    - input/intro-notes
+#  active-tables: false
+  pin-canonicals: pin-multiples
+  path-expansion-params: '../../expansion-params.json'
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: true
+  usage-stats-opt-out: true
+  # excludexml: false
+  # excludejson: false
+  # excludettl: true
+  # excludemap: true
+ # suppressed-ids: DocumentReference/discharge-summary
+ # tabbed-snapshots: false
+  # generate: #what does this do - todo: remove and see4
+  #   - xml
+  #   - json
+ # no-narrative:
+ #   - Patient/example-targeted-provenance
+ #   - Bundle/docref-example-1
+  # no-validate:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
+ # version-comparison:
+ #    - 5.0.1
+ #    - 4.0.0
+
+#   excludettl: true
+#   validation: [allow-any-extensions, no-broken-links]  
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │

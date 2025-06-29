@@ -11,8 +11,8 @@ Usage: #definition
 * experimental = true					
 * description = "eHN Order to this guide Map"					
 * purpose = "It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/OrderCz"					
-* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-service-request-lab"					
+//* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/OrderCz"					
+//* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-service-request-lab"					
 					
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/OrderCz"					
 * group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-service-request-lab"					

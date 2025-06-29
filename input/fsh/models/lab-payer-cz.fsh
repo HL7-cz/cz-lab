@@ -2,7 +2,7 @@
 //  Logical Model				lab-payer-cz.fsh
 // -------------------------------------------------------------------------------				
 Logical: PayerLabEhnCz				
-Id: Payer				
+Id: PayerCz				
 Title: "A.1.3 - Health insurance and payment information"				
 Description:  """Health insurance and payment information.  Section A1.3 of the eHN guideline."""				
 * insert SetFmmandStatusRule( 2, informative)				

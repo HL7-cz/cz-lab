@@ -1,5 +1,5 @@
 Profile: CZ_CompositionLabReport
-Parent: $clinicaldocument
+Parent: Composition
 Id: cz-composition-lab-report
 Title: "Composition: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report in the scope of the Czech national interoperability project."
@@ -48,6 +48,9 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * insert ReportSubjectRule
 * insert ReportEncounterRule
+
+* language 1..1
+
 * author 1..*
   * ^short = "Who and/or what authored the Laboratory Report"
   * ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
@@ -63,6 +66,7 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
     * ^short = "Who attested the report"
     * ^comment = "For a Laboratory Report it is usually non expected that the attester would be a Patient or a RealtedPerson"
 
+* custodian 1..1
 * custodian only Reference(CZ_OrganizationCore)
 
 * event
@@ -75,7 +79,7 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
   * ^short = "Laboratory Report"
   * ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Laboratory Report\" or any equivalent translation"
 
-
+* confidentiality 1..1
 
 // ServiceRequest and/or RequestGroup
 

@@ -2,7 +2,7 @@
 //  Logical Model				lab-specimen-cz.fsh
 // -------------------------------------------------------------------------------				
 Logical: SpecimenLabEhnCz				
-Id: SpecimenLab				
+Id: SpecimenLabCz		
 Title: "A.4 - Specimen information"				
 Description:  """Specimen information. Section A4 of the eHN guideline."""				
 * insert SetFmmandStatusRule( 2, informative)				
