@@ -11,8 +11,8 @@ Usage: #definition
 * experimental = true					
 * description = "eHN Payer Model to this guide Map"					
 * purpose = "It shows how the Laboratory Report Payer data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/PayerCz"					
-* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-bundle-lab"					
+//* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/PayerCz"					
+//* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-bundle-lab"					
 					
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/PayerCz"					
 * group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-service-request-lab"					
@@ -44,7 +44,7 @@ Usage: #definition
 					
 					
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/PayerCz"					
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/Coverage"							
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-coverage"							
 					
 * group[=].element[+].code = #Payer.identifier					
 * group[=].element[=].display = "A.1.3.1 Health insurance code"					
@@ -94,7 +94,7 @@ Usage: #definition
 					
 					
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/PayerCz"					
-* group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-patient-lab"									
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"									
 					
 * group[=].element[+].code = #Payer.identifier					
 * group[=].element[=].display = "A.1.3.1 Health insurance code"					

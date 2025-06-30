@@ -11,8 +11,8 @@ Usage: #definition
 * experimental = true					
 * description = "eHN Specimen Model to this guide Map"					
 * purpose = "It shows how the Specimen data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/SpecimenLabCz"					
-* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-service-request-lab"	
+//* sourceUri = "https://hl7.cz/fhir/lab/StructureDefinition/SpecimenLabCz"					
+//* targetUri = "https://hl7.cz/fhir/lab/StructureDefinition/cz-service-request-lab"	
 
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/SpecimenLabCz"					
 * group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-service-request-lab"					

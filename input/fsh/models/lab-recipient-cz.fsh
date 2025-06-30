@@ -2,7 +2,7 @@
 //  Logical Model				lab-recipient-cz.fsh
 // -------------------------------------------------------------------------------				
 Logical: RecipientLabEhnCz		
-Id: Recipient				
+Id: RecipientCz				
 Title: "A.1.4 - Information recipient"				
 Description:  """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable.
 Section A1.4 of the eHN guideline."""				

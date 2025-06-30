@@ -20,10 +20,11 @@ Alias: $ucum =  http://unitsofmeasure.org
 Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $obs-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+Alias: $ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 Alias: $hl7CoverageType = http://terminology.hl7.org/CodeSystem/coverage-type
+Alias: $mkn-10 = https://mkn10.uzis.cz
 
 //------- Value Sets
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction

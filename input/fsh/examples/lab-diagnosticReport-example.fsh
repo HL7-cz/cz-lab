@@ -1,4 +1,5 @@
-Instance: CZ-LabResult-DiagnosticReport-Example
+/*
+Instance: CZ-LabResult-DiagnosticReport-Example2
 InstanceOf: CZ_DiagnosticReportLab
 Usage: #example
 Title: "Lab Result DiagnosticReport"
@@ -14,3 +15,4 @@ Description: "Example of DiagnosticReport for lab result"
 * result[0] = Reference(urn:uuid:observation1)
 * specimen[0] = Reference(urn:uuid:specimen1)
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:composition1)
+*/

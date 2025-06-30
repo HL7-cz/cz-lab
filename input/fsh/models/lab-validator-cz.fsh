@@ -2,7 +2,7 @@
 //  Logical Model				lab-validator-cz.fsh
 // -------------------------------------------------------------------------------				
 Logical: ValidatorLabEhnCz				
-Id: Validator				
+Id: ValidatorCz			
 Title: "A.1.6 - Result validator"				
 Description:  """Result validator. Section A1.6 of the eHN guideline."""				
 * insert SetFmmandStatusRule( 2, informative)				

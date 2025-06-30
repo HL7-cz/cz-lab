@@ -2,7 +2,7 @@
 //  Logical Model				lab-legalAuth-cz.fsh
 // -------------------------------------------------------------------------------				
 Logical: LegalAuthenticatorLabEhnCz				
-Id: LegalAuthenticator				
+Id: LegalAuthenticatorCz			
 Title: "A.1.7 - Legal authenticator"				
 Description:  """Legal authenticator (The person taking responsibility for the medical content of the document).
 Section A1.7 of the eHN guideline."""				
