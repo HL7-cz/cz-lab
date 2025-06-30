@@ -6,4 +6,4 @@ Description: "This extension applies to the Composition resource and is used to 
 * ^context[+].type = #element
 * ^context[=].expression = "Composition"
 * ^url = "http://hl7.eu/fhir/StructureDefinition/information-recipient"
-* value[x] only Reference(CZ_PractitionerCore or Device or CZ_PatientCore or RelatedPerson or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+* value[x] only Reference(CZ_PractitionerCore or Device or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)

@@ -137,32 +137,42 @@ Usage: #definition
 * group[=].element[=].target.comment = "Mapped in the Composition resource if it refers to the business report version"			
 
 * group[=].element[+].code = #LabReport.order					
-* group[=].element[=].display = "A.2-A.3 Order"					
+* group[=].element[=].display = "A.2.1-A.2.2 Order"					
 * group[=].element[=].target.code = #DiagnosticReport.basedOn					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "basedOn.resolve().ofType(ServiceRequest)"		
+* group[=].element[=].target.comment = "basedOn.resolve().ofType(CZ_ServiceRequest)"		
 
 * group[=].element[+].code = #LabReport.specimen					
-* group[=].element[=].display = "A.4 Specimen information"					
+* group[=].element[=].display = "A.2.3 Specimen information"					
 * group[=].element[=].target.code = #DiagnosticReport.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto	
 
 * group[=].element[+].code = #LabReport.specimen					
-* group[=].element[=].display = "A.4 Specimen information"					
+* group[=].element[=].display = "A.2.3 Specimen information"					
 * group[=].element[=].target.code = #DiagnosticReport.result.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "result.resolve().ofType(Observation)"		
+* group[=].element[=].target.comment = "result.resolve().ofType(CZ_ObservationResultLaboratory)"		
 					
 * group[=].element[+].code = #LabReport.result					
-* group[=].element[=].display = "A.5 Results data elements"					
+* group[=].element[=].display = "A.2.4 Results data elements"					
 * group[=].element[=].target.code = #DiagnosticReport.result					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
-			
+
+* group[=].element[+].code = #LabReport.presentedForm					
+* group[=].element[=].display = "A.3 Laboratory report presented form"					
+* group[=].element[=].target.code = #DiagnosticReport.presentedForm					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+
+* group[=].element[+].code = #LabReport.attachment					
+* group[=].element[=].display = "A.4 Laboratory report attachment"					
+* group[=].element[=].target.code = #DiagnosticReport.media.link.content.attachment					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto				
 //---END					
 //---END					
 //---END					
@@ -291,35 +301,35 @@ attester.where(mode='legal')"
 * group[=].element[=].target.comment = "if it refers to the business report version"			
 
 * group[=].element[+].code = #LabReport.order	
-* group[=].element[=].display = "A.2-A.3 Order"					
+* group[=].element[=].display = "A.2.1-A.2.2 Order"					
 * group[=].element[=].target.code = #Composition.extension:basedOn-order-or-requisition.insurance					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest)"	
 
 * group[=].element[+].code = #LabReport.specimen					
-* group[=].element[=].display = "A.4 Specimen information"					
+* group[=].element[=].display = "A.2.3 Specimen information"					
 * group[=].element[=].target.code = #Composition.section:lab-no-subsections.entry.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If no sub sections"		
 
 * group[=].element[+].code = #LabReport.result					
-* group[=].element[=].display = "A.5 Results data elements"					
+* group[=].element[=].display = "A.2.4 Results data elements"					
 * group[=].element[=].target.code = #Composition.section:lab-no-subsections.entry					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If no sub sections"		
 
 * group[=].element[+].code = #LabReport.specimen					
-* group[=].element[=].display = "A.4 Specimen information"					
+* group[=].element[=].display = "A.2.3 Specimen information"					
 * group[=].element[=].target.code = #Composition.section:lab-subsections.section.entry.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If sub sections"			
 		
 * group[=].element[+].code = #LabReport.result					
-* group[=].element[=].display = "A.5 Results data elements"					
+* group[=].element[=].display = "A.2.4 Results data elements"					
 * group[=].element[=].target.code = #Composition.section:lab-subsections.section.entry					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
