@@ -86,6 +86,9 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry contains device 0..*
 * entry[device].resource only CZ_DeviceObserver
 
+* entry contains attachment 0..*
+* entry[attachment].resource only CZ_Attachment
+
 //* entry contains procedure 0..
 //* entry[procedure].resource only ProcedureUvIps // CZ
 

@@ -29,11 +29,16 @@ Description:  """Laboratory Report. eHN guideline model."""
 * header.metadata.version 0..1 string "A.1.8.9 Version" """Version of the document."""		
 * header.electronicSignatures 0..1 BackboneElement "A.1.9 Electronic signatures" """Electronic signatures According to Act No. 327/2011, §54a."""
 
-* order 0..* http://hl7.eu/fhir/laboratory/StructureDefinition/Order "A.2-A.3 Order" """A.2 Order information (Laboratory Result Report could respond to multiple test orders)
-A.3 Order reason (Laboratory Result Report could respond to multiple reasons)
+* body 1..1 BackboneElement "A.2 Report body data elements" """A.1 Report body data elements"""	
+* body.order 0..* http://hl7.eu/fhir/laboratory/StructureDefinition/Order "A.2.1-A.2.2 Order" """A.2.1 Order information (Laboratory Result Report could respond to multiple test orders)
+A.2.2 Order reason (Laboratory Result Report could respond to multiple reasons)
 """				
-* specimen 0..* http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab "A.4 Specimen information" """A.4 Specimen information"""				
-* result 0..* http://hl7.eu/fhir/laboratory/StructureDefinition/Result "A.5 Results data elements" """A.5 Results data elements"""				
+* body.specimen 0..* http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab "A.2.3 Specimen information" """A.2.3 Specimen information"""				
+* body.result 0..* http://hl7.eu/fhir/laboratory/StructureDefinition/Result "A.2.4 Results data elements" """A.2.4 Results data elements"""				
+
+* presentedForm 1..* PresentedFormCz "A.3 - Presented Form" """Entire report as issued. Various formats could be provided,  pdf format is recommended."""
+* attachments 0..* AttachmentsCz "A.4 - Attachments" """Aditional attachment"""
+
 //--- END				
 //--- END				
 //--- END				

@@ -25,8 +25,17 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
 
 * requisition ^short = "Composite Request ID."
 
+//* replaces only Reference(CZ_ServiceRequestLab)
+
 * specimen	only Reference(CZ_SpecimenLab)
   * ^short = "Must be present, if order is request for test" // Check....
   // add invariant ?
 
 * insurance only Reference(CZ_Coverage)
+
+* requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CZ_RelatedPersonCore or Device)
+* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or HealthcareService or CZ_PatientCore or CZ_RelatedPersonCore or Device)
+
+* locationReference only Reference(CZ_LocationCore)
+
+* reasonCode from $mkn-10-list
