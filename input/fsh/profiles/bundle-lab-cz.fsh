@@ -123,7 +123,6 @@ Description: "DiagnosticReport and Composition SHALL have the same subject"
 Expression: "( (entry.resource.ofType(Composition).subject.empty() and entry.resource.ofType(DiagnosticReport).subject.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
 Severity:    #error
 
-
 Invariant: dr-comp-type
 Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
 Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()"

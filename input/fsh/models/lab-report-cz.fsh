@@ -27,9 +27,9 @@ Description:  """Laboratory Report. eHN guideline model."""
 * header.metadata.language 1..1 CodeableConcept "A.1.8.8 Language" """Language in which the document is written.
 - Preferred system(s):  NCLP EJAZYK"""				
 * header.metadata.version 0..1 string "A.1.8.9 Version" """Version of the document."""		
-* header.electronicSignatures 0..1 BackboneElement "A.1.9 Electronic signatures" """Electronic signatures According to Act No. 327/2011, §54a."""
+* header.electronicSignatures 1..* BackboneElement "A.1.9 Electronic signatures" """Electronic signatures According to Act No. 327/2011, §54a."""
 
-* body 1..1 BackboneElement "A.2 Report body data elements" """A.1 Report body data elements"""	
+* body 0..1 BackboneElement "A.2 Report body data elements" """A.1 Report body data elements"""	
 * body.order 0..* http://hl7.eu/fhir/laboratory/StructureDefinition/Order "A.2.1-A.2.2 Order" """A.2.1 Order information (Laboratory Result Report could respond to multiple test orders)
 A.2.2 Order reason (Laboratory Result Report could respond to multiple reasons)
 """				
