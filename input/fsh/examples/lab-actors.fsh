@@ -129,6 +129,7 @@ Description: "Role MUDr. Erazima Vyčichla (žádající lékař)"
 * telecom[=].value = "erazim.vycichlo@zlabekdolni.cz"
 
 
+// laboratorní pracovník
 Instance: practitionerSejdlova
 InstanceOf: CZ_PractitionerCore
 Usage: #example
@@ -154,3 +155,30 @@ Description: "Role Mgr. Kvildy Šejdlové (provádějící laborant)"
 * active = true
 * telecom[+].system = #email
 * telecom[=].value = "kvilda.sejdlova@horni-dolni.eu"
+
+
+// Lékař, který autorizuje/uvolňuje výsledky
+Instance: practitionerZybradlo
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Virtuální lékař MUDr. Kvido Zýbradlo"
+* id = "aabbccdd-1111-4222-9333-ffeeddccbbcc"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "975318642"
+* name.use = #usual
+* name.prefix = "MUDr."
+* name.given = "Kvido"
+* name.family = "Zýbradlo"
+* gender = #male
+
+Instance: practitionerRoleZybradlo
+InstanceOf: CZ_PractitionerRoleCore
+Usage: #example
+Description: "Role MUDr. Kvida Zýbradla (legal authenticator výsledku)"
+* id = "ff223344-5566-4777-8899-ccbbccddeeff"
+* practitioner = Reference(practitionerZybradlo)
+* organization = Reference(NemocniceZlabekDolni)
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#L00 "Lékař"
+* active = true
+* telecom[+].system = #email
+* telecom[=].value = "kvido.zybradlo@zlabekdolni.cz"
