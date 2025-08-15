@@ -26,15 +26,14 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-#  hl7.fhir.uv.ips: current
   hl7.fhir.uv.ips: 1.1.0
 
 # hl7.fhir.eu.extensions: current
 # hl7.fhir.eu.base.r4: current
-  hl7.fhir.eu.laboratory: current 
+  hl7.fhir.eu.laboratory: current
   hl7.fhir.extensions.r5: 4.0.1
 
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 0.1.0-ballot
   hl7.fhir.cz.core: current
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -101,15 +100,15 @@ pages:
   terminology-considerations-en.md:
     title: Terminology considerations
   terminology-considerations-cs.md:
-    title: Terminologické aspekty  
+    title: Terminologické aspekty
   use-cases-en.md:
     title: Use cases
   use-cases-cs.md:
     title: Příklady užití
   workflow-en.md:
-    title: Workflow  
+    title: Workflow
   workflow-cs.md:
-    title: Workflow 
+    title: Workflow
 #  artifacts-en.xml:
 #    title: Artifacts
 # profiles-and-extensions.md:
@@ -186,7 +185,7 @@ parameters:
  #    - 4.0.0
 
 #   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]  
+#   validation: [allow-any-extensions, no-broken-links]
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
