@@ -4,7 +4,7 @@ Usage: #example
 Title: "Sodík v séru"
 Description: "Příklad lab. výsledku, který nebyl dodán z důvodu rozbité zkumavky, komentář k výsledku"
 
-* status = #cancelled
+* status = #final
 
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 

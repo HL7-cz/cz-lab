@@ -7,7 +7,7 @@ Description: "Příklad lab. výsledku numerický vč. nejistoty měření, hodn
 * status = #final
 
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
+* category[studyType] = $loinc#18719-5	"Chemistry studies (set)"
 //* category[specialty] = 
 
 * code.coding[0].system = $nclp
@@ -19,10 +19,10 @@ Description: "Příklad lab. výsledku numerický vč. nejistoty měření, hodn
 * specimen = Reference(CZ-LabResult-Specimen-Example)
 
 * performer[+] = Reference(practitionerRoleSejdlova)
-* performer[=].extension[performerFunction].valueCodeableConcept = http://hl7.org/fhir/StructureDefinition/event-performerFunction#PPRF "Primary performer"
+* performer[=].extension[performerFunction].valueCodeableConcept = http://hl7.org/fhir/StructureDefinition/event-performerFunction#PPRF "primary performer"
 
 * performer[+] = Reference(practitionerRoleZybradlo)
-* performer[=].extension[performerFunction].valueCodeableConcept = http://hl7.org/fhir/StructureDefinition/event-performerFunction#LA "Legal authenticator"
+* performer[=].extension[performerFunction].valueCodeableConcept = http://hl7.org/fhir/StructureDefinition/event-performerFunction#VRF "verifier"
 
 * effectiveDateTime = "2025-04-24T08:45:00+01:00"
 * issued = "2025-04-24T09:30:00+01:00"
@@ -61,6 +61,7 @@ Description: "Příklad lab. výsledku numerický vč. nejistoty měření, hodn
 
 // kalibrátor
 * extension[ObservationCertifiedRefMaterialCodeable].valueCodeableConcept = http://nibsc.org#11/222 "Urea, certified reference material, 10 mmol/L"
+// realne bude stacit pouze predchozi zapis (pripadne jeden z nich)
 * extension[ObservationCertifiedRefMaterialIdentifer].valueIdentifier
   * system = "http://nibsc.org"
   * value = "11/222"
@@ -80,7 +81,7 @@ Description: "Analyzátor BioAnalyt 6000"
 * deviceName[0].name = "BioAnalyt 6000"
 * deviceName[0].type = #manufacturer-name
 * manufacturer = "Best manufacturer"
-//* type = $sct#706168006 "Automated clinical chemistry analyzer"
+* type = $sct#706168006 "Automated clinical chemistry analyzer"
 
 // Testovací souprava - kit
 Instance: deviceKitUrea
@@ -91,4 +92,4 @@ Description: "Testovací souprava Urea enzymatic assay"
 * deviceName[0].name = "Urea Enzymatic Assay Kit"
 * deviceName[0].type = #manufacturer-name
 * manufacturer = "Best manufacturer"
-//* type = $sct#706167001 "Reagent kit"
+* type = $sct#706167001 "Reagent kit"

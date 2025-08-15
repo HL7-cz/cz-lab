@@ -11,7 +11,7 @@ Description: "Příklad lab. výsledku numerický, hodnocení pomocí škály, p
 //* category[specialty] = 
 
 * code.coding[0].system = $nclp
-* code.coding[0].code = #21102
+* code.coding[0].code = #01897
 * code.coding[0].display = "Glukóza; látková koncentrace; plazma"
 * code.text = "Glukóza v plazmě"
 
