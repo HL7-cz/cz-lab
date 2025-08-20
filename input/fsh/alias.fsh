@@ -1,8 +1,8 @@
 //============== ALIAS ===============
 
 //------- Code Systems
-Alias: $nclp = https://terminology.ncez.mzcr.cz/CodeSystems/nclp
-Alias: $ncmpspm = https://terminology.ncez.mzcr.cz/CodeSystems/ncmpspm //Specifikace mikrobiologických materiálů
+Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/NCLPPOL
+Alias: $ncmpspm = https://nclp.ncez.mzcr.cz/CodeSystem/ncmpspm //Specifikace mikrobiologických materiálů
 Alias: $loinc = http://loinc.org
 Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
 Alias: $icd11 = http://id.who.int/icd11/mms
@@ -24,7 +24,7 @@ Alias: $ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-Obs
 Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 Alias: $hl7CoverageType = http://terminology.hl7.org/CodeSystem/coverage-type
-Alias: $mkn-10 = https://mkn10.uzis.cz
+Alias: $mkn-10 = https://terminology.uzis.cz/CodeSystem/Mkn10_5
 
 //------- Value Sets
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction

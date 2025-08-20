@@ -28,7 +28,7 @@ Description: "Fiktivní pacientka pro účel příkladu"
 * name.family = "Prouzdalová"
 * name.given = "Zyrgana"
 * telecom.system = #phone
-* telecom.value = "+420 777 123 987"
+* telecom.value = "+420777123987"
 * telecom.use = #mobile
 * gender = #female
 * birthDate = "1982-03-17"
@@ -41,7 +41,8 @@ Description: "Fiktivní pacientka pro účel příkladu"
     * extension[houseNumber].valueString = "42"
   * city = "Počernice nad Blátem"
   * postalCode = "99999"
-  * country = "CZ"
+  * country = "Česko"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
@@ -96,7 +97,8 @@ Usage: #example
 * address[=].line = "Blatouchová 77"
 * address[=].city = "Žlábek Dolní"
 * address[=].postalCode = "54321"
-* address[=].country = "CZ"
+* address[=].country = "Česko"
+  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 
 // Žádající lékař
@@ -127,6 +129,7 @@ Description: "Role MUDr. Erazima Vyčichla (žádající lékař)"
 * telecom[=].value = "erazim.vycichlo@zlabekdolni.cz"
 
 
+// laboratorní pracovník
 Instance: practitionerSejdlova
 InstanceOf: CZ_PractitionerCore
 Usage: #example
@@ -152,3 +155,30 @@ Description: "Role Mgr. Kvildy Šejdlové (provádějící laborant)"
 * active = true
 * telecom[+].system = #email
 * telecom[=].value = "kvilda.sejdlova@horni-dolni.eu"
+
+
+// Lékař, který autorizuje/uvolňuje výsledky
+Instance: practitionerZybradlo
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Virtuální lékař MUDr. Kvido Zýbradlo"
+* id = "aabbccdd-1111-4222-9333-ffeeddccbbcc"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "975318642"
+* name.use = #usual
+* name.prefix = "MUDr."
+* name.given = "Kvido"
+* name.family = "Zýbradlo"
+* gender = #male
+
+Instance: practitionerRoleZybradlo
+InstanceOf: CZ_PractitionerRoleCore
+Usage: #example
+Description: "Role MUDr. Kvida Zýbradla (legal authenticator výsledku)"
+* id = "ff223344-5566-4777-8899-ccbbccddeeff"
+* practitioner = Reference(practitionerZybradlo)
+* organization = Reference(NemocniceZlabekDolni)
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#L00 "Lékař"
+* active = true
+* telecom[+].system = #email
+* telecom[=].value = "kvido.zybradlo@zlabekdolni.cz"
