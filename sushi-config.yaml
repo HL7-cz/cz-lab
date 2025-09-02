@@ -315,6 +315,24 @@ instanceOptions:
 #     - StructureDefinition/bark-control
 #     - StructureDefinition/bee-sting
 #
+groups:
+  czech-logical-model:
+    name:  Czech logical model (Informative)
+    description: Logical model in czech language. Informative for this version of the guide.
+    resources:
+      - StructureDefinition/LogLabReportCz
+      - StructureDefinition/LogSubjectCz
+      - StructureDefinition/LogPayerCz
+      - StructureDefinition/LogRecipientCz
+      - StructureDefinition/LogAuthorCz
+      - StructureDefinition/LogValidatorCz
+      - StructureDefinition/LogLegalAuthenticatorCz
+      - StructureDefinition/LogElectronicSignatures
+      - StructureDefinition/LogOrderCz
+      - StructureDefinition/LogSpecimenLabCz
+      - StructureDefinition/LogResultCz
+      - StructureDefinition/LogPresentedFormCz
+      - StructureDefinition/LogAttachmentsCz
 #
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
