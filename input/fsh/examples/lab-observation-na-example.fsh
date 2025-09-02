@@ -7,8 +7,8 @@ Description: "Příklad lab. výsledku, který nebyl dodán z důvodu rozbité z
 * status = #final
 
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
-//* category[specialty] = 
+* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+//* category[specialty] =
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05272
@@ -17,7 +17,7 @@ Description: "Příklad lab. výsledku, který nebyl dodán z důvodu rozbité z
 
 * subject = Reference(Zyrgana)
 * performer[+] = Reference(practitionerRoleSejdlova)
-* specimen = Reference(CZ-LabResult-Specimen-Damaged-Example)
+//* specimen = Reference(CZ-LabResult-Specimen-Damaged-Example)
 
 * effectiveDateTime = "2025-04-24T08:45:00+01:00"
 * issued = "2025-04-24T09:30:00+01:00"
