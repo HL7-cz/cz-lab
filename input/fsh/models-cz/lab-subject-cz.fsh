@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: LogCzSubjectLabEhnCz				
 Id: LogSubjectCz		
-Title: "A1.1, A1.2 - Pacient"				
+Title: "A.1.1, A1.2 - Pacient"				
 Description:  """Pacient"""				
 * insert SetFmmandStatusRule ( 1, draft )			
 * identifikace 1..1 Base "A.1.1 Identifikace pacienta" """A.1.1 Identifikace pacienta"""	

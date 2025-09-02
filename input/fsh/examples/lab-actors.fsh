@@ -35,11 +35,11 @@ Description: "Fiktivní pacientka pro účel příkladu"
 * address[+]
   * use = #home
   * type = #physical
-  * text = "U Roury 42, 999 99, Počernice n. Blátem"
+  * text = "U Roury 42, 999 99, Počernice n. Mokrou"
   * line[+] = "U Roury 42"
     * extension[streetName].valueString = "U Roury"
     * extension[houseNumber].valueString = "42"
-  * city = "Počernice nad Blátem"
+  * city = "Počernice nad Mokrou"
   * postalCode = "99999"
   * country = "Česko"
     * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"

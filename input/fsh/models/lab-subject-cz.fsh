@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: LogEnSubjectLabEhnCz				
 Id: SubjectCz		
-Title: "A1.1, A1.2 - Subject of care"				
+Title: "A.1.1, A1.2 - Subject of care"				
 Description:  """Patient or Subject of care. Sections A1.1 and A1.2 of the eHN guideline."""				
 * insert SetFmmandStatusRule ( 1, draft )		
 * identification 1..1 Base "A.1.1 Identification of the patient/subject" """A.1.1 Identification of the patient/subject"""	

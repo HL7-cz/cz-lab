@@ -64,7 +64,7 @@ Description: "Czech Lab Report - example of a bundle containing lab observation(
 * entry[=].resource = Observation-CRP
 * entry[+].fullUrl = "urn:uuid:f53d66a1-c9c4-4b58-b04b-3c86a2ec0c16"
 * entry[=].resource = Observation-Prokalcitonin
-/*
+
 // Observations - krev - serologie
 * entry[+].fullUrl = "urn:uuid:b0f7fc5d-d204-4e1c-b72f-83736e73efa4"
 * entry[=].resource = Observation-antiHAVIgM
@@ -72,7 +72,7 @@ Description: "Czech Lab Report - example of a bundle containing lab observation(
 * entry[=].resource = Observation-antiHAVIgG
 * entry[+].fullUrl = "urn:uuid:dd34ef38-f949-4cc7-9b98-e2e3b55c84d5"
 * entry[=].resource = Observation-AntiHCV
-*/
+
 // Observations - krev - hematologie
 * entry[+].fullUrl = "urn:uuid:a6c9f96b-23ea-4644-aadc-b11b8d3a17e2"
 * entry[=].resource = Observation-Leukocyty
@@ -131,7 +131,7 @@ Description: "An example of a laboratory report Composition for a glucose result
     * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Markery zánětu</div>"
     * entry[+] = Reference(urn:uuid:e2d39425-bc9b-4fcd-88fb-3499d14d8670) // CRP
     * entry[+] = Reference(urn:uuid:f53d66a1-c9c4-4b58-b04b-3c86a2ec0c16) // prokalcitonin
- /* * section[+]
+  * section[+]
     * title = "Serologická vyšetření"
     * code = $loinc#18719-5 "Chemistry studies (set)"
     * text.status = #generated
@@ -139,7 +139,7 @@ Description: "An example of a laboratory report Composition for a glucose result
     * entry[+] = Reference(urn:uuid:b0f7fc5d-d204-4e1c-b72f-83736e73efa4) // anti-HAV-IgM
     * entry[+] = Reference(urn:uuid:5eb7e3de-27a2-47bc-b67c-c085343f11eb) // anti-HAVI-gG
     * entry[+] = Reference(urn:uuid:dd34ef38-f949-4cc7-9b98-e2e3b55c84d5) // anti-HCV
-*/
+
 // Sekce: Hematologie
 * section[lab-no-subsections]
   * title = "Hematologie"
@@ -184,11 +184,11 @@ Description: "Example of DiagnosticReport for lab result"
 * result[+] = Reference(urn:uuid:e2d39425-bc9b-4fcd-88fb-3499d14d8670)
 * result[+] = Reference(urn:uuid:f53d66a1-c9c4-4b58-b04b-3c86a2ec0c16)
 
-/*
+
 * result[+] = Reference(urn:uuid:b0f7fc5d-d204-4e1c-b72f-83736e73efa4)
 * result[+] = Reference(urn:uuid:5eb7e3de-27a2-47bc-b67c-c085343f11eb)
 * result[+] = Reference(urn:uuid:dd34ef38-f949-4cc7-9b98-e2e3b55c84d5)
-*/
+
 * result[+] = Reference(urn:uuid:a6c9f96b-23ea-4644-aadc-b11b8d3a17e2)
 * result[+] = Reference(urn:uuid:c4a42d64-5e43-449a-9460-3fd15cbbeff1)
 * result[+] = Reference(urn:uuid:9b4c7d7f-8495-42bc-877f-b9864317ed38)
@@ -384,9 +384,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * receivedTime = "2025-04-24T09:30:00+02:00"
 * collection.collectedDateTime = "2025-04-24T08:00:00+02:00"
-* container.type = $sct#706049000 "Blood collection tube"
-//* container. = $sct#125141000146109 "EDTA solution (substance)"
-
+* container.type = $sct#125141000146109 "EDTA solution (substance)"
 
 
 Instance: Specimen-Moc
@@ -399,7 +397,8 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * receivedTime = "2025-04-24T09:30:00+02:00"
 * collection.collectedDateTime = "2025-04-24T08:15:00+02:00"
-//* container.type = $sct#702224000 "Midstream urine specimen container"
+* container.type = $sct#702224000 "Midstream urine specimen container"
+
 
 // =====================
 // OBSERVATIONS
@@ -522,7 +521,7 @@ Usage: #inline
 * interpretation = $ObservationInterpretation#N "Normal"
 
 
-/*
+
 // Krev - Serologie
 Instance: Observation-antiHAVIgM
 InstanceOf: CZ_ObservationResultLaboratory
@@ -562,7 +561,7 @@ Usage: #inline
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 * valueCodeableConcept = $sct#260385009 "Negative"
 * interpretation = $ObservationInterpretation#NEG "Negative"
-*/
+
 
 // Krevni obraz
 Instance: Observation-Leukocyty
