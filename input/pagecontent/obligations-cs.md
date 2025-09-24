@@ -7,4 +7,32 @@
 
 ### Přehled
 
-Na této stránce bude vložen přehled všech povinností.
+Povinnosti (Obligations) jsou prostředkem, kterým se v  HL7 FHIR specifikuje schopnosti, které definovaní aktéři MOHOU (MAY), MĚLI BY (SHOULD) nebo MUSÍ (SHALL) mít implementovány specifikovanými profily.
+
+Definujeme tři základní úrovně plnění standardu:
+- L1 – nestrukturovaný dokument – předáváno jako nezbytná metadata dokumentu a lidsky čitelný dokument v PDF formátu
+- L2 – strukturovaný dokument rozdělený do identifikovatelných sekcí (vstupní vyšetření, anamnéza, rizikové faktory, medikace, doporučení, …), obsah je stále veden pouze v textové neformalizované formě
+- L3 – Dokument je strukturovaný do identifikovatelných sekcí (stejných jako v L2), některé informace lze vést ve formalizované podobě, vybrané informace budou povinně vedeny ve formalizované a kódované formě
+
+Tato stránka také popisuje aktéry, kteří byli definováni pro specifikaci povinností.
+
+### Aktéři
+
+{% include fsh-link-references.md %}
+
+Byli specifikováni aktéři ve těchto rolích:
+
+| Role                                                 | Popis                                                                                                                      |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [Tvůrce úrovně L1](ActorDefinition-actor-creator-lab-L1.html)     | Jedná se o aktéra úrovně L1, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
+| [Konzument úrovně L1](ActorDefinition-actor-consumer-lab-L1.html) | Tento aktér představuje systém úrovně L1, který přijatou nebo načtenou zprávu používá.                                                  |
+ |
+| [Tvůrce úrovně L2](ActorDefinition-actor-creator-lab-L2.html)     | Jedná se o aktéra úrovně L2, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
+| [Konzument úrovně L2](ActorDefinition-actor-consumer-lab-L2.html) | Tento aktér představuje systém úrovně L2, který přijatou nebo načtenou zprávu používá.                                                  |
+ |
+| [Tvůrce úrovně L3](ActorDefinition-actor-creator-lab-L3.html)     | Jedná se o aktéra úrovně L3, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
+| [Konzument  úrovně L3](ActorDefinition-actor-consumer-lab-L3.html) | Tento aktér představuje systém úrovně L3, který přijatou nebo načtenou zprávu používá.                                                  |
+
+
+
+### Seznam povinností

@@ -1,8 +1,10 @@
 Instance: CZ-LabResult-Observation-Example-Glucose
 InstanceOf: CZ_ObservationResultLaboratory
 Usage: #example
-Title: "Glukóza v plazmě"
-Description: "Příklad lab. výsledku numerický, hodnocení pomocí škály, předběžný (neuvolněný)"
+Title: "Serum glucose"
+Description: "Example of a lab result – numeric, scale-based evaluation, preliminary (unreleased)"
+
+* id = "8d6e1f2b-3a84-4c9d-bc2e-5f71a9d4e6c3"
 
 * status = #preliminary
 
@@ -11,16 +13,16 @@ Description: "Příklad lab. výsledku numerický, hodnocení pomocí škály, p
 //* category[specialty] = 
 
 * code.coding[0].system = $nclp
-* code.coding[0].code = #01897
-* code.coding[0].display = "Glukóza; látková koncentrace; plazma"
-* code.text = "Glukóza v plazmě"
+* code.coding[0].code = #12355
+* code.coding[0].display = "s_Glukóza"
+* code.text = "Glukóza v séru"
 
 * subject = Reference(Zyrgana)
 * performer[+] = Reference(practitionerRoleSejdlova)
 * specimen = Reference(CZ-LabResult-Specimen-Example)
 
-* effectiveDateTime = "2025-04-24T08:45:00+01:00"
-* issued = "2025-04-24T09:30:00+01:00"
+* effectiveDateTime = "2025-04-24T08:45:00+02:00"
+* issued = "2025-04-24T09:30:00+02:00"
 
 * valueQuantity.value = 5.2
 * valueQuantity.unit = "mmol/L"

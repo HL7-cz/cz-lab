@@ -1,8 +1,10 @@
 Instance: CZ-LabResult-Observation-Example-Urea
 InstanceOf: CZ_ObservationResultLaboratory
 Usage: #example
-Title: "Mocovina v séru"
-Description: "Příklad lab. výsledku numerický vč. nejistoty měření, hodnocení pomocí škály, ref. meze pro ženu věk 15-150 let, uvolněný"
+Title: "Serum urea"
+Description: "Example of a numeric lab result including measurement uncertainty, scale-based evaluation, reference ranges for a female aged 15–150 years, released"
+
+* id = "d1a7f3c8-0e5b-4b2a-8c91-6f4e2d7a9b35"
 
 * status = #final
 
@@ -12,7 +14,7 @@ Description: "Příklad lab. výsledku numerický vč. nejistoty měření, hodn
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03086
-* code.coding[0].display = "Mocovina; látková koncentrace; sérum/plazma"
+* code.coding[0].display = "s_Urea"
 * code.text = "Urea"
 
 * subject = Reference(Zyrgana)
@@ -24,8 +26,8 @@ Description: "Příklad lab. výsledku numerický vč. nejistoty měření, hodn
 * performer[+] = Reference(practitionerRoleZybradlo)
 * performer[=].extension[performerFunction].valueCodeableConcept = http://hl7.org/fhir/StructureDefinition/event-performerFunction#VRF "verifier"
 
-* effectiveDateTime = "2025-04-24T08:45:00+01:00"
-* issued = "2025-04-24T09:30:00+01:00"
+* effectiveDateTime = "2025-04-24T08:45:00+02:00"
+* issued = "2025-04-24T09:30:00+02:00"
 
 * valueQuantity.value = 8.3
 * valueQuantity.unit = "mmol/L"

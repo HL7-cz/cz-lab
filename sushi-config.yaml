@@ -32,6 +32,7 @@ dependencies:
 # hl7.fhir.eu.base.r4: current
   hl7.fhir.eu.laboratory: current
   hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.uv.extensions.r4: 5.2.0
 
   hl7.fhir.eu.base: 0.1.0-ballot
   hl7.fhir.cz.core: current
@@ -316,6 +317,17 @@ instanceOptions:
 #     - StructureDefinition/bee-sting
 #
 groups:
+  actors:
+    name:  Actors
+    description: Actors used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
+      - ActorDefinition/actor-creator-lab-L1
+      - ActorDefinition/actor-creator-lab-L2
+      - ActorDefinition/actor-creator-lab-L3
+      - ActorDefinition/actor-consumer-lab-L1
+      - ActorDefinition/actor-consumer-lab-L2
+      - ActorDefinition/actor-consumer-lab-L3
+
   czech-logical-model:
     name:  Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.

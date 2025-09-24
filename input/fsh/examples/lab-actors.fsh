@@ -2,7 +2,8 @@
 Instance: Zyrgana
 InstanceOf: CZ_PatientCore
 Usage: #example
-Description: "Fiktivní pacientka pro účel příkladu"
+Description: "Fictitious patient for the purpose of the example"
+* id = "c60b7c0e-0d8c-4e43-9f52-86d1dcf1a43c"
 
 //* contained[+] = RegisteringProviderExample
 * identifier[+]
