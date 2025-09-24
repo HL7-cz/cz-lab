@@ -30,6 +30,8 @@ Alias: $mkn-10 = https://terminology.uzis.cz/CodeSystem/Mkn10_5
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
 Alias: $mkn-10-list = https://terminology.ncez.mzcr.cz/ValueSet/mkn-10
+Alias: $nclp-vs = https://nclp.ncez.mzcr.cz/ValuSet/nclppol
+
 //----------- Profiles
 Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
 Alias: ips_lab_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips

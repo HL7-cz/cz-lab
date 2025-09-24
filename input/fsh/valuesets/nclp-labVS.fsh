@@ -8,4 +8,5 @@ Description: "Sada obsahuje všechny položky kódového systému NČLP, které 
 * ^status = #active
 * ^publisher = "https://ncez.mzcr.cz"
 * ^date = "2023-01-01T00:00:00.000+01:00"
+* ^url = $nclp-vs
 * include codes from system $nclp

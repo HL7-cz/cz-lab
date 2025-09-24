@@ -9,8 +9,8 @@ Description: "Example of a lab result not delivered due to a broken tube, with a
 * status = #final
 
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
-//* category[specialty] = 
+* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+//* category[specialty] =
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05272
@@ -19,7 +19,7 @@ Description: "Example of a lab result not delivered due to a broken tube, with a
 
 * subject = Reference(Zyrgana)
 * performer[+] = Reference(practitionerRoleSejdlova)
-* specimen = Reference(CZ-LabResult-Specimen-Damaged-Example)
+//* specimen = Reference(CZ-LabResult-Specimen-Damaged-Example)
 
 * effectiveDateTime = "2025-04-24T08:45:00+02:00"
 * issued = "2025-04-24T09:30:00+02:00"

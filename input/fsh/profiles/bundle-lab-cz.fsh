@@ -72,7 +72,7 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry[bodyStructure].resource only BodyStructureCz
 
 * entry contains encounter 0..*
-* entry[encounter].resource only Encounter
+* entry[encounter].resource only CZ_Encounter
 
 * entry contains location 0..*
 * entry[location].resource only CZ_LocationCore
