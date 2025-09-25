@@ -1,3 +1,4 @@
+{% include variable-definitions.md %}
 
 This page lists HL7 FHIR logical models used to represent the laboratory report.
 

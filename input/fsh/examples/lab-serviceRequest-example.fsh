@@ -21,9 +21,9 @@ Usage: #example
 
 Instance: CZ-LabResult-Coverage-Example
 InstanceOf: CZ_Coverage
-Description: "Příklad pojištění"
+Title: "Coverage example"
 Usage: #example
-Title: "Příklad pojištění zdravotní pojišťovnou"
+Description: "Example of insurance by a health insurance company"
 
 * status = #active
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rc"

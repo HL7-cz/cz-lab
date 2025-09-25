@@ -2,7 +2,7 @@ Profile: CZ_BundleLab
 Parent: Bundle
 Id: cz-bundle-lab
 Title: "Bundle - Laboratory Result Report"
-Description: "This profile represents the constraints applied to the Bundle resource by the Czech national laboratory report (HDR) FHIR Implementation Guide."
+Description: "This profile represents the constraints applied to the Bundle resource by the Czech national laboratory report FHIR Implementation Guide."
 * ^purpose = "Laboratory result report bundle is an electronic health record extract containing results of laboratory testing of specimens from a subject of care, comprising at least the required elements of the lab dataset."
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"

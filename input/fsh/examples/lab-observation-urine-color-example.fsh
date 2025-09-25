@@ -1,8 +1,10 @@
 Instance: CZ-LabResult-Observation-Example-Urine-Color
 InstanceOf: CZ_ObservationResultLaboratory
 Usage: #example
-Title: "Barva moči"
-Description: "Příklad lab. výsledku textový - volný text"
+Title: "Urine color"
+Description: "Example of a lab result – free text"
+
+* id = "5c3e9a12-4f7b-41d0-86a2-9b7e4d2f1c08"
 
 * status = #final
 
@@ -12,7 +14,7 @@ Description: "Příklad lab. výsledku textový - volný text"
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12339
-* code.coding[0].display = "Moč; barva; vizuální hodnocení"
+* code.coding[0].display = "Moč barva"
 * code.text = "Barva moči"
 
 * subject = Reference(Zyrgana)
@@ -25,8 +27,8 @@ Description: "Příklad lab. výsledku textový - volný text"
 
 * specimen = Reference(CZ-LabResult-Specimen-Urine-Example)
 
-* effectiveDateTime = "2025-04-24T09:00:00+01:00"
-* issued = "2025-04-24T10:00:00+01:00"
+* effectiveDateTime = "2025-04-24T09:00:00+02:00"
+* issued = "2025-04-24T10:00:00+02:00"
 
 * valueCodeableConcept.text = "žlutá"
 

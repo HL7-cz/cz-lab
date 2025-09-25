@@ -64,10 +64,41 @@ Alias: $DiagnosticReport-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinit
 Alias: $ServiceRequest-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab
 
 //----------- Extensions
-Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
-Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
-Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
-Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
+Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
+Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
+Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
+Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $allergy-intolerance-certainty-url = http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty
+Alias: $artifact-title-url                = http://hl7.org/fhir/StructureDefinition/artifact-description
+Alias: $artifact-description-url          = http://hl7.org/fhir/StructureDefinition/artifact-title
+Alias: $artifact-version-url              = http://hl7.org/fhir/StructureDefinition/artifact-version
+Alias: $data-absent-reason-url            = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $diagnostic-report-composition-url = http://hl7.org/fhir/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinition/event-basedOn|4.0.1
+Alias: $individual-genderIdentity         = http://hl7.org/fhir/StructureDefinition/individual-genderIdentity
+Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
+Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
+Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
+Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
+Alias: $obligation                        = http://hl7.org/fhir/StructureDefinition/obligation
+Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
+Alias: $cvDiagnosticReport-composition    = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
+Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
+Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
+Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
+Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
+Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
+Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
+Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
+
+//----------- Actors
+Alias: $creatorL1 = http://hl7.cz/fhir/cz-lab/actor-creator-lab-L1
+Alias: $consumerL1 = http://hl7.cz/fhir/cz-lab/actor-consumer-lab-L1
+Alias: $creatorL2 = http://hl7.cz/fhir/cz-lab/actor-creator-lab-L2
+Alias: $consumerL2 = http://hl7.cz/fhir/cz-lab/actor-consumer-lab-L2
+Alias: $creatorL3 = http://hl7.cz/fhir/cz-lab/actor-creator-lab-L3
+Alias: $consumerL3 = http://hl7.cz/fhir/cz-lab/actor-consumer-lab-L3

@@ -1,7 +1,7 @@
 Logical: LogCzAttachmentsCz
 Id: LogAttachmentsCz
 Title: "A.4 - Additional attachments"
-Description: """Imaging Report - Imaging Report additional attachments - A.4"""
+Description: """Laboratory Report - Laboratory Report additional attachments - A.4"""
 
 * insert SetFmmandStatusRule ( 1, draft )
 

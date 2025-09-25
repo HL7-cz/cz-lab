@@ -22,4 +22,4 @@ Description: "Czech profile for a specimen in a laboratory report. In some labor
 * container.identifier MS
 * container.type MS
 
-* request only Reference(CZ_ServiceRequestLab)
+//* request only Reference(CZ_ServiceRequestLab)

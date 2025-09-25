@@ -1,8 +1,10 @@
 Instance: CZ-LabResult-Observation-Example-Urine-Leukocytes
 InstanceOf: CZ_ObservationResultLaboratory
 Usage: #example
-Title: "Nitrity v moči"
-Description: "Příklad lab. výsledku textový - kódovaný"
+Title: "Urine nitrites"
+Description: "Example of a lab result – coded text"
+
+* id = "b4e2d7a9-63c1-44f8-b0a5-2e9d1c7a3f56"
 
 * status = #final
 
@@ -12,7 +14,7 @@ Description: "Příklad lab. výsledku textový - kódovaný"
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03399
-* code.coding[0].display = "Nitrity; moč"
+* code.coding[0].display = "U_nitrity"
 * code.text = "Nitrity v moči"
 
 * subject = Reference(Zyrgana)
@@ -25,8 +27,8 @@ Description: "Příklad lab. výsledku textový - kódovaný"
 
 * specimen = Reference(CZ-LabResult-Specimen-Urine-Example)
 
-* effectiveDateTime = "2025-04-24T09:00:00+01:00"
-* issued = "2025-04-24T10:00:00+01:00"
+* effectiveDateTime = "2025-04-24T09:00:00+02:00"
+* issued = "2025-04-24T10:00:00+02:00"
 
 * valueCodeableConcept = $sct#260385009 "Negative"
 
