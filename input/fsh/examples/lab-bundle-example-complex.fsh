@@ -119,7 +119,10 @@ Description: "Czech Lab Report - example of a bundle containing containing sever
 
 Instance: 5880b262-abcb-55a0-88a4-76ef4f97f744
 InstanceOf: CZ_CompositionLabReport
-Usage: #example
+Usage: #inline
+
+* id = "5880b262-abcb-55a0-88a4-76ef4f97f744"
+
 * status = #final
 * language = #cs-CZ
 * confidentiality = #N
@@ -190,7 +193,10 @@ Usage: #example
 
 Instance: 66fda6b2-1bb0-5187-9842-292ce06cf15f
 InstanceOf: CZ_DiagnosticReportLab
-Usage: #example
+Usage: #inline
+
+* id = "66fda6b2-1bb0-5187-9842-292ce06cf15f"
+
 * status = #final
 * code = $loinc#11502-2 "Laboratory report"
 * category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
@@ -254,7 +260,8 @@ Usage: #example
 
 Instance: 879657b8-f2d4-54da-ab1f-c363b4f092d5
 InstanceOf: CZ_PatientCore
-Usage: #example
+Usage: #inline
+* id = "879657b8-f2d4-54da-ab1f-c363b4f092d5"
 * identifier[0].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis"
 * identifier[0].value = "5408120025"
 * name[0].family = "Podmořský"
@@ -264,8 +271,9 @@ Usage: #example
 
 Instance: a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a
 InstanceOf: CZ_PractitionerRoleCore
-Usage: #example
+Usage: #inline
 Description: "Role MUDr. Milboženy Hrčálkové"
+* id = "a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a"
 * practitioner = Reference(urn:uuid:fa4f28b1-1234-4f78-9cda-dcf01f228acf)
 * organization = Reference(b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
 * code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
@@ -277,6 +285,7 @@ Instance: fa4f28b1-1234-4f78-9cda-dcf01f228acf
 InstanceOf: CZ_PractitionerCore
 Usage: #inline
 Description: "Virtuální lékařka Milbožena Hrčálková"
+* id = "fa4f28b1-1234-4f78-9cda-dcf01f228acf"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"
 * name.use = #usual
@@ -287,25 +296,29 @@ Description: "Virtuální lékařka Milbožena Hrčálková"
 
 Instance: b8ad152c-2c7d-54cb-a80f-5eff76fa6b32
 InstanceOf: CZ_OrganizationCore
-Usage: #example
+Usage: #inline
+* id = "b8ad152c-2c7d-54cb-a80f-5eff76fa6b32"
 * name = "Pracoviště laboratorních metod, Nemocnice"
 * address.text = "Berlínská 2268/9, Praha 6"
 
 Instance: e53c77f3-4c38-59d3-a9ff-5964a2600d42
 InstanceOf: CZ_SpecimenLab
-Usage: #example
+Usage: #inline
+* id = "e53c77f3-4c38-59d3-a9ff-5964a2600d42"
 * type = $sct#119364003 "Serum specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: b732db29-a256-541b-8f3b-a240152a89f3
 InstanceOf: CZ_SpecimenLab
-Usage: #example
+Usage: #inline
+* id = "b732db29-a256-541b-8f3b-a240152a89f3"
 * type = $sct#122575003 "Urine specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: 541dc2b2-6ccb-5afb-9512-b191de5ae31d
 InstanceOf: CZ_SpecimenLab
-Usage: #example
+Usage: #inline
+* id = "541dc2b2-6ccb-5afb-9512-b191de5ae31d"
 * type = $sct#122554006 "Whole blood specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
@@ -313,7 +326,8 @@ Usage: #example
 
 Instance: 933860e0-674b-505a-a582-b0bd90c38993
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "933860e0-674b-505a-a582-b0bd90c38993"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05272
@@ -332,7 +346,8 @@ Usage: #example
 
 Instance: 658cbb3e-987d-5dfc-8d02-9099ef3b3131
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "658cbb3e-987d-5dfc-8d02-9099ef3b3131"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05254
@@ -350,7 +365,8 @@ Usage: #example
 
 Instance: 8ac14b7c-dbed-5d19-8961-974bf4ca6919
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "8ac14b7c-dbed-5d19-8961-974bf4ca6919"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05187
@@ -368,7 +384,8 @@ Usage: #example
 
 Instance: f5d3739d-5fcd-5f41-aaad-4429db2b5a9b
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "f5d3739d-5fcd-5f41-aaad-4429db2b5a9b"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #08574
@@ -386,7 +403,8 @@ Usage: #example
 
 Instance: 14499fe4-6fcf-5b0d-b875-c3d90d573d05
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "14499fe4-6fcf-5b0d-b875-c3d90d573d05"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03078
@@ -404,7 +422,8 @@ Usage: #example
 
 Instance: 954baa05-0e22-5ef5-896e-b5546e5c6cc2
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "954baa05-0e22-5ef5-896e-b5546e5c6cc2"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #00507
@@ -422,7 +441,8 @@ Usage: #example
 
 Instance: 1cd8e13f-08c0-5736-96c9-33824275ccec
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "1cd8e13f-08c0-5736-96c9-33824275ccec"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01154
@@ -440,7 +460,8 @@ Usage: #example
 
 Instance: 1383c340-82db-520c-9a6b-54c246afbe18
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "1383c340-82db-520c-9a6b-54c246afbe18"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #00921
@@ -458,7 +479,8 @@ Usage: #example
 
 Instance: 73f295c8-55fa-5aa0-bf21-0f35c96aa6dd
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "73f295c8-55fa-5aa0-bf21-0f35c96aa6dd"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #00582
@@ -476,7 +498,8 @@ Usage: #example
 
 Instance: 3b5ec105-7c16-549d-be31-ebda584176d2
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "3b5ec105-7c16-549d-be31-ebda584176d2"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #00543
@@ -494,7 +517,8 @@ Usage: #example
 
 Instance: 70e5f1ae-0bb3-5256-b3ad-7f051101b521
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "70e5f1ae-0bb3-5256-b3ad-7f051101b521"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01961
@@ -512,7 +536,8 @@ Usage: #example
 
 Instance: 0ef8c9cd-ed96-5502-bf48-bfded9a06e20
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "0ef8c9cd-ed96-5502-bf48-bfded9a06e20"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #17341
@@ -530,7 +555,8 @@ Usage: #example
 
 Instance: 37047047-3d77-55ad-85d4-454f7d99ec6d
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "37047047-3d77-55ad-85d4-454f7d99ec6d"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #17339
@@ -548,7 +574,8 @@ Usage: #example
 
 Instance: 29f445b7-8195-5f19-a0a5-fd0e81a6dd47
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "29f445b7-8195-5f19-a0a5-fd0e81a6dd47"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03410
@@ -566,7 +593,8 @@ Usage: #example
 
 Instance: 61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05143
@@ -584,7 +612,8 @@ Usage: #example
 
 Instance: c6607469-575d-5035-bbba-4db320a035bb
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "c6607469-575d-5035-bbba-4db320a035bb"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03355
@@ -602,7 +631,8 @@ Usage: #example
 
 Instance: 48ad3dbf-109d-58e6-9484-724f96ac085b
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "48ad3dbf-109d-58e6-9484-724f96ac085b"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03384
@@ -620,7 +650,8 @@ Usage: #example
 
 Instance: 4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #14010
@@ -638,7 +669,8 @@ Usage: #example
 
 Instance: 20e21656-736f-533d-b284-631ac2d6a499
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "20e21656-736f-533d-b284-631ac2d6a499"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #15172
@@ -656,7 +688,8 @@ Usage: #example
 
 Instance: cfd544a2-674b-529b-b66e-cea6aa2f0025
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "cfd544a2-674b-529b-b66e-cea6aa2f0025"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03297
@@ -674,7 +707,8 @@ Usage: #example
 
 Instance: ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #09191
@@ -695,7 +729,8 @@ Usage: #example
 // LH Observations
 Instance: e89faf39-5f38-539a-ab6d-519416e51f41
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "e89faf39-5f38-539a-ab6d-519416e51f41"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #13808
@@ -712,7 +747,8 @@ Usage: #example
 
 Instance: a9947032-ca45-5ad4-bcd4-10d1c51f4d1f
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "a9947032-ca45-5ad4-bcd4-10d1c51f4d1f"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01675
@@ -729,7 +765,8 @@ Usage: #example
 
 Instance: 688d4582-802b-53cb-be6d-b7f9c4e82162
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "688d4582-802b-53cb-be6d-b7f9c4e82162"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01991
@@ -746,7 +783,8 @@ Usage: #example
 
 Instance: bafee946-7f25-5eb9-b8fa-a6901becdfad
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "bafee946-7f25-5eb9-b8fa-a6901becdfad"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02099
@@ -763,7 +801,8 @@ Usage: #example
 
 Instance: edfc7297-2415-59ed-bad1-ca32112fc51e
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "edfc7297-2415-59ed-bad1-ca32112fc51e"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02419
@@ -780,7 +819,8 @@ Usage: #example
 
 Instance: b1fac24e-2775-53c8-9af5-a7ed8974c3ff
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "b1fac24e-2775-53c8-9af5-a7ed8974c3ff"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12271
@@ -797,7 +837,8 @@ Usage: #example
 
 Instance: 30d526f4-5577-5fa2-b2fa-d55288ac29e2
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "30d526f4-5577-5fa2-b2fa-d55288ac29e2"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12273
@@ -814,7 +855,8 @@ Usage: #example
 
 Instance: 491c3724-0e2e-5f7e-8cd5-451227551485
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "491c3724-0e2e-5f7e-8cd5-451227551485"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #04769
@@ -831,7 +873,8 @@ Usage: #example
 
 Instance: b8dffd1f-39fe-5c1d-9e17-71b999c33799
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "b8dffd1f-39fe-5c1d-9e17-71b999c33799"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02688
@@ -848,7 +891,8 @@ Usage: #example
 
 Instance: 46199dd5-329c-5291-a8ed-4d19b5362db9
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "46199dd5-329c-5291-a8ed-4d19b5362db9"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #04726
@@ -865,7 +909,8 @@ Usage: #example
 
 Instance: 8723ae16-1ed7-5415-b8aa-17ef742ed36a
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "8723ae16-1ed7-5415-b8aa-17ef742ed36a"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12278
@@ -882,7 +927,8 @@ Usage: #example
 
 Instance: f850d703-803a-5633-95c2-2de1d0f80c31
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "f850d703-803a-5633-95c2-2de1d0f80c31"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #16263
@@ -899,7 +945,8 @@ Usage: #example
 
 Instance: c089c0d9-28d3-5645-8f25-5853840b2e9a
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "c089c0d9-28d3-5645-8f25-5853840b2e9a"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #18895
@@ -916,7 +963,8 @@ Usage: #example
 
 Instance: aab312ea-6305-51ca-8d2e-5457f26aab23
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "aab312ea-6305-51ca-8d2e-5457f26aab23"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12369
@@ -933,7 +981,8 @@ Usage: #example
 
 Instance: 5d3066ad-d41f-5a48-8793-a95362034e82
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "5d3066ad-d41f-5a48-8793-a95362034e82"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12483
@@ -950,7 +999,8 @@ Usage: #example
 
 Instance: a92d765d-afc7-5e56-b1ab-5d299a448a98
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "a92d765d-afc7-5e56-b1ab-5d299a448a98"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12365
@@ -967,7 +1017,8 @@ Usage: #example
 
 Instance: c6a12f2a-416e-57fb-9006-e5a544929fcd
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "c6a12f2a-416e-57fb-9006-e5a544929fcd"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12471
@@ -984,7 +1035,8 @@ Usage: #example
 
 Instance: 03f3c097-232e-5682-86ad-8f0b91e7a062
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "03f3c097-232e-5682-86ad-8f0b91e7a062"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12367
@@ -1001,7 +1053,8 @@ Usage: #example
 
 Instance: 4367f7e9-1c83-59f2-9aa5-70861cc380ca
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "4367f7e9-1c83-59f2-9aa5-70861cc380ca"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12478
@@ -1018,7 +1071,8 @@ Usage: #example
 
 Instance: 522a2991-a37c-59d5-a836-2435df5be6e0
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "522a2991-a37c-59d5-a836-2435df5be6e0"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12348
@@ -1035,7 +1089,8 @@ Usage: #example
 
 Instance: d0e5d40b-cfb4-5671-9df5-72d67c601e20
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "d0e5d40b-cfb4-5671-9df5-72d67c601e20"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12460
@@ -1052,7 +1107,8 @@ Usage: #example
 
 Instance: af240b68-3d61-51ce-8701-ddbef6b9c445
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "af240b68-3d61-51ce-8701-ddbef6b9c445"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12347
@@ -1069,7 +1125,8 @@ Usage: #example
 
 Instance: dc29587b-6bda-51c0-83e5-71d5388918f7
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "dc29587b-6bda-51c0-83e5-71d5388918f7"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12449
@@ -1086,7 +1143,8 @@ Usage: #example
 
 Instance: 09484c96-2ef9-500a-a890-db95f79b5cf9
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "09484c96-2ef9-500a-a890-db95f79b5cf9"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #18027
@@ -1103,7 +1161,8 @@ Usage: #example
 
 Instance: 99568880-9ab9-58a9-b680-2b0f79d605e5
 InstanceOf: CZ_ObservationResultLaboratory
-Usage: #example
+Usage: #inline
+* id = "99568880-9ab9-58a9-b680-2b0f79d605e5"
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #18029
@@ -1117,43 +1176,3 @@ Usage: #example
 * referenceRange.low.value = 0.000
 * referenceRange.high.value = 0.005
 * performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
-
-
-
-
-// =========================================================================================================
-// COMPOSITION
-// =========================================================================================================
-
-
-
-
-// =========================================================================================================
-// DIAGNOSTIC REPORT
-// =========================================================================================================
-
-
-
-
-
-// =========================================================================================================
-// ACTORS
-// =========================================================================================================
-
-
-
-
-
-
-// =========================================================================================================
-// SERVICE REQUESTS
-// =========================================================================================================
-
-
-
-
-
-
-// =========================================================================================================
-// SPECIMENS
-// =========================================================================================================

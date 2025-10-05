@@ -11,7 +11,7 @@ Description:  """Results data elements. Section A5 of the eHN guideline."""
 * narrative.notes 0..1 Narrative "A.2.4.1.2 Comments, interpretation and recommendations" """Comments, such as a textual interpretation or advice accompanying the result report, for example."""		 		
 * observation 0..1 Base "A.2.4.2 Observation details" """A.2.4.2 Observation details (report could consist of multiple observations) """				
 * observation.dateTime 1..* CodeableConcept "A.2.4.2.1 Observation date" """Date and time of the observation - Preferred system(s): ISO 8601"""				
-* observation.code 1..* CodeableConcept "A.2.4.2.32 Observation code" """Code representing the observation using the agreed code systems.
+* observation.code 1..* CodeableConcept "A.2.4.2.2 Observation code" """Code representing the observation using the agreed code systems.
 - Preferred system(s): NČLP"""				
 * observation.code.name 1..* string "A.2.4.2.3 Observation name" """Full name of the observation according to the used test coding standard."""				
 //MK* observation.code.originalName 0..* string "A.2.4.2.3.2 Observation original name" """Original (conventional) name of the observation as used by the laboratory"""				
@@ -19,8 +19,8 @@ Description:  """Results data elements. Section A5 of the eHN guideline."""
 * observation.method 0..1 CodeableConcept "A.2.4.2.4 Observation method" """Observation method (measurement principle) to obtain the result.
 - Preferred system(s): SNOMED CT"""		
 * observation.device 0..1 CodeableConcept "A.2.4.2.5 Observation device" """Device (analyser), laboratory test kit and used calibrator information (identifier, type, name, model, manufacturer)
-- Preferované systémy: SNOMED CT
-- Preferované systémy: EMDN"""				
+- Preferred system(s): SNOMED CT
+- Preferred system(s): EMDN"""				
 * observation.testKit 0..1 string "A.2.4.2.6 Test kit" """Information about the test kit used – ID, type, name, manufacturer"""		
 * observation.calibrator 0..1 string "A.2.4.2.7 Calibrator" """Information about the calibrator used (unless it is a basic unit of measurement, e.g. IU) - ID, type, name, manufacturer"""
 * observation.order 0..1 Base "A.2.4.2.8 Order" """Identifies order and order placer this observation belongs to."""				
