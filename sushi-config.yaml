@@ -328,6 +328,20 @@ groups:
       - ActorDefinition/actor-consumer-lab-L2
       - ActorDefinition/actor-consumer-lab-L3
 
+  obligations:
+    name:  Obligations
+    description: Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
+      - StructureDefinition/cz-bundle-obl-lab
+      - StructureDefinition/cz-composition-obl-lab
+      - StructureDefinition/cz-diagnosticReport-obl-lab
+      - StructureDefinition/cz-documentReference-obl-lab
+      - StructureDefinition/cz-encounter-obl-lab
+      - StructureDefinition/cz-organization-obl-lab
+      - StructureDefinition/cz-patientAnimal-obl-lab
+      - StructureDefinition/cz-patient-obl-lab
+      - StructureDefinition/cz-specimen-obl-lab
+
   czech-logical-model:
     name:  Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.

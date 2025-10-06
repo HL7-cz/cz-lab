@@ -1,5 +1,5 @@
 Profile: CZ_SpecimenLab
-Parent: CZ_Specimen
+Parent: CZ_Specimen           // SpecimenEu
 Id: cz-specimen-lab
 Title: "Specimen Laboratory (CZ)"
 Description: "Czech profile for a specimen in a laboratory report. In some laboratory reports, specimen information is allowed to be minimal as many informations concerning the specimen are implied by the observations done."
@@ -22,4 +22,4 @@ Description: "Czech profile for a specimen in a laboratory report. In some labor
 * container.identifier MS
 * container.type MS
 
-//* request only Reference(CZ_ServiceRequestLab)
+* request only Reference(CZ_ServiceRequestLab)
