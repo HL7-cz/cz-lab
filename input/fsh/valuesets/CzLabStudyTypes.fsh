@@ -2,12 +2,14 @@ ValueSet: CZ_LabStudyTypesVS
 Id: cz-lab-study-types-VS
 Title: "Laboratory Study Types (CZ)"
 Description: "Typy laboratorních vyšetření"
-* ^language = #cs-CZ
-//* ^identifier.system = "urn:ietf:rfc:3986"
-// add value * ^identifier.value = "urn:oid:1.2.203.24341.11.1.1"
+
 * ^version = "1.0.0"
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-08-11"
+* ^publisher = "HL7 Czech Republic"
+* ^language = #cs-CZ
+
 * $loinc#18716-1 "Alergologická studie"  // není v Evropském číselníku
 * $loinc#18717-9 "Transfúzní studie"
 * $loinc#18719-5 "Biochemická studie"
@@ -16,7 +18,3 @@ Description: "Typy laboratorních vyšetření"
 * $loinc#18725-2 "Mikrobiologická studie"
 * $loinc#18728-6 "Toxikologická studie"
 * $loinc#26436-6 "Laboratorní studie"
-
-
-
-

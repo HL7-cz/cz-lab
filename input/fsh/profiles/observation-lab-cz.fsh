@@ -119,6 +119,9 @@ That's why it is important to explicitly include informaiton about measurement m
   * code from CZ_NclpLabpolVS (preferred)
   * insert ObservationResultsValueCz
 
+* extension contains AccreditationCz named accreditation 0..1
+* extension[accreditation] ^short = "Information on the laboratory’s accreditation for the respective test"
+
 /*
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding.code"

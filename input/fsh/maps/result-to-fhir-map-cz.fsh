@@ -170,16 +170,10 @@ If the person responsible for validation:  performer.extension:performerFunction
 					
 * group[=].element[+].code = #Result.observation.accreditationStatus					
 * group[=].element[=].display = "A.2.4.2.14 Accreditation status"					
-* group[=].element[=].target.code = #Observation.performer.qualification					
+* group[=].element[=].target.code = #Observation.extension[accreditation]					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "performer ofType PractitionerRole"					
-* group[=].element[+].code = #Result.observation.accreditationStatus					
-* group[=].element[=].display = "A.2.4.2.14 Accreditation status"					
-* group[=].element[=].target.code = #Observation.performer.organization.qualification					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "performer ofType Organization"					
+* group[=].element[=].target.equivalence = #equivalent										
+				
 //---END					
 //---END					
 //---END					

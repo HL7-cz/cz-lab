@@ -1,5 +1,5 @@
 Profile: CZ_CompositionLabReport
-Parent: Composition
+Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: cz-composition-lab-report
 Title: "Composition: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report in the scope of the Czech national interoperability project."
@@ -18,6 +18,7 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 // what to do with the composition text ?
 // should we make it 0.. ?
 // or have text repeated here and in the sections ?
+
 
 // TODO
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
