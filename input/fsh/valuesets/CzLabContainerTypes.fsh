@@ -1,13 +1,16 @@
 ValueSet: CZ_LabContainerTypesVS
 Id: cz-lab-container-types-VS
 Title: "Laboratory Container Types (CZ)"
-Description: "Typy odběrových nádob"
+Description: "Laboratory Container Types ValueSet"
+
 * ^language = #cs-CZ
 //* ^identifier.system = "urn:ietf:rfc:3986"
 // add value * ^identifier.value = "urn:oid:1.2.203.24341.11.1.1"
 * ^version = "1.0.0"
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-08-11"
+
 * $sct#702279008 "Evacuated blood collection tube, gel separator"
 * $sct#702283008 "Non-evacuated blood collection tube with gel separator"
 * $sct#733479001 "Adhesive slide"
