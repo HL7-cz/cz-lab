@@ -1,7 +1,7 @@
 Instance: CZ-LabReport-Bundle-Example
 InstanceOf: CZ_BundleLab
 Usage: #example
-Title: "CZ Lab Report Bundle Example"
+Title: "Basic Lab Report Bundle Example"
 Description: "Czech Lab Report - basic example of a bundle containing lab observation(s)"
 
 * identifier.system = "http://hospital.example.org/lab-results"
@@ -92,10 +92,10 @@ Title: "Lab Result Composition Example"
 Description: "An example of a laboratory report Composition for a glucose result"
 
 * id = "05f95a04-cb07-4bd2-8833-c40521f1182c"
-* language = #cs-CZ
+* language = #cs
 * status = #final
-* type = $loinc#11502-2 "Laboratory report"
-* category = $loinc#26436-6 "Laboratory studies (set)" 
+* type = $loinc#11502-2 //"Laboratory report"
+* category = $loinc#26436-6 //"Laboratory studies (set)" 
 * title = "Laboratorní nález"
 * date = "2025-04-25T10:00:00+01:00"
 * confidentiality = #N
@@ -108,7 +108,7 @@ Description: "An example of a laboratory report Composition for a glucose result
 // Sekce: Moč
 * section[lab-no-subsections]
   * title = "Moč"
-  * code = $loinc#18719-5 "Chemistry studies (set)"
+  * code = $loinc#18719-5 //"Chemistry studies (set)"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Výsledky vyšetření moči</div>"
   * entry[+] = Reference(urn:uuid:172bc194-10b5-4e82-a9c3-2936b3b2523e) // spec. hmotnost
@@ -117,10 +117,10 @@ Description: "An example of a laboratory report Composition for a glucose result
 // Sekce: Biochemie s podsekcemi
 * section[lab-subsections]
   * title = "Biochemie"
-  * code = $loinc#18719-5 "Chemistry studies (set)"
+  * code = $loinc#18719-5 //"Chemistry studies (set)"
   * section[+]
     * title = "Základní vyšetření sérum/plazma"
-    * code = $loinc#18719-5 "Chemistry studies (set)"
+    * code = $loinc#18719-5 //"Chemistry studies (set)"
     * text.status = #generated
     * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Základní vyšetření sérum/plazma</div>"
     * entry[+] = Reference(urn:uuid:ad631612-fb27-4a7c-930e-73e22aff18f1) // sodik
@@ -128,14 +128,14 @@ Description: "An example of a laboratory report Composition for a glucose result
     * entry[+] = Reference(urn:uuid:5e058858-c126-4f0e-9202-ece18d3c9c3e) // chloridy
   * section[+]
     * title = "Markery zánětu"
-    * code = $loinc#18719-5 "Chemistry studies (set)"
+    * code = $loinc#18719-5 //"Chemistry studies (set)"
     * text.status = #generated
     * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Markery zánětu</div>"
     * entry[+] = Reference(urn:uuid:e2d39425-bc9b-4fcd-88fb-3499d14d8670) // CRP
     * entry[+] = Reference(urn:uuid:f53d66a1-c9c4-4b58-b04b-3c86a2ec0c16) // prokalcitonin
   * section[+]
     * title = "Serologická vyšetření"
-    * code = $loinc#18719-5 "Chemistry studies (set)"
+    * code = $loinc#18719-5 //"Chemistry studies (set)"
     * text.status = #generated
     * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Serologická vyšetření</div>"
     * entry[+] = Reference(urn:uuid:b0f7fc5d-d204-4e1c-b72f-83736e73efa4) // anti-HAV-IgM
@@ -145,7 +145,7 @@ Description: "An example of a laboratory report Composition for a glucose result
 // Sekce: Hematologie
 * section[lab-no-subsections]
   * title = "Hematologie"
-  * code = $loinc#18723-7 "Hematology studies (set)"
+  * code = $loinc#18723-7 //"Hematology studies (set)"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Výsledky krevního obrazu</div>"
   * entry[+] = Reference(urn:uuid:a6c9f96b-23ea-4644-aadc-b11b8d3a17e2) // leukocyty
@@ -165,8 +165,8 @@ Description: "Example of DiagnosticReport for lab result"
 * id = "41ae1cd0-7f48-4d86-9643-21442d8e418e"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:05f95a04-cb07-4bd2-8833-c40521f1182c)
 * status = #final
-* code = $loinc#11502-2 "Laboratory report"
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
+* code = $loinc#11502-2 //"Laboratory report"
+* category[studyType] = $loinc#26436-6 //"Laboratory studies (set)" 
 
 * effectiveDateTime = "2025-04-24T08:45:00+01:00"
 * issued = "2025-04-24T09:30:00+01:00"
@@ -375,7 +375,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * receivedTime = "2025-04-24T09:30:00+02:00"
 * collection.collectedDateTime = "2025-04-24T08:00:00+02:00"
-* container.type = $sct#706049000 "Blood collection tube"
+//* container.type = $sct# //"Blood collection tube"
 
 
 Instance: Specimen-Krev-Hematologie
@@ -388,7 +388,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * receivedTime = "2025-04-24T09:30:00+02:00"
 * collection.collectedDateTime = "2025-04-24T08:00:00+02:00"
-* container.type = $sct#125141000146109 "EDTA solution (substance)"
+//* container.type = $sct# //"EDTA solution (substance)"
 
 
 Instance: Specimen-Moc
@@ -401,7 +401,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * receivedTime = "2025-04-24T09:30:00+02:00"
 * collection.collectedDateTime = "2025-04-24T08:15:00+02:00"
-* container.type = $sct#702224000 "Midstream urine specimen container"
+//* container.type = $sct# //"Midstream urine specimen container"
 
 
 // =========================================================================================================
@@ -416,6 +416,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * effectiveDateTime = "2025-04-24T08:15:00+02:00"
 * code = $nclp#05143
+* code.text = "Specifická hustota"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:04bb3e5b-83fb-41a5-b260-c91cdba5df80)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -429,6 +430,7 @@ Usage: #inline
 * status = #final
 * effectiveDateTime = "2025-04-24T08:15:00+02:00"
 * code = $nclp#03410
+* code.text = "pH"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:04bb3e5b-83fb-41a5-b260-c91cdba5df80)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -449,6 +451,7 @@ Usage: #inline
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
 * code = $nclp#05272
+* code.text = "Sodík"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -465,6 +468,7 @@ Usage: #inline
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
 * code = $nclp#05254
+* code.text = "Draslík"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -481,6 +485,7 @@ Usage: #inline
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
 * code = $nclp#05187
+* code.text = "Chloridy"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -498,7 +503,8 @@ Usage: #inline
 * id = "e2d39425-bc9b-4fcd-88fb-3499d14d8670"
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
-* code = $nclp#01522 "C-reaktivní protein"
+* code = $nclp#01522 //"C-reaktivní protein"
+* code.text = "C-reaktivní protein"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -514,7 +520,8 @@ Usage: #inline
 * id = "f53d66a1-c9c4-4b58-b04b-3c86a2ec0c16"
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
-* code = $nclp#12233 "Prokalcitonin"
+* code = $nclp#12233 //"Prokalcitonin"
+* code.text = "Prokalcitonin"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -534,6 +541,7 @@ Usage: #inline
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
 * code = $nclp#19353
+* code.text = "Anti-HAV IgM"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -547,6 +555,7 @@ Usage: #inline
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
 * code = $nclp#16517
+* code.text = "Anti-HAV IgG"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -560,6 +569,7 @@ Usage: #inline
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
 * code = $nclp#00384
+* code.text = "anti-HCV celkové"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
@@ -574,7 +584,8 @@ Usage: #inline
 * id = "a6c9f96b-23ea-4644-aadc-b11b8d3a17e2"
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
-* code = $nclp#13808 "Leukocyty"
+* code = $nclp#13808 //"Leukocyty"
+* code.text = "Leukocyty"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:b7a2f9d3-760f-4a89-bbbf-12199808f2e5)
 * performer = Reference(urn:uuid:cc8e6b12-2b99-48cf-9c3c-3c8d74805821)
@@ -590,7 +601,8 @@ Usage: #inline
 * id = "c4a42d64-5e43-449a-9460-3fd15cbbeff1"
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
-* code = $nclp#01675 "Erytrocyty"
+* code = $nclp#01675 //"Erytrocyty"
+* code.text = "Erytrocyty"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:b7a2f9d3-760f-4a89-bbbf-12199808f2e5)
 * performer = Reference(urn:uuid:cc8e6b12-2b99-48cf-9c3c-3c8d74805821)
@@ -606,7 +618,8 @@ Usage: #inline
 * id = "9b4c7d7f-8495-42bc-877f-b9864317ed38"
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
-* code = $nclp#01991 "Hemoglobin"
+* code = $nclp#01991 //"Hemoglobin"
+* code.text = "Hemoglobin"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:b7a2f9d3-760f-4a89-bbbf-12199808f2e5)
 * performer = Reference(urn:uuid:cc8e6b12-2b99-48cf-9c3c-3c8d74805821)

@@ -18,7 +18,7 @@ Description: "This profile defines obligations for a practitioner in FHIR for th
 //* telecom insert OblConsumer(#SHOULD:display,L1)
 //* address insert OblConsumer(#SHOULD:display,L1)
 
-/*
+
 // L2
 * identifier[KRZP] insert OblCreator(#SHALL:populate-if-known,L2)
 * name insert OblCreator(#SHALL:able-to-populate,L2)
@@ -30,7 +30,7 @@ Description: "This profile defines obligations for a practitioner in FHIR for th
 * name insert OblConsumer(#SHALL:display,L2)
 * telecom insert OblConsumer(#SHOULD:display,L2)
 * address insert OblConsumer(#SHOULD:display,L2)
-
+/*
 // L3
 * identifier[KRZP] insert OblCreator(#SHALL:populate-if-known,L3)
 * name insert OblCreator(#SHALL:able-to-populate,L3)

@@ -20,7 +20,7 @@ Description: "This profile defines obligations for an organization in FHIR for t
 //* address insert OblConsumer(#SHALL:display,L1)
 //* extension[logo] insert OblConsumer(#SHALL:display,L1)
 
-/*
+
 // L2 Creator Obligations ============>
 * identifier[KRPZS] insert OblCreator(#SHALL:populate-if-known,L2)
 * identifier[KP] insert OblCreator(#SHALL:populate-if-known,L2)
@@ -34,7 +34,7 @@ Description: "This profile defines obligations for an organization in FHIR for t
 * name insert OblConsumer(#SHALL:display,L2) 
 * address insert OblConsumer(#SHALL:display,L2)
 * extension[logo] insert OblConsumer(#SHALL:display,L2)
-
+/*
 // L3 Creator Obligations ============>
 * identifier[KRPZS] insert OblCreator(#SHALL:populate-if-known,L3)
 * identifier[KP] insert OblCreator(#SHALL:populate-if-known,L2)

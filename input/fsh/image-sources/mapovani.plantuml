@@ -1,0 +1,51 @@
+@startuml
+left to right direction
+scale 0.85
+
+' bezpečné skinparamy
+skinparam dpi 180
+skinparam DefaultFontName "Segoe UI"
+skinparam DefaultFontSize 11
+skinparam ArrowThickness 1.1
+skinparam ArrowColor #3A74E3
+skinparam BackgroundColor transparent
+skinparam Shadowing false
+skinparam PackageStyle rectangle
+skinparam PackageBorderColor #B8C0CC
+
+
+
+package "FHIR Bundle (document)" as B {
+  [Composition]      as F_COMP
+  [DiagnosticReport] as F_DREP
+  [Observation]      as F_OBS
+  [Specimen]         as F_SPC
+  [ServiceRequest]   as F_REQ
+  [Patient]          as F_PAT
+  [Organization]     as F_ORG
+  [Practitioner]     as F_PRAC
+}
+
+' mapování
+L_PAC  -[#3A74E3]-> F_PAT
+L_POJ  -[#3A74E3]-> F_PAT
+L_REC  -[#3A74E3]-> F_COMP : infoRecipient
+L_AUT  -[#3A74E3]-> F_COMP : author/attester
+L_META -[#3A74E3]-> F_COMP : id/meta
+L_REQ  -[#3A74E3]-> F_REQ
+L_SPC  -[#3A74E3]-> F_SPC
+L_OBS  -[#3A74E3]-> F_OBS
+L_VIS  -[#3A74E3]-> F_DREP : presentedForm
+L_ATT  -[#3A74E3]-> F_DREP : media
+
+' vazby uvnitř FHIRu
+F_REQ  ..[#888888]-> F_OBS : basedOn
+F_OBS  ..[#888888]-> F_SPC : specimen
+F_DREP ..[#888888]-> F_OBS : result[*]
+F_DREP ..[#888888]-> F_SPC : specimen[*]
+F_COMP ..[#888888]-> F_PAT : subject
+F_COMP ..[#888888]-> F_REQ : basedOn
+F_COMP ..[#888888]-> F_ORG : author
+F_COMP ..[#888888]-> F_PRAC: attester
+F_COMP ..[#888888]-> F_DREP: section.entry
+@enduml

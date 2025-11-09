@@ -1,0 +1,79 @@
+@startmindmap
+!theme plain
+skinparam dpi 180
+skinparam BackgroundColor transparent
+skinparam Shadowing false
+skinparam DefaultFontName "Segoe UI"
+
+' 💡 Kompaktnější rozložení
+skinparam NodeMargin 4
+skinparam LineThickness 0.5
+skinparam FontSize 13
+skinparam ArrowColor #888888
+skinparam Rectangle {
+  Padding 2
+}
+skinparam HorizontalSpacing 6
+skinparam VerticalSpacing 8
+
+* <b>Laboratorní zpráva</b>
+
+' --- HLAVIČKA (vlevo) ---
+left side
+**[#cfe8ff] <b>Hlavička dokumentu</b>
+***[#cfe8ff] <b>Identifikace pacienta</b>
+***[#cfe8ff] <b>Kontaktní informace pacienta</b>
+***[#cfe8ff] <b>Zdravotní pojištění</b>
+***[#cfe8ff] <b>Příjemce dokumentu</b>
+***[#cfe8ff] <b>Autor dokumentu</b>
+****_ Autor
+****_ Datum a čas uložení
+***[#cfe8ff] <b>Ověřil</b>
+****_ Ověřovatel
+****_ Datum a čas ověření
+***[#cfe8ff] <b>Zodpovídá</b>
+****_ Zodpovědná osoba
+****_ Datum a čas autorizace
+***[#cfe8ff] <b>Metadata dokumentu</b>
+****_ ID, Název, Kategorie
+****_ Stav, Datum vytvoření, Verze
+****_ Důvěrnost, Jazyk
+****_ Správce, Digitální podpis
+
+
+' --- TĚLO (vpravo) ---
+right side
+**[#dfffe0] <b>Tělo dokumentu</b>
+***[#dfffe0] <b>Informace o žádance (objednávce)</b>
+****_ ID žádanky (objednávky)
+****_ Datum a čas žádosti
+****_ Identifikace žadatele (osoby)
+****_ Kontaktní údaje žadatele
+****_ Organizace žadatele (objednatele)
+***[#dfffe0] <b>Důvod objednávky</b>
+***[#dfffe0] <b>Informace o vzorku</b>
+****_ ID vzorku
+****_ Biologický druh
+****_ Materiál
+****_ Doba sběru
+****_ Anatomické umístění, Morfologie, Zdroj materiálu
+****_ Metoda sběru
+****_ Datum přijetí
+***[#dfffe0] <b>Datové elementy výsledku vyšetření</b>
+****_ Datum a čas vyšetření
+****_ Kód a název vyšetření
+****_ Metoda vyšetření
+****_ Měřící systém, Testovací souprava
+****_ Kalibrátor
+****_ Provedl
+****_ Vydal
+****_ Výsledek měření
+****_ Interpretace
+****_ Popis výsledku
+
+
+' --- EXTRA BLOK (mimo Tělo, třetí barva) ---
+**[#fff3bf] <b>Vizuální podoba dokumentu</b>
+**[#fff3bf] <b>Přílohy</b>
+
+@endmindmap
