@@ -1,121 +1,124 @@
 Instance: CZ-LabReport-Bundle-Example-Complex
 InstanceOf: CZ_BundleLab
 Usage: #example
-Title: "CZ Lab Report Bundle Example"
+Title: "Complex Report Bundle Example"
 Description: "Czech Lab Report - example of a bundle containing containing several laboratory results as would occur in a real-life report"
 
 * identifier.system = "http://hospital.example.org/lab-results"
 * identifier.value = "LR2345678"
 * type = #document
 * timestamp = "2019-10-17T09:53:00+01:00"
-* entry[+].fullUrl = "urn:uuid:5880b262-abcb-55a0-88a4-76ef4f97f744"
-* entry[=].resource = 5880b262-abcb-55a0-88a4-76ef4f97f744
-* entry[+].fullUrl = "urn:uuid:66fda6b2-1bb0-5187-9842-292ce06cf15f"
-* entry[=].resource = 66fda6b2-1bb0-5187-9842-292ce06cf15f
-* entry[+].fullUrl = "urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5"
-* entry[=].resource = 879657b8-f2d4-54da-ab1f-c363b4f092d5
-* entry[+].fullUrl = "urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32"
-* entry[=].resource = b8ad152c-2c7d-54cb-a80f-5eff76fa6b32
-* entry[+].fullUrl = "urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42"
-* entry[=].resource = e53c77f3-4c38-59d3-a9ff-5964a2600d42
-* entry[+].fullUrl = "urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3"
-* entry[=].resource = b732db29-a256-541b-8f3b-a240152a89f3
-* entry[+].fullUrl = "urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d"
-* entry[=].resource = 541dc2b2-6ccb-5afb-9512-b191de5ae31d
-* entry[+].fullUrl = "urn:uuid:933860e0-674b-505a-a582-b0bd90c38993"
-* entry[=].resource = 933860e0-674b-505a-a582-b0bd90c38993
-* entry[+].fullUrl = "urn:uuid:658cbb3e-987d-5dfc-8d02-9099ef3b3131"
-* entry[=].resource = 658cbb3e-987d-5dfc-8d02-9099ef3b3131
-* entry[+].fullUrl = "urn:uuid:8ac14b7c-dbed-5d19-8961-974bf4ca6919"
-* entry[=].resource = 8ac14b7c-dbed-5d19-8961-974bf4ca6919
-* entry[+].fullUrl = "urn:uuid:f5d3739d-5fcd-5f41-aaad-4429db2b5a9b"
-* entry[=].resource = f5d3739d-5fcd-5f41-aaad-4429db2b5a9b
-* entry[+].fullUrl = "urn:uuid:14499fe4-6fcf-5b0d-b875-c3d90d573d05"
-* entry[=].resource = 14499fe4-6fcf-5b0d-b875-c3d90d573d05
-* entry[+].fullUrl = "urn:uuid:954baa05-0e22-5ef5-896e-b5546e5c6cc2"
-* entry[=].resource = 954baa05-0e22-5ef5-896e-b5546e5c6cc2
-* entry[+].fullUrl = "urn:uuid:1cd8e13f-08c0-5736-96c9-33824275ccec"
-* entry[=].resource = 1cd8e13f-08c0-5736-96c9-33824275ccec
-* entry[+].fullUrl = "urn:uuid:1383c340-82db-520c-9a6b-54c246afbe18"
-* entry[=].resource = 1383c340-82db-520c-9a6b-54c246afbe18
-* entry[+].fullUrl = "urn:uuid:73f295c8-55fa-5aa0-bf21-0f35c96aa6dd"
-* entry[=].resource = 73f295c8-55fa-5aa0-bf21-0f35c96aa6dd
-* entry[+].fullUrl = "urn:uuid:3b5ec105-7c16-549d-be31-ebda584176d2"
-* entry[=].resource = 3b5ec105-7c16-549d-be31-ebda584176d2
-* entry[+].fullUrl = "urn:uuid:70e5f1ae-0bb3-5256-b3ad-7f051101b521"
-* entry[=].resource = 70e5f1ae-0bb3-5256-b3ad-7f051101b521
-* entry[+].fullUrl = "urn:uuid:0ef8c9cd-ed96-5502-bf48-bfded9a06e20"
-* entry[=].resource = 0ef8c9cd-ed96-5502-bf48-bfded9a06e20
-* entry[+].fullUrl = "urn:uuid:37047047-3d77-55ad-85d4-454f7d99ec6d"
-* entry[=].resource = 37047047-3d77-55ad-85d4-454f7d99ec6d
-* entry[+].fullUrl = "urn:uuid:29f445b7-8195-5f19-a0a5-fd0e81a6dd47"
-* entry[=].resource = 29f445b7-8195-5f19-a0a5-fd0e81a6dd47
-* entry[+].fullUrl = "urn:uuid:61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f"
-* entry[=].resource = 61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f
-* entry[+].fullUrl = "urn:uuid:48ad3dbf-109d-58e6-9484-724f96ac085b"
-* entry[=].resource = 48ad3dbf-109d-58e6-9484-724f96ac085b
-* entry[+].fullUrl = "urn:uuid:c6607469-575d-5035-bbba-4db320a035bb"
-* entry[=].resource = c6607469-575d-5035-bbba-4db320a035bb
-* entry[+].fullUrl = "urn:uuid:48ad3dbf-109d-58e6-9484-724f96ac085b"
-* entry[=].resource = 48ad3dbf-109d-58e6-9484-724f96ac085b
-* entry[+].fullUrl = "urn:uuid:4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1"
-* entry[=].resource = 4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1
-* entry[+].fullUrl = "urn:uuid:20e21656-736f-533d-b284-631ac2d6a499"
-* entry[=].resource = 20e21656-736f-533d-b284-631ac2d6a499
-* entry[+].fullUrl = "urn:uuid:cfd544a2-674b-529b-b66e-cea6aa2f0025"
-* entry[=].resource = cfd544a2-674b-529b-b66e-cea6aa2f0025
-* entry[+].fullUrl = "urn:uuid:ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500"
-* entry[=].resource = ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500
-* entry[+].fullUrl = "urn:uuid:e89faf39-5f38-539a-ab6d-519416e51f41"
-* entry[=].resource = e89faf39-5f38-539a-ab6d-519416e51f41
-* entry[+].fullUrl = "urn:uuid:a9947032-ca45-5ad4-bcd4-10d1c51f4d1f"
-* entry[=].resource = a9947032-ca45-5ad4-bcd4-10d1c51f4d1f
-* entry[+].fullUrl = "urn:uuid:688d4582-802b-53cb-be6d-b7f9c4e82162"
-* entry[=].resource = 688d4582-802b-53cb-be6d-b7f9c4e82162
-* entry[+].fullUrl = "urn:uuid:bafee946-7f25-5eb9-b8fa-a6901becdfad"
-* entry[=].resource = bafee946-7f25-5eb9-b8fa-a6901becdfad
-* entry[+].fullUrl = "urn:uuid:edfc7297-2415-59ed-bad1-ca32112fc51e"
-* entry[=].resource = edfc7297-2415-59ed-bad1-ca32112fc51e
-* entry[+].fullUrl = "urn:uuid:b1fac24e-2775-53c8-9af5-a7ed8974c3ff"
-* entry[=].resource = b1fac24e-2775-53c8-9af5-a7ed8974c3ff
-* entry[+].fullUrl = "urn:uuid:30d526f4-5577-5fa2-b2fa-d55288ac29e2"
-* entry[=].resource = 30d526f4-5577-5fa2-b2fa-d55288ac29e2
-* entry[+].fullUrl = "urn:uuid:491c3724-0e2e-5f7e-8cd5-451227551485"
-* entry[=].resource = 491c3724-0e2e-5f7e-8cd5-451227551485
-* entry[+].fullUrl = "urn:uuid:b8dffd1f-39fe-5c1d-9e17-71b999c33799"
-* entry[=].resource = b8dffd1f-39fe-5c1d-9e17-71b999c33799
-* entry[+].fullUrl = "urn:uuid:46199dd5-329c-5291-a8ed-4d19b5362db9"
-* entry[=].resource = 46199dd5-329c-5291-a8ed-4d19b5362db9
-* entry[+].fullUrl = "urn:uuid:8723ae16-1ed7-5415-b8aa-17ef742ed36a"
-* entry[=].resource = 8723ae16-1ed7-5415-b8aa-17ef742ed36a
-* entry[+].fullUrl = "urn:uuid:f850d703-803a-5633-95c2-2de1d0f80c31"
-* entry[=].resource = f850d703-803a-5633-95c2-2de1d0f80c31
-* entry[+].fullUrl = "urn:uuid:c089c0d9-28d3-5645-8f25-5853840b2e9a"
-* entry[=].resource = c089c0d9-28d3-5645-8f25-5853840b2e9a
-* entry[+].fullUrl = "urn:uuid:aab312ea-6305-51ca-8d2e-5457f26aab23"
-* entry[=].resource = aab312ea-6305-51ca-8d2e-5457f26aab23
-* entry[+].fullUrl = "urn:uuid:5d3066ad-d41f-5a48-8793-a95362034e82"
-* entry[=].resource = 5d3066ad-d41f-5a48-8793-a95362034e82
-* entry[+].fullUrl = "urn:uuid:a92d765d-afc7-5e56-b1ab-5d299a448a98"
-* entry[=].resource = a92d765d-afc7-5e56-b1ab-5d299a448a98
-* entry[+].fullUrl = "urn:uuid:c6a12f2a-416e-57fb-9006-e5a544929fcd"
-* entry[=].resource = c6a12f2a-416e-57fb-9006-e5a544929fcd
-* entry[+].fullUrl = "urn:uuid:03f3c097-232e-5682-86ad-8f0b91e7a062"
-* entry[=].resource = 03f3c097-232e-5682-86ad-8f0b91e7a062
-* entry[+].fullUrl = "urn:uuid:4367f7e9-1c83-59f2-9aa5-70861cc380ca"
-* entry[=].resource = 4367f7e9-1c83-59f2-9aa5-70861cc380ca
-* entry[+].fullUrl = "urn:uuid:522a2991-a37c-59d5-a836-2435df5be6e0"
-* entry[=].resource = 522a2991-a37c-59d5-a836-2435df5be6e0
-* entry[+].fullUrl = "urn:uuid:d0e5d40b-cfb4-5671-9df5-72d67c601e20"
-* entry[=].resource = d0e5d40b-cfb4-5671-9df5-72d67c601e20
-* entry[+].fullUrl = "urn:uuid:af240b68-3d61-51ce-8701-ddbef6b9c445"
-* entry[=].resource = af240b68-3d61-51ce-8701-ddbef6b9c445
-* entry[+].fullUrl = "urn:uuid:dc29587b-6bda-51c0-83e5-71d5388918f7"
-* entry[=].resource = dc29587b-6bda-51c0-83e5-71d5388918f7
-* entry[+].fullUrl = "urn:uuid:09484c96-2ef9-500a-a890-db95f79b5cf9"
-* entry[=].resource = 09484c96-2ef9-500a-a890-db95f79b5cf9
-* entry[+].fullUrl = "urn:uuid:99568880-9ab9-58a9-b680-2b0f79d605e5"
-* entry[=].resource = 99568880-9ab9-58a9-b680-2b0f79d605e5
+* entry[composition][+].fullUrl = "urn:uuid:5880b262-abcb-55a0-88a4-76ef4f97f744"
+* entry[composition][=].resource = 5880b262-abcb-55a0-88a4-76ef4f97f744
+
+* entry[diagnosticReport][+].fullUrl = "urn:uuid:66fda6b2-1bb0-5187-9842-292ce06cf15f"
+* entry[diagnosticReport][=].resource = 66fda6b2-1bb0-5187-9842-292ce06cf15f
+
+* entry[patient][+].fullUrl = "urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5"
+* entry[patient][=].resource = 879657b8-f2d4-54da-ab1f-c363b4f092d5
+
+* entry[organization][+].fullUrl = "urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32"
+* entry[organization][=].resource = b8ad152c-2c7d-54cb-a80f-5eff76fa6b32
+
+* entry[specimen][+].fullUrl = "urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42"
+* entry[specimen][=].resource = e53c77f3-4c38-59d3-a9ff-5964a2600d42
+* entry[specimen][+].fullUrl = "urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3"
+* entry[specimen][=].resource = b732db29-a256-541b-8f3b-a240152a89f3
+* entry[specimen][+].fullUrl = "urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d"
+* entry[specimen][=].resource = 541dc2b2-6ccb-5afb-9512-b191de5ae31d
+
+* entry[observation][+].fullUrl = "urn:uuid:933860e0-674b-505a-a582-b0bd90c38993"
+* entry[observation][=].resource = 933860e0-674b-505a-a582-b0bd90c38993
+* entry[observation][+].fullUrl = "urn:uuid:658cbb3e-987d-5dfc-8d02-9099ef3b3131"
+* entry[observation][=].resource = 658cbb3e-987d-5dfc-8d02-9099ef3b3131
+* entry[observation][+].fullUrl = "urn:uuid:8ac14b7c-dbed-5d19-8961-974bf4ca6919"
+* entry[observation][=].resource = 8ac14b7c-dbed-5d19-8961-974bf4ca6919
+* entry[observation][+].fullUrl = "urn:uuid:f5d3739d-5fcd-5f41-aaad-4429db2b5a9b"
+* entry[observation][=].resource = f5d3739d-5fcd-5f41-aaad-4429db2b5a9b
+* entry[observation][+].fullUrl = "urn:uuid:14499fe4-6fcf-5b0d-b875-c3d90d573d05"
+* entry[observation][=].resource = 14499fe4-6fcf-5b0d-b875-c3d90d573d05
+* entry[observation][+].fullUrl = "urn:uuid:954baa05-0e22-5ef5-896e-b5546e5c6cc2"
+* entry[observation][=].resource = 954baa05-0e22-5ef5-896e-b5546e5c6cc2
+* entry[observation][+].fullUrl = "urn:uuid:1cd8e13f-08c0-5736-96c9-33824275ccec"
+* entry[observation][=].resource = 1cd8e13f-08c0-5736-96c9-33824275ccec
+* entry[observation][+].fullUrl = "urn:uuid:1383c340-82db-520c-9a6b-54c246afbe18"
+* entry[observation][=].resource = 1383c340-82db-520c-9a6b-54c246afbe18
+* entry[observation][+].fullUrl = "urn:uuid:73f295c8-55fa-5aa0-bf21-0f35c96aa6dd"
+* entry[observation][=].resource = 73f295c8-55fa-5aa0-bf21-0f35c96aa6dd
+* entry[observation][+].fullUrl = "urn:uuid:3b5ec105-7c16-549d-be31-ebda584176d2"
+* entry[observation][=].resource = 3b5ec105-7c16-549d-be31-ebda584176d2
+* entry[observation][+].fullUrl = "urn:uuid:70e5f1ae-0bb3-5256-b3ad-7f051101b521"
+* entry[observation][=].resource = 70e5f1ae-0bb3-5256-b3ad-7f051101b521
+* entry[observation][+].fullUrl = "urn:uuid:0ef8c9cd-ed96-5502-bf48-bfded9a06e20"
+* entry[observation][=].resource = 0ef8c9cd-ed96-5502-bf48-bfded9a06e20
+* entry[observation][+].fullUrl = "urn:uuid:37047047-3d77-55ad-85d4-454f7d99ec6d"
+* entry[observation][=].resource = 37047047-3d77-55ad-85d4-454f7d99ec6d
+* entry[observation][+].fullUrl = "urn:uuid:29f445b7-8195-5f19-a0a5-fd0e81a6dd47"
+* entry[observation][=].resource = 29f445b7-8195-5f19-a0a5-fd0e81a6dd47
+* entry[observation][+].fullUrl = "urn:uuid:61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f"
+* entry[observation][=].resource = 61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f
+* entry[observation][+].fullUrl = "urn:uuid:c6607469-575d-5035-bbba-4db320a035bb"
+* entry[observation][=].resource = c6607469-575d-5035-bbba-4db320a035bb
+* entry[observation][+].fullUrl = "urn:uuid:48ad3dbf-109d-58e6-9484-724f96ac085b"
+* entry[observation][=].resource = 48ad3dbf-109d-58e6-9484-724f96ac085b
+* entry[observation][+].fullUrl = "urn:uuid:4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1"
+* entry[observation][=].resource = 4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1
+* entry[observation][+].fullUrl = "urn:uuid:20e21656-736f-533d-b284-631ac2d6a499"
+* entry[observation][=].resource = 20e21656-736f-533d-b284-631ac2d6a499
+* entry[observation][+].fullUrl = "urn:uuid:cfd544a2-674b-529b-b66e-cea6aa2f0025"
+* entry[observation][=].resource = cfd544a2-674b-529b-b66e-cea6aa2f0025
+* entry[observation][+].fullUrl = "urn:uuid:ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500"
+* entry[observation][=].resource = ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500
+* entry[observation][+].fullUrl = "urn:uuid:e89faf39-5f38-539a-ab6d-519416e51f41"
+* entry[observation][=].resource = e89faf39-5f38-539a-ab6d-519416e51f41
+* entry[observation][+].fullUrl = "urn:uuid:a9947032-ca45-5ad4-bcd4-10d1c51f4d1f"
+* entry[observation][=].resource = a9947032-ca45-5ad4-bcd4-10d1c51f4d1f
+* entry[observation][+].fullUrl = "urn:uuid:688d4582-802b-53cb-be6d-b7f9c4e82162"
+* entry[observation][=].resource = 688d4582-802b-53cb-be6d-b7f9c4e82162
+* entry[observation][+].fullUrl = "urn:uuid:bafee946-7f25-5eb9-b8fa-a6901becdfad"
+* entry[observation][=].resource = bafee946-7f25-5eb9-b8fa-a6901becdfad
+* entry[observation][+].fullUrl = "urn:uuid:edfc7297-2415-59ed-bad1-ca32112fc51e"
+* entry[observation][=].resource = edfc7297-2415-59ed-bad1-ca32112fc51e
+* entry[observation][+].fullUrl = "urn:uuid:b1fac24e-2775-53c8-9af5-a7ed8974c3ff"
+* entry[observation][=].resource = b1fac24e-2775-53c8-9af5-a7ed8974c3ff
+* entry[observation][+].fullUrl = "urn:uuid:30d526f4-5577-5fa2-b2fa-d55288ac29e2"
+* entry[observation][=].resource = 30d526f4-5577-5fa2-b2fa-d55288ac29e2
+* entry[observation][+].fullUrl = "urn:uuid:491c3724-0e2e-5f7e-8cd5-451227551485"
+* entry[observation][=].resource = 491c3724-0e2e-5f7e-8cd5-451227551485
+* entry[observation][+].fullUrl = "urn:uuid:b8dffd1f-39fe-5c1d-9e17-71b999c33799"
+* entry[observation][=].resource = b8dffd1f-39fe-5c1d-9e17-71b999c33799
+* entry[observation][+].fullUrl = "urn:uuid:46199dd5-329c-5291-a8ed-4d19b5362db9"
+* entry[observation][=].resource = 46199dd5-329c-5291-a8ed-4d19b5362db9
+* entry[observation][+].fullUrl = "urn:uuid:8723ae16-1ed7-5415-b8aa-17ef742ed36a"
+* entry[observation][=].resource = 8723ae16-1ed7-5415-b8aa-17ef742ed36a
+* entry[observation][+].fullUrl = "urn:uuid:f850d703-803a-5633-95c2-2de1d0f80c31"
+* entry[observation][=].resource = f850d703-803a-5633-95c2-2de1d0f80c31
+* entry[observation][+].fullUrl = "urn:uuid:c089c0d9-28d3-5645-8f25-5853840b2e9a"
+* entry[observation][=].resource = c089c0d9-28d3-5645-8f25-5853840b2e9a
+* entry[observation][+].fullUrl = "urn:uuid:aab312ea-6305-51ca-8d2e-5457f26aab23"
+* entry[observation][=].resource = aab312ea-6305-51ca-8d2e-5457f26aab23
+* entry[observation][+].fullUrl = "urn:uuid:5d3066ad-d41f-5a48-8793-a95362034e82"
+* entry[observation][=].resource = 5d3066ad-d41f-5a48-8793-a95362034e82
+* entry[observation][+].fullUrl = "urn:uuid:a92d765d-afc7-5e56-b1ab-5d299a448a98"
+* entry[observation][=].resource = a92d765d-afc7-5e56-b1ab-5d299a448a98
+* entry[observation][+].fullUrl = "urn:uuid:c6a12f2a-416e-57fb-9006-e5a544929fcd"
+* entry[observation][=].resource = c6a12f2a-416e-57fb-9006-e5a544929fcd
+* entry[observation][+].fullUrl = "urn:uuid:03f3c097-232e-5682-86ad-8f0b91e7a062"
+* entry[observation][=].resource = 03f3c097-232e-5682-86ad-8f0b91e7a062
+* entry[observation][+].fullUrl = "urn:uuid:4367f7e9-1c83-59f2-9aa5-70861cc380ca"
+* entry[observation][=].resource = 4367f7e9-1c83-59f2-9aa5-70861cc380ca
+* entry[observation][+].fullUrl = "urn:uuid:522a2991-a37c-59d5-a836-2435df5be6e0"
+* entry[observation][=].resource = 522a2991-a37c-59d5-a836-2435df5be6e0
+* entry[observation][+].fullUrl = "urn:uuid:d0e5d40b-cfb4-5671-9df5-72d67c601e20"
+* entry[observation][=].resource = d0e5d40b-cfb4-5671-9df5-72d67c601e20
+* entry[observation][+].fullUrl = "urn:uuid:af240b68-3d61-51ce-8701-ddbef6b9c445"
+* entry[observation][=].resource = af240b68-3d61-51ce-8701-ddbef6b9c445
+* entry[observation][+].fullUrl = "urn:uuid:dc29587b-6bda-51c0-83e5-71d5388918f7"
+* entry[observation][=].resource = dc29587b-6bda-51c0-83e5-71d5388918f7
+* entry[observation][+].fullUrl = "urn:uuid:09484c96-2ef9-500a-a890-db95f79b5cf9"
+* entry[observation][=].resource = 09484c96-2ef9-500a-a890-db95f79b5cf9
+* entry[observation][+].fullUrl = "urn:uuid:99568880-9ab9-58a9-b680-2b0f79d605e5"
+* entry[observation][=].resource = 99568880-9ab9-58a9-b680-2b0f79d605e5
 
 Instance: 5880b262-abcb-55a0-88a4-76ef4f97f744
 InstanceOf: CZ_CompositionLabReport
@@ -124,72 +127,71 @@ Usage: #inline
 * id = "5880b262-abcb-55a0-88a4-76ef4f97f744"
 
 * status = #final
-* language = #cs-CZ
+* language = #cs
 * confidentiality = #N
-* type = $loinc#11502-2 "Laboratory report"
-* category = $loinc#26436-6 "Laboratory studies (set)" 
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
-* custodian = Reference(b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
+* type = $loinc#11502-2 //"Laboratory report"
+* category = $loinc#26436-6 //"Laboratory studies (set)" 
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* custodian = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
 * date = "2019-10-17T09:53:00+01:00"
-* author = Reference(b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
+* author = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
 * title = "Laboratorní nález"
 
 * section[lab-no-subsections]
   * title = "Laboratorní nález"
-  * code = $loinc#18719-5 "Chemistry studies (set)"
+  * code = $loinc#18719-5 //"Chemistry studies (set)"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Výsledky laboratorního vyšetření</div>"
 
 // bio
-  * entry[+] = Reference(933860e0-674b-505a-a582-b0bd90c38993)
-  * entry[+] = Reference(658cbb3e-987d-5dfc-8d02-9099ef3b3131)
-  * entry[+] = Reference(8ac14b7c-dbed-5d19-8961-974bf4ca6919)
-  * entry[+] = Reference(f5d3739d-5fcd-5f41-aaad-4429db2b5a9b)
-  * entry[+] = Reference(14499fe4-6fcf-5b0d-b875-c3d90d573d05)
-  * entry[+] = Reference(954baa05-0e22-5ef5-896e-b5546e5c6cc2)
-  * entry[+] = Reference(1cd8e13f-08c0-5736-96c9-33824275ccec)
-  * entry[+] = Reference(1383c340-82db-520c-9a6b-54c246afbe18)
-  * entry[+] = Reference(73f295c8-55fa-5aa0-bf21-0f35c96aa6dd)
-  * entry[+] = Reference(3b5ec105-7c16-549d-be31-ebda584176d2)
-  * entry[+] = Reference(70e5f1ae-0bb3-5256-b3ad-7f051101b521)
+  * entry[+] = Reference(urn:uuid:933860e0-674b-505a-a582-b0bd90c38993)
+  * entry[+] = Reference(urn:uuid:658cbb3e-987d-5dfc-8d02-9099ef3b3131)
+  * entry[+] = Reference(urn:uuid:8ac14b7c-dbed-5d19-8961-974bf4ca6919)
+  * entry[+] = Reference(urn:uuid:f5d3739d-5fcd-5f41-aaad-4429db2b5a9b)
+  * entry[+] = Reference(urn:uuid:14499fe4-6fcf-5b0d-b875-c3d90d573d05)
+  * entry[+] = Reference(urn:uuid:954baa05-0e22-5ef5-896e-b5546e5c6cc2)
+  * entry[+] = Reference(urn:uuid:1cd8e13f-08c0-5736-96c9-33824275ccec)
+  * entry[+] = Reference(urn:uuid:1383c340-82db-520c-9a6b-54c246afbe18)
+  * entry[+] = Reference(urn:uuid:73f295c8-55fa-5aa0-bf21-0f35c96aa6dd)
+  * entry[+] = Reference(urn:uuid:3b5ec105-7c16-549d-be31-ebda584176d2)
+  * entry[+] = Reference(urn:uuid:70e5f1ae-0bb3-5256-b3ad-7f051101b521)
 // moc
-  * entry[+] = Reference(0ef8c9cd-ed96-5502-bf48-bfded9a06e20)
-  * entry[+] = Reference(37047047-3d77-55ad-85d4-454f7d99ec6d)
-  * entry[+] = Reference(29f445b7-8195-5f19-a0a5-fd0e81a6dd47)
-  * entry[+] = Reference(61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f)
-  * entry[+] = Reference(48ad3dbf-109d-58e6-9484-724f96ac085b)
-  * entry[+] = Reference(c6607469-575d-5035-bbba-4db320a035bb)
-  * entry[+] = Reference(48ad3dbf-109d-58e6-9484-724f96ac085b)
-  * entry[+] = Reference(4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1)
-  * entry[+] = Reference(20e21656-736f-533d-b284-631ac2d6a499)
-  * entry[+] = Reference(cfd544a2-674b-529b-b66e-cea6aa2f0025)
-  * entry[+] = Reference(ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500)
+  * entry[+] = Reference(urn:uuid:0ef8c9cd-ed96-5502-bf48-bfded9a06e20)
+  * entry[+] = Reference(urn:uuid:37047047-3d77-55ad-85d4-454f7d99ec6d)
+  * entry[+] = Reference(urn:uuid:29f445b7-8195-5f19-a0a5-fd0e81a6dd47)
+  * entry[+] = Reference(urn:uuid:61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f)
+  * entry[+] = Reference(urn:uuid:c6607469-575d-5035-bbba-4db320a035bb)
+  * entry[+] = Reference(urn:uuid:48ad3dbf-109d-58e6-9484-724f96ac085b)
+  * entry[+] = Reference(urn:uuid:4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1)
+  * entry[+] = Reference(urn:uuid:20e21656-736f-533d-b284-631ac2d6a499)
+  * entry[+] = Reference(urn:uuid:cfd544a2-674b-529b-b66e-cea6aa2f0025)
+  * entry[+] = Reference(urn:uuid:ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500)
 // hematologie
-  * entry[+] = Reference(e89faf39-5f38-539a-ab6d-519416e51f41)
-  * entry[+] = Reference(a9947032-ca45-5ad4-bcd4-10d1c51f4d1f)
-  * entry[+] = Reference(688d4582-802b-53cb-be6d-b7f9c4e82162)
-  * entry[+] = Reference(bafee946-7f25-5eb9-b8fa-a6901becdfad)
-  * entry[+] = Reference(edfc7297-2415-59ed-bad1-ca32112fc51e)
-  * entry[+] = Reference(b1fac24e-2775-53c8-9af5-a7ed8974c3ff)
-  * entry[+] = Reference(30d526f4-5577-5fa2-b2fa-d55288ac29e2)
-  * entry[+] = Reference(491c3724-0e2e-5f7e-8cd5-451227551485)
-  * entry[+] = Reference(b8dffd1f-39fe-5c1d-9e17-71b999c33799)
-  * entry[+] = Reference(46199dd5-329c-5291-a8ed-4d19b5362db9)
-  * entry[+] = Reference(8723ae16-1ed7-5415-b8aa-17ef742ed36a)
-  * entry[+] = Reference(f850d703-803a-5633-95c2-2de1d0f80c31)
-  * entry[+] = Reference(c089c0d9-28d3-5645-8f25-5853840b2e9a)
-  * entry[+] = Reference(aab312ea-6305-51ca-8d2e-5457f26aab23)
-  * entry[+] = Reference(5d3066ad-d41f-5a48-8793-a95362034e82)
-  * entry[+] = Reference(a92d765d-afc7-5e56-b1ab-5d299a448a98)
-  * entry[+] = Reference(c6a12f2a-416e-57fb-9006-e5a544929fcd)
-  * entry[+] = Reference(03f3c097-232e-5682-86ad-8f0b91e7a062)
-  * entry[+] = Reference(4367f7e9-1c83-59f2-9aa5-70861cc380ca)
-  * entry[+] = Reference(522a2991-a37c-59d5-a836-2435df5be6e0)
-  * entry[+] = Reference(d0e5d40b-cfb4-5671-9df5-72d67c601e20)
-  * entry[+] = Reference(af240b68-3d61-51ce-8701-ddbef6b9c445)
-  * entry[+] = Reference(dc29587b-6bda-51c0-83e5-71d5388918f7)
-  * entry[+] = Reference(09484c96-2ef9-500a-a890-db95f79b5cf9)
-  * entry[+] = Reference(99568880-9ab9-58a9-b680-2b0f79d605e5)
+  * entry[+] = Reference(urn:uuid:e89faf39-5f38-539a-ab6d-519416e51f41)
+  * entry[+] = Reference(urn:uuid:a9947032-ca45-5ad4-bcd4-10d1c51f4d1f)
+  * entry[+] = Reference(urn:uuid:688d4582-802b-53cb-be6d-b7f9c4e82162)
+  * entry[+] = Reference(urn:uuid:bafee946-7f25-5eb9-b8fa-a6901becdfad)
+  * entry[+] = Reference(urn:uuid:edfc7297-2415-59ed-bad1-ca32112fc51e)
+  * entry[+] = Reference(urn:uuid:b1fac24e-2775-53c8-9af5-a7ed8974c3ff)
+  * entry[+] = Reference(urn:uuid:30d526f4-5577-5fa2-b2fa-d55288ac29e2)
+  * entry[+] = Reference(urn:uuid:491c3724-0e2e-5f7e-8cd5-451227551485)
+  * entry[+] = Reference(urn:uuid:b8dffd1f-39fe-5c1d-9e17-71b999c33799)
+  * entry[+] = Reference(urn:uuid:46199dd5-329c-5291-a8ed-4d19b5362db9)
+  * entry[+] = Reference(urn:uuid:8723ae16-1ed7-5415-b8aa-17ef742ed36a)
+  * entry[+] = Reference(urn:uuid:f850d703-803a-5633-95c2-2de1d0f80c31)
+  * entry[+] = Reference(urn:uuid:c089c0d9-28d3-5645-8f25-5853840b2e9a)
+  * entry[+] = Reference(urn:uuid:aab312ea-6305-51ca-8d2e-5457f26aab23)
+  * entry[+] = Reference(urn:uuid:5d3066ad-d41f-5a48-8793-a95362034e82)
+  * entry[+] = Reference(urn:uuid:a92d765d-afc7-5e56-b1ab-5d299a448a98)
+  * entry[+] = Reference(urn:uuid:c6a12f2a-416e-57fb-9006-e5a544929fcd)
+  * entry[+] = Reference(urn:uuid:03f3c097-232e-5682-86ad-8f0b91e7a062)
+  * entry[+] = Reference(urn:uuid:4367f7e9-1c83-59f2-9aa5-70861cc380ca)
+  * entry[+] = Reference(urn:uuid:522a2991-a37c-59d5-a836-2435df5be6e0)
+  * entry[+] = Reference(urn:uuid:d0e5d40b-cfb4-5671-9df5-72d67c601e20)
+  * entry[+] = Reference(urn:uuid:af240b68-3d61-51ce-8701-ddbef6b9c445)
+  * entry[+] = Reference(urn:uuid:dc29587b-6bda-51c0-83e5-71d5388918f7)
+  * entry[+] = Reference(urn:uuid:09484c96-2ef9-500a-a890-db95f79b5cf9)
+  * entry[+] = Reference(urn:uuid:99568880-9ab9-58a9-b680-2b0f79d605e5)
 
 Instance: 66fda6b2-1bb0-5187-9842-292ce06cf15f
 InstanceOf: CZ_DiagnosticReportLab
@@ -198,72 +200,74 @@ Usage: #inline
 * id = "66fda6b2-1bb0-5187-9842-292ce06cf15f"
 
 * status = #final
-* code = $loinc#11502-2 "Laboratory report"
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code = $loinc#11502-2 //"Laboratory report"
+* category[studyType] = $loinc#26436-6 //"Laboratory studies (set)" 
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * issued = "2019-10-17T09:53:00+01:00"
-* performer = Reference(b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(5880b262-abcb-55a0-88a4-76ef4f97f744)
+* performer = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:5880b262-abcb-55a0-88a4-76ef4f97f744)
 
-* result[+] = Reference(933860e0-674b-505a-a582-b0bd90c38993)
-* result[+] = Reference(658cbb3e-987d-5dfc-8d02-9099ef3b3131)
-* result[+] = Reference(8ac14b7c-dbed-5d19-8961-974bf4ca6919)
-* result[+] = Reference(f5d3739d-5fcd-5f41-aaad-4429db2b5a9b)
-* result[+] = Reference(14499fe4-6fcf-5b0d-b875-c3d90d573d05)
-* result[+] = Reference(954baa05-0e22-5ef5-896e-b5546e5c6cc2)
-* result[+] = Reference(1cd8e13f-08c0-5736-96c9-33824275ccec)
-* result[+] = Reference(1383c340-82db-520c-9a6b-54c246afbe18)
-* result[+] = Reference(73f295c8-55fa-5aa0-bf21-0f35c96aa6dd)
-* result[+] = Reference(3b5ec105-7c16-549d-be31-ebda584176d2)
-* result[+] = Reference(70e5f1ae-0bb3-5256-b3ad-7f051101b521)
-* result[+] = Reference(0ef8c9cd-ed96-5502-bf48-bfded9a06e20)
-* result[+] = Reference(37047047-3d77-55ad-85d4-454f7d99ec6d)
-* result[+] = Reference(29f445b7-8195-5f19-a0a5-fd0e81a6dd47)
-* result[+] = Reference(61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f)
-* result[+] = Reference(48ad3dbf-109d-58e6-9484-724f96ac085b)
-* result[+] = Reference(c6607469-575d-5035-bbba-4db320a035bb)
-* result[+] = Reference(48ad3dbf-109d-58e6-9484-724f96ac085b)
-* result[+] = Reference(4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1)
-* result[+] = Reference(20e21656-736f-533d-b284-631ac2d6a499)
-* result[+] = Reference(cfd544a2-674b-529b-b66e-cea6aa2f0025)
-* result[+] = Reference(ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500)
-* result[+] = Reference(e89faf39-5f38-539a-ab6d-519416e51f41)
-* result[+] = Reference(a9947032-ca45-5ad4-bcd4-10d1c51f4d1f)
-* result[+] = Reference(688d4582-802b-53cb-be6d-b7f9c4e82162)
-* result[+] = Reference(bafee946-7f25-5eb9-b8fa-a6901becdfad)
-* result[+] = Reference(edfc7297-2415-59ed-bad1-ca32112fc51e)
-* result[+] = Reference(b1fac24e-2775-53c8-9af5-a7ed8974c3ff)
-* result[+] = Reference(30d526f4-5577-5fa2-b2fa-d55288ac29e2)
-* result[+] = Reference(491c3724-0e2e-5f7e-8cd5-451227551485)
-* result[+] = Reference(b8dffd1f-39fe-5c1d-9e17-71b999c33799)
-* result[+] = Reference(46199dd5-329c-5291-a8ed-4d19b5362db9)
-* result[+] = Reference(8723ae16-1ed7-5415-b8aa-17ef742ed36a)
-* result[+] = Reference(f850d703-803a-5633-95c2-2de1d0f80c31)
-* result[+] = Reference(c089c0d9-28d3-5645-8f25-5853840b2e9a)
-* result[+] = Reference(aab312ea-6305-51ca-8d2e-5457f26aab23)
-* result[+] = Reference(5d3066ad-d41f-5a48-8793-a95362034e82)
-* result[+] = Reference(a92d765d-afc7-5e56-b1ab-5d299a448a98)
-* result[+] = Reference(c6a12f2a-416e-57fb-9006-e5a544929fcd)
-* result[+] = Reference(03f3c097-232e-5682-86ad-8f0b91e7a062)
-* result[+] = Reference(4367f7e9-1c83-59f2-9aa5-70861cc380ca)
-* result[+] = Reference(522a2991-a37c-59d5-a836-2435df5be6e0)
-* result[+] = Reference(d0e5d40b-cfb4-5671-9df5-72d67c601e20)
-* result[+] = Reference(af240b68-3d61-51ce-8701-ddbef6b9c445)
-* result[+] = Reference(dc29587b-6bda-51c0-83e5-71d5388918f7)
-* result[+] = Reference(09484c96-2ef9-500a-a890-db95f79b5cf9)
-* result[+] = Reference(99568880-9ab9-58a9-b680-2b0f79d605e5)
+* result[+] = Reference(urn:uuid:933860e0-674b-505a-a582-b0bd90c38993)
+* result[+] = Reference(urn:uuid:658cbb3e-987d-5dfc-8d02-9099ef3b3131)
+* result[+] = Reference(urn:uuid:8ac14b7c-dbed-5d19-8961-974bf4ca6919)
+* result[+] = Reference(urn:uuid:f5d3739d-5fcd-5f41-aaad-4429db2b5a9b)
+* result[+] = Reference(urn:uuid:14499fe4-6fcf-5b0d-b875-c3d90d573d05)
+* result[+] = Reference(urn:uuid:954baa05-0e22-5ef5-896e-b5546e5c6cc2)
+* result[+] = Reference(urn:uuid:1cd8e13f-08c0-5736-96c9-33824275ccec)
+* result[+] = Reference(urn:uuid:1383c340-82db-520c-9a6b-54c246afbe18)
+* result[+] = Reference(urn:uuid:73f295c8-55fa-5aa0-bf21-0f35c96aa6dd)
+* result[+] = Reference(urn:uuid:3b5ec105-7c16-549d-be31-ebda584176d2)
+* result[+] = Reference(urn:uuid:70e5f1ae-0bb3-5256-b3ad-7f051101b521)
+* result[+] = Reference(urn:uuid:0ef8c9cd-ed96-5502-bf48-bfded9a06e20)
+* result[+] = Reference(urn:uuid:37047047-3d77-55ad-85d4-454f7d99ec6d)
+* result[+] = Reference(urn:uuid:29f445b7-8195-5f19-a0a5-fd0e81a6dd47)
+* result[+] = Reference(urn:uuid:61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f)
+* result[+] = Reference(urn:uuid:c6607469-575d-5035-bbba-4db320a035bb)
+* result[+] = Reference(urn:uuid:48ad3dbf-109d-58e6-9484-724f96ac085b)
+* result[+] = Reference(urn:uuid:4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1)
+* result[+] = Reference(urn:uuid:20e21656-736f-533d-b284-631ac2d6a499)
+* result[+] = Reference(urn:uuid:cfd544a2-674b-529b-b66e-cea6aa2f0025)
+* result[+] = Reference(urn:uuid:ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500)
+* result[+] = Reference(urn:uuid:e89faf39-5f38-539a-ab6d-519416e51f41)
+* result[+] = Reference(urn:uuid:a9947032-ca45-5ad4-bcd4-10d1c51f4d1f)
+* result[+] = Reference(urn:uuid:688d4582-802b-53cb-be6d-b7f9c4e82162)
+* result[+] = Reference(urn:uuid:bafee946-7f25-5eb9-b8fa-a6901becdfad)
+* result[+] = Reference(urn:uuid:edfc7297-2415-59ed-bad1-ca32112fc51e)
+* result[+] = Reference(urn:uuid:b1fac24e-2775-53c8-9af5-a7ed8974c3ff)
+* result[+] = Reference(urn:uuid:30d526f4-5577-5fa2-b2fa-d55288ac29e2)
+* result[+] = Reference(urn:uuid:491c3724-0e2e-5f7e-8cd5-451227551485)
+* result[+] = Reference(urn:uuid:b8dffd1f-39fe-5c1d-9e17-71b999c33799)
+* result[+] = Reference(urn:uuid:46199dd5-329c-5291-a8ed-4d19b5362db9)
+* result[+] = Reference(urn:uuid:8723ae16-1ed7-5415-b8aa-17ef742ed36a)
+* result[+] = Reference(urn:uuid:f850d703-803a-5633-95c2-2de1d0f80c31)
+* result[+] = Reference(urn:uuid:c089c0d9-28d3-5645-8f25-5853840b2e9a)
+* result[+] = Reference(urn:uuid:aab312ea-6305-51ca-8d2e-5457f26aab23)
+* result[+] = Reference(urn:uuid:5d3066ad-d41f-5a48-8793-a95362034e82)
+* result[+] = Reference(urn:uuid:a92d765d-afc7-5e56-b1ab-5d299a448a98)
+* result[+] = Reference(urn:uuid:c6a12f2a-416e-57fb-9006-e5a544929fcd)
+* result[+] = Reference(urn:uuid:03f3c097-232e-5682-86ad-8f0b91e7a062)
+* result[+] = Reference(urn:uuid:4367f7e9-1c83-59f2-9aa5-70861cc380ca)
+* result[+] = Reference(urn:uuid:522a2991-a37c-59d5-a836-2435df5be6e0)
+* result[+] = Reference(urn:uuid:d0e5d40b-cfb4-5671-9df5-72d67c601e20)
+* result[+] = Reference(urn:uuid:af240b68-3d61-51ce-8701-ddbef6b9c445)
+* result[+] = Reference(urn:uuid:dc29587b-6bda-51c0-83e5-71d5388918f7)
+* result[+] = Reference(urn:uuid:09484c96-2ef9-500a-a890-db95f79b5cf9)
+* result[+] = Reference(urn:uuid:99568880-9ab9-58a9-b680-2b0f79d605e5)
 
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #cs
-* presentedForm.data = ""
+* presentedForm.data = 
+"JVBERi0xLjcNCiW1tbW1DQoxIDAgb2JqDQo8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFIvTGFuZyhjcy1DWikgL1N0cnVjdFRyZWVSb290IDE1IDAgUi9NYXJrSW5mbzw8L01hcmtlZCB0cnVlPj4vTWV0YWRhdGEgMjcgMCBSL1ZpZXdlclByZWZlcmVuY2VzIDI4IDAgUj4+DQplbmRvYmoNCjIgMCBvYmoNCjw8L1R5cGUvUGFnZXMvQ291bnQgMS9LaWRzWyAzIDAgUl0gPj4NCmVuZG9iag0KMyAwIG9iag0KPDwvVHlwZS9QYWdlL1BhcmVudCAyIDAgUi9SZXNvdXJjZXM8PC9Gb250PDwvRjEgNSAwIFIvRjIgOSAwIFI+Pi9FeHRHU3RhdGU8PC9HUzcgNyAwIFIvR1M4IDggMCBSPj4vUHJvY1NldFsvUERGL1RleHQvSW1hZ2VCL0ltYWdlQy9JbWFnZUldID4+L01lZGlhQm94WyAwIDAgNTk1LjMyIDg0MS45Ml0gL0NvbnRlbnRzIDQgMCBSL0dyb3VwPDwvVHlwZS9Hcm91cC9TL1RyYW5zcGFyZW5jeS9DUy9EZXZpY2VSR0I+Pi9UYWJzL1MvU3RydWN0UGFyZW50cyAwPj4NCmVuZG9iag0KNCAwIG9iag0KPDwvRmlsdGVyL0ZsYXRlRGVjb2RlL0xlbmd0aCAzMDg+Pg0Kc3RyZWFtDQp4nK1STUsDMRC9B/If3jERmmY22d0slB76YVEoVFzwIB5Wm1bBrtpu/7/Jbg8etqDUwMC8zGTem8lguMJoNFxOb2bQ4zEmsym+ONNKx+NcTtBIi1SZBM6SKhLsPWcPV6g5m5ScDa8JREpblBvOYrYGIdfKJRZ5plXmUO5C3uI+x/YQSmPbIndCC84exUoOrNj7gyQtfN34NTbR/ZCDVOwlJWIXEyCfUN5yNg+8d5z9UWfSo5OsUeR+6mzldapG2uR2fAll32jIOpWeo7ywxV6+lBSdo3uVRhyDteOtannpjHsFuFTp4pyC9nd9ta6eZSbefagoB4n4DJq6yCFgI+qAmyquRPPWLkW8gCy6DdlErwkW2/GID9bBa2MvR0mn/sJiqX/vzuRGZeaX34n5copv1BivFA0KZW5kc3RyZWFtDQplbmRvYmoNCjUgMCBvYmoNCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1RydWVUeXBlL05hbWUvRjEvQmFzZUZvbnQvQkNERUVFK0NhbGlicmkvRW5jb2RpbmcvV2luQW5zaUVuY29kaW5nL0ZvbnREZXNjcmlwdG9yIDYgMCBSL0ZpcnN0Q2hhciAzMi9MYXN0Q2hhciAxMTcvV2lkdGhzIDI2IDAgUj4+DQplbmRvYmoNCjYgMCBvYmoNCjw8L1R5cGUvRm9udERlc2NyaXB0b3IvRm9udE5hbWUvQkNERUVFK0NhbGlicmkvRmxhZ3MgMzIvSXRhbGljQW5nbGUgMC9Bc2NlbnQgNzUwL0Rlc2NlbnQgLTI1MC9DYXBIZWlnaHQgNzUwL0F2Z1dpZHRoIDUyMS9NYXhXaWR0aCAxNzQzL0ZvbnRXZWlnaHQgNDAwL1hIZWlnaHQgMjUwL1N0ZW1WIDUyL0ZvbnRCQm94WyAtNTAzIC0yNTAgMTI0MCA3NTBdIC9Gb250RmlsZTIgMjQgMCBSPj4NCmVuZG9iag0KNyAwIG9iag0KPDwvVHlwZS9FeHRHU3RhdGUvQk0vTm9ybWFsL2NhIDE+Pg0KZW5kb2JqDQo4IDAgb2JqDQo8PC9UeXBlL0V4dEdTdGF0ZS9CTS9Ob3JtYWwvQ0EgMT4+DQplbmRvYmoNCjkgMCBvYmoNCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUwL0Jhc2VGb250L0JDREZFRStDYWxpYnJpL0VuY29kaW5nL0lkZW50aXR5LUgvRGVzY2VuZGFudEZvbnRzIDEwIDAgUi9Ub1VuaWNvZGUgMjMgMCBSPj4NCmVuZG9iag0KMTAgMCBvYmoNClsgMTEgMCBSXSANCmVuZG9iag0KMTEgMCBvYmoNCjw8L0Jhc2VGb250L0JDREZFRStDYWxpYnJpL1N1YnR5cGUvQ0lERm9udFR5cGUyL1R5cGUvRm9udC9DSURUb0dJRE1hcC9JZGVudGl0eS9EVyAxMDAwL0NJRFN5c3RlbUluZm8gMTIgMCBSL0ZvbnREZXNjcmlwdG9yIDEzIDAgUi9XIDI1IDAgUj4+DQplbmRvYmoNCjEyIDAgb2JqDQo8PC9PcmRlcmluZyhJZGVudGl0eSkgL1JlZ2lzdHJ5KEFkb2JlKSAvU3VwcGxlbWVudCAwPj4NCmVuZG9iag0KMTMgMCBvYmoN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cmlwdGlvbiByZGY6YWJvdXQ9IiIgIHhtbG5zOnBkZj0iaHR0cDovL25zLmFkb2JlLmNvbS9wZGYvMS4zLyI+CjxwZGY6UHJvZHVjZXI+TWljcm9zb2Z0wq4gV29yZCAyMDE5PC9wZGY6UHJvZHVjZXI+PC9yZGY6RGVzY3JpcHRpb24+CjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgo8ZGM6Y3JlYXRvcj48cmRmOlNlcT48cmRmOmxpPk5lY2h2w6F0YWwgTHVrw6HFoTwvcmRmOmxpPjwvcmRmOlNlcT48L2RjOmNyZWF0b3I+PC9yZGY6RGVzY3JpcHRpb24+CjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iPgo8eG1wOkNyZWF0b3JUb29sPk1pY3Jvc29mdMKuIFdvcmQgMjAxOTwveG1wOkNyZWF0b3JUb29sPjx4bXA6Q3JlYXRlRGF0ZT4yMDI1LTA2LTMwVDA5OjU1OjU1KzAyOjAwPC94bXA6Q3JlYXRlRGF0ZT48eG1wOk1vZGlmeURhdGU+MjAyNS0wNi0zMFQwOTo1NTo1NSswMjowMDwveG1wOk1vZGlmeURhdGU+PC9yZGY6RGVzY3JpcHRpb24+CjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyI+Cjx4bXBNTTpEb2N1bWVudElEPnV1aWQ6NjY5RDA4ODktM0EwRS00OUJGLTkyQUYtNTIzOERCMEU4MEQ0PC94bXBNTTpEb2N1bWVudElEPjx4bXBNTTpJbnN0YW5jZUlEPnV1aWQ6NjY5RDA4ODktM0EwRS00OUJGLTkyQUYtNTIzOERCMEU4MEQ0PC94bXBNTTpJbnN0YW5jZUlEPjwvcmRmOkRlc2NyaXB0aW9uPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPC9yZGY6UkRGPjwveDp4bXBtZXRhPjw/eHBhY2tldCBlbmQ9InciPz4NCmVuZHN0cmVhbQ0KZW5kb2JqDQoyOCAwIG9iag0KPDwvRGlzcGxheURvY1RpdGxlIHRydWU+Pg0KZW5kb2JqDQoyOSAwIG9iag0KPDwvVHlwZS9YUmVmL1NpemUgMjkvV1sgMSA0IDJdIC9Sb290IDEgMCBSL0luZm8gMTQgMCBSL0lEWzw4OTA4OUQ2NjBFM0FCRjQ5OTJBRjUyMzhEQjBFODBEND48ODkwODlENjYwRTNBQkY0OTkyQUY1MjM4REIwRTgwRDQ+XSAvRmlsdGVyL0ZsYXRlRGVjb2RlL0xlbmd0aCAxMTA+Pg0Kc3RyZWFtDQp4nC3NqxGEQBAE0F7+tSgEZwiGoCAJIAA8AoPGowni3OlTFFWYZelmxDzTPQP4cc74XQAPs/gSc5CwIVFFYitq0YqTJKVYhSPpHwj8zQ8CEYpIxMKIN5n4XvZj3epDPpFuJ/1GhoWMF3ADo+ESBg0KZW5kc3RyZWFtDQplbmRvYmoNCnhyZWYNCjAgMzANCjAwMDAwMDAwMTUgNjU1MzUgZg0KMDAwMDAwMDAxNyAwMDAwMCBuDQowMDAwMDAwMTY2IDAwMDAwIG4NCjAwMDAwMDAyMjIgMDAwMDAgbg0KMDAwMDAwMDUwMSAwMDAwMCBuDQowMDAwMDAwODgzIDAwMDAwIG4NCjAwMDAwMDEwNTEgMDAwMDAgbg0KMDAwMDAwMTI5MCAwMDAwMCBuDQowMDAwMDAxMzQzIDAwMDAwIG4NCjAwMDAwMDEzOTYgMDAwMDAgbg0KMDAwMDAwMTUyNyAwMDAwMCBuDQowMDAwMDAxNTU3IDAwMDAwIG4NCjAwMDAwMDE3MTcgMDAwMDAgbg0KMDAwMDAwMTc5MSAwMDAwMCBuDQowMDAwMDAyMDMxIDAwMDAwIG4NCjAwMDAwMDAwMTYgNjU1MzUgZg0KMDAwMDAwMDAxNyA2NTUzNSBmDQowMDAwMDAwMDE4IDY1NTM1IGYNCjAwMDAwMDAwMTkgNjU1MzUgZg0KMDAwMDAwMDAyMCA2NTUzNSBmDQowMDAwMDAwMDIxIDY1NTM1IGYNCjAwMDAwMDAwMjIgNjU1MzUgZg0KMDAwMDAwMDAwMCA2NTUzNSBmDQowMDAwMDAyNjc2IDAwMDAwIG4NCjAwMDAwMDI5NzggMDAwMDAgbg0KMDAwMDAzNTI3NCAwMDAwMCBuDQowMDAwMDM1NTIwIDAwMDAwIG4NCjAwMDAwMzU3NTUgMDAwMDAgbg0KMDAwMDAzODkwNiAwMDAwMCBuDQowMDAwMDM4OTUxIDAwMDAwIG4NCnRyYWlsZXINCjw8L1NpemUgMzAvUm9vdCAxIDAgUi9JbmZvIDE0IDAgUi9JRFs8ODkwODlENjYwRTNBQkY0OTkyQUY1MjM4REIwRTgwRDQ+PDg5MDg5RDY2MEUzQUJGNDk5MkFGNTIzOERCMEU4MEQ0Pl0gPj4NCnN0YXJ0eHJlZg0KMzkyNjINCiUlRU9GDQp4cmVmDQowIDANCnRyYWlsZXINCjw8L1NpemUgMzAvUm9vdCAxIDAgUi9JbmZvIDE0IDAgUi9JRFs8ODkwODlENjYwRTNBQkY0OTkyQUY1MjM4REIwRTgwRDQ+PDg5MDg5RDY2MEUzQUJGNDk5MkFGNTIzOERCMEU4MEQ0Pl0gL1ByZXYgMzkyNjIvWFJlZlN0bSAzODk1MT4+DQpzdGFydHhyZWYNCjQwMDE5DQolJUVPRg=="
 
 Instance: 879657b8-f2d4-54da-ab1f-c363b4f092d5
 InstanceOf: CZ_PatientCore
 Usage: #inline
 * id = "879657b8-f2d4-54da-ab1f-c363b4f092d5"
-* identifier[0].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis"
-* identifier[0].value = "5408120025"
+* identifier[RC][+].system = "https://ncez.mzcr.cz/fhir/sid/rcis"
+* identifier[RC][=].value = "5408120025"
+* identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+* identifier[RID][=].value = "7319424039"
 * name[0].family = "Podmořský"
 * name[0].given[0] = "Radim"
 * gender = #male
@@ -275,7 +279,7 @@ Usage: #inline
 Description: "Role MUDr. Milboženy Hrčálkové"
 * id = "a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a"
 * practitioner = Reference(urn:uuid:fa4f28b1-1234-4f78-9cda-dcf01f228acf)
-* organization = Reference(b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
+* organization = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
 * code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
 * active = true
 * telecom[+].system = #email
@@ -305,21 +309,21 @@ Instance: e53c77f3-4c38-59d3-a9ff-5964a2600d42
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "e53c77f3-4c38-59d3-a9ff-5964a2600d42"
-* type = $sct#119364003 "Serum specimen"
+//* container.type = $sct# //"Serum specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: b732db29-a256-541b-8f3b-a240152a89f3
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "b732db29-a256-541b-8f3b-a240152a89f3"
-* type = $sct#122575003 "Urine specimen"
+//* container.type = $sct# //"Urine specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: 541dc2b2-6ccb-5afb-9512-b191de5ae31d
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "541dc2b2-6ccb-5afb-9512-b191de5ae31d"
-* type = $sct#122554006 "Whole blood specimen"
+//* container.type = $sct# //"Whole blood specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 // ---- Observations from LB (Biochemie + Moč) ----
@@ -331,8 +335,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05272
-* code.coding[0].display = "s_sodík"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_sodík"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 141.7
 * valueQuantity.unit = "mmoL/L"
@@ -340,8 +344,9 @@ Usage: #inline
 * valueQuantity.code = #mmol/L
 * referenceRange.low.value = 137.0
 * referenceRange.high.value = 144.0
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 
 Instance: 658cbb3e-987d-5dfc-8d02-9099ef3b3131
@@ -351,8 +356,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05254
-* code.coding[0].display = "s_draslík"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_draslík"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 4.39
 * valueQuantity.unit = "mmoL/L"
@@ -360,8 +365,9 @@ Usage: #inline
 * valueQuantity.code = #mmol/L
 * referenceRange.low.value = 3.50
 * referenceRange.high.value = 5.10
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 8ac14b7c-dbed-5d19-8961-974bf4ca6919
 InstanceOf: CZ_ObservationResultLaboratory
@@ -370,8 +376,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05187
-* code.coding[0].display = "s_chloridy"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_chloridy"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 108.6
 * valueQuantity.unit = "mmoL/L"
@@ -379,8 +385,9 @@ Usage: #inline
 * valueQuantity.code = #mmol/L
 * referenceRange.low.value = 98.0
 * referenceRange.high.value = 107.0
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: f5d3739d-5fcd-5f41-aaad-4429db2b5a9b
 InstanceOf: CZ_ObservationResultLaboratory
@@ -389,8 +396,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #08574
-* code.coding[0].display = "s_kreatinin"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_kreatinin"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 79.6
 * valueQuantity.unit = "umoL/L"
@@ -398,8 +405,9 @@ Usage: #inline
 * valueQuantity.code = #umol/L
 * referenceRange.low.value = 64.0
 * referenceRange.high.value = 104.0
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 14499fe4-6fcf-5b0d-b875-c3d90d573d05
 InstanceOf: CZ_ObservationResultLaboratory
@@ -408,8 +416,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03078
-* code.coding[0].display = "s_kys.močová"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_kys.močová"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 414
 * valueQuantity.unit = "umoL/L"
@@ -417,8 +425,9 @@ Usage: #inline
 * valueQuantity.code = #umol/L
 * referenceRange.low.value = 210
 * referenceRange.high.value = 420
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 954baa05-0e22-5ef5-896e-b5546e5c6cc2
 InstanceOf: CZ_ObservationResultLaboratory
@@ -427,8 +436,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #00507
-* code.coding[0].display = "s_albumin"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_albumin"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 47.5
 * valueQuantity.unit = "g/L"
@@ -436,8 +445,9 @@ Usage: #inline
 * valueQuantity.code = #g/L
 * referenceRange.low.value = 36.0
 * referenceRange.high.value = 45.0
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 1cd8e13f-08c0-5736-96c9-33824275ccec
 InstanceOf: CZ_ObservationResultLaboratory
@@ -446,8 +456,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01154
-* code.coding[0].display = "s_bilirubin celk"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_bilirubin celk"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 13.2
 * valueQuantity.unit = "umoL/L"
@@ -455,8 +465,9 @@ Usage: #inline
 * valueQuantity.code = #umol/L
 * referenceRange.low.value = 3.4
 * referenceRange.high.value = 20.0
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 1383c340-82db-520c-9a6b-54c246afbe18
 InstanceOf: CZ_ObservationResultLaboratory
@@ -465,8 +476,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #00921
-* code.coding[0].display = "s_AST"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_AST"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.48
 * valueQuantity.unit = "ukat/L"
@@ -474,8 +485,9 @@ Usage: #inline
 * valueQuantity.code = #ukat/L
 * referenceRange.low.value = 0.17
 * referenceRange.high.value = 0.75
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 73f295c8-55fa-5aa0-bf21-0f35c96aa6dd
 InstanceOf: CZ_ObservationResultLaboratory
@@ -484,8 +496,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #00582
-* code.coding[0].display = "s_ALT"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_ALT"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.68
 * valueQuantity.unit = "ukat/L"
@@ -493,8 +505,9 @@ Usage: #inline
 * valueQuantity.code = #ukat/L
 * referenceRange.low.value = 0.17
 * referenceRange.high.value = 1.17
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 3b5ec105-7c16-549d-be31-ebda584176d2
 InstanceOf: CZ_ObservationResultLaboratory
@@ -503,8 +516,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #00543
-* code.coding[0].display = "s_ALP"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_ALP"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 1.31
 * valueQuantity.unit = "ukat/L"
@@ -512,8 +525,9 @@ Usage: #inline
 * valueQuantity.code = #ukat/L
 * referenceRange.low.value = 0.58
 * referenceRange.high.value = 1.75
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 70e5f1ae-0bb3-5256-b3ad-7f051101b521
 InstanceOf: CZ_ObservationResultLaboratory
@@ -522,8 +536,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01961
-* code.coding[0].display = "s_GGT"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "S_GGT"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.37
 * valueQuantity.unit = "ukat/L"
@@ -531,8 +545,9 @@ Usage: #inline
 * valueQuantity.code = #ukat/L
 * referenceRange.low.value = 0.20
 * referenceRange.high.value = 1.07
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 0ef8c9cd-ed96-5502-bf48-bfded9a06e20
 InstanceOf: CZ_ObservationResultLaboratory
@@ -541,8 +556,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #17341
-* code.coding[0].display = "GFR-MDRD-1P"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "GFR-MDRD-1P"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 1.41
 * valueQuantity.unit = "mL/s na 1,73 m2"
@@ -550,8 +565,9 @@ Usage: #inline
 * valueQuantity.code = #mL/s/{1.73_m2}
 * referenceRange.low.value = 1.33
 * referenceRange.high.value = 2.50
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 37047047-3d77-55ad-85d4-454f7d99ec6d
 InstanceOf: CZ_ObservationResultLaboratory
@@ -560,8 +576,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #17339
-* code.coding[0].display = "CKD-EPI"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "CKD-EPI"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 1.55
 * valueQuantity.unit = "mL/s na 1,73 m2"
@@ -569,8 +585,9 @@ Usage: #inline
 * valueQuantity.code = #mL/s/{1.73_m2}
 * referenceRange.low.value = 1.33
 * referenceRange.high.value = 2.50
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:e53c77f3-4c38-59d3-a9ff-5964a2600d42)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 29f445b7-8195-5f19-a0a5-fd0e81a6dd47
 InstanceOf: CZ_ObservationResultLaboratory
@@ -579,17 +596,18 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03410
-* code.coding[0].display = "U_pH"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "U_pH"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 5.5
-* valueQuantity.unit = "-"
+* valueQuantity.unit = "pH"
 * valueQuantity.system = $ucum
-* valueQuantity.code = #-
+* valueQuantity.code = #pH
 * referenceRange.low.value = 5.0
 * referenceRange.high.value = 6.0
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 61a7fd0a-b7f2-5444-8e8f-b3c0b31afb0f
 InstanceOf: CZ_ObservationResultLaboratory
@@ -598,8 +616,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #05143
-* code.coding[0].display = "U_spec.hmotnost"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "U_spec.hmotnost"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 1006.000
 * valueQuantity.unit = "kg/m*3"
@@ -607,8 +625,9 @@ Usage: #inline
 * valueQuantity.code = #kg/m3
 * referenceRange.low.value = 1015.000
 * referenceRange.high.value = 1030.000
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#L "Low"
+* specimen = Reference(urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: c6607469-575d-5035-bbba-4db320a035bb
 InstanceOf: CZ_ObservationResultLaboratory
@@ -617,8 +636,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03355
-* code.coding[0].display = "U_erytrocyty"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "U_erytrocyty"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0
 * valueQuantity.unit = "10*6/L"
@@ -626,8 +645,9 @@ Usage: #inline
 * valueQuantity.code = #10*6/L
 * referenceRange.low.value = 0
 * referenceRange.high.value = 5
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 48ad3dbf-109d-58e6-9484-724f96ac085b
 InstanceOf: CZ_ObservationResultLaboratory
@@ -636,8 +656,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03384
-* code.coding[0].display = "U_leukocyty"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "U_leukocyty"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 1
 * valueQuantity.unit = "10*6/L"
@@ -645,8 +665,9 @@ Usage: #inline
 * valueQuantity.code = #10*6/L
 * referenceRange.low.value = 0
 * referenceRange.high.value = 10
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 4f6e8f4a-21ea-51c9-a6fa-e78bb86a96a1
 InstanceOf: CZ_ObservationResultLaboratory
@@ -655,8 +676,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #14010
-* code.coding[0].display = "U_epitelie dlaž."
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "U_epitelie dlaž."
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0
 * valueQuantity.unit = "10*6/L"
@@ -664,8 +685,9 @@ Usage: #inline
 * valueQuantity.code = #10*6/L
 * referenceRange.low.value = 0
 * referenceRange.high.value = 20
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: 20e21656-736f-533d-b284-631ac2d6a499
 InstanceOf: CZ_ObservationResultLaboratory
@@ -674,8 +696,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #15172
-* code.coding[0].display = "U_epitelie jiné"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "U_epitelie jiné"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0
 * valueQuantity.unit = "10*6/L"
@@ -683,8 +705,9 @@ Usage: #inline
 * valueQuantity.code = #10*6/L
 * referenceRange.low.value = 0
 * referenceRange.high.value = 4
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: cfd544a2-674b-529b-b66e-cea6aa2f0025
 InstanceOf: CZ_ObservationResultLaboratory
@@ -693,8 +716,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03297
-* code.coding[0].display = "U_válce hyalinní"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "U_válce hyalinní"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0
 * valueQuantity.unit = "10*6/L"
@@ -702,8 +725,9 @@ Usage: #inline
 * valueQuantity.code = #10*6/L
 * referenceRange.low.value = 0
 * referenceRange.high.value = 2
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 Instance: ed194f5b-fcf7-5ee6-b4d2-8a10da8dd500
 InstanceOf: CZ_ObservationResultLaboratory
@@ -712,8 +736,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #09191
-* code.coding[0].display = "U_válce patolog."
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "U_válce patolog."
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0
 * valueQuantity.unit = "10*6/L"
@@ -721,8 +745,9 @@ Usage: #inline
 * valueQuantity.code = #10*6/L
 * referenceRange.low.value = 0
 * referenceRange.high.value = 1
-* specimen = Reference(e53c77f3-4c38-59d3-a9ff-5964a2600d42)
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* specimen = Reference(urn:uuid:b732db29-a256-541b-8f3b-a240152a89f3)
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 
 
@@ -734,8 +759,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #13808
-* code.coding[0].display = "B_Leukocyty"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Leukocyty"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 4.9
 * valueQuantity.unit = "10*9/L"
@@ -743,7 +768,9 @@ Usage: #inline
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 4.0
 * referenceRange.high.value = 10.0
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: a9947032-ca45-5ad4-bcd4-10d1c51f4d1f
 InstanceOf: CZ_ObservationResultLaboratory
@@ -752,8 +779,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01675
-* code.coding[0].display = "B_Erytrocyty"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Erytrocyty"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 5.06
 * valueQuantity.unit = "10*12/L"
@@ -761,7 +788,9 @@ Usage: #inline
 * valueQuantity.code = #10*12/L
 * referenceRange.low.value = 4.00
 * referenceRange.high.value = 5.80
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 688d4582-802b-53cb-be6d-b7f9c4e82162
 InstanceOf: CZ_ObservationResultLaboratory
@@ -770,8 +799,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01991
-* code.coding[0].display = "B_Hemoglobin"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Hemoglobin"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 155
 * valueQuantity.unit = "g/L"
@@ -779,7 +808,9 @@ Usage: #inline
 * valueQuantity.code = #g/L
 * referenceRange.low.value = 135
 * referenceRange.high.value = 175
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: bafee946-7f25-5eb9-b8fa-a6901becdfad
 InstanceOf: CZ_ObservationResultLaboratory
@@ -788,8 +819,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02099
-* code.coding[0].display = "B_Hematokrit"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Hematokrit"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.424
 * valueQuantity.unit = "1"
@@ -797,7 +828,9 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.400
 * referenceRange.high.value = 0.500
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: edfc7297-2415-59ed-bad1-ca32112fc51e
 InstanceOf: CZ_ObservationResultLaboratory
@@ -806,8 +839,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02419
-* code.coding[0].display = "B_MCV"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_MCV"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 83.8
 * valueQuantity.unit = "fL"
@@ -815,7 +848,9 @@ Usage: #inline
 * valueQuantity.code = #fL
 * referenceRange.low.value = 82.0
 * referenceRange.high.value = 98.0
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: b1fac24e-2775-53c8-9af5-a7ed8974c3ff
 InstanceOf: CZ_ObservationResultLaboratory
@@ -824,8 +859,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12271
-* code.coding[0].display = "B_MCH"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_MCH"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 30.6
 * valueQuantity.unit = "pg"
@@ -833,7 +868,9 @@ Usage: #inline
 * valueQuantity.code = #pg
 * referenceRange.low.value = 28.0
 * referenceRange.high.value = 34.0
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 30d526f4-5577-5fa2-b2fa-d55288ac29e2
 InstanceOf: CZ_ObservationResultLaboratory
@@ -842,8 +879,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12273
-* code.coding[0].display = "B_MCHC"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_MCHC"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 366
 * valueQuantity.unit = "g/L"
@@ -851,7 +888,9 @@ Usage: #inline
 * valueQuantity.code = #g/L
 * referenceRange.low.value = 320
 * referenceRange.high.value = 360
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 491c3724-0e2e-5f7e-8cd5-451227551485
 InstanceOf: CZ_ObservationResultLaboratory
@@ -860,8 +899,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #04769
-* code.coding[0].display = "B_RDW"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_RDW"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.124
 * valueQuantity.unit = "1"
@@ -869,7 +908,9 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.100
 * referenceRange.high.value = 0.152
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: b8dffd1f-39fe-5c1d-9e17-71b999c33799
 InstanceOf: CZ_ObservationResultLaboratory
@@ -878,8 +919,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02688
-* code.coding[0].display = "B_Trombocyty"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Trombocyty"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 192
 * valueQuantity.unit = "10*9/L"
@@ -887,7 +928,9 @@ Usage: #inline
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 150
 * referenceRange.high.value = 400
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 46199dd5-329c-5291-a8ed-4d19b5362db9
 InstanceOf: CZ_ObservationResultLaboratory
@@ -896,8 +939,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #04726
-* code.coding[0].display = "B_Thr objem"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Thr objem"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 10.2
 * valueQuantity.unit = "fL"
@@ -905,7 +948,9 @@ Usage: #inline
 * valueQuantity.code = #fL
 * referenceRange.low.value = 7.8
 * referenceRange.high.value = 11.0
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 8723ae16-1ed7-5415-b8aa-17ef742ed36a
 InstanceOf: CZ_ObservationResultLaboratory
@@ -914,8 +959,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12278
-* code.coding[0].display = "B_Trombokrit"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Trombokrit"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 2.00
 * valueQuantity.unit = "10*-3"
@@ -923,7 +968,9 @@ Usage: #inline
 * valueQuantity.code = #10*-3
 * referenceRange.low.value = 1.20
 * referenceRange.high.value = 3.50
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: f850d703-803a-5633-95c2-2de1d0f80c31
 InstanceOf: CZ_ObservationResultLaboratory
@@ -932,8 +979,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #16263
-* code.coding[0].display = "B_Thr_Aniz_SD"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Thr_Aniz_SD"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 12.6
 * valueQuantity.unit = "fL"
@@ -941,7 +988,9 @@ Usage: #inline
 * valueQuantity.code = #fL
 * referenceRange.low.value = 9.0
 * referenceRange.high.value = 17.0
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: c089c0d9-28d3-5645-8f25-5853840b2e9a
 InstanceOf: CZ_ObservationResultLaboratory
@@ -950,8 +999,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #18895
-* code.coding[0].display = "B_Thr velké>12fl"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Thr velké>12fl"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.2730
 * valueQuantity.unit = "1"
@@ -959,7 +1008,9 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.1500
 * referenceRange.high.value = 0.3500
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: aab312ea-6305-51ca-8d2e-5457f26aab23
 InstanceOf: CZ_ObservationResultLaboratory
@@ -968,8 +1019,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12369
-* code.coding[0].display = "B_Neutrofily_abs"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Neutrofily_abs"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 3.340
 * valueQuantity.unit = "10*9/L"
@@ -977,7 +1028,9 @@ Usage: #inline
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 2.000
 * referenceRange.high.value = 7.000
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 5d3066ad-d41f-5a48-8793-a95362034e82
 InstanceOf: CZ_ObservationResultLaboratory
@@ -986,8 +1039,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12483
-* code.coding[0].display = "B_Neutrofily"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Neutrofily"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.682
 * valueQuantity.unit = "1"
@@ -995,7 +1048,9 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.450
 * referenceRange.high.value = 0.700
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: a92d765d-afc7-5e56-b1ab-5d299a448a98
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1004,8 +1059,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12365
-* code.coding[0].display = "B_Lymfocyty_abs"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Lymfocyty_abs"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 1.080
 * valueQuantity.unit = "10*9/L"
@@ -1013,7 +1068,9 @@ Usage: #inline
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 0.800
 * referenceRange.high.value = 4.000
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: c6a12f2a-416e-57fb-9006-e5a544929fcd
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1022,8 +1079,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12471
-* code.coding[0].display = "B_Lymfocyty"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Lymfocyty"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.220
 * valueQuantity.unit = "1"
@@ -1031,7 +1088,9 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.200
 * referenceRange.high.value = 0.450
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 03f3c097-232e-5682-86ad-8f0b91e7a062
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1040,8 +1099,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12367
-* code.coding[0].display = "B_Monocyty_abs"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Monocyty_abs"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.320
 * valueQuantity.unit = "10*9/L"
@@ -1049,7 +1108,9 @@ Usage: #inline
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 0.080
 * referenceRange.high.value = 1.200
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 4367f7e9-1c83-59f2-9aa5-70861cc380ca
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1058,8 +1119,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12478
-* code.coding[0].display = "B_Monocyty"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Monocyty"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.065
 * valueQuantity.unit = "1"
@@ -1067,7 +1128,9 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.020
 * referenceRange.high.value = 0.120
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 522a2991-a37c-59d5-a836-2435df5be6e0
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1076,8 +1139,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12348
-* code.coding[0].display = "B_Eosinofily_abs"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Eosinofily_abs"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.150
 * valueQuantity.unit = "10*9/L"
@@ -1085,7 +1148,9 @@ Usage: #inline
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 0.000
 * referenceRange.high.value = 0.500
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: d0e5d40b-cfb4-5671-9df5-72d67c601e20
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1094,8 +1159,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12460
-* code.coding[0].display = "B_Eosinofily"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Eosinofily"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.031
 * valueQuantity.unit = "1"
@@ -1103,7 +1168,9 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.000
 * referenceRange.high.value = 0.050
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: af240b68-3d61-51ce-8701-ddbef6b9c445
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1112,8 +1179,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12347
-* code.coding[0].display = "B_Basofily_abs"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Basofily_abs"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.010
 * valueQuantity.unit = "10*9/L"
@@ -1121,7 +1188,9 @@ Usage: #inline
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 0.000
 * referenceRange.high.value = 0.200
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: dc29587b-6bda-51c0-83e5-71d5388918f7
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1130,8 +1199,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #12449
-* code.coding[0].display = "B_Basofily"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Basofily"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.002
 * valueQuantity.unit = "1"
@@ -1139,7 +1208,9 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.000
 * referenceRange.high.value = 0.020
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 09484c96-2ef9-500a-a890-db95f79b5cf9
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1148,8 +1219,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #18027
-* code.coding[0].display = "B_Nezr.gran.abs"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Nezr.gran.abs"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.01
 * valueQuantity.unit = "10*9/L"
@@ -1157,7 +1228,9 @@ Usage: #inline
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 0.00
 * referenceRange.high.value = 0.03
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)
 
 Instance: 99568880-9ab9-58a9-b680-2b0f79d605e5
 InstanceOf: CZ_ObservationResultLaboratory
@@ -1166,8 +1239,8 @@ Usage: #inline
 * status = #final
 * code.coding[0].system = $nclp
 * code.coding[0].code = #18029
-* code.coding[0].display = "B_Nezr.gran.rel"
-* subject = Reference(879657b8-f2d4-54da-ab1f-c363b4f092d5)
+* code.text = "B_Nezr.gran.rel"
+* subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * effectiveDateTime = "2019-10-17T08:22:00+01:00"
 * valueQuantity.value = 0.002
 * valueQuantity.unit = "1"
@@ -1175,4 +1248,6 @@ Usage: #inline
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.000
 * referenceRange.high.value = 0.005
-* performer[+] = Reference(a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
+* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
+* specimen = Reference(urn:uuid:541dc2b2-6ccb-5afb-9512-b191de5ae31d)

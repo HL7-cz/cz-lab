@@ -1,7 +1,7 @@
 Instance: CZ-LabReport-Bundle-Example-Min
 InstanceOf: CZ_BundleLab
 Usage: #example
-Title: "CZ Lab Report Bundle Example - Minimal"
+Title: "Minimal Lab Report Bundle Example"
 Description: "Czech Lab Report - example of a minimal bundle containing lab observations"
 
 * identifier.system = "http://hospital.example.org/lab-results"
@@ -17,15 +17,14 @@ Description: "Czech Lab Report - example of a minimal bundle containing lab obse
 * entry[diagnosticReport][+].fullUrl = "urn:uuid:0e2f0d73-8e8f-4cf7-b24a-5c6b812f77a3"
 * entry[diagnosticReport][=].resource = CZ-LabReport-DiagnosticReport-Example-Min
 // patient
-* entry[patient][+].fullUrl = "urn:uuid:6d8d3324-4be6-4048-a337-22af2e15c0c5"
-* entry[patient][=].resource = patientPiry
-// practitioner
-* entry[practitioner][+].fullUrl = "urn:uuid:e67890bc-1234-4f56-9abc-9876543210ef"
-* entry[practitioner][=].resource = practitionerHromada
+* entry[patient][+].fullUrl = "urn:uuid:3f2a1b9e-6d4f-4c2e-9a7b-2d8f0b3e1c9a"
+* entry[patient][=].resource = Mracena
 // organization
 * entry[organization][+].fullUrl = "urn:uuid:d5e2f0ab-9b42-4c3f-b1b9-02c78f52a8a1"
 * entry[organization][=].resource = LaboratorAlveaMed
-
+// practitioner
+* entry[practitioner][+].fullUrl = "urn:uuid:e67890bc-1234-4f56-9abc-9876543210ef"
+* entry[practitioner][=].resource = practitionerHromada
 // observations
 * entry[observation][+].fullUrl = "urn:uuid:de3ab9ef-f11a-4f9d-86cf-f9ef84df7b52"
 * entry[observation][=].resource = CZ-LabResult-Observation-Example-Min-Na
@@ -46,34 +45,28 @@ Description: "An example of a minimal laboratory report Composition"
 
 * id = "b4a52c6d-4c78-4cfa-bd1a-5f8356e96274"
 
-//* meta.profile[+] = "https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report"
 * extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:0e2f0d73-8e8f-4cf7-b24a-5c6b812f77a3)
 
-* language = #cs-CZ
+* language = #cs
 * status = #final
-* type = $loinc#11502-2 //"Laboratorní nález"
+* type = $loinc#11502-2 //"Laboratory report"
 * date = "2022-01-24T09:30:00+02:00"
 
 * title = "Laboratorní nález"
 * confidentiality = #N
 
-//* subject = Reference(patientPiry)
-* subject = Reference(urn:uuid:6d8d3324-4be6-4048-a337-22af2e15c0c5)
-//* author[+] = Reference(practitionerHromada) 
+
+* subject = Reference(urn:uuid:3f2a1b9e-6d4f-4c2e-9a7b-2d8f0b3e1c9a)
 * author[+] = Reference(urn:uuid:e67890bc-1234-4f56-9abc-9876543210ef) 
 
-//* custodian = Reference(LaboratorAlveaMed)
 * custodian = Reference(urn:uuid:d5e2f0ab-9b42-4c3f-b1b9-02c78f52a8a1)
 
 * section[lab-no-subsections]
   * title = "Laboratorní nález"
   * code = $loinc#18719-5 //"Chemistry studies (set)"
 
-  //* entry[+] = Reference(CZ-LabResult-Observation-Example-Min-Na)
   * entry[+] = Reference(urn:uuid:de3ab9ef-f11a-4f9d-86cf-f9ef84df7b52)
-  //* entry[+] = Reference(CZ-LabResult-Observation-Example-Min-K)
   * entry[+] = Reference(urn:uuid:de3ab9ef-f11a-4f9d-86cf-f9ef84df7b45)
-  //* entry[+] = Reference(CZ-LabResult-Observation-Example-Min-Cl)
   * entry[+] = Reference(urn:uuid:de3ab9ef-f11a-4f9d-86cf-f9ef84df7b74)
 
 
@@ -90,12 +83,12 @@ Description: "Example of DiagnosticReport for lab result"
 
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:b4a52c6d-4c78-4cfa-bd1a-5f8356e96274)
 * status = #final
-* code = $loinc#11502-2 //"Laboratorní nález"
+* code = $loinc#11502-2 //"Laboratory report"
 
 * effectiveDateTime = "2022-01-24T08:19:00+02:00"
 * issued = "2022-01-24T09:30:00+02:00"
 
-* subject = Reference(urn:uuid:6d8d3324-4be6-4048-a337-22af2e15c0c5)
+* subject = Reference(urn:uuid:3f2a1b9e-6d4f-4c2e-9a7b-2d8f0b3e1c9a)
 
 * result[+] = Reference(urn:uuid:de3ab9ef-f11a-4f9d-86cf-f9ef84df7b52)
 * result[+] = Reference(urn:uuid:de3ab9ef-f11a-4f9d-86cf-f9ef84df7b45)
@@ -110,31 +103,10 @@ Description: "Example of DiagnosticReport for lab result"
 // =========================================================================================================
 // ACTORS
 // =========================================================================================================
-Instance: patientPiry
-InstanceOf: CZ_PatientCore
-Usage: #inline
-Description: "Zoltán Píry"
-
-* id = "6d8d3324-4be6-4048-a337-22af2e15c0c5"
-
-* identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
-* identifier[CPOJ][=].value = "490908181"
-
-* identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[RID][=].value = "1116309493"
-
-* name.family = "Píry"
-* name.given = "Zoltán"
-
-* birthDate = "1949-09-08"
-
-* gender = #male
-
-
 Instance: practitionerHromada
 InstanceOf: CZ_PractitionerCore
 Usage: #inline
-Description: "Virtuální lékař MUDr. Bohumil Hromada"
+Description: "Virtual practitioner MUDr. Bohumil Hromada"
 * id = "e67890bc-1234-4f56-9abc-9876543210ef"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "246813579"
@@ -147,24 +119,24 @@ Description: "Virtuální lékař MUDr. Bohumil Hromada"
 Instance: LaboratorAlveaMed
 InstanceOf: CZ_OrganizationCore
 Title: "AlveaMed laboratorní centrum s.r.o."
-Description: "Soukromá biochemická laboratoř zaměřená na klinickou chemii a imunoanalýzu."
+Description: "Virtual laboratory"
 Usage: #inline
 
 * id = "d5e2f0ab-9b42-4c3f-b1b9-02c78f52a8a1"
 
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
-* identifier[=].value = "74259613"
+//* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+//* identifier[=].value = "74259613"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
 * identifier[=].value = "AL742596"
 
 * active = true
 * name = "AlveaMed laboratorní centrum s.r.o."
 
-* telecom[+].system = #phone
-* telecom[=].value = "+420541883221"
+//* telecom[+].system = #phone
+//* telecom[=].value = "+420541883221"
 
-* telecom[+].system = #email
-* telecom[=].value = "kontakt@alveamed.cz"
+//* telecom[+].system = #email
+//* telecom[=].value = "kontakt@alveamed.cz"
 
 * address[+].use = #work
 * address[=].line = "Kyslíková 8"
@@ -188,21 +160,31 @@ Usage: #inline
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 
 * code.coding[0].system = $nclp
-* code.coding[0].code = #03086
-* code.coding[0].display = "s_Urea"
-* code.text = "Urea"
+* code.coding[0].code = #02505
+* code.coding[0].display = "Na (S; látková konc. [mmol/l] ISE bez diluce)"
+* code.text = "S_Sodík"
 
-* subject = Reference(urn:uuid:6d8d3324-4be6-4048-a337-22af2e15c0c5)
+* subject = Reference(urn:uuid:3f2a1b9e-6d4f-4c2e-9a7b-2d8f0b3e1c9a)
 
 * effectiveDateTime = "2022-01-24T08:19:00+02:00"
 * issued = "2022-01-24T09:19:00+02:00"
 
 * performer[+] = Reference(urn:uuid:e67890bc-1234-4f56-9abc-9876543210ef) 
 
-* valueQuantity.value = 138.00
+* valueQuantity.value = 140
 * valueQuantity.unit = "mmol/L"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #mmol/L
+
+* referenceRange[0].low.value = 136
+* referenceRange[0].low.unit = "mmol/L"
+* referenceRange[0].low.system = $ucum
+* referenceRange[0].low.code = #mmol/L
+
+* referenceRange[0].high.value = 145
+* referenceRange[0].high.unit = "mmol/L"
+* referenceRange[0].high.system = $ucum
+* referenceRange[0].high.code = #mmol/L
 
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 
@@ -219,20 +201,30 @@ Usage: #inline
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02271
-* code.coding[0].display = "s_Draslík"
-* code.text = "Draslík"
+* code.coding[0].display = "K (U; látková konc. [mmol/l] *)"
+* code.text = "S_Draslík"
 
-* subject = Reference(urn:uuid:6d8d3324-4be6-4048-a337-22af2e15c0c5)
+* subject = Reference(urn:uuid:3f2a1b9e-6d4f-4c2e-9a7b-2d8f0b3e1c9a)
 
 * effectiveDateTime = "2022-01-24T08:19:00+02:00"
 * issued = "2022-01-24T09:19:00+02:00"
 
 * performer[+] = Reference(urn:uuid:e67890bc-1234-4f56-9abc-9876543210ef) 
 
-* valueQuantity.value = 3.7
+* valueQuantity.value = 4.1
 * valueQuantity.unit = "mmol/L"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #mmol/L
+
+* referenceRange[0].low.value = 3.5
+* referenceRange[0].low.unit = "mmol/L"
+* referenceRange[0].low.system = $ucum
+* referenceRange[0].low.code = #mmol/L
+
+* referenceRange[0].high.value = 5.1
+* referenceRange[0].high.unit = "mmol/L"
+* referenceRange[0].high.system = $ucum
+* referenceRange[0].high.code = #mmol/L
 
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 
@@ -249,10 +241,10 @@ Usage: #inline
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #01433
-* code.coding[0].display = "s_Chloridy"
-* code.text = "Chloridy"
+* code.coding[0].display = "Cl (S; látková konc. [mmol/l] ISE bez diluce)"
+* code.text = "S_Chloridy"
 
-* subject = Reference(urn:uuid:6d8d3324-4be6-4048-a337-22af2e15c0c5)
+* subject = Reference(urn:uuid:3f2a1b9e-6d4f-4c2e-9a7b-2d8f0b3e1c9a)
 
 * effectiveDateTime = "2022-01-24T08:19:00+02:00"
 * issued = "2022-01-24T09:19:00+02:00"
@@ -263,5 +255,15 @@ Usage: #inline
 * valueQuantity.unit = "mmol/L"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #mmol/L
+
+* referenceRange[0].low.value = 98
+* referenceRange[0].low.unit = "mmol/L"
+* referenceRange[0].low.system = $ucum
+* referenceRange[0].low.code = #mmol/L
+
+* referenceRange[0].high.value = 107
+* referenceRange[0].high.unit = "mmol/L"
+* referenceRange[0].high.system = $ucum
+* referenceRange[0].high.code = #mmol/L
 
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"

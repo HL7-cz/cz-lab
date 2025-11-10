@@ -9,22 +9,22 @@ Description: "Example of a numeric lab result including measurement uncertainty,
 * status = #final
 
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
-* category[studyType] = $loinc#18719-5	"Chemistry studies (set)"
+* category[studyType] = $loinc#18719-5	//"Chemistry studies (set)"
 //* category[specialty] = 
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03086
-* code.coding[0].display = "s_Urea"
-* code.text = "Urea"
+* code.coding[0].display = "Urea (S; látková konc. [mmol/l] Absorpční spektrofotometrie)"
+* code.text = "S_Urea"
 
-* subject = Reference(Zyrgana)
-* specimen = Reference(CZ-LabResult-Specimen-Example)
+* subject = Reference(urn:uuid:c60b7c0e-0d8c-4e43-9f52-86d1dcf1a43c)
+* specimen = Reference(urn:uuid:fa3d8c2e-71b4-4e9c-9d2f-85b0a1f7c934)
 
-* performer[+] = Reference(practitionerRoleSejdlova)
-* performer[=].extension[performerFunction].valueCodeableConcept = http://hl7.org/fhir/StructureDefinition/event-performerFunction#PPRF "primary performer"
+* performer[+] = Reference(urn:uuid:fab321ab-7777-4444-cccc-abcdefabcdef)
+* performer[=].extension[performerFunction].valueCodeableConcept = $performer-function#PPRF "primary performer"
 
-* performer[+] = Reference(practitionerRoleZybradlo)
-* performer[=].extension[performerFunction].valueCodeableConcept = http://hl7.org/fhir/StructureDefinition/event-performerFunction#VRF "verifier"
+* performer[+] = Reference(urn:uuid:aabbccdd-1111-4222-9333-ffeeddccbbcc)
+* performer[=].extension[performerFunction].valueCodeableConcept = $performer-function#VRF "verifier"
 
 * effectiveDateTime = "2025-04-24T08:45:00+02:00"
 * issued = "2025-04-24T09:30:00+02:00"
@@ -34,14 +34,15 @@ Description: "Example of a numeric lab result including measurement uncertainty,
 * valueQuantity.system = $ucum
 * valueQuantity.code = #mmol/L
 
+
 * valueQuantity.extension[uncertainty].url = "http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty"
-* valueQuantity.extension[uncertainty].valueDecimal = 0.2
+* valueQuantity.extension[=].valueDecimal = 0.2
 * valueQuantity.extension[uncertaintyType].url = "http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType"
-* valueQuantity.extension[uncertaintyType].valueCode = #normal
+* valueQuantity.extension[=].valueCode = #N
 
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
 
-* method = $sct#70621000052105 "Spectrophotometric technique"
+* method = $sct#70621000052105 //"Spectrophotometric technique"
 
 * referenceRange[0].low.value = 2.0
 * referenceRange[0].low.unit = "mmol/L"
@@ -57,20 +58,16 @@ Description: "Example of a numeric lab result including measurement uncertainty,
 * referenceRange[0].age.high.value = 150
 * referenceRange[0].age.low.unit = "a"
 * referenceRange[0].age.high.unit = "a"
-* referenceRange[0].type = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
+//* referenceRange[0].type = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
 
 * referenceRange[0].appliesTo[0] = $sct#248152002 "Female"
 
 // kalibrátor
-* extension[ObservationCertifiedRefMaterialCodeable].valueCodeableConcept = http://nibsc.org#11/222 "Urea, certified reference material, 10 mmol/L"
-// realne bude stacit pouze predchozi zapis (pripadne jeden z nich)
-* extension[ObservationCertifiedRefMaterialIdentifer].valueIdentifier
-  * system = "http://nibsc.org"
-  * value = "11/222"
+//* extension[ObservationCertifiedRefMaterialCodeable].valueCodeableConcept = http://nibsc.org#11/222 "Urea, certified reference material, 10 mmol/L"
 
-* contained[+] = deviceKitUrea
+//* contained[+] = deviceKitUrea
 * contained[+] = deviceAnalyzerUrea
-* extension[DeviceLabTestKit].valueReference = Reference (deviceKitUrea)
+//* extension[DeviceLabTestKit].valueReference = Reference (deviceKitUrea)
 * device = Reference (deviceAnalyzerUrea)
 
 
@@ -83,8 +80,9 @@ Description: "Analyzátor BioAnalyt 6000"
 * deviceName[0].name = "BioAnalyt 6000"
 * deviceName[0].type = #manufacturer-name
 * manufacturer = "Best manufacturer"
-* type = $sct#706168006 "Automated clinical chemistry analyzer"
+* type = $sct#706168006 //"Automated clinical chemistry analyzer"
 
+/*
 // Testovací souprava - kit
 Instance: deviceKitUrea
 InstanceOf: Device
@@ -94,4 +92,5 @@ Description: "Testovací souprava Urea enzymatic assay"
 * deviceName[0].name = "Urea Enzymatic Assay Kit"
 * deviceName[0].type = #manufacturer-name
 * manufacturer = "Best manufacturer"
-* type = $sct#706167001 "Reagent kit"
+* type = $sct#706167001 //"Reagent kit"
+*/
