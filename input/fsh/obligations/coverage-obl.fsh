@@ -11,10 +11,9 @@ Description: "This profile defines obligations for a coverage in FHIR for the pu
 
 * payor insert OblConsumer(#SHALL:display,L2)
 * identifier insert OblConsumer(#SHALL:display,L2)
-/*
+
 * payor insert OblCreator(#SHALL:able-to-populate,L3)
 * identifier insert OblCreator(#SHALL:able-to-populate,L3)
 
 * payor insert OblConsumer(#SHALL:display,L3)
 * identifier insert OblConsumer(#SHALL:display,L3)
-*/

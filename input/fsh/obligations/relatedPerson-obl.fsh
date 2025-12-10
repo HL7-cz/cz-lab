@@ -21,7 +21,7 @@ Description: "This profile defines obligations for a related person in FHIR for 
 * name.family insert OblConsumer(#SHALL:display,L2)
 * address insert OblConsumer(#SHALL:display,L2)
 * telecom insert OblConsumer(#SHALL:display,L2)
-/*
+
 // L3
 * identifier insert OblCreator(#SHALL:populate-if-known,L3)
 * relationship insert OblCreator(#SHALL:able-to-populate,L3)
@@ -37,4 +37,3 @@ Description: "This profile defines obligations for a related person in FHIR for 
 * name.family insert OblConsumer(#SHALL:display,L3)
 * address insert OblConsumer(#SHALL:display,L3)
 * telecom insert OblConsumer(#SHALL:display,L3)
-*/

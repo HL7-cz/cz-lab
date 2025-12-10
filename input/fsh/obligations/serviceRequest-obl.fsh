@@ -12,19 +12,19 @@ Description: "This profile defines obligations for an order information in FHIR 
 * occurrenceDateTime insert OblCreator(#SHOULD:able-to-populate,L2)
 * reasonReference insert OblCreator(#SHOULD:able-to-populate,L2)
 
-* identifier insert OblCreator(#SHALL:able-to-populate,L2)
-* authoredOn insert OblCreator(#SHALL:able-to-populate,L2)   
-* occurrenceDateTime insert OblCreator(#SHALL:able-to-populate,L2)
-* reasonReference insert OblCreator(#SHALL:able-to-populate,L2)
+* identifier insert OblCreator(#SHALL:able-to-populate,L3)
+* authoredOn insert OblCreator(#SHALL:able-to-populate,L3)   
+* occurrenceDateTime insert OblCreator(#SHALL:able-to-populate,L3)
+* reasonReference insert OblCreator(#SHALL:able-to-populate,L3)
 
 * identifier insert OblConsumer(#SHOULD:display,L2)
 * authoredOn insert OblConsumer(#SHOULD:display,L2)   
 * occurrenceDateTime insert OblConsumer(#SHOULD:display,L2)
 * reasonReference insert OblConsumer(#SHOULD:display,L2)
 
-* identifier insert OblConsumer(#SHALL:display,L2)
-* authoredOn insert OblConsumer(#SHALL:display,L2)   
-* occurrenceDateTime insert OblConsumer(#SHALL:display,L2)
-* reasonReference insert OblConsumer(#SHALL:display,L2)
+* identifier insert OblConsumer(#SHALL:display,L3)
+* authoredOn insert OblConsumer(#SHALL:display,L3)   
+* occurrenceDateTime insert OblConsumer(#SHALL:display,L3)
+* reasonReference insert OblConsumer(#SHALL:display,L3)
 
 

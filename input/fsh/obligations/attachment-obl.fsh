@@ -4,11 +4,6 @@ Id: cz-attachment-obl-lab
 Title:    "Attachment: Obligations"
 Description: "This profile defines obligations for an attachment in FHIR for the purpose of this guide."
 
-* height insert OblCreator(#SHOULD:populate-if-known,L2)
-* width insert OblCreator(#SHOULD:populate-if-known,L2)
-* frames insert OblCreator(#SHOULD:populate-if-known,L2)
-* duration insert OblCreator(#SHOULD:populate-if-known,L2)
-* bodySite insert OblCreator(#SHOULD:populate-if-known,L2)
 * content.contentType insert OblCreator(#SHOULD:able-to-populate,L2)
 * content.language insert OblCreator(#SHOULD:able-to-populate,L2)
 * content.data insert OblCreator(#SHOULD:able-to-populate,L2)
@@ -17,12 +12,7 @@ Description: "This profile defines obligations for an attachment in FHIR for the
 * content.creation insert OblCreator(#SHOULD:populate-if-known,L2)
 * content.hash insert OblCreator(#SHOULD:populate-if-known,L2)
 * content.size insert OblCreator(#SHOULD:populate-if-known,L2)
-/*
-* height insert OblCreator(#SHALL:populate-if-known,L3)
-* width insert OblCreator(#SHALL:populate-if-known,L3)
-* frames insert OblCreator(#SHALL:populate-if-known,L3)
-* duration insert OblCreator(#SHALL:populate-if-known,L3)
-* bodySite insert OblCreator(#SHALL:populate-if-known,L3)
+
 * content.contentType insert OblCreator(#SHALL:able-to-populate,L3)
 * content.language insert OblCreator(#SHALL:able-to-populate,L3)
 * content.data insert OblCreator(#SHALL:able-to-populate,L3)
@@ -31,12 +21,7 @@ Description: "This profile defines obligations for an attachment in FHIR for the
 * content.creation insert OblCreator(#SHALL:populate-if-known,L3)
 * content.hash insert OblCreator(#SHALL:populate-if-known,L3)
 * content.size insert OblCreator(#SHALL:populate-if-known,L3)
-*/
-* height insert OblConsumer(#SHOULD:process,L2)
-* width insert OblConsumer(#SHOULD:process,L2)
-* frames insert OblConsumer(#SHOULD:process,L2)
-* duration insert OblConsumer(#SHOULD:process,L2)
-* bodySite insert OblConsumer(#SHOULD:display,L2)
+
 * content.contentType insert OblConsumer(#SHOULD:display,L2)
 * content.language insert OblConsumer(#SHOULD:display,L2)
 * content.data insert OblConsumer(#SHOULD:display,L2)
@@ -45,12 +30,7 @@ Description: "This profile defines obligations for an attachment in FHIR for the
 * content.creation insert OblConsumer(#SHOULD:display,L2)
 * content.hash insert OblConsumer(#SHOULD:display,L2)
 * content.size insert OblConsumer(#SHOULD:display,L2)
-/*
-* height insert OblConsumer(#SHALL:process,L3)
-* width insert OblConsumer(#SHALL:process,L3)
-* frames insert OblConsumer(#SHALL:process,L3)
-* duration insert OblConsumer(#SHALL:process,L3)
-* bodySite insert OblConsumer(#SHALL:display,L3)
+
 * content.contentType insert OblConsumer(#SHALL:display,L3)
 * content.language insert OblConsumer(#SHALL:display,L3)
 * content.data insert OblConsumer(#SHALL:display,L3)
@@ -59,4 +39,3 @@ Description: "This profile defines obligations for an attachment in FHIR for the
 * content.creation insert OblConsumer(#SHALL:display,L3)
 * content.hash insert OblConsumer(#SHALL:display,L3)
 * content.size insert OblConsumer(#SHALL:display,L3)
-*/

@@ -48,6 +48,22 @@ Description: "Diagnostic Report used to represent an entry of a Laboratory Repor
 
 * presentedForm 1..*
 * obeys presentedform-01
+* presentedForm ^short = "Entire report as issued (pdf recommended)"
+
+* media
+  * ^short = "Additional data (like images, diagrams or documents) associated with this report"
+  * ^definition = "A list of additional data, other then presented form of the report, associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."
+  * ^requirements = "Some diagnostic reports may include additional data such as images, diagrams or documents that are relevant to the report. This additional information can provide further context and support for the findings presented in the report."
+  * ^alias = "DICOM; Slides; Scans; Pictures; Documents; Diagrams"
+  * comment
+    * ^short = "Comment about the image or data (e.g. explanation)"
+    * ^definition = "Allows for a comment about the image or data, such as an explanation of its significance or context within the diagnostic report."
+    * ^requirements = "The provider of the report should make a comment about each image or data included in the report. This comment can provide valuable context and help the reader understand the significance of the image or data in relation to the overall findings of the report."
+  * link
+    * ^short = "Reference to the image or data"
+    * ^definition = "A reference to the image or data associated with this report."
+
+
 
 Invariant: presentedform-01
 Description: "At least one of presented form has PDF format"

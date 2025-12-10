@@ -97,9 +97,9 @@ Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/ext
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 
 //----------- Actors
-Alias: $creatorL1 = http://hl7.cz/fhir/cz-lab/actor-creator-lab-L1
-Alias: $consumerL1 = http://hl7.cz/fhir/cz-lab/actor-consumer-lab-L1
-Alias: $creatorL2 = http://hl7.cz/fhir/cz-lab/actor-creator-lab-L2
-Alias: $consumerL2 = http://hl7.cz/fhir/cz-lab/actor-consumer-lab-L2
-Alias: $creatorL3 = http://hl7.cz/fhir/cz-lab/actor-creator-lab-L3
-Alias: $consumerL3 = http://hl7.cz/fhir/cz-lab/actor-consumer-lab-L3
+Alias: $creatorL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L1
+Alias: $consumerL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L1
+Alias: $creatorL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L2
+Alias: $consumerL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L2
+Alias: $creatorL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L3
+Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3

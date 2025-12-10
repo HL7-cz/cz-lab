@@ -24,7 +24,7 @@ Description: "This profile defines obligations for an observation result in FHIR
 * category insert OblCreator(#SHOULD:able-to-populate,L2)
 * device insert OblCreator(#SHOULD:able-to-populate,L2)
 * effectiveDateTime insert OblCreator(#SHOULD:populate-if-known,L2)
-/*
+
 * note insert OblCreator(#SHALL:able-to-populate,L3)
 * hasMember insert OblCreator(#SHALL:able-to-populate,L3)
 * component insert OblCreator(#SHALL:able-to-populate,L3)
@@ -42,7 +42,7 @@ Description: "This profile defines obligations for an observation result in FHIR
 * category insert OblCreator(#SHALL:able-to-populate,L3)
 * device insert OblCreator(#SHALL:able-to-populate,L3)
 * effectiveDateTime insert OblCreator(#SHALL:populate-if-known,L3)
-*/
+
 * note insert OblConsumer(#SHOULD:display,L2)
 * hasMember insert OblConsumer(#SHOULD:display,L2)
 * component insert OblConsumer(#SHOULD:display,L2)
@@ -60,7 +60,7 @@ Description: "This profile defines obligations for an observation result in FHIR
 * category insert OblConsumer(#SHOULD:display,L2)
 * device insert OblConsumer(#SHOULD:display,L2)
 * effectiveDateTime insert OblConsumer(#SHOULD:display,L2)
-/*
+
 * note insert OblConsumer(#SHALL:display,L3)
 * hasMember insert OblConsumer(#SHALL:display,L3)
 * component insert OblConsumer(#SHALL:display,L3)
@@ -78,4 +78,3 @@ Description: "This profile defines obligations for an observation result in FHIR
 * category insert OblConsumer(#SHALL:display,L3)
 * device insert OblConsumer(#SHALL:display,L3)
 * effectiveDateTime insert OblConsumer(#SHALL:display,L3)
-*/
