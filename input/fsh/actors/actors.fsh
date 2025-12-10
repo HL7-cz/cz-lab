@@ -1,3 +1,4 @@
+/*
 Instance: actor-creator-lab-L1
 InstanceOf: ActorDefinition
 Title: "Actor Laboratory report Creator L1"
@@ -78,3 +79,4 @@ Usage: #example
 // * type = #entity
 * documentation = """This actor represents the L3 Laboratory report consumers. That is the system using the report received or retrieved.
 Using includes, but is not limited to, the report display, storage or processing."""
+*/

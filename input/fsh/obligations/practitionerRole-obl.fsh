@@ -19,7 +19,7 @@ Description: "This profile defines obligations for a practitioner role in FHIR f
 * specialty insert OblConsumer(#SHALL:display,L2)
 * telecom insert OblConsumer(#SHALL:display,L2)
 * organization insert OblConsumer(#SHALL:display,L2) 
-/*
+
 // L3 Creator Obligations ============>
 * identifier insert OblCreator(#SHALL:populate-if-known,L3)
 * practitioner insert OblCreator(#SHALL:able-to-populate,L3)
@@ -33,4 +33,3 @@ Description: "This profile defines obligations for a practitioner role in FHIR f
 * specialty insert OblConsumer(#SHALL:display,L3)
 * telecom insert OblConsumer(#SHALL:display,L3)
 * organization insert OblConsumer(#SHALL:display,L3) 
-*/

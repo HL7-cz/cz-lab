@@ -44,6 +44,8 @@ Title: "Lab Result Composition Minimal Example"
 Description: "An example of a minimal laboratory report Composition"
 
 * id = "c3a1e83b-1a2f-4f7e-9fd8-18d4ad31a44d"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR123458"
 
 * extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:6b4f39a0-0f1d-4b52-96b8-927f3de96792)
 

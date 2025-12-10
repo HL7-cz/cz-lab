@@ -125,6 +125,8 @@ InstanceOf: CZ_CompositionLabReport
 Usage: #inline
 
 * id = "5880b262-abcb-55a0-88a4-76ef4f97f744"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR2345678"
 
 * status = #final
 * language = #cs
@@ -280,7 +282,7 @@ Description: "Role MUDr. Milboženy Hrčálkové"
 * id = "a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a"
 * practitioner = Reference(urn:uuid:fa4f28b1-1234-4f78-9cda-dcf01f228acf)
 * organization = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
-* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
 * active = true
 * telecom[+].system = #email
 * telecom[=].value = "milbozena.hrcalkova@vzor-nemocnice.cz"

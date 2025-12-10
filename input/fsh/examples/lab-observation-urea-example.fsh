@@ -63,11 +63,11 @@ Description: "Example of a numeric lab result including measurement uncertainty,
 * referenceRange[0].appliesTo[0] = $sct#248152002 "Female"
 
 // kalibrátor
-//* extension[ObservationCertifiedRefMaterialCodeable].valueCodeableConcept = http://nibsc.org#11/222 "Urea, certified reference material, 10 mmol/L"
+* extension[ObservationCertifiedRefMaterialCodeable].valueCodeableConcept = http://nibsc.org#11/222 "Urea, certified reference material, 10 mmol/L"
 
-//* contained[+] = deviceKitUrea
+* contained[+] = deviceKitUrea
 * contained[+] = deviceAnalyzerUrea
-//* extension[DeviceLabTestKit].valueReference = Reference (deviceKitUrea)
+* extension[DeviceLabTestKit].valueReference = Reference (deviceKitUrea)
 * device = Reference (deviceAnalyzerUrea)
 
 
@@ -82,7 +82,7 @@ Description: "Analyzátor BioAnalyt 6000"
 * manufacturer = "Best manufacturer"
 * type = $sct#706168006 //"Automated clinical chemistry analyzer"
 
-/*
+
 // Testovací souprava - kit
 Instance: deviceKitUrea
 InstanceOf: Device
@@ -93,4 +93,3 @@ Description: "Testovací souprava Urea enzymatic assay"
 * deviceName[0].type = #manufacturer-name
 * manufacturer = "Best manufacturer"
 * type = $sct#706167001 //"Reagent kit"
-*/

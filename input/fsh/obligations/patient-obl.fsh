@@ -16,7 +16,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * address insert OblCreator(#SHOULD:able-to-populate,L1) //can-send
 * telecom insert OblCreator(#SHOULD:able-to-populate,L1) //can-send
 * active insert OblCreator(#SHOULD:able-to-populate,L1)
-* generalPractitioner insert OblCreator(#SHALL:able-to-populate,L1) //can-send
+* generalPractitioner insert OblCreator(#SHOULD:able-to-populate,L1) //can-send
 
 
 // Consumer obligations L1
@@ -58,7 +58,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * generalPractitioner insert OblConsumer(#SHOULD:display,L2)
 * address insert OblConsumer(#SHALL:display,L2)
 * contact insert OblConsumer(#SHOULD:display,L2)
-/*
+
 // Creator Obligations L3 ============>
 * identifier[RID] insert OblCreator(#SHALL:able-to-populate,L3)
 * name.given insert OblCreator(#SHALL:able-to-populate,L3)
@@ -84,4 +84,3 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * generalPractitioner insert OblConsumer(#SHOULD:display,L3)
 * address insert OblConsumer(#SHALL:display,L3)
 * contact insert OblConsumer(#SHOULD:display,L3)
-*/

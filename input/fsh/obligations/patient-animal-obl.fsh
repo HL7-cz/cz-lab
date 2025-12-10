@@ -48,7 +48,7 @@ Description: "This profile defines obligations for an animal Patient in FHIR for
 * birthDate insert OblConsumer(#SHALL:display,L2)
 * address insert OblConsumer(#SHALL:display,L2)
 * extension[patient-animal] insert OblConsumer(#SHALL:display,L2)
-/*
+
 // Creator Obligations L3 ============>
 * identifier insert OblCreator(#SHALL:able-to-populate,L3)
 * name.given insert OblCreator(#SHALL:able-to-populate,L3)
@@ -68,4 +68,3 @@ Description: "This profile defines obligations for an animal Patient in FHIR for
 * birthDate insert OblConsumer(#SHALL:display,L3)
 * address insert OblConsumer(#SHALL:display,L3)
 * extension[patient-animal] insert OblConsumer(#SHALL:display,L3)
-*/

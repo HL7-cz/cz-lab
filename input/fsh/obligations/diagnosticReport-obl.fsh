@@ -33,7 +33,7 @@ Description: "This profile defines obligations for a diagnostic report in FHIR f
 * result insert OblCreator(#SHOULD:able-to-populate,L2)
 * presentedForm insert OblCreator(#SHALL:able-to-populate,L2)
 * media insert OblCreator(#SHOULD:able-to-populate,L2)
-/*
+
 * text insert OblCreator(#SHALL:able-to-populate,L3)
 * effectiveDateTime insert OblCreator(#SHALL:populate-if-known,L3)
 * performer insert OblCreator(#SHALL:able-to-populate,L3)
@@ -42,7 +42,7 @@ Description: "This profile defines obligations for a diagnostic report in FHIR f
 * result insert OblCreator(#SHALL:able-to-populate,L3)
 * presentedForm insert OblCreator(#SHALL:able-to-populate,L3)
 * media insert OblCreator(#SHALL:able-to-populate,L3)
-*/
+
 
 * text insert OblCreator(#SHALL:display,L2)
 * effectiveDateTime insert OblCreator(#SHALL:display,L2)
@@ -52,7 +52,7 @@ Description: "This profile defines obligations for a diagnostic report in FHIR f
 * result insert OblCreator(#SHOULD:display,L2)
 * presentedForm insert OblConsumer(#SHALL:display,L2)
 * media insert OblConsumer(#SHOULD:display,L2)
-/*
+
 * text insert OblCreator(#SHALL:display,L3)
 * effectiveDateTime insert OblCreator(#SHALL:display,L3)
 * performer insert OblCreator(#SHALL:display,L3)
@@ -61,4 +61,3 @@ Description: "This profile defines obligations for a diagnostic report in FHIR f
 * result insert OblCreator(#SHALL:display,L3)
 * presentedForm insert OblConsumer(#SHALL:display,L3)
 * media insert OblConsumer(#SHALL:display,L3)
-*/

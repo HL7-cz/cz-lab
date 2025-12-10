@@ -118,6 +118,7 @@ pages:
     title: Download
   downloads-cs.md:
     title: Download
+
 # === MAP ====
 #  Header-map-en.html:
 #    title: Header Model map
@@ -231,6 +232,7 @@ menu:
     Copyright (en): copyright-en.html
     Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
+  IG LAB EU: https://hl7.eu/fhir/laboratory/index.html
 
 instanceOptions:
   manualSliceOrdering: true
@@ -317,17 +319,6 @@ instanceOptions:
 #     - StructureDefinition/bee-sting
 #
 groups:
-  actors:
-    name:  Actors
-    description: Actors used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this version of the guide.
-    resources:
-      - ActorDefinition/actor-creator-lab-L1
-      - ActorDefinition/actor-creator-lab-L2
-      - ActorDefinition/actor-creator-lab-L3
-      - ActorDefinition/actor-consumer-lab-L1
-      - ActorDefinition/actor-consumer-lab-L2
-      - ActorDefinition/actor-consumer-lab-L3
-
   obligations:
     name:  Obligations
     description: Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.

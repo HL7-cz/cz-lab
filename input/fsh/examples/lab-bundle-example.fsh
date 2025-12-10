@@ -301,7 +301,7 @@ Description: "Role MUDr. Záboje Šlofáka"
 * id = "cc8e6b12-2b99-48cf-9c3c-3c8d74805821"
 * practitioner = Reference(urn:uuid:7e243f25-5292-4f5a-9a8c-2a2a9a3e8f7f)
 * organization = Reference(urn:uuid:fd0cbd93-d65e-47b2-86c9-792268a2c1ff)
-* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
 * active = true
 * telecom[+].system = #phone
 * telecom[=].value = "+420775111222"
@@ -314,7 +314,7 @@ Description: "Role MUDr. Milboženy Hrčálkové"
 * id = "a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a"
 * practitioner = Reference(urn:uuid:fa4f28b1-1234-4f78-9cda-dcf01f228acf)
 * organization = Reference(urn:uuid:fd0cbd93-d65e-47b2-86c9-792268a2c1ff)
-* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
 * active = true
 * telecom[+].system = #email
 * telecom[=].value = "milbozena.hrcalkova@vzor-nemocnice.cz"

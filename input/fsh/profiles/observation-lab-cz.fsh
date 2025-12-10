@@ -46,6 +46,9 @@ This observation may represent the result of a simple laboratory test such as he
   * ^short = "Laboratory Test Kit"
   * ^definition = """The laboratory test kit used for this test."""
 
+* extension contains AccreditationCz named accreditation 0..1
+  * ^short = "Information on the laboratory’s accreditation for the respective test"
+
 * category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -119,8 +122,7 @@ That's why it is important to explicitly include informaiton about measurement m
   * code from CZ_NclpLabpolVS (preferred)
   * insert ObservationResultsValueCz
 
-* extension contains AccreditationCz named accreditation 0..1
-* extension[accreditation] ^short = "Information on the laboratory’s accreditation for the respective test"
+
 
 /*
 * component ^slicing.discriminator.type = #value

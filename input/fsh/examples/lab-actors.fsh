@@ -146,35 +146,6 @@ Usage: #example
 * address[=].country = "Česko"
   * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
-
-// Žádající lékař
-Instance: practitionerVycichlo
-InstanceOf: CZ_PractitionerCore
-Usage: #example
-Description: "Fictional physician MUDr. Erazim Vyčichlo"
-* id = "d12345af-8888-4001-bcde-1234567890ab"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
-* identifier[=].value = "135792468"
-* name.use = #usual
-* name.prefix = "MUDr."
-* name.given = "Erazim"
-* name.family = "Vyčichlo"
-* gender = #male
-
-
-Instance: practitionerRoleVycichlo
-InstanceOf: CZ_PractitionerRoleCore
-Usage: #example
-Description: "Role of MUDr. Erazim Vyčichlo (requesting physician)"
-* id = "99988877-aaaa-4000-bbbb-cceeddccbbaa"
-* practitioner = Reference(urn:uuid:d12345af-8888-4001-bcde-1234567890ab)
-* organization = Reference(urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123)
-* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#L3 "Lékař po absolvování specializačního vzdělání (L3)"
-* active = true
-* telecom[+].system = #email
-* telecom[=].value = "erazim.vycichlo@zlabekdolni.cz"
-
-
 // laboratorní pracovník
 Instance: practitionerSejdlova
 InstanceOf: CZ_PractitionerCore
@@ -197,7 +168,7 @@ Description: "Role of Mgr. Kvilda Šejdlová (performing laboratory technician)"
 * id = "aabbccdd-2222-3333-dddd-112233445566"
 * practitioner = Reference(urn:uuid:fab321ab-7777-4444-cccc-abcdefabcdef)
 * organization = Reference(urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123) // Nemocnice Horní Dolní (laboratoř)
-* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
 * active = true
 * telecom[+].system = #email
 * telecom[=].value = "kvilda.sejdlova@horni-dolni.eu"
@@ -224,7 +195,50 @@ Description: "Role of MUDr. Kvido Zýbradlo (legal authenticator of the result)"
 * id = "ff223344-5566-4777-8899-ccbbccddeeff"
 * practitioner = Reference(urn:uuid:aabbccdd-1111-4222-9333-ffeeddccbbcc)
 * organization = Reference(urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123)
-* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#L00 "Lékař"
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#L00 "Lékař"
 * active = true
 * telecom[+].system = #email
 * telecom[=].value = "kvido.zybradlo@zlabekdolni.cz"
+
+/*
+// Žádající lékař
+Instance: practitionerVycichlo
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Fictional physician MUDr. Erazim Vyčichlo"
+* id = "c2a7b9de-3b44-4e6f-9e51-9a1b8f1c82f4"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "135792468"
+* name.use = #usual
+* name.prefix = "MUDr."
+* name.given = "Erazim"
+* name.family = "Vyčichlo"
+* gender = #male
+*/
+
+// Lékař, který autorizuje/uvolňuje výsledky
+Instance: practitionerFranc
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Fictional physician MUDr. Kvido Zýbradlo"
+* id = "c2a7b9de-3b44-4e6f-9e51-9a1b8f1c82f4"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "275318649"
+* name.use = #usual
+* name.prefix = "MUDr."
+* name.given = "Karel"
+* name.family = "Franc"
+* gender = #male
+
+
+Instance: practitionerRoleFranc
+InstanceOf: CZ_PractitionerRoleCore
+Usage: #example
+Description: "Role of MUDr. Karel Franc (requesting physician)"
+* id = "3e4f8b7c-9a25-49cf-8b2a-2a8f1e7f3d66"
+* practitioner = Reference(urn:uuid:c2a7b9de-3b44-4e6f-9e51-9a1b8f1c82f4)
+* organization = Reference(urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123)
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#L3 "Lékař po absolvování specializačního vzdělání (L3)"
+* active = true
+* telecom[+].system = #email
+* telecom[=].value = "karel.franc@zlabekdolni.cz"

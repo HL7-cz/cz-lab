@@ -22,6 +22,8 @@ Description: "Czech Lab Report - example of a bundle containing lab observations
 // actors
 * entry[organization][+].fullUrl = "urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123"
 * entry[organization][=].resource = NemocniceZlabekDolni
+* entry[organization][+].fullUrl = "urn:uuid:d7a9324a-6d45-420a-bd8d-0a2c66e8e40c"
+* entry[organization][=].resource = CZ-LabResult-Payor-Example
 * entry[practitioner][+].fullUrl = "urn:uuid:aabbccdd-1111-4222-9333-ffeeddccbbcc"
 * entry[practitioner][=].resource = practitionerZybradlo
 * entry[practitioner][+].fullUrl = "urn:uuid:fab321ab-7777-4444-cccc-abcdefabcdef"
@@ -30,6 +32,14 @@ Description: "Czech Lab Report - example of a bundle containing lab observations
 * entry[practitionerRole][=].resource = practitionerRoleZybradlo
 * entry[practitionerRole][+].fullUrl = "urn:uuid:aabbccdd-2222-3333-dddd-112233445566"
 * entry[practitionerRole][=].resource = practitionerRoleSejdlova
+* entry[practitioner][+].fullUrl = "urn:uuid:c2a7b9de-3b44-4e6f-9e51-9a1b8f1c82f4"
+* entry[practitioner][=].resource = practitionerFranc
+
+* entry[coverage][+].fullUrl = "urn:uuid:b4e1a7f0-93f3-4d86-a3b1-7d15e42b12f8"
+* entry[coverage][=].resource = CZ-LabResult-Coverage-Example
+
+* entry[serviceRequest][+].fullUrl = "urn:uuid:5f9c2e8d-0b74-4dbb-8af3-3e6d2c1191a7"
+* entry[serviceRequest][=].resource = CZ-LabResult-ServiceRequest-Example
 
 // observations
 * entry[observation][+].fullUrl = "urn:uuid:8d6e1f2b-3a84-4c9d-bc2e-5f71a9d4e6c3"
@@ -63,6 +73,8 @@ Title: "Lab Result Composition Example"
 Description: "An example of a laboratory report Composition for a glucose result"
 
 * id = "7f5c2b2d-4a34-44c9-94ad-3c73d80291eb"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR123457"
 * language = #cs
 * status = #preliminary
 * type = $loinc#11502-2 //"Laboratory report"
