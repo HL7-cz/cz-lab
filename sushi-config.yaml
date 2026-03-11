@@ -30,12 +30,12 @@ dependencies:
 
 # hl7.fhir.eu.extensions: current
 # hl7.fhir.eu.base.r4: current
-  hl7.fhir.eu.laboratory: current
+  hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.uv.extensions.r4: 5.2.0
 
-  hl7.fhir.eu.base: 0.1.0-ballot
-  hl7.fhir.cz.core: current
+  hl7.fhir.eu.base: 0.1.0
+  hl7.fhir.cz.core: 0.3.0
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
