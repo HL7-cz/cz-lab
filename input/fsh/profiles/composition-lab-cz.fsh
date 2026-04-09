@@ -11,7 +11,6 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 * . ^definition = "Laboratory Report composition.\r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
 * insert ImposeProfile($Composition-eu-lab)
-
 * insert SetFmmandStatusRule ( 0, draft )
 
 
@@ -21,13 +20,11 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 
 
 // TODO
-* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+* extension contains $compositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(CZ_ServiceRequestLab)
-
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
-
-* extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
+* extension contains $diagnosticReportReference named diagnosticReport-reference 0..1
 * extension[diagnosticReport-reference].valueReference only Reference(CZ_DiagnosticReportLab)
 * extension[diagnosticReport-reference].valueReference 1..1
 * extension[diagnosticReport-reference].valueReference.reference 1..
