@@ -10,5 +10,6 @@ Description: "Codes of the clinically relevant times"
 * ^experimental = false
 * ^publisher = "https://ncez.mzcr.cz"
 
+* insert SNOMEDCopyrightForVS
 * $sct#399445004 "Specimen collection date (observable entity)"
 * $sct#281271004 "Date sample received in laboratory (observable entity)"
