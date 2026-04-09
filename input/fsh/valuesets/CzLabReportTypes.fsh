@@ -11,4 +11,5 @@ Description: "Typy laboratorních zpráv"
 * ^experimental = false
 * ^date = "2022-08-11"
 
+* insert LOINCCopyrightForVS
 * $loinc#11502-2 "Laboratorní nález"
