@@ -10,6 +10,7 @@ Description: "Typy laboratorních vyšetření"
 * ^publisher = "HL7 Czech Republic"
 * ^language = #cs-CZ
 
+* insert LOINCCopyrightForVS
 * $loinc#18716-1 "Alergologická studie"  // není v Evropském číselníku
 * $loinc#18717-9 "Transfúzní studie"
 * $loinc#18719-5 "Biochemická studie"
