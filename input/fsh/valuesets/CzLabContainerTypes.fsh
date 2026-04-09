@@ -11,6 +11,7 @@ Description: "Laboratory Container Types ValueSet"
 * ^experimental = false
 * ^date = "2022-08-11"
 
+* insert SNOMEDCopyrightForVS
 * $sct#702279008 "Evacuated blood collection tube, gel separator"
 * $sct#702283008 "Non-evacuated blood collection tube with gel separator"
 * $sct#733479001 "Adhesive slide"
