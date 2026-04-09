@@ -95,6 +95,8 @@ Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinit
 Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
 Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
+Alias: $diagnosticReportReference = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference
+Alias: $compositionBasedOnOrderOrRequisition = http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 
 //----------- Actors
 Alias: $creatorL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L1
