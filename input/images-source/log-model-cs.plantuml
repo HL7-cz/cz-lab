@@ -1,0 +1,79 @@
+@startmindmap log-model-cs
+!theme plain
+skinparam dpi 180
+skinparam BackgroundColor transparent
+skinparam Shadowing false
+skinparam DefaultFontName "Segoe UI"
+
+' Kompaktnejsi rozlozeni
+skinparam NodeMargin 4
+skinparam LineThickness 0.5
+skinparam FontSize 13
+skinparam ArrowColor #888888
+skinparam Rectangle {
+  Padding 2
+}
+skinparam HorizontalSpacing 6
+skinparam VerticalSpacing 8
+
+* <b>Laboratorni zprava</b>
+
+' --- HLAVICKA (vlevo) ---
+left side
+**[#cfe8ff] <b>Hlavicka dokumentu</b>
+***[#cfe8ff] <b>Identifikace pacienta</b>
+***[#cfe8ff] <b>Kontaktni informace pacienta</b>
+***[#cfe8ff] <b>Zdravotni pojisteni</b>
+***[#cfe8ff] <b>Prijemce dokumentu</b>
+***[#cfe8ff] <b>Autor dokumentu</b>
+****_ Autor
+****_ Datum a cas ulozeni
+***[#cfe8ff] <b>Overil</b>
+****_ Overovatel
+****_ Datum a cas overeni
+***[#cfe8ff] <b>Zodpovida</b>
+****_ Zodpovedna osoba
+****_ Datum a cas autorizace
+***[#cfe8ff] <b>Metadata dokumentu</b>
+****_ ID, Nazev, Kategorie
+****_ Stav, Datum vytvoreni, Verze
+****_ Duvernost, Jazyk
+****_ Spravce, Digitalni podpis
+
+
+' --- TELO (vpravo) ---
+right side
+**[#dfffe0] <b>Telo dokumentu</b>
+***[#dfffe0] <b>Informace o zadance (objednavce)</b>
+****_ ID zadanky (objednavky)
+****_ Datum a cas zadosti
+****_ Identifikace zadatele (osoby)
+****_ Kontaktni udaje zadatele
+****_ Organizace zadatele (objednatele)
+***[#dfffe0] <b>Duvod objednavky</b>
+***[#dfffe0] <b>Informace o vzorku</b>
+****_ ID vzorku
+****_ Biologicky druh
+****_ Material
+****_ Doba sberu
+****_ Anatomicke umisteni, Morfologie, Zdroj materialu
+****_ Metoda sberu
+****_ Datum prijeti
+***[#dfffe0] <b>Datove elementy vysledku vysetreni</b>
+****_ Datum a cas vysetreni
+****_ Kod a nazev vysetreni
+****_ Metoda vysetreni
+****_ Merici system, Testovaci souprava
+****_ Kalibrator
+****_ Provedl
+****_ Vydal
+****_ Vysledek mereni
+****_ Interpretace
+****_ Popis vysledku
+
+
+' --- EXTRA BLOK (mimo telo, treti barva) ---
+**[#fff3bf] <b>Vizualni podoba dokumentu</b>
+**[#fff3bf] <b>Prilohy</b>
+
+@endmindmap

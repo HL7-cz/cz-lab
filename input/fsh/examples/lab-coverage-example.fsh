@@ -3,7 +3,8 @@ Instance: CZ-Coverage-SelfPay
 InstanceOf: CoverageCz
 Usage: #example
 Title: "Self-paying Patient Coverage"
-Description: "Example of a coverage entry where the patient pays for the services (samoplátce) on a specific date"
+// Description: "Example of a coverage entry where the patient pays for the services (samoplátce) on a specific date"
+Description: "Example of a coverage entry where the patient is self-paying on a specific date"
 
 * status = #active
 * type = $hl7CoverageType#self "Self-pay"

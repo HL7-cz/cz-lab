@@ -253,7 +253,8 @@ Description: "Virtual practitioner MUDr. Bohumil Hromada"
 
 Instance: LaboratorAlveaMed-L1
 InstanceOf: CZ_OrganizationCore
-Title: "AlveaMed laboratorní centrum s.r.o."
+// Title: "AlveaMed laboratorní centrum s.r.o."
+Title: "AlveaMed Laboratory Center Ltd."
 Description: "Virtual laboratory"
 Usage: #inline
 

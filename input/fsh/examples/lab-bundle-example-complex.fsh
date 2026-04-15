@@ -278,7 +278,8 @@ Usage: #inline
 Instance: a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a
 InstanceOf: CZ_PractitionerRoleCore
 Usage: #inline
-Description: "Role MUDr. Milboženy Hrčálkové"
+// Description: "Role MUDr. Milboženy Hrčálkové"
+Description: "Role of MUDr. Milbožena Hrčálková"
 * id = "a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a"
 * practitioner = Reference(urn:uuid:fa4f28b1-1234-4f78-9cda-dcf01f228acf)
 * organization = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
@@ -290,7 +291,8 @@ Description: "Role MUDr. Milboženy Hrčálkové"
 Instance: fa4f28b1-1234-4f78-9cda-dcf01f228acf
 InstanceOf: CZ_PractitionerCore
 Usage: #inline
-Description: "Virtuální lékařka Milbožena Hrčálková"
+// Description: "Virtuální lékařka Milbožena Hrčálková"
+Description: "Virtual physician Milbožena Hrčálková"
 * id = "fa4f28b1-1234-4f78-9cda-dcf01f228acf"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"

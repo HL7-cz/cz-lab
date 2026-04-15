@@ -6,7 +6,7 @@ InstanceOf: ConceptMap
 Usage: #definition					
 * insert SetFmmandStatusRuleInstance( 2, informative)					
 * name = "LegalAuth2Fhir"					
-* title = "eHN Recipient to this guide Map"					
+* title = "eHN Legal Authenticator to this guide Map"					
 * status = #draft					
 * experimental = true					
 * description = "eHN Legal Authenticator Model to this guide Map"					

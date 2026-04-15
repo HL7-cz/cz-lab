@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Attachments -&gt; FHIR profiles (CZ LAB)</title>
+
+    <style type="text/css">
+      .model-map-block { margin: 0 0 1rem 0; }
+    </style>
+  </head>
+
+  <body>
+
+    <h3>Attachments -&gt; FHIR profiles (CZ LAB)</h3>
+
+    <p>
+      This page shows how the conceptual elements for the rendered document form and its attachments map to the corresponding FHIR profiles and their key elements.
+    </p>
+
+    <h4 id="model">Mapping overview</h4>
+
+    <p>{% include labReportAttach-map-en.svg %}</p>
+
+  </body>
+</div>

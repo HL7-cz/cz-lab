@@ -75,7 +75,8 @@ Description: "Example of a numeric lab result including measurement uncertainty,
 Instance: deviceAnalyzerUrea
 InstanceOf: Device
 Usage: #example
-Description: "Analyzátor BioAnalyt 6000"
+// Description: "Analyzátor BioAnalyt 6000"
+Description: "BioAnalyt 6000 analyzer"
 * id = "device-analyzer-urea"
 * deviceName[0].name = "BioAnalyt 6000"
 * deviceName[0].type = #manufacturer-name
@@ -87,7 +88,8 @@ Description: "Analyzátor BioAnalyt 6000"
 Instance: deviceKitUrea
 InstanceOf: Device
 Usage: #example
-Description: "Testovací souprava Urea enzymatic assay"
+// Description: "Testovací souprava Urea enzymatic assay"
+Description: "Urea enzymatic assay test kit"
 * id = "device-kit-urea"
 * deviceName[0].name = "Urea Enzymatic Assay Kit"
 * deviceName[0].type = #manufacturer-name

@@ -1,7 +1,7 @@
 Logical: LogCzAttachmentsCz
 Id: LogAttachmentsCz
-Title: "A.4 - Additional attachments"
-Description: """Laboratory Report - Laboratory Report additional attachments - A.4"""
+Title: "A.4 - Ostatní přílohy"
+Description: """Ostatní přílohy laboratorní zprávy"""
 
 * insert SetFmmandStatusRule ( 1, draft )
 

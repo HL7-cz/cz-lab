@@ -1,0 +1,79 @@
+@startmindmap log-model-en
+!theme plain
+skinparam dpi 180
+skinparam BackgroundColor transparent
+skinparam Shadowing false
+skinparam DefaultFontName "Segoe UI"
+
+' Compact layout
+skinparam NodeMargin 4
+skinparam LineThickness 0.5
+skinparam FontSize 13
+skinparam ArrowColor #888888
+skinparam Rectangle {
+  Padding 2
+}
+skinparam HorizontalSpacing 6
+skinparam VerticalSpacing 8
+
+* <b>Laboratory report</b>
+
+' --- HEADER (left) ---
+left side
+**[#cfe8ff] <b>Document header</b>
+***[#cfe8ff] <b>Patient identification</b>
+***[#cfe8ff] <b>Patient contact information</b>
+***[#cfe8ff] <b>Health insurance</b>
+***[#cfe8ff] <b>Document recipient</b>
+***[#cfe8ff] <b>Document author</b>
+****_ Author
+****_ Storage date and time
+***[#cfe8ff] <b>Validator</b>
+****_ Validator
+****_ Validation date and time
+***[#cfe8ff] <b>Legal authenticator</b>
+****_ Responsible person
+****_ Authorization date and time
+***[#cfe8ff] <b>Document metadata</b>
+****_ ID, Name, Category
+****_ Status, Creation date, Version
+****_ Confidentiality, Language
+****_ Custodian, Digital signature
+
+
+' --- BODY (right) ---
+right side
+**[#dfffe0] <b>Document body</b>
+***[#dfffe0] <b>Request information (order)</b>
+****_ Request ID (order ID)
+****_ Request date and time
+****_ Requester identification (person)
+****_ Requester contact details
+****_ Requesting organization
+***[#dfffe0] <b>Reason for request</b>
+***[#dfffe0] <b>Specimen information</b>
+****_ Specimen ID
+****_ Biological species
+****_ Material
+****_ Collection period
+****_ Body site, Morphology, Source material
+****_ Collection method
+****_ Receipt date
+***[#dfffe0] <b>Test result data elements</b>
+****_ Examination date and time
+****_ Test code and name
+****_ Examination method
+****_ Measuring system, Test kit
+****_ Calibrator
+****_ Performed by
+****_ Released by
+****_ Measurement result
+****_ Interpretation
+****_ Result description
+
+
+' --- EXTRA BLOCK (outside body, third color) ---
+**[#fff3bf] <b>Presented form</b>
+**[#fff3bf] <b>Attachments</b>
+
+@endmindmap

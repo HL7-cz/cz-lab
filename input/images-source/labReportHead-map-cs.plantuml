@@ -1,0 +1,42 @@
+@startuml labReportHead-map-cs
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+class "Hlavička laboratorní zprávy" <<LogicalModel>> [[StructureDefinition-LogLabReportCz.html]]
+
+class "cz-bundle-lab" <<Profile>> [[StructureDefinition-cz-bundle-lab.html]]
+class "cz-composition-lab-report" <<Profile>> [[StructureDefinition-cz-composition-lab-report.html]]
+class "cz-diagnostic-report-lab" <<Profile>> [[StructureDefinition-cz-diagnostic-report-lab.html]]
+class "cz-patient" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
+class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
+class "cz-practitionerRole-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-role-core.html]]
+class "cz-organization-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
+
+"Hlavička laboratorní zprávy" <|. "cz-bundle-lab"
+"Hlavička laboratorní zprávy" <|. "cz-composition-lab-report"
+"Hlavička laboratorní zprávy" <|. "cz-diagnostic-report-lab"
+"Hlavička laboratorní zprávy" <|. "cz-patient"
+"Hlavička laboratorní zprávy" <|. "cz-coverage"
+"Hlavička laboratorní zprávy" <|. "cz-practitioner-core"
+"Hlavička laboratorní zprávy" <|. "cz-practitionerRole-core"
+"Hlavička laboratorní zprávy" <|. "cz-organization-core"
+
+"cz-bundle-lab" -d[hidden]-> "cz-composition-lab-report"
+"cz-composition-lab-report" -d[hidden]-> "cz-diagnostic-report-lab"
+"cz-diagnostic-report-lab" -d[hidden]-> "cz-patient"
+"cz-patient" -d[hidden]-> "cz-coverage"
+"cz-coverage" -d[hidden]-> "cz-practitioner-core"
+"cz-practitioner-core" -d[hidden]-> "cz-practitionerRole-core"
+"cz-practitionerRole-core" -d[hidden]-> "cz-organization-core"
+@enduml
