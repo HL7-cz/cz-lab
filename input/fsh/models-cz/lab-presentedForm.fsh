@@ -1,6 +1,6 @@
 Logical: LogCzPresentedFormCz
 Id: LogPresentedFormCz
-Title: "A.3 - Presented form"
+Title: "A.3 - Presented form (CZ)"
 Description: """Presented form - Entire report as issued. Various formats could be provided, pdf format is recommended."""
 
 * insert SetFmmandStatusRule ( 1, draft )
