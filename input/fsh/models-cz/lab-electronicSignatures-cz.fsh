@@ -3,9 +3,9 @@
 // -------------------------------------------------------------------------------
 Logical: LogCzElectronicSignaturesLabEhnCz
 Id: LogElectronicSignatures
-Title: "A.1.9 - Electronic signatures (CZ)"
-Description:  """Electronic signatures According to Act No. 327/2011, §54a
-Section A1.7 of the eHN guideline."""
+Title: "A.1.9 - Elektronické podpisy"
+Description: """Elektronické podpisy - Elektronické podpisy nebo pečetě dle zákona 327/2011 §54a"""
+
 * insert SetFmmandStatusRule ( 1, draft )
 
 * elektronickyPodpis 0..* Signature "A.1.9.1 - Elektronický podpis" """Elektronický podpis nebo pečeť dokumentu."""

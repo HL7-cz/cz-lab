@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: LogCzPayerLabEhnCz				
 Id: LogPayerCz				
-Title: "A.1.3 - Preferované systémy"				
+Title: "A.1.3 - Zdravotní pojištění"			
 Description:  """Informace o zdravotním pojištění"""				
 * insert SetFmmandStatusRule ( 1, draft )		
 * kod 0..1 Identifier "A.1.3.1 Kód zdravotní pojišťovny" """Kód zdravotní pojišťovny"""				

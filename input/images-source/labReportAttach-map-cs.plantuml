@@ -1,0 +1,30 @@
+@startuml labReportAttach-map-cs
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+
+class "Vizuální podoba dokumentu" <<LogicalModel>> [[StructureDefinition-LogPresentedFormCz.html]]
+class "Přílohy" <<LogicalModel>> [[StructureDefinition-LogAttachmentsCz.html]]
+
+class "cz-diagnostic-report-lab.presentedForm" <<Profile>> [[StructureDefinition-cz-diagnostic-report-lab.html]]
+class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
+
+"Vizuální podoba dokumentu" -- "Přílohy"
+"Vizuální podoba dokumentu" <|. "cz-diagnostic-report-lab.presentedForm"
+"Přílohy" <|. "cz-attachment"
+
+"Vizuální podoba dokumentu" -r[hidden]-> "Přílohy"
+"Vizuální podoba dokumentu" -d[hidden]-> "cz-diagnostic-report-lab.presentedForm"
+"Přílohy" -d[hidden]-> "cz-attachment"
+
+@enduml

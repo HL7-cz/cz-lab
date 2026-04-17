@@ -23,4 +23,5 @@ Description: "Example of a lab result – coded"
 * effectiveDateTime = "2025-04-24T09:00:00+02:00"
 * issued = "2025-04-24T10:00:00+02:00"
 
-* valueCodeableConcept = $sct#278151004 // Blood group AB Rh(D) positive
+//* valueCodeableConcept = $sct#278151004 // Blood group AB Rh(D) positive
+* valueCodeableConcept = $nclpmtv#AB+ // Blood group AB Rh(D) positive

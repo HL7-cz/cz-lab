@@ -1,0 +1,30 @@
+@startuml labReportAttach-map-en
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+class "Presented Form" <<LogicalModel>> [[StructureDefinition-PresentedFormCz.html]]
+class "Attachments" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
+
+class "cz-diagnostic-report-lab.presentedForm" <<Profile>> [[StructureDefinition-cz-diagnostic-report-lab.html]]
+class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
+
+"Presented Form" -- "Attachments"
+"Presented Form" <|. "cz-diagnostic-report-lab.presentedForm"
+"Attachments" <|. "cz-attachment"
+
+"Presented Form" -r[hidden]-> "Attachments"
+"Presented Form" -d[hidden]-> "cz-diagnostic-report-lab.presentedForm"
+"Attachments" -d[hidden]-> "cz-attachment"
+
+@enduml

@@ -1,7 +1,7 @@
 Logical: LogCzPresentedFormCz
 Id: LogPresentedFormCz
-Title: "A.3 - Presented form (CZ)"
-Description: """Presented form - Entire report as issued. Various formats could be provided, pdf format is recommended."""
+Title: "A.3 - Vizuální podoba dokumentu"
+Description: """Laboratorní zpráva vyšetření čitelná lidským okem,  je požadován PDF formát."""
 
 * insert SetFmmandStatusRule ( 1, draft )
 

@@ -1,7 +1,8 @@
 ValueSet: CZ_LabStudyTypesVS
 Id: cz-lab-study-types-VS
 Title: "Laboratory Study Types (CZ)"
-Description: "Typy laboratorních vyšetření"
+// Description: "Typy laboratorních vyšetření"
+Description: "Laboratory study types"
 
 * ^version = "1.0.0"
 * ^status = #active

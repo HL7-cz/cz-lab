@@ -26,16 +26,16 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.cz.core: 0.3.0
 
+  hl7.fhir.eu.base: 0.1.0
   hl7.fhir.eu.extensions: 1.2.0
 # hl7.fhir.eu.base.r4: current
   hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.uv.extensions.r4: 5.2.0
+  hl7.fhir.uv.ips: 1.1.0
 
-  hl7.fhir.eu.base: 0.1.0
-  hl7.fhir.cz.core: 0.3.0
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -120,18 +120,18 @@ pages:
     title: Download
 
 # === MAP ====
-#  Header-map-en.html:
-#    title: Header Model map
-#  Header-map-cs.html:
-#    title: Mapování logického modelu hlavičky
-#  Body-map-en.html:
-#    title: Body Model map
-#  Body-map-cs.html:
-#    title: Mapování logického modelu těla
-#  Attachment-map.html:
-#    title: Presented Form and Media Model map
-#  Attachment-map-cs.html:
-#    title: Mapování logického modelu vizuální podoby dokumentu a medií
+  Header-map-en.html:
+    title: Header Model map
+  Header-map-cs.html:
+    title: Mapování logického modelu hlavičky
+  Body-map-en.html:
+    title: Body Model map
+  Body-map-cs.html:
+    title: Mapování logického modelu těla
+  Attachment-map-en.html:
+    title: Attachment Model map
+  Attachment-map-cs.html:
+    title: Mapování logického modelu příloh
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide

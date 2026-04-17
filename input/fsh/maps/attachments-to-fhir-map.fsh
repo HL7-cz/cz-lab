@@ -1,12 +1,12 @@
-Instance: AttachmentImagingReport2FHIR-cz
+Instance: AttachmentLabReport2FHIR-cz
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/lab/ConceptMap/AttachmentImagingReport2FHIR-cz"
-* name = "AttachmentImagingReport2FHIRcz"
+* url = "https://hl7.cz/fhir/lab/ConceptMap/AttachmentLabReport2FHIR-cz"
+* name = "AttachmentLabReport2FHIRcz"
 * title = "CZ Attachment Model to this guide Map"
 * status = #draft
 * experimental = true
-* description = """CZ Imaging Report Attachment Model to this guide mapping"""
+* description = """CZ Lab Report Attachment Model to this guide mapping"""
 
 * group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/PresentedFormCz"
 * group[=].target = "https://hl7.cz/fhir/lab/StructureDefinition/cz-diagnostic-report"	

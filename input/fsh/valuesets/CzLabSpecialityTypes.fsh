@@ -1,7 +1,8 @@
 ValueSet: CZ_LabSpecialityTypesVS
 Id: cz-lab-speciality-types-VS
 Title: "Laboratory Speciality Types (CZ)"
-Description: "Typy specializací laboratorní medicíny podle SNOMED CT pro použití v českých laboratorních implementacích (např. sekce v Composition, klasifikace laboratoře apod.)."
+// Description: "Typy specializací laboratorní medicíny podle SNOMED CT pro použití v českých laboratorních implementacích (např. sekce v Composition, klasifikace laboratoře apod.)."
+Description: "Types of laboratory medicine specialties based on SNOMED CT for use in Czech laboratory implementations, for example in Composition sections or laboratory classification."
 
 * ^language = #cs-CZ
 //* ^identifier.system = "urn:ietf:rfc:3986"

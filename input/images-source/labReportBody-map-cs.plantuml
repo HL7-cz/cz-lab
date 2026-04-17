@@ -1,0 +1,33 @@
+@startuml labReportBody-map-cs
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+class "Tělo laboratorní zprávy" <<LogicalModel>> [[StructureDefinition-LogLabReportCz.html]]
+
+class "cz-service-request-lab" <<Profile>> [[StructureDefinition-cz-service-request-lab.html]]
+class "cz-specimen-lab" <<Profile>> [[StructureDefinition-cz-specimen-lab.html]]
+class "cz-observation-result-laboratory" <<Profile>> [[StructureDefinition-cz-observation-result-laboratory.html]]
+class "cz-diagnostic-report-lab" <<Profile>> [[StructureDefinition-cz-diagnostic-report-lab.html]]
+class "cz-composition-lab-report" <<Profile>> [[StructureDefinition-cz-composition-lab-report.html]]
+
+"Tělo laboratorní zprávy" <|. "cz-service-request-lab"
+"Tělo laboratorní zprávy" <|. "cz-specimen-lab"
+"Tělo laboratorní zprávy" <|. "cz-observation-result-laboratory"
+"Tělo laboratorní zprávy" <|. "cz-diagnostic-report-lab"
+"Tělo laboratorní zprávy" <|. "cz-composition-lab-report"
+
+"cz-service-request-lab" -d[hidden]-> "cz-specimen-lab"
+"cz-specimen-lab" -d[hidden]-> "cz-observation-result-laboratory"
+"cz-observation-result-laboratory" -d[hidden]-> "cz-diagnostic-report-lab"
+"cz-diagnostic-report-lab" -d[hidden]-> "cz-composition-lab-report"
+@enduml

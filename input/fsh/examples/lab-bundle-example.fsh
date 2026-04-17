@@ -209,7 +209,8 @@ Description: "Example of DiagnosticReport for lab result"
 Instance: patientVirelan
 InstanceOf: CZ_PatientCore
 Usage: #inline
-Description: "Virtuální pacient: Drahovín Virelan"
+// Description: "Virtuální pacient: Drahovín Virelan"
+Description: "Virtual patient: Drahovín Virelan"
 
 * id = "11af8e2a-3e10-426e-b80f-4c9f9c7de3c9"
 
@@ -252,9 +253,11 @@ Description: "Virtuální pacient: Drahovín Virelan"
 
 Instance: VirelanInsurance
 InstanceOf: CZ_Coverage
-Description: "Příklad pojištění"
+// Description: "Příklad pojištění"
+Description: "Insurance example"
 Usage: #inline
-Title: "Příklad pojištění zdravotní pojišťovnou"
+// Title: "Příklad pojištění zdravotní pojišťovnou"
+Title: "Health insurance coverage example"
 
 * id = "8d08dca4-bf95-4b46-bcb4-e5b127aa2e30"
 * status = #active
@@ -269,7 +272,8 @@ Title: "Příklad pojištění zdravotní pojišťovnou"
 Instance: practitionerSlofak
 InstanceOf: CZ_PractitionerCore
 Usage: #inline
-Description: "Virtuální lékař Záboj Šlofák"
+// Description: "Virtuální lékař Záboj Šlofák"
+Description: "Virtual physician Záboj Šlofák"
 * id = "7e243f25-5292-4f5a-9a8c-2a2a9a3e8f7f"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456789"
@@ -283,7 +287,8 @@ Description: "Virtuální lékař Záboj Šlofák"
 Instance: practitionerHrcalkova
 InstanceOf: CZ_PractitionerCore
 Usage: #inline
-Description: "Virtuální lékařka Milbožena Hrčálková"
+// Description: "Virtuální lékařka Milbožena Hrčálková"
+Description: "Virtual physician Milbožena Hrčálková"
 * id = "fa4f28b1-1234-4f78-9cda-dcf01f228acf"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"
@@ -297,7 +302,8 @@ Description: "Virtuální lékařka Milbožena Hrčálková"
 Instance: practitionerRoleSlofak
 InstanceOf: CZ_PractitionerRoleCore
 Usage: #inline
-Description: "Role MUDr. Záboje Šlofáka"
+// Description: "Role MUDr. Záboje Šlofáka"
+Description: "Role of MUDr. Záboj Šlofák"
 * id = "cc8e6b12-2b99-48cf-9c3c-3c8d74805821"
 * practitioner = Reference(urn:uuid:7e243f25-5292-4f5a-9a8c-2a2a9a3e8f7f)
 * organization = Reference(urn:uuid:fd0cbd93-d65e-47b2-86c9-792268a2c1ff)
@@ -310,7 +316,8 @@ Description: "Role MUDr. Záboje Šlofáka"
 Instance: practitionerRoleHrcalkova
 InstanceOf: CZ_PractitionerRoleCore
 Usage: #inline
-Description: "Role MUDr. Milboženy Hrčálkové"
+// Description: "Role MUDr. Milboženy Hrčálkové"
+Description: "Role of MUDr. Milbožena Hrčálková"
 * id = "a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a"
 * practitioner = Reference(urn:uuid:fa4f28b1-1234-4f78-9cda-dcf01f228acf)
 * organization = Reference(urn:uuid:fd0cbd93-d65e-47b2-86c9-792268a2c1ff)
@@ -322,8 +329,10 @@ Description: "Role MUDr. Milboženy Hrčálkové"
 
 Instance: NemocniceHorniDolni
 InstanceOf: CZ_OrganizationCore
-Title: "Nemocnice Horní Dolní"
-Description: "Virtuální nemocnice pro účely příkladu."
+// Title: "Nemocnice Horní Dolní"
+Title: "Horni Dolni Hospital"
+// Description: "Virtuální nemocnice pro účely příkladu."
+Description: "Virtual hospital for example purposes."
 Usage: #inline
 
 * id = "fd0cbd93-d65e-47b2-86c9-792268a2c1ff"

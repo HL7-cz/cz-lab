@@ -1,7 +1,8 @@
 ValueSet: CZ_LabReportTypesVS
 Id: cz-lab-report-types-VS
 Title: "Laboratory Report Types (CZ)"
-Description: "Typy laboratorních zpráv"
+// Description: "Typy laboratorních zpráv"
+Description: "Laboratory report types"
 
 * ^language = #cs-CZ
 //* ^identifier.system = "urn:ietf:rfc:3986"

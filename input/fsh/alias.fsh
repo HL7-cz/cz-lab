@@ -1,8 +1,9 @@
 //============== ALIAS ===============
 
 //------- Code Systems
-Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/nclppol
-Alias: $ncmpspm = https://nclp.ncez.mzcr.cz/CodeSystem/ncmpspm //Specifikace mikrobiologických materiálů
+Alias: $nclp = https://ncez.mzcr.cz/nclp/CodeSystem/nclppol
+Alias: $nclpmtv = https://ncez.mzcr.cz/nclp/CodeSystem/nclpmtv
+Alias: $ncmpspm = https://ncez.mzcr.cz/nclp/CodeSystem/ncmpspm //Specifikace mikrobiologických materiálů
 Alias: $loinc = http://loinc.org
 Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
 Alias: $icd11 = http://id.who.int/icd11/mms
@@ -13,7 +14,7 @@ Alias: $sct =  http://snomed.info/sct
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $icd-10 = http://hl7.org/fhir/sid/icd-10
-Alias: $ema = https://ec.europa.eu/health/documents/community-register/html/
+Alias: $ema = https://ec.europa.eu/health/documents/community-register/html
 Alias: $spor = https://spor.ema.europa.eu/v1/organisations
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $ucum =  http://unitsofmeasure.org

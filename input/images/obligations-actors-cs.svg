@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="212px" preserveAspectRatio="none" style="width:1075px;height:212px;background:#FFFFFF;" version="1.1" viewBox="0 0 1075 212" width="1075px" zoomAndPan="magnify">
+  <defs />
+  <g>
+    <g id="elem_creator">
+      <ellipse cx="353" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" />
+      <path d="M353,22 L353,49 M340,30 L366,30 M353,49 L340,64 M353,49 L366,64" fill="none" style="stroke:#181818;stroke-width:0.5;" />
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="231.5" y="80.0332">Tvůrce zprávy ze zobrazovacích metod</text>
+    </g>
+    <g id="elem_consumer">
+      <ellipse cx="774" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" />
+      <path d="M774,22 L774,49 M761,30 L787,30 M774,49 L761,64 M774,49 L787,64" fill="none" style="stroke:#181818;stroke-width:0.5;" />
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="269" x="639.5" y="80.0332">Konzument zprávy ze zobrazovacích metod</text>
+    </g>
+    <g id="elem_create">
+      <ellipse cx="150.9967" cy="174.8993" fill="#F1F1F1" rx="144.9967" ry="31.3993" style="stroke:#181818;stroke-width:0.5;" />
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="258" x="21.9967" y="178.6279">Vytvoření zprávy ze zobrazovacích metod</text>
+    </g>
+    <g id="elem_use">
+      <ellipse cx="702.9693" cy="175.1939" fill="#F1F1F1" rx="136.4693" ry="29.6939" style="stroke:#181818;stroke-width:0.5;" />
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="240" x="582.9693" y="178.9224">Použití zprávy ze zobrazovacích metod</text>
+    </g>
+    <g id="elem_save">
+      <ellipse cx="424.8753" cy="175.1751" fill="#F1F1F1" rx="93.8753" ry="21.1751" style="stroke:#181818;stroke-width:0.5;" />
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="351.3753" y="178.9036">Uzavření/uložení zprávy</text>
+    </g>
+    <g id="elem_receive">
+      <ellipse cx="971.8945" cy="174.8789" fill="#F1F1F1" rx="97.3945" ry="21.8789" style="stroke:#181818;stroke-width:0.5;" />
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155" x="894.3945" y="178.6074">Vyhledání/Získání zprávy</text>
+    </g>
+    <g id="link_creator_create">
+      <path d="M293.21,83.53 C263.84,102.22 228.85,124.48 200.93,142.24" fill="none" id="creator-to-create" style="stroke:#181818;stroke-width:1.0;" />
+      <polygon fill="#181818" points="196.51,145.05,206.2495,143.5864,200.7265,142.3628,201.9501,136.8399,196.51,145.05" style="stroke:#181818;stroke-width:1.0;" />
+    </g>
+    <g id="link_creator_save">
+      <path d="M374.41,83.71 C386.33,104.99 400.82,130.85 411.24,149.44" fill="none" id="creator-to-save" style="stroke:#181818;stroke-width:1.0;" />
+      <polygon fill="#181818" points="413.79,154,412.8777,144.1935,411.3448,149.6387,405.8996,148.1058,413.79,154" style="stroke:#181818;stroke-width:1.0;" />
+    </g>
+    <g id="link_consumer_use">
+      <path d="M752.89,83.71 C742.88,101.83 731.02,123.28 721.38,140.73" fill="none" id="consumer-to-use" style="stroke:#181818;stroke-width:1.0;" />
+      <polygon fill="#181818" points="718.73,145.53,726.5744,139.5747,721.1412,141.1498,719.5661,135.7167,718.73,145.53" style="stroke:#181818;stroke-width:1.0;" />
+    </g>
+    <g id="link_consumer_receive">
+      <path d="M832.6,83.53 C866.37,105.45 907.72,132.28 936.57,151.01" fill="none" id="consumer-to-receive" style="stroke:#181818;stroke-width:1.0;" />
+      <polygon fill="#181818" points="941.09,153.94,935.7022,145.6955,936.8906,151.2261,931.36,152.4145,941.09,153.94" style="stroke:#181818;stroke-width:1.0;" />
+    </g>
+  </g>
+</svg>

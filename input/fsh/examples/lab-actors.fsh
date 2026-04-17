@@ -15,12 +15,12 @@ Description: "Fictional patient for the purpose of the example"
   * value = "1122334455"
 * identifier[+]
   * system = "http://hl7.org/fhir/sid/passport-CZE"
-  * value = "CZE9876543"
+  * value = "CZE987654"
   * use = #official
   * type = $v2-0203#PPN
 * identifier[+]
   * system = "http://hl7.org/fhir/sid/passport-FRA"
-  * value = "FRA1234567"
+  * value = "FRA123456"
   * use = #official
   * type = $v2-0203#PPN
 
@@ -119,7 +119,8 @@ Usage: #example
 // Nemocnice s laboratoří
 Instance: NemocniceZlabekDolni
 InstanceOf: CZ_OrganizationCore
-Title: "Hospital Žlábek Dolní"
+// Title: "Nemocnice Žlábek Dolní"
+Title: "Zlabek Dolni Hospital"
 Description: "Healthcare facility requesting a laboratory examination."
 Usage: #example
 
@@ -163,6 +164,8 @@ Description: "Fictional laboratory technician Mgr. Kvilda Šejdlová"
 
 Instance: practitionerRoleSejdlova
 InstanceOf: CZ_PractitionerRoleCore
+// Title: "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
+Title: "Laboratory methods and medicinal product preparation specialist"
 Usage: #example
 Description: "Role of Mgr. Kvilda Šejdlová (performing laboratory technician)"
 * id = "aabbccdd-2222-3333-dddd-112233445566"
@@ -190,6 +193,8 @@ Description: "Fictional physician MUDr. Kvido Zýbradlo"
 
 Instance: practitionerRoleZybradlo
 InstanceOf: CZ_PractitionerRoleCore
+// Title: "Lékař"
+Title: "Physician"
 Usage: #example
 Description: "Role of MUDr. Kvido Zýbradlo (legal authenticator of the result)"
 * id = "ff223344-5566-4777-8899-ccbbccddeeff"
@@ -233,6 +238,8 @@ Description: "Fictional physician MUDr. Kvido Zýbradlo"
 
 Instance: practitionerRoleFranc
 InstanceOf: CZ_PractitionerRoleCore
+// Title: "Lékař po absolvování specializačního vzdělání (L3)"
+Title: "Physician with completed specialized training (L3)"
 Usage: #example
 Description: "Role of MUDr. Karel Franc (requesting physician)"
 * id = "3e4f8b7c-9a25-49cf-8b2a-2a8f1e7f3d66"
