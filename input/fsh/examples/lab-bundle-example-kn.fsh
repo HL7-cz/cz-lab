@@ -23,6 +23,10 @@ Description: "Czech Lab Report - example of a bundle for a cumulative view in co
 * entry[organization][+].fullUrl = "urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123"
 * entry[organization][=].resource = NemocniceZlabekDolni
 // practitioner
+* entry[practitioner][+].fullUrl = "urn:uuid:aabbccdd-1111-4222-9333-ffeeddccbbcc"
+* entry[practitioner][=].resource = practitionerZybradlo
+* entry[practitioner][+].fullUrl = "urn:uuid:e67890bc-1234-4f56-9abc-9876543210ef"
+* entry[practitioner][=].resource = practitionerHromada
 * entry[practitionerRole][+].fullUrl = "urn:uuid:ff223344-5566-4777-8899-ccbbccddeeff"
 * entry[practitionerRole][=].resource = practitionerRoleZybradlo
 // observations
@@ -82,6 +86,8 @@ Title: "Lab Result DiagnosticReport"
 Description: "Example of DiagnosticReport for lab result"
 
 * id = "6b4f39a0-0f1d-4b52-96b8-927f3de96792"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR123458"
 
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:c3a1e83b-1a2f-4f7e-9fd8-18d4ad31a44d)
 * status = #final

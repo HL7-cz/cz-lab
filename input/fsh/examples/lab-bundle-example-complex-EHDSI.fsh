@@ -17,6 +17,12 @@ Description: "Czech Lab Report - EHDSI compatibleexample of a bundle containing 
 * entry[patient][+].fullUrl = "urn:uuid:8f79bf84-41e1-485f-95b8-813fe993974d"
 * entry[patient][=].resource = 8f79bf84-41e1-485f-95b8-813fe993974d
 
+* entry[practitioner][+].fullUrl = "urn:uuid:8ca95deb-49ea-4f15-9372-a0533f659cdb"
+* entry[practitioner][=].resource = 8ca95deb-49ea-4f15-9372-a0533f659cdb
+
+* entry[practitionerRole][+].fullUrl = "urn:uuid:66fbb2c0-27e9-44cb-afa5-3530d09f0f3a"
+* entry[practitionerRole][=].resource = 66fbb2c0-27e9-44cb-afa5-3530d09f0f3a
+
 * entry[organization][+].fullUrl = "urn:uuid:4ee94491-4a3a-402c-a110-74ac3adb0012"
 * entry[organization][=].resource = 4ee94491-4a3a-402c-a110-74ac3adb0012
 

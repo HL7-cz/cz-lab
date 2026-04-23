@@ -109,6 +109,8 @@ Title: "Lab Result DiagnosticReport"
 Description: "Example of DiagnosticReport for lab result"
 
 * id = "f0c94762-9b36-42e3-9e2e-32fcf6b548a9"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR123457"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:7f5c2b2d-4a34-44c9-94ad-3c73d80291eb)
 * status = #preliminary
 * code = $loinc#11502-2 //"Laboratory report"

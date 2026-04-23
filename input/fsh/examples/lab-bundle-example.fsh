@@ -92,6 +92,8 @@ Title: "Lab Result Composition Example"
 Description: "An example of a laboratory report Composition for a glucose result"
 
 * id = "05f95a04-cb07-4bd2-8833-c40521f1182c"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR123456"
 * language = #cs
 * status = #final
 * type = $loinc#11502-2 //"Laboratory report"
@@ -163,6 +165,8 @@ Title: "Lab Result DiagnosticReport"
 Description: "Example of DiagnosticReport for lab result"
 
 * id = "41ae1cd0-7f48-4d86-9643-21442d8e418e"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR123456"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:05f95a04-cb07-4bd2-8833-c40521f1182c)
 * status = #final
 * code = $loinc#11502-2 //"Laboratory report"

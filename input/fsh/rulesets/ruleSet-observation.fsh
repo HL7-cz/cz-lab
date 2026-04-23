@@ -1,9 +1,9 @@
 RuleSet: ObservationResultsValueCz
 //* value[x]
-* extension contains $observation-value-r5 named value-r5 0..1
-* extension[value-r5]
-  * value[x] only Attachment
-  * ^short = "only for result of type Attachment"
+/* Removed to match current upstream workaround.
+   This R5 backport slice generates an unresolved canonical
+   http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
+   in the R4 validation toolchain. */
 
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"

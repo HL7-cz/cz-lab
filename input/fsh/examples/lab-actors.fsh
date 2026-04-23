@@ -15,12 +15,12 @@ Description: "Fictional patient for the purpose of the example"
   * value = "1122334455"
 * identifier[+]
   * system = "http://hl7.org/fhir/sid/passport-CZE"
-  * value = "CZE987654"
+  * value = "12345678"
   * use = #official
   * type = $v2-0203#PPN
 * identifier[+]
   * system = "http://hl7.org/fhir/sid/passport-FRA"
-  * value = "FRA123456"
+  * value = "12AB34567"
   * use = #official
   * type = $v2-0203#PPN
 
@@ -205,13 +205,13 @@ Description: "Role of MUDr. Kvido Zýbradlo (legal authenticator of the result)"
 * telecom[+].system = #email
 * telecom[=].value = "kvido.zybradlo@zlabekdolni.cz"
 
-/*
+
 // Žádající lékař
 Instance: practitionerVycichlo
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Fictional physician MUDr. Erazim Vyčichlo"
-* id = "c2a7b9de-3b44-4e6f-9e51-9a1b8f1c82f4"
+* id = "c2a7b9de-3b44-4e6f-9e51-9a1b8f1c98e2"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "135792468"
 * name.use = #usual
@@ -219,7 +219,6 @@ Description: "Fictional physician MUDr. Erazim Vyčichlo"
 * name.given = "Erazim"
 * name.family = "Vyčichlo"
 * gender = #male
-*/
 
 // Lékař, který autorizuje/uvolňuje výsledky
 Instance: practitionerFranc
