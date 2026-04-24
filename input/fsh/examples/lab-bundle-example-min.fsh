@@ -82,6 +82,8 @@ Title: "Lab Result DiagnosticReport"
 Description: "Example of DiagnosticReport for lab result"
 
 * id = "0e2f0d73-8e8f-4cf7-b24a-5c6b812f77a3"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR123458"
 
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:b4a52c6d-4c78-4cfa-bd1a-5f8356e96274)
 * status = #final

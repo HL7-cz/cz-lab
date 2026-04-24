@@ -7,20 +7,140 @@
 
     <style type="text/css">
       .model-map-block { margin: 0 0 1rem 0; }
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+      .callout-box { color: #222; }
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
     </style>
   </head>
 
   <body>
 
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Overview:</strong>
+          This page expands the full A.2 body mappings captured in the laboratory ConceptMap definitions, including the main report map and all detailed order, specimen and result rows.
+        </div>
+      </div>
+    </div>
+
     <h3>Body -&gt; FHIR profiles (CZ LAB)</h3>
 
     <p>
-      This page shows how the conceptual elements of the laboratory report body map to the corresponding FHIR profiles and their key elements.
+      This page lists the complete mapping rows for the laboratory report body, following the body-related ConceptMap definitions used in this guide.
     </p>
 
-    <h4 id="model">Mapping overview</h4>
+    <h4 id="model">Model Overview</h4>
 
     <p>{% include labReportBody-map-en.svg %}</p>
+
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li><strong>Source logical model:</strong> <a href="StructureDefinition-LabReportCz.html">LabReportCz</a></li>
+        <li><strong>Source ConceptMaps:</strong> <code>labRpt-to-fhir-map-cz.fsh</code>, <code>order-to-fhir-map-cz.fsh</code>, <code>specimen-to-fhir-map-cz.fsh</code>, <code>result-to-fhir-map-cz.fsh</code></li>
+        <li><strong>Mapping scope:</strong> A.2 Order, specimen and result mappings</li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table summary="Complete mapping of body logical model rows to CZ LAB profiles">
+        <caption>Body -&gt; FHIR profiles (CZ LAB)</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">Body (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">FHIR Target</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource/Profile</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>LabReport.order</td><td>A.2.1-A.2.2 Order</td><td>relatedto</td><td>DiagnosticReport | Composition | ServiceRequest</td><td>DiagnosticReport.basedOn | Composition.extension:basedOn-order-or-requisition</td><td></td><td>Top-level order row from the main report ConceptMap.</td></tr>
+          <tr><td>Order.orderDetails</td><td>A.2.1 Order information</td><td>relatedto</td><td>cz-service-request-lab</td><td>ServiceRequest</td><td></td><td></td></tr>
+          <tr><td>Order.orderDetails.identifier</td><td>A.2.1.1 Order Id</td><td>relatedto</td><td>cz-service-request-lab</td><td>ServiceRequest.identifier | ServiceRequest.requisition</td><td></td><td>Identifier for Order Id, requisition if this is the composite request identifier.</td></tr>
+          <tr><td>Order.orderDetails.dateTime</td><td>A.2.1.2 Order date and time</td><td>equivalent</td><td>cz-service-request-lab</td><td>ServiceRequest.authoredOn</td><td></td><td></td></tr>
+          <tr><td>Order.orderDetails.orderPlacerIdentifier</td><td>A.2.1.3 Order placer identifier</td><td>relatedto</td><td>cz-service-request-lab</td><td>ServiceRequest.requester.identifier</td><td></td><td>If the order placer identifier is part of the composite request identifier.</td></tr>
+          <tr><td>Order.orderDetails.orderPlacerName</td><td>A.2.1.4 Order placer name</td><td>relatedto</td><td>cz-service-request-lab</td><td>ServiceRequest.requester.name | ServiceRequest.requester.Practitioner.name</td><td></td><td>Requester resolved to Practitioner or PractitionerRole.</td></tr>
+          <tr><td>Order.orderDetails.orderPlacerContacts</td><td>A.2.1.5 Order placer contact details</td><td>relatedto</td><td>cz-service-request-lab</td><td>ServiceRequest.requester.telecom | ServiceRequest.requester.address</td><td></td><td>Requester telecom or address for Practitioner or PractitionerRole.</td></tr>
+          <tr><td>Order.orderDetails.orderPlacerOrganization</td><td>A.2.1.6 Order placer organization</td><td>equivalent</td><td>cz-service-request-lab</td><td>ServiceRequest.requester.organization</td><td></td><td>requester.resolve().ofType(PractitionerRole).organization.resolve()</td></tr>
+          <tr><td>Order.reason</td><td>A.2.2 Order reason</td><td>relatedto</td><td>cz-service-request-lab</td><td>ServiceRequest.reasonCode | ServiceRequest.reasonReference</td><td></td><td></td></tr>
+          <tr><td>Order.reason.code</td><td>A.2.2.1 Problem / diagnosis / condition description</td><td>equivalent</td><td>cz-service-request-lab</td><td>ServiceRequest.reasonCode</td><td></td><td></td></tr>
+          <tr><td>LabReport.specimen</td><td>A.2.3 Specimen information</td><td>relatedto</td><td>DiagnosticReport | Composition | Specimen</td><td>DiagnosticReport.specimen | DiagnosticReport.result.specimen | Composition.section.entry.specimen | Composition.section.section.entry.specimen</td><td></td><td>Top-level specimen row from the main report ConceptMap.</td></tr>
+          <tr><td>SpecimenLab.identifier</td><td>A.2.3.1 Specimen identifier</td><td>equivalent</td><td>cz-service-request-lab</td><td>Specimen.identifier</td><td></td><td>First group target is nominally ServiceRequest, actual target element is on Specimen.</td></tr>
+          <tr><td>SpecimenLab.speciesType</td><td>A.2.3.2 Type of species</td><td>relatedto</td><td>cz-service-request-lab</td><td>Specimen.subject.extension:patient-animal.extension:species</td><td></td><td>subject.ofType(Patient)</td></tr>
+          <tr><td>SpecimenLab.material</td><td>A.2.3.3 Material</td><td>equivalent</td><td>cz-service-request-lab</td><td>Specimen.type</td><td></td><td></td></tr>
+          <tr><td>SpecimenLab.collected</td><td>A.2.3.4 Collection period</td><td>equivalent</td><td>cz-service-request-lab</td><td>Specimen.collection.collected[x]</td><td></td><td></td></tr>
+          <tr><td>SpecimenLab.anatomicLocation</td><td>A.2.3.5 Anatomic location</td><td>relatedto / equivalent</td><td>cz-service-request-lab | BodyStructure-eu-lab</td><td>Specimen.collection.bodySite | Specimen.collection.extension:bodySite | BodyStructure.location | BodyStructure.extension:laterality</td><td></td><td>Multiple variants for Specimen and BodyStructure.</td></tr>
+          <tr><td>SpecimenLab.morphology</td><td>A.2.3.6 Morphology</td><td>relatedto / equivalent</td><td>cz-service-request-lab | BodyStructure-eu-lab</td><td>Specimen.collection.extension:bodySite | BodyStructure.morphology</td><td></td><td>See the second mapping group for details.</td></tr>
+          <tr><td>SpecimenLab.sourceDevice</td><td>A.2.3.7 Source Device</td><td>relatedto</td><td>cz-service-request-lab</td><td>Specimen.subject</td><td></td><td>When the device itself is what has been examined; if it is the collection means, see collectionMethod.</td></tr>
+          <tr><td>SpecimenLab.collectionMethod</td><td>A.2.3.8 Collection procedure/method</td><td>equivalent</td><td>cz-service-request-lab</td><td>Specimen.collection.method</td><td></td><td></td></tr>
+          <tr><td>SpecimenLab.receivedDateTime</td><td>A.2.3.9 Received date</td><td>equivalent</td><td>cz-service-request-lab</td><td>Specimen.receivedTime</td><td></td><td></td></tr>
+          <tr><td>LabReport.result</td><td>A.2.4 Results data elements</td><td>relatedto</td><td>DiagnosticReport | Composition | Observation</td><td>DiagnosticReport.result | Composition.section.entry | Composition.section.section.entry</td><td></td><td>Top-level result row from the main report ConceptMap.</td></tr>
+          <tr><td>Result.narrative</td><td>A.2.4.1 Laboratory report narrative</td><td>unmatched</td><td>(unmatched in Observation)</td><td>(unmatched in Observation)</td><td></td><td>No direct Observation target in this mapping group.</td></tr>
+          <tr><td>Result.narrative.report</td><td>A.2.4.1.1 Narrative report</td><td>unmatched</td><td>(unmatched in Observation)</td><td>(unmatched in Observation)</td><td></td><td>No direct Observation target in this mapping group.</td></tr>
+          <tr><td>Result.narrative.notes</td><td>A.2.4.1.2 Comments, interpretation and recommendations</td><td>unmatched</td><td>(unmatched in Observation)</td><td>(unmatched in Observation)</td><td></td><td>No direct Observation target in this mapping group.</td></tr>
+          <tr><td>Result.observation</td><td>A.2.4.2 Observation details</td><td>equivalent</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation | DiagnosticReport.result</td><td></td><td></td></tr>
+          <tr><td>Result.observation.dateTime</td><td>A.2.4.2.1 Observation date</td><td>equivalent</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.effective[x] | Observation.issued | DiagnosticReport.result</td><td></td><td>Observation effective[x] for clinically relevant time; issued for publication time.</td></tr>
+          <tr><td>Result.observation.code</td><td>A.2.4.2.3 Observation code</td><td>relatedto</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.code | Observation.hasMember.code | Observation.component.code | DiagnosticReport.result</td><td></td><td>Depends on the type of laboratory test.</td></tr>
+          <tr><td>Result.observation.code.name</td><td>A.2.4.2.3.1 Observation name</td><td>equivalent</td><td>cz-observation-result-laboratory</td><td>Observation.code.coding.display</td><td></td><td>Used for full specified name versus short name designation.</td></tr>
+          <tr><td>Result.observation.method</td><td>A.2.4.2.4 Observation method</td><td>equivalent</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.method | DiagnosticReport.result</td><td></td><td></td></tr>
+          <tr><td>Result.observation.device</td><td>A.2.4.2.5 Observation device</td><td>relatedto</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.device | Observation.device.device | DiagnosticReport.result</td><td></td><td>Used when a measuring Device or DeviceMeasure is carried, including calibration context.</td></tr>
+          <tr><td>Result.observation.order</td><td>A.2.4.2.8 Order</td><td>equivalent</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.basedOn | DiagnosticReport.result</td><td></td><td></td></tr>
+          <tr><td>Result.observation.performer</td><td>A.2.4.2.9 Performer</td><td>equivalent</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.performer | DiagnosticReport.result</td><td></td><td></td></tr>
+          <tr><td>Result.observation.reporter</td><td>A.2.4.2.10 Reporter</td><td>relatedto</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.performer | DiagnosticReport.result</td><td></td><td>Interpreter: performer.extension:performerFunction = AUT. Validator: AUTHEN or LA.</td></tr>
+          <tr><td>Result.observation.result</td><td>A.2.4.2.11 Observation result</td><td>equivalent</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.value[x] | Observation.component.value[x] | DiagnosticReport.result</td><td></td><td>Depends on the type of laboratory test.</td></tr>
+          <tr><td>Result.observation.interpretation</td><td>A.2.4.2.12 Observation interpretation</td><td>equivalent</td><td>cz-observation-result-laboratory | cz-diagnostic-report-lab</td><td>Observation.interpretation | Observation.component.interpretation | DiagnosticReport.result</td><td></td><td>Depends on the type of laboratory test.</td></tr>
+          <tr><td>Result.observation.description</td><td>A.2.4.2.13 Result description</td><td>relatedto</td><td>cz-observation-result-laboratory</td><td>Observation.text</td><td></td><td></td></tr>
+          <tr><td>Result.observation.accreditationStatus</td><td>A.2.4.2.14 Accreditation status</td><td>equivalent</td><td>cz-observation-result-laboratory</td><td>Observation.extension[accreditation]</td><td></td><td></td></tr>
+          <tr><td>Result.narrative</td><td>A.2.4.1 Laboratory report narrative</td><td>relatedto</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport</td><td></td><td>Diagnostic report narrative group.</td></tr>
+          <tr><td>Result.narrative.report</td><td>A.2.4.1.1 Narrative report</td><td>relatedto</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.text</td><td></td><td></td></tr>
+          <tr><td>Result.narrative.notes</td><td>A.2.4.1.2 Comments, interpretation and recommendations</td><td>relatedto</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.conclusion</td><td></td><td>If the notes apply to the overall report conclusion.</td></tr>
+        </tbody>
+      </table>
+    </div>
 
   </body>
 </div>

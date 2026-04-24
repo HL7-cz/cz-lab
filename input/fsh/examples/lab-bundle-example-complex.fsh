@@ -17,6 +17,12 @@ Description: "Czech Lab Report - example of a bundle containing containing sever
 * entry[patient][+].fullUrl = "urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5"
 * entry[patient][=].resource = 879657b8-f2d4-54da-ab1f-c363b4f092d5
 
+* entry[practitioner][+].fullUrl = "urn:uuid:fa4f28b1-1234-4f78-9cda-dcf01f228acf"
+* entry[practitioner][=].resource = fa4f28b1-1234-4f78-9cda-dcf01f228acf
+
+* entry[practitionerRole][+].fullUrl = "urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a"
+* entry[practitionerRole][=].resource = a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a
+
 * entry[organization][+].fullUrl = "urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32"
 * entry[organization][=].resource = b8ad152c-2c7d-54cb-a80f-5eff76fa6b32
 
@@ -200,6 +206,8 @@ InstanceOf: CZ_DiagnosticReportLab
 Usage: #inline
 
 * id = "66fda6b2-1bb0-5187-9842-292ce06cf15f"
+* identifier.system = "http://hospital.example.org/lab-results"
+* identifier.value = "LR2345678"
 
 * status = #final
 * code = $loinc#11502-2 //"Laboratory report"
