@@ -7,20 +7,116 @@
 
     <style type="text/css">
       .model-map-block { margin: 0 0 1rem 0; }
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+      .callout-box { color: #222; }
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
     </style>
   </head>
 
   <body>
 
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Přehled:</strong>
+          Tato stránka rozepisuje kompletní mapování částí A.3 a A.4 podle laboratorních ConceptMap definic pro presented form i další přílohy.
+        </div>
+      </div>
+    </div>
+
     <h3>Přílohy -&gt; FHIR profily (CZ LAB)</h3>
 
     <p>
-      Tato stránka ukazuje, jak se konceptuální prvky prezentované podoby dokumentu a dalších příloh promítají do odpovídajících FHIR profilů a jejich klíčových elementů.
+      Tato stránka uvádí kompletní mapovací řádky pro vizuální podobu laboratorní zprávy a další přílohy podle attachment ConceptMap definic použitých v tomto implementačním průvodci.
     </p>
 
-    <h4 id="model">Přehled mapování</h4>
+    <h4 id="model">Přehled modelu</h4>
 
     <p>{% include labReportAttach-map-cs.svg %}</p>
+
+    <div class="table-wrap">
+      <strong>Kontext mapování</strong>
+      <ul>
+        <li><strong>Zdrojové logické modely:</strong> <a href="StructureDefinition-PresentedFormCz.html">PresentedFormCz</a>, <a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz</a></li>
+        <li><strong>Zdrojové ConceptMap soubory:</strong> <code>labRpt-to-fhir-map-cz.fsh</code>, <code>attachments-to-fhir-map.fsh</code></li>
+        <li><strong>Rozsah mapování:</strong> A.3 Vizuální podoba dokumentu a A.4 Přílohy</li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table summary="Mapování vizuální podoby a příloh na CZ LAB profily">
+        <caption>Přílohy -&gt; FHIR profily (CZ LAB)</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">Vizuální podoba / Přílohy (Logický model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cíl</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Poznámky</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>LabReport.presentedForm</td><td>A.3 Vizuální podoba laboratorního reportu</td><td>relatedto</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.presentedForm</td><td></td><td>Vrcholový řádek z hlavní laboratorní ConceptMap.</td></tr>
+          <tr><td>PresentedForm</td><td>A.3 Vizuální podoba dokumentu</td><td>equivalent</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.presentedForm</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>PresentedForm.contentType</td><td>A.3.1 Typ obsahu</td><td>equivalent</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.presentedForm.contentType</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>PresentedForm.language</td><td>A.3.2 Jazyk obsahu</td><td>equivalent</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.presentedForm.language</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>PresentedForm.data</td><td>A.3.3 Data obsahu</td><td>equivalent</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.presentedForm.data</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>PresentedForm.url</td><td>A.3.4 URL obsahu</td><td>equivalent</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.presentedForm.url</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>PresentedForm.title</td><td>A.3.5 Název obsahu</td><td>equivalent</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.presentedForm.title</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>PresentedForm.creation</td><td>A.3.6 Datum vytvoření</td><td>equivalent</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.presentedForm.creation</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>LabReport.attachment</td><td>A.4 Přílohy laboratorního reportu</td><td>relatedto</td><td>Attachment</td><td>Attachment</td><td></td><td>Vrcholový řádek z hlavní laboratorní ConceptMap.</td></tr>
+          <tr><td>Attachments</td><td>A.4 Přílohy</td><td>equivalent</td><td>cz-attachment</td><td>Attachment</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>Attachments.contentType</td><td>A.4.1 Typ obsahu</td><td>equivalent</td><td>cz-attachment</td><td>Attachment.contentType</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>Attachments.language</td><td>A.4.2 Jazyk obsahu</td><td>equivalent</td><td>cz-attachment</td><td>Attachment.language</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>Attachments.data</td><td>A.4.3 Data obsahu</td><td>equivalent</td><td>cz-attachment</td><td>Attachment.data</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>Attachments.url</td><td>A.4.4 URL obsahu</td><td>equivalent</td><td>cz-attachment</td><td>Attachment.url</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>Attachments.title</td><td>A.4.5 Název obsahu</td><td>equivalent</td><td>cz-attachment</td><td>Attachment.title</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+          <tr><td>Attachments.creation</td><td>A.4.6 Datum vytvoření</td><td>equivalent</td><td>cz-attachment</td><td>Attachment.creation</td><td></td><td>Detailní řádek z attachments-to-fhir-map.fsh.</td></tr>
+        </tbody>
+      </table>
+    </div>
 
   </body>
 </div>

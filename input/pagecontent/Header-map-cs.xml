@@ -7,20 +7,163 @@
 
     <style type="text/css">
       .model-map-block { margin: 0 0 1rem 0; }
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+      .callout-box { color: #222; }
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
     </style>
   </head>
 
   <body>
 
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Přehled:</strong>
+          Tato stránka rozepisuje kompletní mapování části A.1 podle laboratorních ConceptMap definic, včetně hlavní mapy reportu i všech detailních podmap pro hlavičku.
+        </div>
+      </div>
+    </div>
+
     <h3>Hlavička -&gt; FHIR profily (CZ LAB)</h3>
 
     <p>
-      Tato stránka ukazuje, jak se konceptuální prvky hlavičky laboratorní zprávy promítají do odpovídajících FHIR profilů a jejich klíčových elementů.
+      Tato stránka uvádí kompletní mapovací řádky pro hlavičku laboratorní zprávy podle header ConceptMap definic použitých v tomto implementačním průvodci.
     </p>
 
-    <h4 id="model">Přehled mapování</h4>
+    <h4 id="model">Přehled modelu</h4>
 
     <p>{% include labReportHead-map-cs.svg %}</p>
+
+    <div class="table-wrap">
+      <strong>Kontext mapování</strong>
+      <ul>
+        <li><strong>Zdrojový logický model:</strong> <a href="StructureDefinition-LabReportCz.html">LabReportCz</a></li>
+        <li><strong>Zdrojové ConceptMap soubory:</strong> <code>labRpt-to-fhir-map-cz.fsh</code>, <code>subject-to-fhir-map-cz.fsh</code>, <code>payer-to-fhir-map-cz.fsh</code>, <code>recipient-to-fhir-map-cz.fsh</code>, <code>author-to-fhir-map-cz.fsh</code>, <code>validator-to-fhir-map-cz.fsh</code>, <code>legalAuth-to-fhir-map-cz.fsh</code></li>
+        <li><strong>Rozsah mapování:</strong> A.1 Hlavička, subjekt, plátce, příjemce informace, autor, validátor, právní autentizátor a metadata</li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table summary="Mapování hlavičky logického modelu na CZ LAB profily">
+        <caption>Hlavička -&gt; FHIR profily (CZ LAB)</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">Hlavička (Logický model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cíl</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Poznámky</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>LabReport.header</td><td>A.1 Datové prvky hlavičky reportu</td><td>relatedto</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport | Composition</td><td>(hlavní mapování)</td><td>Vrcholový řádek z hlavní ConceptMap laboratorního reportu.</td></tr>
+          <tr><td>LabReport.header.subject</td><td>A.1.1 - A1.2 Pacient/subjekt</td><td>relatedto</td><td>Patient</td><td>DiagnosticReport.subject | Composition.subject</td><td></td><td>Vrcholový subject řádek z hlavní mapy reportu.</td></tr>
+          <tr><td>Subject.identification</td><td>A.1.1 Identifikace pacienta/subjektu</td><td>relatedto</td><td>cz-patient-core</td><td>Patient</td><td></td><td></td></tr>
+          <tr><td>Subject.identification.givenName</td><td>A.1.1.1 Jméno</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.name.given</td><td></td><td></td></tr>
+          <tr><td>Subject.identification.familyName</td><td>A.1.1.2 Příjmení</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.name.family</td><td></td><td></td></tr>
+          <tr><td>Subject.identification.dateOfBirth</td><td>A.1.1.3 Datum narození</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.birthDate</td><td></td><td></td></tr>
+          <tr><td>Subject.identification.identifier</td><td>A.1.1.4 Identifikátor pacienta</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.identifier</td><td></td><td></td></tr>
+          <tr><td>Subject.identification.citizenship</td><td>A.1.1.5 Státní příslušnost</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.patient-citizenship</td><td></td><td></td></tr>
+          <tr><td>Subject.identification.gender</td><td>A.1.1.6 Pohlaví</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.gender</td><td></td><td></td></tr>
+          <tr><td>Subject.identification.languageOfCommunication</td><td>A.1.1.7 Jazyk komunikace</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.communication.language</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo</td><td>A.1.2 Kontaktní údaje pacienta/subjektu</td><td>relatedto</td><td>cz-patient-core</td><td>Patient</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.address</td><td>A.1.2.1 Adresa</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.address</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.telecom</td><td>A.1.2.2 Telekom</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.telecom</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.preferedPhysician</td><td>A.1.2.3 Preferovaný lékař</td><td>equivalent</td><td>cz-patient-core | cz-practitioner-core | cz-practitionerrole-core</td><td>Patient.generalPractitioner | Practitioner | PractitionerRole</td><td></td><td>Mapuje se na Patient, Practitioner nebo PractitionerRole podle kontextu.</td></tr>
+          <tr><td>Subject.contactInfo.legalRepresent</td><td>A.1.2.4 Zákonný zástupce a jiné kontaktní osoby</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.contact</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.legalRepresent.type</td><td>A.1.2.4.1 Typ kontaktu</td><td>relatedto</td><td>cz-patient-core</td><td>Patient.contact.relationship</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.legalRepresent.relationToSubject</td><td>A.1.2.4.2 Vztah k pacientovi</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.contact.relationship</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.legalRepresent.givenName</td><td>A.1.2.4.4 Jméno</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.contact.name.given</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.legalRepresent.familyName</td><td>A.1.2.4.5 Příjmení</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.contact.name.family</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.legalRepresent.address</td><td>A.1.2.4.6 Adresa kontaktní osoby</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.contact.address</td><td></td><td></td></tr>
+          <tr><td>Subject.contactInfo.legalRepresent.telecom</td><td>A.1.2.4.7 Telekom</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.contact.telecom</td><td></td><td></td></tr>
+          <tr><td>LabReport.header.payer</td><td>A.1.3 Zdravotní pojištění a úhrada</td><td>relatedto</td><td>DiagnosticReport | Composition | ServiceRequest | Coverage</td><td>DiagnosticReport.basedOn.insurance | Composition.extension:basedOn-order-or-requisition.insurance</td><td></td><td>Vrcholový payer řádek z hlavní mapy reportu.</td></tr>
+          <tr><td>Payer.identifier</td><td>A.1.3.1 Kód zdravotní pojišťovny</td><td>relatedto</td><td>cz-service-request-lab | cz-coverage | cz-patient-core</td><td>ServiceRequest.insurance | Coverage.payor.identifier | (unmatched for Patient)</td><td></td><td>Detaily skupiny 1 v mapovací skupině Coverage.</td></tr>
+          <tr><td>Payer.identifier</td><td>A.1.3.1 Kód zdravotní pojišťovny</td><td>equivalent</td><td>cz-coverage</td><td>Coverage.payor.identifier</td><td></td><td>payor.ofType(Organization)</td></tr>
+          <tr><td>Payer.name</td><td>A.1.3.2 Název zdravotní pojišťovny</td><td>relatedto</td><td>cz-service-request-lab</td><td>ServiceRequest.insurance</td><td></td><td>Detaily v mapovací skupině Coverage.</td></tr>
+          <tr><td>Payer.name</td><td>A.1.3.2 Název zdravotní pojišťovny</td><td>equivalent</td><td>cz-coverage</td><td>Coverage.payor.name</td><td></td><td>payor.ofType(Organization)</td></tr>
+          <tr><td>Payer.subjectIdentifier</td><td>A.1.3.3 Číslo pojištěnce</td><td>relatedto</td><td>cz-service-request-lab</td><td>ServiceRequest.insurance</td><td></td><td>Detaily v mapovací skupině Coverage.</td></tr>
+          <tr><td>Payer.subjectIdentifier</td><td>A.1.3.3 Číslo pojištěnce</td><td>equivalent</td><td>cz-coverage</td><td>Coverage.policyHolder.identifier | Coverage.beneficiary.identifier | Coverage.subscriberId | Coverage.subscriber.identifier</td><td></td><td>Více cílů podle toho, zda je identifikátor chápán jako policy holder, beneficiary nebo subscriber.</td></tr>
+          <tr><td>Payer.subjectIdentifier</td><td>A.1.3.3 Číslo pojištěnce</td><td>equivalent</td><td>cz-patient-core</td><td>Patient.identifier</td><td></td><td>Pokud je v lokální praxi použit jako identifikátor pacienta.</td></tr>
+          <tr><td>LabReport.header.informationRecipient</td><td>A.1.4 Příjemce informace</td><td>equivalent</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport.extension:information-recipient | Composition.extension:information-recipient</td><td></td><td>Vrcholový řádek z hlavní mapy reportu.</td></tr>
+          <tr><td>Recipient.identifier</td><td>A.1.4.1 Identifikátor příjemce</td><td>equivalent</td><td>information-recipient extension</td><td>extension:information-recipient.valueReference.identifier</td><td></td><td></td></tr>
+          <tr><td>Recipient.name</td><td>A.1.4.2 Jméno příjemce</td><td>equivalent</td><td>information-recipient extension</td><td>extension:information-recipient.valueReference.name</td><td></td><td></td></tr>
+          <tr><td>Recipient.organizationIdentifier</td><td>A.1.4.3 Identifikátor organizace příjemce</td><td>equivalent</td><td>information-recipient extension</td><td>extension:information-recipient.ValueReference.identifier | extension:information-recipient.ValueReference.organization.identifier</td><td></td><td>ValueReference.resolve().ofType(Organization) nebo ValueReference.resolve().ofType(PractitionerRole)</td></tr>
+          <tr><td>Recipient.organization</td><td>A.1.4.4 Organizace příjemce</td><td>equivalent</td><td>information-recipient extension</td><td>extension:information-recipient.ValueReference | extension:information-recipient.ValueReference.organization</td><td></td><td>Záleží na tom, zda se příjemce resolveuje na Organization nebo PractitionerRole.</td></tr>
+          <tr><td>LabReport.header.author</td><td>A.1.5 Autor</td><td>relatedto</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport.resultsInterpreter | DiagnosticReport.performer | Composition.author</td><td></td><td>Pokud je autor interpretem nebo performerem.</td></tr>
+          <tr><td>Author.identifier</td><td>A.1.5.1 Identifikátor autora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.author.identifier</td><td></td><td></td></tr>
+          <tr><td>Author.identifier</td><td>A.1.5.1 Identifikátor autora</td><td>relatedto</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.resultsInterpreter.identifier | DiagnosticReport.performer.identifier</td><td></td><td>Pokud je autor interpretem nebo performerem.</td></tr>
+          <tr><td>Author.name</td><td>A.1.5.2 Jméno autora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.author.name | Composition.author.Practitioner.name | Composition.device.name</td><td></td><td>Podle toho, zda jde o lidského autora nebo zařízení.</td></tr>
+          <tr><td>Author.name</td><td>A.1.5.2 Jméno autora</td><td>relatedto</td><td>cz-diagnostic-report-lab</td><td>DiagnosticReport.resultsInterpreter.name | DiagnosticReport.performer.name</td><td></td><td>Více variant pro Practitioner nebo PractitionerRole.</td></tr>
+          <tr><td>Author.organizationIdentifier</td><td>A.1.5.3 Identifikátor organizace autora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.author.organization.identifier</td><td></td><td></td></tr>
+          <tr><td>Author.organization</td><td>A.1.5.4 Organizace autora</td><td>equivalent</td><td>cz-composition-lab-report | cz-diagnostic-report-lab</td><td>Composition.author.organization | Composition.author.owner | DiagnosticReport.resultsInterpreter.organization | DiagnosticReport.performer.organization</td><td></td><td>Záleží na typu autora i cílovém resource.</td></tr>
+          <tr><td>Author.organization.dateOfSaving</td><td>A.1.5.5 Datum a čas uložení</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.date</td><td></td><td></td></tr>
+          <tr><td>LabReport.header.legalAuthenticator</td><td>A.1.6 Právní autentizátor</td><td>unmatched</td><td>DiagnosticReport</td><td>(unmatched in DiagnosticReport)</td><td></td><td>Mapováno do Composition, ne do DiagnosticReport.</td></tr>
+          <tr><td>LegalAuthenticator.identifier</td><td>A.1.6.1 Identifikátor právního autentizátora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.party.identifier</td><td></td><td>attester.where(mode='legal')</td></tr>
+          <tr><td>LegalAuthenticator.name</td><td>A.1.6.2 Jméno právního autentizátora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.party.name | Composition.attester.party.Practitioner.name</td><td></td><td>Varianty pro Practitioner nebo PractitionerRole, attester.where(mode='legal').</td></tr>
+          <tr><td>LegalAuthenticator.organization</td><td>A.1.6.3 Organizace právního autentizátora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.party.organization</td><td></td><td>attester.where(mode='legal').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr>
+          <tr><td>LegalAuthenticator.dateTime</td><td>A.1.6.4 Datum a čas autentizace</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.time</td><td></td><td>attester.where(mode='legal').time</td></tr>
+          <tr><td>LabReport.header.validator</td><td>A.1.7 Validátor výsledku</td><td>unmatched</td><td>DiagnosticReport</td><td>(unmatched in DiagnosticReport)</td><td></td><td>Mapováno do Composition, ne do DiagnosticReport.</td></tr>
+          <tr><td>Validator.identifier</td><td>A.1.6.1 Identifikátor validátora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.party.identifier</td><td></td><td>attester.where(mode='professional')</td></tr>
+          <tr><td>Validator.name</td><td>A.1.6.2 Jméno validátora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.party.name | Composition.attester.party.Practitioner.name</td><td></td><td>Varianty pro Practitioner nebo PractitionerRole, attester.where(mode='professional').</td></tr>
+          <tr><td>Validator.organizationIdentifier</td><td>A.1.6.3 Identifikátor organizace validátora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.party.organization.identifier</td><td></td><td></td></tr>
+          <tr><td>Validator.organization</td><td>A.1.6.4 Organizace validátora</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.party.organization</td><td></td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr>
+          <tr><td>Validator.dateTime</td><td>A.1.6.5 Datum a čas validace</td><td>equivalent</td><td>cz-composition-lab-report</td><td>Composition.attester.time</td><td></td><td>attester.where(mode='professional').time</td></tr>
+          <tr><td>LabReport.header.metadata</td><td>A.1.8 Metadata laboratorního reportu</td><td>relatedto</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport | Composition</td><td></td><td>Obalový metadata řádek z hlavní mapy reportu.</td></tr>
+          <tr><td>LabReport.header.metadata.documentId</td><td>A.1.8.1 Id dokumentu</td><td>relatedto / equivalent</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport.identifier | Composition.identifier</td><td></td><td>DiagnosticReport pro identifikátor reportu nezávislý na verzi, Composition je ekvivalentní.</td></tr>
+          <tr><td>LabReport.header.metadata.type</td><td>A.1.8.2 Typ dokumentu</td><td>equivalent</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport.code | Composition.type</td><td></td><td></td></tr>
+          <tr><td>LabReport.header.metadata.status</td><td>A.1.8.3 Stav dokumentu</td><td>relatedto</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport.status | Composition.status</td><td></td><td>Composition status se odvozuje přes EU ConceptMap z DiagnosticReport status do Composition status.</td></tr>
+          <tr><td>LabReport.header.metadata.dateTime</td><td>A.1.8.4 Datum a čas reportu</td><td>equivalent</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport.effectiveDateTime | Composition.date</td><td></td><td></td></tr>
+          <tr><td>LabReport.header.metadata.title</td><td>A.1.8.5 Název dokumentu</td><td>unmatched / equivalent</td><td>Composition</td><td>Composition.title</td><td></td><td>V DiagnosticReport unmatched, v Composition equivalent.</td></tr>
+          <tr><td>LabReport.header.metadata.custodian</td><td>A.1.8.6 Správce reportu</td><td>unmatched / equivalent</td><td>Composition</td><td>Composition.custodian</td><td></td><td>V DiagnosticReport unmatched, v Composition equivalent.</td></tr>
+          <tr><td>LabReport.header.metadata.confidentiality</td><td>A.1.8.7 Důvěrnost</td><td>unmatched / equivalent</td><td>Composition</td><td>Composition.confidentiality</td><td></td><td>V DiagnosticReport unmatched, v Composition equivalent.</td></tr>
+          <tr><td>LabReport.header.metadata.language</td><td>A.1.8.8 Jazyk</td><td>equivalent</td><td>DiagnosticReport | Composition</td><td>DiagnosticReport.language | Composition.language</td><td></td><td></td></tr>
+          <tr><td>LabReport.header.metadata.version</td><td>A.1.8.9 Verze</td><td>unmatched / equivalent</td><td>Composition</td><td>Composition.extension:versionNumber</td><td></td><td>V DiagnosticReport unmatched; v Composition equivalent, pokud jde o obchodní verzi reportu.</td></tr>
+        </tbody>
+      </table>
+    </div>
 
   </body>
 </div>

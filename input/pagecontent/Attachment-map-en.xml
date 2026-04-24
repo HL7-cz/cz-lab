@@ -7,20 +7,116 @@
 
     <style type="text/css">
       .model-map-block { margin: 0 0 1rem 0; }
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+      .callout-box { color: #222; }
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
     </style>
   </head>
 
   <body>
 
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Overview:</strong>
+          This page expands the full A.3 and A.4 mappings captured in the laboratory ConceptMap definitions, including both high-level report rows and all detailed attachment fields.
+        </div>
+      </div>
+    </div>
+
     <h3>Attachments -&gt; FHIR profiles (CZ LAB)</h3>
 
     <p>
-      This page shows how the conceptual elements for the rendered document form and its attachments map to the corresponding FHIR profiles and their key elements.
+      This page lists the complete mapping rows for the presented form and additional attachments, following the attachment ConceptMap definitions used in this guide.
     </p>
 
-    <h4 id="model">Mapping overview</h4>
+    <h4 id="model">Model Overview</h4>
 
     <p>{% include labReportAttach-map-en.svg %}</p>
+
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li><strong>Source logical models:</strong> <a href="StructureDefinition-PresentedFormCz.html">PresentedFormCz</a>, <a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz</a></li>
+        <li><strong>Source ConceptMaps:</strong> <code>labRpt-to-fhir-map-cz.fsh</code>, <code>attachments-to-fhir-map.fsh</code></li>
+        <li><strong>Mapping scope:</strong> A.3 Presented form and A.4 Attachments</li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table summary="Complete mapping of presented form and attachments logical models to CZ LAB profiles">
+        <caption>Attachments -&gt; FHIR profiles (CZ LAB)</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">Presented Form / Attachments (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">FHIR Target</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource/Profile</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>LabReport.presentedForm</td><td>A.3 Laboratory report presented form</td><td>relatedto</td><td>DiagnosticReport</td><td>DiagnosticReport.presentedForm</td><td></td><td>Top-level row from the main laboratory report ConceptMap.</td></tr>
+          <tr><td>PresentedForm</td><td>A.3 - Presented Form</td><td>equivalent</td><td>cz-diagnostic-report</td><td>DiagnosticReport.presentedForm</td><td></td><td>Detailed row from <code>attachments-to-fhir-map.fsh</code>.</td></tr>
+          <tr><td>PresentedForm.contentType</td><td>A.3.1 - Content type of presented form</td><td>equivalent</td><td>cz-attachment</td><td>content.contentType</td><td></td><td></td></tr>
+          <tr><td>PresentedForm.language</td><td>A.3.2 - Language of presented form</td><td>equivalent</td><td>cz-attachment</td><td>content.language</td><td></td><td></td></tr>
+          <tr><td>PresentedForm.data</td><td>A.3.3 - Data of presented form</td><td>equivalent</td><td>cz-attachment</td><td>content.data</td><td></td><td></td></tr>
+          <tr><td>PresentedForm.url</td><td>A.3.4 - URL of presented form</td><td>equivalent</td><td>cz-attachment</td><td>content.url</td><td></td><td></td></tr>
+          <tr><td>PresentedForm.title</td><td>A.3.5 - Title of presented form</td><td>equivalent</td><td>cz-attachment</td><td>content.title</td><td></td><td></td></tr>
+          <tr><td>PresentedForm.creation</td><td>A.3.6 - Date and time of creation</td><td>equivalent</td><td>cz-attachment</td><td>content.creation</td><td></td><td></td></tr>
+          <tr><td>LabReport.attachment</td><td>A.4 Laboratory report attachment</td><td>relatedto</td><td>DiagnosticReport</td><td>DiagnosticReport.media.link.content.attachment</td><td></td><td>Top-level row from the main laboratory report ConceptMap.</td></tr>
+          <tr><td>Attachments</td><td>A.4 - Attachments</td><td>equivalent</td><td>cz-diagnostic-report</td><td>DiagnosticReport.media.link.content.attachment</td><td>If it is additional MEDIA attachments</td><td>Detailed attachment group entry from <code>attachments-to-fhir-map.fsh</code>.</td></tr>
+          <tr><td>Attachments.contentType</td><td>A.4.1 - Content type of media attachments</td><td>equivalent</td><td>cz-attachment</td><td>content.contentType</td><td></td><td></td></tr>
+          <tr><td>Attachments.language</td><td>A.4.2 - Language of media attachments</td><td>equivalent</td><td>cz-attachment</td><td>content.language</td><td></td><td></td></tr>
+          <tr><td>Attachments.data</td><td>A.4.3 - Data of media attachments</td><td>equivalent</td><td>cz-attachment</td><td>content.data</td><td></td><td></td></tr>
+          <tr><td>Attachments.url</td><td>A.4.4 - URL of media attachments</td><td>equivalent</td><td>cz-attachment</td><td>content.url</td><td></td><td></td></tr>
+          <tr><td>Attachments.title</td><td>A.4.5 - Title of media attachments</td><td>equivalent</td><td>cz-attachment</td><td>content.title</td><td></td><td></td></tr>
+          <tr><td>Attachments.creation</td><td>A.4.6 - Date and time of creation</td><td>equivalent</td><td>cz-attachment</td><td>content.creation</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
 
   </body>
 </div>
