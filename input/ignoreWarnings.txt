@@ -9,7 +9,10 @@ The html source has duplicate anchor Ids: 1
 # A definition for CodeSystem 'url' could not be found
 A definition for CodeSystem 'http://snomed.info/sct' could not be found, so the code cannot be validated
 A definition for CodeSystem 'https://mkn10.uzis.cz' could not be found, so the code cannot be validated
-
+A definition for CodeSystem 'https://ncez.mzcr.cz/nclp/CodeSystem/nclppol' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://ncez.mzcr.cz/nclp/CodeSystem/nclpmtv' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar' could not be found, so the code cannot be validated
+    
 # URL does not resolve
 URL value 'https://hl7europe.org/example-identifier' does not resolve
 URL value 'https://ncez.mzcr.cz/fhir/sid/krzp' does not resolve
@@ -19,3 +22,25 @@ URL value 'http://hospital.cz/nis' does not resolve
 URL value 'https://ncez.mzcr.cz/fhir/sid/rid' does not resolve
 URL value 'https://ncez.mzcr.cz/fhir/sid/rcis' does not resolve
 URL value 'https://ncez.mzcr.cz/fhir/sid/kp' does not resolve
+
+# No definition could be found for URL value
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/cpoj'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rc'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krzp'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/ico'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krpzs'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/kp'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/icz'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/icp'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/clk'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/nrzp'
+
+
+
+# Preferred binding differences - CZ NCLP as primary coding
+%None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab|0.1.1), and a coding is recommended to come from this value set%
+
+# SNOMED CT terminology server version validation issues - valid warning, intentionally suppressed due to external TX server version availability
+A definition for CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/%

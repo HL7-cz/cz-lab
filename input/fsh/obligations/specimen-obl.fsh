@@ -7,15 +7,15 @@ Description: "This profile defines obligations for a specimen in FHIR for the pu
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, informative)
 
-* identifier insert OblCreator(#SHOULD:able-to-populate,L1)
-* type insert OblCreator(#SHOULD:able-to-populate,L1)
-* subject insert OblCreator(#SHOULD:able-to-populate,L1)
-* collection.collectedDateTime insert OblCreator(#SHOULD:able-to-populate,L1)
+//* identifier insert OblCreator(#SHOULD:able-to-populate,L1)
+//* type insert OblCreator(#SHOULD:able-to-populate,L1)
+//* subject insert OblCreator(#SHOULD:able-to-populate,L1)
+//* collection.collectedDateTime insert OblCreator(#SHOULD:able-to-populate,L1)
 
-* identifier insert OblConsumer(#SHOULD:display,L1)
-* type insert OblConsumer(#SHOULD:display,L1)
-* subject insert OblConsumer(#SHOULD:display,L1)
-* collection.collectedDateTime insert OblConsumer(#SHOULD:display,L1)
+//* identifier insert OblConsumer(#SHOULD:display,L1)
+//* type insert OblConsumer(#SHOULD:display,L1)
+//* subject insert OblConsumer(#SHOULD:display,L1)
+//* collection.collectedDateTime insert OblConsumer(#SHOULD:display,L1)
 
 
 * identifier insert OblCreator(#SHOULD:able-to-populate,L2)

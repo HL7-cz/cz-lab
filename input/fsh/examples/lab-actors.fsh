@@ -171,7 +171,7 @@ Description: "Role of Mgr. Kvilda Šejdlová (performing laboratory technician)"
 * id = "aabbccdd-2222-3333-dddd-112233445566"
 * practitioner = Reference(urn:uuid:fab321ab-7777-4444-cccc-abcdefabcdef)
 * organization = Reference(urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123) // Nemocnice Horní Dolní (laboratoř)
-* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL25
 * active = true
 * telecom[+].system = #email
 * telecom[=].value = "kvilda.sejdlova@horni-dolni.eu"

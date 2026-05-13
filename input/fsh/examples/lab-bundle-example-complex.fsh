@@ -291,7 +291,7 @@ Description: "Role of MUDr. Milbožena Hrčálková"
 * id = "a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a"
 * practitioner = Reference(urn:uuid:fa4f28b1-1234-4f78-9cda-dcf01f228acf)
 * organization = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
-* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL25 "Odborný pracovník v laboratorních metodách a v přípravě léčivých přípravků"
+* code[NRZP_POVOLANI] = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL25
 * active = true
 * telecom[+].system = #email
 * telecom[=].value = "milbozena.hrcalkova@vzor-nemocnice.cz"
