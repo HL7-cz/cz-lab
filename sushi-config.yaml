@@ -216,6 +216,8 @@ menu:
     Terminology considerations (en): terminology-considerations-en.html
     Terminology considerations (cs): terminology-considerations-cs.html
   Implementation:
+    Implementation notes (en): implementation-notes-en.html
+    Implementation notes (cs): implementation-notes-cs.html
     Mapping to profiles (en): model-map-en.html
     Mapping to profiles (cs): model-map-cs.html
     Examples (en): examples-en.html

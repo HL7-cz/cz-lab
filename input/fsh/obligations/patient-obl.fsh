@@ -12,8 +12,8 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * name.family insert OblCreator(#SHALL:able-to-populate,L1)
 * name.text insert OblCreator(#SHALL:able-to-populate,L1) //can-send
 * birthDate insert OblCreator(#SHALL:able-to-populate,L1)
-* gender insert OblCreator(#SHOULD:able-to-populate,L1)
-* address insert OblCreator(#SHOULD:able-to-populate,L1) //can-send
+* gender insert OblCreator(#SHALL:able-to-populate,L1)
+* address insert OblCreator(#SHALL:able-to-populate,L1) //can-send
 * telecom insert OblCreator(#SHOULD:able-to-populate,L1) //can-send
 * active insert OblCreator(#SHOULD:able-to-populate,L1)
 * generalPractitioner insert OblCreator(#SHOULD:able-to-populate,L1) //can-send
@@ -23,13 +23,13 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * identifier[RID] insert OblConsumer(#SHALL:process,L1)
 * name.given insert OblConsumer(#SHALL:display,L1)
 * name.family insert OblConsumer(#SHALL:display,L1)
-* name.text insert OblConsumer(#SHALL:display,L1) //can-send
+* name.text insert OblConsumer(#SHOULD:display,L1) //can-send
 * birthDate insert OblConsumer(#SHALL:display,L1)
-* gender insert OblConsumer(#SHOULD:display,L1)
-* address insert OblConsumer(#SHOULD:display,L1) //can-send
-* telecom insert OblConsumer(#SHOULD:display,L1) //can-send
+* gender insert OblConsumer(#SHALL:display,L1)
+* address insert OblConsumer(#SHALL:display,L1) //can-send
+* telecom insert OblConsumer(#SHALL:display,L1) //can-send
 * active insert OblConsumer(#SHOULD:display,L1)
-* generalPractitioner insert OblConsumer(#SHALL:display,L1) //can-send
+* generalPractitioner insert OblConsumer(#SHOULD:display,L1) //can-send
 
 
 
