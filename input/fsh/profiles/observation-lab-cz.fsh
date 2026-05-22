@@ -31,7 +31,7 @@ This observation may represent the result of a simple laboratory test such as he
 * subject only Reference(CZ_PatientAnimal or CZ_PatientCore or Group or Device or CZ_LocationCore)
 * subject.reference 1..
 
-* obeys cz-lab-0
+* obeys cz-lab-1
 * obeys cz-lab-2
 * extension contains $workflow-supportingInfo named supportingInfo 0..*
 
@@ -73,7 +73,7 @@ This observation may represent the result of a simple laboratory test such as he
 
 * effective[x] 1..
 * effective[x] only dateTime or Period
-* effective[x] obeys cz-lab-1 // efective datetime musí být uveden s přesností alespoň na den
+* effective[x] obeys cz-lab-3 // efective datetime musí být uveden s přesností alespoň na den
 * effective[x].extension ^slicing.discriminator.type = #value
 * effective[x].extension ^slicing.discriminator.path = "url"
 * effective[x].extension ^slicing.rules = #open
@@ -114,8 +114,8 @@ That's why it is important to explicitly include informaiton about measurement m
 * issued ^short = "Date/Time this result was made available"
 
 
-* derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or MolecularSequence or CZ_ObservationResultLaboratory)
-* derivedFrom ^short = "In the initial iteration of the Czech interoperability project: this can be ObservationLaboratory (CZ) or Media"
+* derivedFrom only Reference(CZ_ObservationResultLaboratory or ImagingStudy)
+* derivedFrom ^short = "Derived from another laboratory observation or an imaging study"
 
 * component
   * code only $CodeableConcept-uv-ips
@@ -198,12 +198,12 @@ That's why it is important to explicitly include informaiton about measurement m
 // ToDo: jak sdělovat výsledky funkčních testů viz položky sci a atribut ind_vazb_fv
 
 
-Invariant: cz-lab-0
+Invariant: cz-lab-1
 Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
 Severity: #error
-Expression: "(status in ('registered'|'cancelled')) or value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+Expression: "(status in ('registered'|'cancelled')) or value.exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value').exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
 
 Invariant: cz-lab-2
 Description: "If observation has components and observation status is other then \"registered\" or \"cancelled\", at least one of these Observation.component elements shall be provided:  \"value\" or \"dataAbsentReason\""
 Severity: #error
-Expression: "component.exists() implies (status in ('registered'|'cancelled')) or component.value.exists() or component.dataAbsentReason.exists()"
+Expression: "component.exists() implies (status in ('registered'|'cancelled')) or component.all(value.exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value').exists() or dataAbsentReason.exists())"

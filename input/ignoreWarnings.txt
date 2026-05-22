@@ -40,7 +40,7 @@ No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/nrzp'
 
 
 # Preferred binding differences - CZ NCLP as primary coding
-%None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab|0.1.1), and a coding is recommended to come from this value set%
+%None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab|2.0.0), and a coding is recommended to come from this value set%
 
 # SNOMED CT terminology server version validation issues - valid warning, intentionally suppressed due to external TX server version availability
 A definition for CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/%

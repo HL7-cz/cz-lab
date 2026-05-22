@@ -51,7 +51,7 @@ Description: "An example of a minimal laboratory report Composition"
 * identifier.system = "http://hospital.example.org/lab-results"
 * identifier.value = "LR123458"
 
-* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:6b4f39a0-0f1d-4b52-96b8-927f3de96792)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:6b4f39a0-0f1d-4b52-96b8-927f3de96792)
 
 * language = #cs
 * status = #final
@@ -67,9 +67,11 @@ Description: "An example of a minimal laboratory report Composition"
 
 * custodian = Reference(urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123)
 
-* section[lab-no-subsections]
+* section[+]
   * title = "Laboratorní nález"
   * code = $loinc#18719-5 //"Chemistry studies (set)"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratorní nález</div>"
 
   * entry[+] = Reference(urn:uuid:b2476a5a-45ce-4a18-931b-bc62372f86e2)
   * entry[+] = Reference(urn:uuid:e3a2e0a1-3b94-4f6f-a9b1-6dc1e4fdcc5e)
@@ -90,6 +92,7 @@ Description: "Example of DiagnosticReport for lab result"
 * identifier.value = "LR123458"
 
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:c3a1e83b-1a2f-4f7e-9fd8-18d4ad31a44d)
+* extension[DiagnosticReportCompositionR5].valueReference.type = "Composition"
 * status = #final
 * code = $loinc#11502-2 //"Laboratory report"
 

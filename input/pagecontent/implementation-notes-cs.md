@@ -29,7 +29,7 @@ classDiagram
   CZ_DiagnosticReportLab --> CZ_CompositionLabReport: extension[diagnosticReport-composition]
 
   CZ_CompositionLabReport --> CZ_ServiceRequestLab: extension[basedOn-order-or-requisition]
-  CZ_CompositionLabReport --> CZ_DiagnosticReportLab: extension[diagnosticReport-reference]
+  CZ_CompositionLabReport --> CZ_DiagnosticReportLab: extension[diagnosticReport] (R5 backport)
   CZ_CompositionLabReport --> CZ_PractitionerCore: extension[information-recipient]
   CZ_CompositionLabReport --> CZ_PractitionerCore: author
   CZ_CompositionLabReport --> CZ_PractitionerRoleCore: author
@@ -76,7 +76,7 @@ Kódy sekcí v obou variantách jsou (preferred) vázány na value set `CZ_LabSt
 
 ### Popis obsahu CZ_DiagnosticReportLab
 
-`CZ_DiagnosticReportLab` reprezentuje samotnou laboratorní výsledkovou zprávu (klinické/diagnostické sdělení) a je konceptuálním protějškem dokumentového Composition. V dokumentovém Bundle laboratorní zprávy se vyskytuje právě jednou a musí být dosažitelný z Composition skrze extension `diagnosticReport-reference`. Naopak `CZ_DiagnosticReportLab` odkazuje na Composition skrze extension `diagnosticReport-composition` (zarovnání R5 do R4).
+`CZ_DiagnosticReportLab` reprezentuje samotnou laboratorní výsledkovou zprávu (klinické/diagnostické sdělení) a je konceptuálním protějškem dokumentového Composition. V dokumentovém Bundle laboratorní zprávy se vyskytuje právě jednou a musí být dosažitelný z Composition skrze R5 cross-version extension `Composition.diagnosticReport` (slice `diagnosticReport`). Naopak `CZ_DiagnosticReportLab` odkazuje na Composition skrze extension `diagnosticReport-composition` (zarovnání R5 do R4).
 
 Nese:
 

@@ -10,10 +10,7 @@ RuleSet: ObservationResultsValueCz
 * value[x] ^slicing.rules = #closed
 * valueString only string
 * valueString ^sliceName = "valueString"
-* valueRange only $Range-uv-ips
-// no practical examples found for the time being
-// reverted to the original statement
-// * valueRange only Range-eu-lab
+* valueRange only Range-eu-lab
 * valueRange ^sliceName = "valueRange"
 //* valueRatio only $Ratio-uv-ips
 * valueRatio only Ratio-eu-lab
@@ -30,9 +27,16 @@ RuleSet: ObservationResultsValueCz
 * valueQuantity ^sliceName = "valueQuantity"
 * valueCodeableConcept only $CodeableConcept-uv-ips
 // * valueCodeableConcept MS
-* valueCodeableConcept from $results-coded-values-laboratory-uv-ips (preferred)  // ToDo: Ověřit co s MTV !!!
+* valueCodeableConcept from CZ_NclpMtvVS (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = Canonical(CZ_NclpMtvVS)
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Preferred Czech binding for laboratory result values encoded as CodeableConcept using the NCLP MTV code system."
+* valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* valueCodeableConcept ^binding.extension[+].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set"

@@ -28,6 +28,7 @@ Description: "Diagnostic Report used to represent an entry of a Laboratory Repor
 
 * insert ReportTypeRule ( code )
 * insert ReportSubjectRule
+* subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group or CZ_LocationCore or Device or CZ_MedicalDevice)
 * insert ReportEncounterRule
 
 
@@ -62,6 +63,11 @@ Description: "Diagnostic Report used to represent an entry of a Laboratory Repor
   * link
     * ^short = "Reference to the image or data"
     * ^definition = "A reference to the image or data associated with this report."
+    * extension contains $diagnosticReport-link-xver named link 0..1
+    * extension[link]
+      * ^definition = "Reference to a DocumentReference containing additional information/attachments associated with this report."
+      * ^short = "DocumentReference containing additional information/attachments"
+      * valueReference only Reference(DocumentReference)
 
 
 

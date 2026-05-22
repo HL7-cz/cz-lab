@@ -46,7 +46,6 @@ Alias: $clinicaldocument = http://hl7.org/fhir/StructureDefinition/clinicaldocum
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Range-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
 
 
 //----------- EU lab profiles
@@ -64,6 +63,36 @@ Alias: $Practitioner-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/
 Alias: $PractitionerRole-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab
 Alias: $DiagnosticReport-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias: $ServiceRequest-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab
+
+//----------- EU lab 2.0.0 – new profiles / extensions
+Alias: $MedicalTestResult-eu-core   = http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core
+Alias: $Device-measuring-eu-lab     = http://hl7.eu/fhir/laboratory/StructureDefinition/Device-measuring-eu-lab
+Alias: $Device-specimen-eu-lab      = http://hl7.eu/fhir/laboratory/StructureDefinition/Device-specimen-eu-lab
+Alias: $animal-specimen-eu-lab      = http://hl7.eu/fhir/laboratory/StructureDefinition/animal-specimen-eu-lab
+Alias: $SpecimenAdditiveSubstance-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-additive-substance-eu-lab
+Alias: $LaboratoryAccreditedEu      = http://hl7.eu/fhir/laboratory/StructureDefinition/laboratory-accredited-eu
+Alias: $DeviceLabTestKit-eu-lab     = http://hl7.eu/fhir/laboratory/StructureDefinition/device-lab-test-kit
+Alias: $ObservationCRMCodeable-eu-lab  = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterial-codeable
+Alias: $ObservationCRMIdentifier-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterial-identifier
+Alias: $SpecimenFocus-eu-lab        = http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-focus
+
+//----------- EU lab 2.0.0 – new value sets
+Alias: $LabPresenceAbsenceEuVs       = http://hl7.eu/fhir/laboratory/ValueSet/lab-presenceAbsence-eu
+Alias: $LabMedicalDeviceEuVs         = http://hl7.eu/fhir/laboratory/ValueSet/lab-medicalDevice-eu-lab
+Alias: $LabSpecimenTypesEuVs         = http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab
+Alias: $LabTechniqueEuVs             = http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab
+Alias: $LabSpecialtyEuVs             = http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab
+Alias: $LabStudyTypesEuVs            = http://hl7.eu/fhir/laboratory/ValueSet/lab-studyTypes-eu-lab
+Alias: $LabReportTypesEuVs           = http://hl7.eu/fhir/laboratory/ValueSet/lab-reportTypes-eu-lab
+Alias: $LaboratoryResultStandardEuVs = http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab
+
+//----------- R5 cross-version extensions (used by EU lab 2.0.0 parents)
+Alias: $composition-diagnosticReport-r5  = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.diagnosticReport
+Alias: $specimen-feature-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature
+Alias: $specimen-feature-type-r5         = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
+Alias: $specimen-collection-device-r5    = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.device
+Alias: $specimen-container-device-r5     = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device
+Alias: $diagnosticReport-media-link-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.media
 
 //----------- Extensions
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
@@ -89,6 +118,7 @@ Alias: $obligation                        = http://hl7.org/fhir/StructureDefinit
 Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
 Alias: $cvDiagnosticReport-composition    = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
+Alias: $diagnosticReport-link-xver        = http://hl7.org/fhir/StructureDefinition/alternate-reference
 Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
@@ -96,6 +126,7 @@ Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinit
 Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
 Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
+Alias: $laboratory-accredited = http://hl7.eu/fhir/StructureDefinition/laboratory-accredited
 Alias: $diagnosticReportReference = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference
 Alias: $compositionBasedOnOrderOrRequisition = http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 

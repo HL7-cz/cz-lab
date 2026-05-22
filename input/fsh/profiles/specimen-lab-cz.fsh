@@ -16,10 +16,23 @@ Description: "Czech profile for a specimen in a laboratory report. In some labor
 * insert ImposeProfile($Specimen-eu-lab)
 * insert SetFmmandStatusRule ( 0, draft )
 
+// EU lab 2.0.0 alignment – type SHALL be present and preferably from the EU lab specimen types value set
+* type 1..1
+* type from $LabSpecimenTypesEuVs (preferred)
+
 * collection MS
 
+// EU lab 2.0.0 alignment – container.additive[x] is closed (replaced by the R5 cross-version
+// container.device extension for device-based containers).
 * container MS
 * container.identifier MS
 * container.type MS
+* container.additive[x] 0..0
+* container.extension[device] 0..1
+  * ^short = "R5 cross-version backport of Specimen.container.device"
+
+// EU lab 2.0.0 alignment – allow R5 collection.device backport
+* collection.extension contains $specimen-collection-device-r5 named collection-device 0..*
+  * ^short = "R5 cross-version backport of Specimen.collection.device"
 
 * request only Reference(CZ_ServiceRequestLab)

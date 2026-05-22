@@ -1,4 +1,4 @@
-Invariant: cz-lab-1
+Invariant: cz-lab-3
 Description: "Datetime musí být uveden s přesností alespoň na den"
 Severity: #error
 Expression: "($this as dateTime).hasValue() implies ($this as dateTime).toString().length() >= 8"

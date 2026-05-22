@@ -133,6 +133,7 @@ Usage: #inline
 * id = "b7870704-1a75-4d72-9d39-69e988553275"
 * identifier.system = "http://hospital.example.org/lab-results"
 * identifier.value = "LR2345678"
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:e64618e6-d2df-44f6-ae31-7271f7b5e517)
 
 * status = #final
 * language = #cs-CZ
@@ -145,7 +146,7 @@ Usage: #inline
 * author = Reference(urn:uuid:4ee94491-4a3a-402c-a110-74ac3adb0012)
 * title = "Laboratorní nález"
 
-* section[lab-no-subsections]
+* section[+]
   * title = "Laboratorní nález"
   * code = $loinc#18719-5 //"Chemistry studies (set)"
   * text.status = #generated
@@ -217,6 +218,7 @@ Usage: #inline
 * issued = "2019-10-17T09:53:00+01:00"
 * performer = Reference(urn:uuid:4ee94491-4a3a-402c-a110-74ac3adb0012)
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:b7870704-1a75-4d72-9d39-69e988553275)
+* extension[DiagnosticReportCompositionR5].valueReference.type = "Composition"
 
 * result[+] = Reference(urn:uuid:b65779f4-7f6e-4d27-b435-e6d653eb8774)
 * result[+] = Reference(urn:uuid:2eb3e70d-4a62-41f1-ad94-a680cab98e2a)
@@ -321,21 +323,21 @@ Instance: 1dcf89c5-89af-490e-b6b8-d229559cb56f
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "1dcf89c5-89af-490e-b6b8-d229559cb56f"
-//* container.type = $sct# //"Serum specimen"
+* type = $sct#119364003 "Serum specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: 07398f34-5f2c-49c5-8863-fd12c084929d
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "07398f34-5f2c-49c5-8863-fd12c084929d"
-//* container.type = $sct# //"Urine specimen"
+* type = $sct#122575003 "Urine specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: ea18aef4-aea0-493e-80a8-6d70da278e9b
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "ea18aef4-aea0-493e-80a8-6d70da278e9b"
-//* container.type = $sct# //"Whole blood specimen"
+* type = $sct#258580003 "Whole blood specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 // ---- Observations from LB (Biochemie + Moč) ----

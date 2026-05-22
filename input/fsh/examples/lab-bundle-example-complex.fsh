@@ -133,6 +133,7 @@ Usage: #inline
 * id = "5880b262-abcb-55a0-88a4-76ef4f97f744"
 * identifier.system = "http://hospital.example.org/lab-results"
 * identifier.value = "LR2345678"
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:66fda6b2-1bb0-5187-9842-292ce06cf15f)
 
 * status = #final
 * language = #cs
@@ -145,7 +146,7 @@ Usage: #inline
 * author = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
 * title = "Laboratorní nález"
 
-* section[lab-no-subsections]
+* section[+]
   * title = "Laboratorní nález"
   * code = $loinc#18719-5 //"Chemistry studies (set)"
   * text.status = #generated
@@ -217,6 +218,7 @@ Usage: #inline
 * issued = "2019-10-17T09:53:00+01:00"
 * performer = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:5880b262-abcb-55a0-88a4-76ef4f97f744)
+* extension[DiagnosticReportCompositionR5].valueReference.type = "Composition"
 
 * result[+] = Reference(urn:uuid:933860e0-674b-505a-a582-b0bd90c38993)
 * result[+] = Reference(urn:uuid:658cbb3e-987d-5dfc-8d02-9099ef3b3131)
@@ -321,21 +323,21 @@ Instance: e53c77f3-4c38-59d3-a9ff-5964a2600d42
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "e53c77f3-4c38-59d3-a9ff-5964a2600d42"
-//* container.type = $sct# //"Serum specimen"
+* type = $sct#119364003 "Serum specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: b732db29-a256-541b-8f3b-a240152a89f3
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "b732db29-a256-541b-8f3b-a240152a89f3"
-//* container.type = $sct# //"Urine specimen"
+* type = $sct#122575003 "Urine specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: 541dc2b2-6ccb-5afb-9512-b191de5ae31d
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "541dc2b2-6ccb-5afb-9512-b191de5ae31d"
-//* container.type = $sct# //"Whole blood specimen"
+* type = $sct#258580003 "Whole blood specimen"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 // ---- Observations from LB (Biochemie + Moč) ----
