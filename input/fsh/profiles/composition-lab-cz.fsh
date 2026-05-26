@@ -19,18 +19,18 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 // or have text repeated here and in the sections ?
 
 
-// TODO
 * extension contains $compositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(CZ_ServiceRequestLab)
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
-* extension contains $diagnosticReportReference named diagnosticReport-reference 0..1
-* extension[diagnosticReport-reference].valueReference only Reference(CZ_DiagnosticReportLab)
-* extension[diagnosticReport-reference].valueReference 1..1
-* extension[diagnosticReport-reference].valueReference.reference 1..
+* extension contains $diagnosticReportReference named diagnosticReport 1..1
+* extension[diagnosticReport].valueReference only Reference(CZ_DiagnosticReportLab)
+* extension[diagnosticReport].valueReference 1..1
+* extension[diagnosticReport].valueReference.reference 1..
 
   * ^comment = """Added to the FHIR R4 guide to strictly conform with the R4 rules for document bundle resources inclusion.
-  Using this extension implies to accept a circular reference Composition to/from  DiagnosticReport"""
+  Using this extension implies to accept a circular reference Composition to/from DiagnosticReport.
+  In R5 this is represented natively by Composition.diagnosticReport; here it is represented through the R4 laboratory extension used by EU lab."""
 
 * text ^short = "Narrative text"
 
@@ -45,6 +45,7 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * insert ReportSubjectRule
+* subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group or CZ_LocationCore or Device or CZ_MedicalDevice)
 * insert ReportEncounterRule
 
 * language 1..1
@@ -87,15 +88,8 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 // check with the XDlab structure */
 
 * section 1..
-  * ^slicing.discriminator[+].type = #exists
-  * ^slicing.discriminator[=].path = "$this.section"
-  * ^slicing.discriminator[+].type = #exists
-  * ^slicing.discriminator[=].path = "$this.entry"
-/*   * ^slicing.discriminator[+].type = #type
-  * ^slicing.discriminator[=].path = "$this.entry.resolve()" */
-  // GC $this.code has a preferred binding, how can work ?
-/*   * ^slicing.discriminator[+].type = #pattern
-  * ^slicing.discriminator[=].path = "$this.code" */
+  * ^slicing.discriminator[+].type = #pattern
+  * ^slicing.discriminator[=].path = "$this.code"
   * ^slicing.ordered = false
   * ^slicing.rules = #open
   * ^definition = """The \"body\" of the report is organized as a tree of up to two levels of sections: top level sections represent laboratory specialties. A top level section SHALL contain either one text block carrying all the text results produced for this specialty along with Laboratory Data Entries or a set of Laboratory Report Item Sections. In the first case the specialty section happens to also be a leaf section. In the latter case, each (second level) leaf section contained in the (top level) specialty section represents a Report Item: i.e., a battery, a specimen study (especially in microbiology), or an individual test. In addition, any leaf section SHALL contain a Laboratory Data Entries containing the observations of that section in a machine-readable format."""
@@ -109,49 +103,21 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 // ---------------------------------
 
 * insert SectionCommonRules
-/* * section.title 1..
-* section.code 1..
-* section.code only $CodeableConcept-uv-ips */
 
 // -------------------------------------
-// Single section  0 .. 1
+// Attachment section  0 .. 1
 // -------------------------------------
-* section contains lab-no-subsections ..* // check if ..1 or ..*
-* section[lab-no-subsections]
-  * ^short = "Variant 1: CZ Laboratory Report section with entries and no sub-sections"
-  * ^definition = """Variant 1: With this option, all laboratory report data entries are provided in the top level sections and no sub-sections are allowed."""
-  * insert SectionElementsRules
-* section[lab-no-subsections].author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-/*   * code from LabStudyTypesEuVs (preferred)
-  * text ^short = "Text summary of the section, for human interpretation."
-  * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
-  * entry 1..
-  * section ..0 */
 
-
-// -------------------------------------
-// Structured sections  0 .. 1
-// -------------------------------------
-* section contains lab-subsections ..* // check if ..1 or ..*
-* section[lab-subsections]
-  * ^short = "Variant 2: CZ Laboratory Report section with one to many subsections Laboratory Report Item"
-  * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
-  * code only $CodeableConcept-uv-ips
-  * code from CZ_LabStudyTypesVS (preferred)
+* section contains attachment ..*
+* section[attachment]
+  * ^short = "Additional data associated with this report"
+  * ^definition = """A list of additional data associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens."""
+  * code = $loinc#77599-9
   * text 0..0
-  * entry 0..0
-  * insert SectionCommonRules
-  * section 1..
-/*     * code 1..
-    * code only $CodeableConcept-uv-ips */
-    * insert SectionElementsRules
-    * code from CZ_LabStudyTypesVS (preferred)
-/*        * text ^short = "Text summary of the section, for human interpretation."
-    * entry 1..
-    * entry only Reference (ObservationResultsLaboratoryEu)
-    * section 0..0 */
-  * section.author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-* section[lab-subsections].author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+  * entry 1..
+  * entry only Reference(Binary or DocumentReference)
+  * section 0..0
+* section[attachment].author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 // -------------------------------------
 // Annotation section  0 .. 1
@@ -171,6 +137,7 @@ Technical note: A list of accredited examination(s) is available at www.laborato
   * entry 0..0
   * section 0..0
 * section[annotations].author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+
 
 
 

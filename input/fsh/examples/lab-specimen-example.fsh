@@ -13,7 +13,6 @@ Description: "Czech Lab Order - example of a specimen"
 * text.status = #empty
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">-</div>"
 * collection.collectedDateTime = "2025-04-24T06:30:00+02:00"
-* container.type = $sct#706052002 "Evacuated blood collection tube" //"Blood collection tube"
 
 
 
@@ -33,8 +32,6 @@ Description: "Czech Lab Order - example of a urine specimen"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vzorek moči – ranní moč</div>"
 * collection.collectedDateTime = "2025-04-24T06:33:00+02:00"
 * collection.method = $sct#698007008 "Collection of early morning mid stream specimen of urine by clean catch " //"Midstream urine specimen collection"
-* container.type = $sct#702244006 "Sterile urine specimen container" //"Urine specimen container"
-* container.description = "Sterilní plastová nádobka na moč, 50 ml"
 
 
 

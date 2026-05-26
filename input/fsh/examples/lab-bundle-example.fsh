@@ -101,14 +101,14 @@ Description: "An example of a laboratory report Composition for a glucose result
 * title = "Laboratorní nález"
 * date = "2025-04-25T10:00:00+01:00"
 * confidentiality = #N
-* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:41ae1cd0-7f48-4d86-9643-21442d8e418e)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:41ae1cd0-7f48-4d86-9643-21442d8e418e)
 
 * custodian = Reference(urn:uuid:fd0cbd93-d65e-47b2-86c9-792268a2c1ff)
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * author[+] = Reference(urn:uuid:7e243f25-5292-4f5a-9a8c-2a2a9a3e8f7f)
 
 // Sekce: Moč
-* section[lab-no-subsections]
+* section[+]
   * title = "Moč"
   * code = $loinc#18719-5 //"Chemistry studies (set)"
   * text.status = #generated
@@ -117,9 +117,11 @@ Description: "An example of a laboratory report Composition for a glucose result
   * entry[+] = Reference(urn:uuid:b470bdf4-93ab-42d2-b5fb-c0dc69f87c72) // pH
 
 // Sekce: Biochemie s podsekcemi
-* section[lab-subsections]
+* section[+]
   * title = "Biochemie"
   * code = $loinc#18719-5 //"Chemistry studies (set)"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Biochemie</div>"
   * section[+]
     * title = "Základní vyšetření sérum/plazma"
     * code = $loinc#18719-5 //"Chemistry studies (set)"
@@ -145,7 +147,7 @@ Description: "An example of a laboratory report Composition for a glucose result
     * entry[+] = Reference(urn:uuid:dd34ef38-f949-4cc7-9b98-e2e3b55c84d5) // anti-HCV
 
 // Sekce: Hematologie
-* section[lab-no-subsections]
+* section[+]
   * title = "Hematologie"
   * code = $loinc#18723-7 //"Hematology studies (set)"
   * text.status = #generated
@@ -168,6 +170,7 @@ Description: "Example of DiagnosticReport for lab result"
 * identifier.system = "http://hospital.example.org/lab-results"
 * identifier.value = "LR123456"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:05f95a04-cb07-4bd2-8833-c40521f1182c)
+* extension[DiagnosticReportCompositionR5].valueReference.type = "Composition"
 * status = #final
 * code = $loinc#11502-2 //"Laboratory report"
 * category[studyType] = $loinc#26436-6 //"Laboratory studies (set)"
@@ -176,12 +179,10 @@ Description: "Example of DiagnosticReport for lab result"
 * issued = "2025-04-24T09:30:00+01:00"
 
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
+* performer = Reference(urn:uuid:fd0cbd93-d65e-47b2-86c9-792268a2c1ff)
 * specimen[+] = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * specimen[+] = Reference(urn:uuid:b7a2f9d3-760f-4a89-bbbf-12199808f2e5)
 * specimen[+] = Reference(urn:uuid:04bb3e5b-83fb-41a5-b260-c91cdba5df80)
-
-* performer[+] = Reference(urn:uuid:cc8e6b12-2b99-48cf-9c3c-3c8d74805821)
-* performer[+] = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
 
 * result[+] = Reference(urn:uuid:172bc194-10b5-4e82-a9c3-2936b3b2523e)
 * result[+] = Reference(urn:uuid:b470bdf4-93ab-42d2-b5fb-c0dc69f87c72)

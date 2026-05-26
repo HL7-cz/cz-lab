@@ -29,7 +29,7 @@ classDiagram
   CZ_DiagnosticReportLab --> CZ_CompositionLabReport: extension[diagnosticReport-composition]
 
   CZ_CompositionLabReport --> CZ_ServiceRequestLab: extension[basedOn-order-or-requisition]
-  CZ_CompositionLabReport --> CZ_DiagnosticReportLab: extension[diagnosticReport-reference]
+  CZ_CompositionLabReport --> CZ_DiagnosticReportLab: extension[diagnosticReport] (R5 backport)
   CZ_CompositionLabReport --> CZ_PractitionerCore: extension[information-recipient]
   CZ_CompositionLabReport --> CZ_PractitionerCore: author
   CZ_CompositionLabReport --> CZ_PractitionerRoleCore: author
@@ -76,7 +76,7 @@ The section codes in both variants are bound (preferred) to the `CZ_LabStudyType
 
 ### Description of content CZ_DiagnosticReportLab
 
-`CZ_DiagnosticReportLab` represents the laboratory result report itself (the clinical/diagnostic statement) and is the conceptual counterpart of the document Composition. In the laboratory document Bundle it occurs exactly once and SHALL be reachable from the Composition through the extension `diagnosticReport-reference`. Conversely, `CZ_DiagnosticReportLab` references the Composition through the extension `diagnosticReport-composition` (R5 alignment for R4).
+`CZ_DiagnosticReportLab` represents the laboratory result report itself (the clinical/diagnostic statement) and is the conceptual counterpart of the document Composition. In the laboratory document Bundle it occurs exactly once and SHALL be reachable from the Composition through the R5 cross-version extension `Composition.diagnosticReport` (slice `diagnosticReport`). Conversely, `CZ_DiagnosticReportLab` references the Composition through the extension `diagnosticReport-composition` (R5 alignment for R4).
 
 It carries:
 

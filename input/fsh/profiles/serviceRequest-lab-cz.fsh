@@ -32,6 +32,7 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
   // add invariant ?
 
 * insurance only Reference(CZ_Coverage)
+* supportingInfo ^short = "Additional information: e.g AOEs and prior results"
 
 * requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CZ_RelatedPersonCore or Device)
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or HealthcareService or CZ_PatientCore or CZ_RelatedPersonCore or Device)

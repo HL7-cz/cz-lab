@@ -15,4 +15,5 @@ Description: "Example of DiagnosticReport for lab result"
 * result[0] = Reference(urn:uuid:observation1)
 * specimen[0] = Reference(urn:uuid:specimen1)
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:composition1)
+* extension[DiagnosticReportCompositionR5].valueReference.type = "Composition"
 */

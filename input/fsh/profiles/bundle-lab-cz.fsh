@@ -86,6 +86,17 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry contains device 0..*
 * entry[device].resource only CZ_DeviceObserver
 
+// EU lab 2.0.0 alignment – dedicated device profiles
+* entry contains deviceMeasuring 0..*
+* entry[deviceMeasuring].resource only CZ_DeviceMeasuring
+
+* entry contains deviceSpecimen 0..*
+* entry[deviceSpecimen].resource only CZ_DeviceSpecimen
+
+// EU lab 2.0.0 alignment – dedicated profile for substances used as specimen additive
+* entry contains substanceAdditive 0..*
+* entry[substanceAdditive].resource only CZ_SpecimenAdditiveSubstance
+
 * entry contains attachment 0..*
 * entry[attachment].resource only CZ_Attachment
 

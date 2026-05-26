@@ -82,13 +82,13 @@ Description: "An example of a laboratory report Composition for a glucose result
 * title = "Laboratorní nález"
 * date = "2025-04-25T10:00:00+02:00"
 * confidentiality = #N
-* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:f0c94762-9b36-42e3-9e2e-32fcf6b548a9)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:f0c94762-9b36-42e3-9e2e-32fcf6b548a9)
 
 * custodian = Reference(urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123)
 * subject = Reference(urn:uuid:c60b7c0e-0d8c-4e43-9f52-86d1dcf1a43c)
 * author[0] = Reference(urn:uuid:ff223344-5566-4777-8899-ccbbccddeeff) 
 
-* section[lab-no-subsections]
+* section[+]
   * title = "Moč"
   * code = $loinc#18719-5 //"Chemistry studies (set)"
   * text.status = #generated
@@ -112,6 +112,7 @@ Description: "Example of DiagnosticReport for lab result"
 * identifier.system = "http://hospital.example.org/lab-results"
 * identifier.value = "LR123457"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:7f5c2b2d-4a34-44c9-94ad-3c73d80291eb)
+* extension[DiagnosticReportCompositionR5].valueReference.type = "Composition"
 * status = #preliminary
 * code = $loinc#11502-2 //"Laboratory report"
 * category[studyType] = $loinc#26436-6 //"Laboratory studies (set)" 
@@ -120,13 +121,12 @@ Description: "Example of DiagnosticReport for lab result"
 * issued = "2025-04-24T09:30:00+02:00"
 
 * subject = Reference(urn:uuid:c60b7c0e-0d8c-4e43-9f52-86d1dcf1a43c)
+* performer = Reference(urn:uuid:bc2b8a3e-999a-4f10-91ce-1dc12fa0e123)
 
 * specimen[+] = Reference(urn:uuid:fa3d8c2e-71b4-4e9c-9d2f-85b0a1f7c934)
 * specimen[+] = Reference(urn:uuid:4c7a1d2f-89b3-41e5-a6f2-3b9d7c5e0a21)
 * specimen[+] = Reference(urn:uuid:92f1c7b5-3a4e-4d8f-97c2-1b6e0f8d2a43)
 * specimen[+] = Reference(urn:uuid:6e2c1f9a-54b7-4d3e-82a1-7c4f9e2b0d85)
-
-* performer[+] = Reference(urn:uuid:aabbccdd-2222-3333-dddd-112233445566)
 
 * result[+] = Reference(urn:uuid:8d6e1f2b-3a84-4c9d-bc2e-5f71a9d4e6c3)
 * result[+] = Reference(urn:uuid:2fb0c9d4-7e12-47a6-9a3b-1c5e8d2f4a76)
