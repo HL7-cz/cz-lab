@@ -31,7 +31,7 @@ Description: "Czech Lab Order - example of a urine specimen"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vzorek moči – ranní moč</div>"
 * collection.collectedDateTime = "2025-04-24T06:33:00+02:00"
-* collection.method = $sct#698007008 "Collection of early morning mid stream specimen of urine by clean catch " //"Midstream urine specimen collection"
+* collection.method = $sct#698007008 "Collection of early morning mid stream specimen of urine by clean catch (procedure)" //"Midstream urine specimen collection"
 
 
 

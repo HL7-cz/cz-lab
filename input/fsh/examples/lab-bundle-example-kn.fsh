@@ -167,7 +167,7 @@ Usage: #inline
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02271
-* code.coding[0].display = "K (U; látková konc. [mmol/l] *)"
+* code.coding[0].display = "K (S; látková konc. [mmol/l] ISE bez diluce)"
 * code.text = "S_Draslík"
 
 * subject = Reference(urn:uuid:3f2a1b9e-6d4f-4c2e-9a7b-2d8f0b3e1c9a)
