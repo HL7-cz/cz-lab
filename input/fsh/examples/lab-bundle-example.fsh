@@ -534,7 +534,7 @@ Usage: #inline
 * id = "f53d66a1-c9c4-4b58-b04b-3c86a2ec0c16"
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
-* code = $nclp#12233 //"Prokalcitonin"
+* code = $nclp#12232 //"Prokalcitonin"
 * code.text = "Prokalcitonin"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)

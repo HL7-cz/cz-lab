@@ -1,5 +1,5 @@
 Profile: CZ_ObservationResultLaboratory
-Parent: Observation
+Parent: CZ_MedicalTestResultCore
 Id: cz-observation-result-laboratory
 Title: "Observation Laboratory (CZ)"
 Description: """This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies.
@@ -28,7 +28,7 @@ This observation may represent the result of a simple laboratory test such as he
 * code only $CodeableConcept-uv-ips
 // * code MS
 * subject 1..
-* subject only Reference(CZ_PatientAnimal or CZ_PatientCore or Group or Device or CZ_LocationCore)
+* subject only Reference(CZ_PatientCore or Group or Device or CZ_LocationCore)
 * subject.reference 1..
 
 * obeys cz-lab-1
@@ -84,11 +84,7 @@ This observation may represent the result of a simple laboratory test such as he
 
 
 * performer 1..
-* performer only Reference(CareTeam or CZ_RelatedPersonCore or CZ_PatientCore or CZ_OrganizationCore or CZ_PractitionerRoleCore or CZ_PractitionerCore)
-
-* performer.extension contains $event-performerFunction named performerFunction 0..*
-* performer.extension[performerFunction]
-// * performer.extension[performerFunction] ^meaningWhenMissing = """The Performer Function is Participant"""
+* performer only Reference(CZ_RelatedPersonCore or CZ_PatientCore or CZ_OrganizationCore or CZ_PractitionerRoleCore or CZ_PractitionerCore)
 
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
 * insert ObservationResultsValueCz
