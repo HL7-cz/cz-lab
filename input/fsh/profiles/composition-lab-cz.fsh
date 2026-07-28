@@ -45,7 +45,7 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * insert ReportSubjectRule
-* subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group or CZ_LocationCore or Device or CZ_MedicalDevice)
+* subject only Reference(CZ_PatientCore or Group or CZ_LocationCore or Device or CZ_MedicalDevice)
 * insert ReportEncounterRule
 
 * language 1..1
