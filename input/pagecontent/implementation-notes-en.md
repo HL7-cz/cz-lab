@@ -23,7 +23,7 @@ classDiagram
   CZ_BundleLab *-- "0..*" CZ_Provenance
   CZ_BundleLab *-- "0..*" CZ_ObservationResultLaboratory
   CZ_BundleLab *-- "0..*" CZ_SpecimenLab
-  CZ_BundleLab *-- "0..*" BodyStructureCz
+  CZ_BundleLab *-- "0..*" BodyStructureCzCore
   CZ_BundleLab *-- "0..*" CZ_Attachment
 
   CZ_DiagnosticReportLab --> CZ_CompositionLabReport: extension[diagnosticReport-composition]
@@ -54,7 +54,7 @@ classDiagram
   CZ_ObservationResultLaboratory --> CZ_SpecimenLab: specimen
   CZ_ObservationResultLaboratory --> CZ_PractitionerCore: performer
   CZ_ObservationResultLaboratory --> CZ_DeviceObserver: device
-  CZ_ObservationResultLaboratory --> BodyStructureCz: bodyStructure
+  CZ_ObservationResultLaboratory --> BodyStructureCzCore: bodyStructure
 
   CZ_SpecimenLab --> CZ_PatientCore: subject
   CZ_SpecimenLab --> CZ_PractitionerCore: collection.collector
@@ -110,7 +110,7 @@ It carries:
 
 - the `type` of the specimen (preferred binding to the CZ specimen type value set, secondary HL7 v2-0487 codes are allowed as a mapping),
 - the `subject` (patient),
-- collection details: `collection.collectedDateTime`/`collectedPeriod`, `collection.bodySite` (or `BodyStructureCz` reference), `collection.method`, `collection.collector`,
+- collection details: `collection.collectedDateTime`/`collectedPeriod`, `collection.bodySite` (or `BodyStructureCzCore` reference), `collection.method`, `collection.collector`,
 - container, processing and the `receivedTime` in the laboratory.
 
 ### Description of content CZ_ServiceRequestLab

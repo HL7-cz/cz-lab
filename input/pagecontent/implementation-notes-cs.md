@@ -23,7 +23,7 @@ classDiagram
   CZ_BundleLab *-- "0..*" CZ_Provenance
   CZ_BundleLab *-- "0..*" CZ_ObservationResultLaboratory
   CZ_BundleLab *-- "0..*" CZ_SpecimenLab
-  CZ_BundleLab *-- "0..*" BodyStructureCz
+  CZ_BundleLab *-- "0..*" BodyStructureCzCore
   CZ_BundleLab *-- "0..*" CZ_Attachment
 
   CZ_DiagnosticReportLab --> CZ_CompositionLabReport: extension[diagnosticReport-composition]
@@ -54,7 +54,7 @@ classDiagram
   CZ_ObservationResultLaboratory --> CZ_SpecimenLab: specimen
   CZ_ObservationResultLaboratory --> CZ_PractitionerCore: performer
   CZ_ObservationResultLaboratory --> CZ_DeviceObserver: device
-  CZ_ObservationResultLaboratory --> BodyStructureCz: bodyStructure
+  CZ_ObservationResultLaboratory --> BodyStructureCzCore: bodyStructure
 
   CZ_SpecimenLab --> CZ_PatientCore: subject
   CZ_SpecimenLab --> CZ_PractitionerCore: collection.collector
@@ -110,7 +110,7 @@ Nese:
 
 - `type` vzorku (preferred binding na český value set typů vzorků, sekundární HL7 v2-0487 kódy jsou povoleny jako mapování),
 - `subject` (pacient),
-- detaily odběru: `collection.collectedDateTime`/`collectedPeriod`, `collection.bodySite` (případně referenci na `BodyStructureCz`), `collection.method`, `collection.collector`,
+- detaily odběru: `collection.collectedDateTime`/`collectedPeriod`, `collection.bodySite` (případně referenci na `BodyStructureCzCore`), `collection.method`, `collection.collector`,
 - nádobu, zpracování a `receivedTime` v laboratoři.
 
 ### Popis obsahu CZ_ServiceRequestLab
