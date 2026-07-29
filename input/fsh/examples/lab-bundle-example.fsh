@@ -95,7 +95,8 @@ Description: "An example of a laboratory report Composition for a glucose result
 * language = #cs
 * status = #final
 * type = $loinc#11502-2 //"Laboratory report"
-* category = $loinc#26436-6 //"Laboratory studies (set)"
+* category[documentCategory] = $loinc#11502-2
+* category[studyType] = $loinc#26436-6 //"Laboratory studies (set)"
 * title = "Laboratorní nález"
 * date = "2025-04-25T10:00:00+01:00"
 * confidentiality = #N

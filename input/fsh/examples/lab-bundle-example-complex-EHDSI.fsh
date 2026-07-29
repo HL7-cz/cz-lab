@@ -140,6 +140,7 @@ Usage: #inline
 * confidentiality = #N
 * type = $loinc#11502-2 //"Laboratory report"
 * category[documentCategory] = $loinc#11502-2
+* category[studyType] = $loinc#26436-6 //"Laboratory studies (set)"
 * subject = Reference(urn:uuid:8f79bf84-41e1-485f-95b8-813fe993974d)
 * custodian = Reference(urn:uuid:4ee94491-4a3a-402c-a110-74ac3adb0012)
 * date = "2019-10-17T09:53:00+01:00"
