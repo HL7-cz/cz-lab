@@ -9,7 +9,7 @@ Description: "Document Reference Lab Report - example of a document reference to
 * status = #current
 * docStatus = #final
 * type = $loinc#11502-2 "Laboratory report"
-* category = $loinc#26436-6 "laboratorní vyšetření"
+* category = $loinc#26436-6 //"laboratorní vyšetření"
 * subject = Reference(urn:uuid:8f79bf84-41e1-485f-95b8-813fe993974d)
 * author[0] = Reference(urn:uuid:4ee94491-4a3a-402c-a110-74ac3adb0012)
 * custodian = Reference(urn:uuid:4ee94491-4a3a-402c-a110-74ac3adb0012)

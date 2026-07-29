@@ -82,12 +82,12 @@ Description: "An example of a minimal laboratory report Composition"
 * encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa08)
 
 * section[0].title = "Laboratory examinations"
-* section[0].code = $loinc#26436-6 "laboratorní vyšetření"
+* section[0].code = $loinc#26436-6 //"laboratorní vyšetření"
 * section[0].code.text = "Laboratory studies"
 * section[0].text.status = #generated
 * section[0].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratory examinations</div>"
 * section[0].section[+].title = "Blood examinations"  // this title should be aligned with ibservation codes
-* section[0].section[=].code.coding[+] = http://loinc.org#18719-5 "biochemické laboratorní vyšetření"
+* section[0].section[=].code.coding[+] = http://loinc.org#18719-5 //"biochemické laboratorní vyšetření"
 * section[0].section[=].code.text = "Examination of blood"
 * section[0].section[=].text.status = #generated
 * section[0].section[=].text.div =
