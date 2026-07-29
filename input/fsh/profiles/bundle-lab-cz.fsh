@@ -69,7 +69,7 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 
 * entry contains bodyStructure 0..*
-* entry[bodyStructure].resource only BodyStructureCz
+* entry[bodyStructure].resource only BodyStructureCzCore
 
 * entry contains encounter 0..*
 * entry[encounter].resource only CZ_Encounter

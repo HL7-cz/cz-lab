@@ -57,6 +57,7 @@ Description: "An example of a minimal laboratory report Composition"
 * status = #final
 * type = $loinc#11502-2 //"Laboratory report"
 * date = "2023-01-24T09:30:00+02:00"
+* category[documentCategory] = $loinc#11502-2
 
 * title = "Laboratorní nález"
 * confidentiality = #N
@@ -167,7 +168,7 @@ Usage: #inline
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #02271
-* code.coding[0].display = "K (U; látková konc. [mmol/l] *)"
+* code.coding[0].display = "K (S; látková konc. [mmol/l] ISE bez diluce)"
 * code.text = "S_Draslík"
 
 * subject = Reference(urn:uuid:3f2a1b9e-6d4f-4c2e-9a7b-2d8f0b3e1c9a)

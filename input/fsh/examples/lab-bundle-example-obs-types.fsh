@@ -30,8 +30,8 @@ Description: "Czech Lab Report - example of a bundle containing lab observations
 * entry[practitioner][=].resource = practitionerSejdlova
 * entry[practitionerRole][+].fullUrl = "urn:uuid:ff223344-5566-4777-8899-ccbbccddeeff"
 * entry[practitionerRole][=].resource = practitionerRoleZybradlo
-* entry[practitionerRole][+].fullUrl = "urn:uuid:aabbccdd-2222-3333-dddd-112233445566"
-* entry[practitionerRole][=].resource = practitionerRoleSejdlova
+//* entry[practitionerRole][+].fullUrl = "urn:uuid:aabbccdd-2222-3333-dddd-112233445566"
+//* entry[practitionerRole][=].resource = practitionerRoleSejdlova
 * entry[practitioner][+].fullUrl = "urn:uuid:c2a7b9de-3b44-4e6f-9e51-9a1b8f1c82f4"
 * entry[practitioner][=].resource = practitionerFranc
 
@@ -78,7 +78,8 @@ Description: "An example of a laboratory report Composition for a glucose result
 * language = #cs
 * status = #preliminary
 * type = $loinc#11502-2 //"Laboratory report"
-* category = $loinc#26436-6 //"Laboratory studies (set)" 
+* category[documentCategory] = $loinc#11502-2
+* category[studyType] = $loinc#26436-6 //"Laboratory studies (set)"
 * title = "Laboratorní nález"
 * date = "2025-04-25T10:00:00+02:00"
 * confidentiality = #N

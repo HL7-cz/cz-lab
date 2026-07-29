@@ -10,7 +10,7 @@ Usage: #example
 * intent = #order
 * identifier.system = "https://example.org/lab-orders"
 * identifier.value = "ORD-20250623-1234"
-* category[0] = $sct#108252007 "Laboratory procedure" 
+* category[0] = $sct#108252007 "laboratorní výkon" 
 * code = $nclp#01898 //"glucose" 
 * subject = Reference(urn:uuid:c60b7c0e-0d8c-4e43-9f52-86d1dcf1a43c)
 * specimen[0] = Reference(urn:uuid:6e2c1f9a-54b7-4d3e-82a1-7c4f9e2b0d85)

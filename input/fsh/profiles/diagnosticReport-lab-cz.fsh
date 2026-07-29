@@ -1,5 +1,5 @@
 Profile: CZ_DiagnosticReportLab
-Parent: DiagnosticReport
+Parent: CZ_DiagnosticReportCore
 Id: cz-diagnostic-report-lab
 Title: "DiagnosticReport: Laboratory Report"
 Description: "Diagnostic Report used to represent an entry of a Laboratory Report, including its context, for the scope of the Czech national interoperability project."
@@ -11,7 +11,6 @@ Description: "Diagnostic Report used to represent an entry of a Laboratory Repor
 * insert ImposeProfile($DiagnosticReport-eu-lab)
 * insert SetFmmandStatusRule ( 0, draft )
 
-* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
 * extension[DiagnosticReportCompositionR5]
   * ^short = "Associated Lab Report Composition"
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnosticReport with the Composition documenting this Laboratory Report."
@@ -28,18 +27,11 @@ Description: "Diagnostic Report used to represent an entry of a Laboratory Repor
 
 * insert ReportTypeRule ( code )
 * insert ReportSubjectRule
-* subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group or CZ_LocationCore or Device or CZ_MedicalDevice)
+* subject only Reference(CZ_PatientCore or Group or CZ_LocationCore or Device or CZ_MedicalDevice)
 * insert ReportEncounterRule
 
 
 * effective[x] ^short = "Clinically relevant time/time-period for report."
-* performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
-  * insert ReportAuthorRule
-* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
-
-* resultsInterpreter
-  * insert ReportAuthorRule
-* resultsInterpreter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
 
 * specimen only Reference(CZ_SpecimenLab)
   * ^short = "Specimens this report is based on." // add reference to the used profile

@@ -17,9 +17,7 @@ Description: "Czech Lab Report - basic example of a bundle containing lab observ
 // patient
 * entry[patient].fullUrl = "urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9"
 * entry[patient].resource = patientVirelan
-// coverage
-* entry[coverage].fullUrl = "urn:uuid:8d08dca4-bf95-4b46-bcb4-e5b127aa2e30"
-* entry[coverage].resource = VirelanInsurance
+
 // practitioner
 * entry[practitioner][+].fullUrl = "urn:uuid:7e243f25-5292-4f5a-9a8c-2a2a9a3e8f7f"
 * entry[practitioner][=].resource = practitionerSlofak
@@ -34,8 +32,8 @@ Description: "Czech Lab Report - basic example of a bundle containing lab observ
 * entry[organization][+].fullUrl = "urn:uuid:fd0cbd93-d65e-47b2-86c9-792268a2c1ff"
 * entry[organization][=].resource = NemocniceHorniDolni
 // organization - pojistovna
-* entry[organization][+].fullUrl = "urn:uuid:abcdef12-3456-7890-abcd-1234567890ab"
-* entry[organization][=].resource = pojistovna
+//* entry[organization][+].fullUrl = "urn:uuid:abcdef12-3456-7890-abcd-1234567890ab"
+//* entry[organization][=].resource = pojistovna
 
 // Specimens
 * entry[specimen][+].fullUrl = "urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d"
@@ -97,7 +95,8 @@ Description: "An example of a laboratory report Composition for a glucose result
 * language = #cs
 * status = #final
 * type = $loinc#11502-2 //"Laboratory report"
-* category = $loinc#26436-6 //"Laboratory studies (set)"
+* category[documentCategory] = $loinc#11502-2
+* category[studyType] = $loinc#26436-6 //"Laboratory studies (set)"
 * title = "Laboratorní nález"
 * date = "2025-04-25T10:00:00+01:00"
 * confidentiality = #N
@@ -254,24 +253,6 @@ Description: "Virtual patient: Drahovín Virelan"
 * telecom[+].system = #email
 * telecom[=].value = "drahovin.Virelan@example.cz"
 * telecom[=].use = #home
-
-
-Instance: VirelanInsurance
-InstanceOf: CZ_Coverage
-// Description: "Příklad pojištění"
-Description: "Insurance example"
-Usage: #inline
-// Title: "Příklad pojištění zdravotní pojišťovnou"
-Title: "Health insurance coverage example"
-
-* id = "8d08dca4-bf95-4b46-bcb4-e5b127aa2e30"
-* status = #active
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rc"
-* identifier[=].value = "8001231234"
-* identifier[=].use = #official
-
-* beneficiary = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
-* payor = Reference(urn:uuid:abcdef12-3456-7890-abcd-1234567890ab)
 
 
 Instance: practitionerSlofak
@@ -534,7 +515,7 @@ Usage: #inline
 * id = "f53d66a1-c9c4-4b58-b04b-3c86a2ec0c16"
 * status = #final
 * effectiveDateTime = "2025-04-24T08:00:00+02:00"
-* code = $nclp#12233 //"Prokalcitonin"
+* code = $nclp#12232 //"Prokalcitonin"
 * code.text = "Prokalcitonin"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
@@ -559,7 +540,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
-* valueCodeableConcept = $sct#260385009 "Negative"
+* valueCodeableConcept = $sct#260385009 "negativní"
 * interpretation = $ObservationInterpretation#NEG "Negative"
 
 Instance: Observation-antiHAVIgG
@@ -573,7 +554,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
-* valueCodeableConcept = $sct#10828004 "Positive"
+* valueCodeableConcept = $sct#10828004 "pozitivní"
 * interpretation = $ObservationInterpretation#POS "Positive"
 
 Instance: Observation-AntiHCV
@@ -587,7 +568,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
-* valueCodeableConcept = $sct#260385009 "Negative"
+* valueCodeableConcept = $sct#260385009 "negativní"
 * interpretation = $ObservationInterpretation#NEG "Negative"
 
 

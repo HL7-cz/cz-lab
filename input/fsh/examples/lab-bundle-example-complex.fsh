@@ -139,7 +139,8 @@ Usage: #inline
 * language = #cs
 * confidentiality = #N
 * type = $loinc#11502-2 //"Laboratory report"
-* category = $loinc#26436-6 //"Laboratory studies (set)"
+* category[documentCategory] = $loinc#11502-2
+* category[studyType] = $loinc#26436-6 //"Laboratory studies (set)"
 * subject = Reference(urn:uuid:879657b8-f2d4-54da-ab1f-c363b4f092d5)
 * custodian = Reference(urn:uuid:b8ad152c-2c7d-54cb-a80f-5eff76fa6b32)
 * date = "2019-10-17T09:53:00+01:00"
@@ -323,21 +324,21 @@ Instance: e53c77f3-4c38-59d3-a9ff-5964a2600d42
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "e53c77f3-4c38-59d3-a9ff-5964a2600d42"
-* type = $sct#119364003 "Serum specimen"
+* type = $sct#119364003 "vzorek séra"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: b732db29-a256-541b-8f3b-a240152a89f3
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "b732db29-a256-541b-8f3b-a240152a89f3"
-* type = $sct#122575003 "Urine specimen"
+* type = $sct#122575003 "vzorek moči"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 Instance: 541dc2b2-6ccb-5afb-9512-b191de5ae31d
 InstanceOf: CZ_SpecimenLab
 Usage: #inline
 * id = "541dc2b2-6ccb-5afb-9512-b191de5ae31d"
-* type = $sct#258580003 "Whole blood specimen"
+* type = $sct#258580003 "vzorek plné krve"
 * collection.collectedDateTime = "2019-10-17T08:22:00+01:00"
 
 // ---- Observations from LB (Biochemie + Moč) ----
