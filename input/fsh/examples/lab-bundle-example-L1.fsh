@@ -65,7 +65,7 @@ Description: "An example of a minimal laboratory report Composition"
 //* versionNumber = 
 * status = #final
 * type = $loinc#11502-2 //"Laboratory report"
-* category = $loinc#26436-6 //"Laboratory studies (set)" 
+* category[documentCategory] = $loinc#11502-2 
 
 * date = "2022-01-24T09:30:00+02:00"
 
@@ -81,11 +81,17 @@ Description: "An example of a minimal laboratory report Composition"
 
 * encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa08)
 
-* section[annotations]
-  * title = "Laboratorní nález"
-  * code = $loinc#48767-8
-  * text.status = #generated
-  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient: 490908181 Píry Zoltán        Hradí: 211
+* section[0].title = "Laboratory examinations"
+* section[0].code = $loinc#26436-6 "laboratorní vyšetření"
+* section[0].code.text = "Laboratory studies"
+* section[0].text.status = #generated
+* section[0].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratory examinations</div>"
+* section[0].section[+].title = "Blood examinations"  // this title should be aligned with ibservation codes
+* section[0].section[=].code.coding[+] = http://loinc.org#18719-5 "biochemické laboratorní vyšetření"
+* section[0].section[=].code.text = "Examination of blood"
+* section[0].section[=].text.status = #generated
+* section[0].section[=].text.div =
+"<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient: 490908181 Píry Zoltán        Hradí: 211
 Diagnóza: 
 
 Laboratorní číslo: 13.RR-0008 
@@ -126,6 +132,22 @@ Description: "Example of DiagnosticReport for lab result"
 * subject = Reference(urn:uuid:6d8d3324-4be6-4048-a337-22af2e15c05c)
 
 * encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa08)
+
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient: 490908181 Píry Zoltán        Hradí: 211
+Diagnóza: 
+
+Laboratorní číslo: 13.RR-0008 
+Datum odběru: 02.11.2025 Datum příjmu: 02.11.2025 Odesláno: 02.12.2025 22:02:06
+Metody                         Hodnoty      Jednotky Hodnocení   Meze           
+
+___Primární materiál:   KREV__________________________________________________
+___Sérum/Plazma - minerály____________________________________________________
+Sodík                          140          mmol/l  140          mmol/l     |   |*|    136-145
+Draslík                        4,1          mmol/l  4,1          mmol/l     |   |*|    3,5-5,1
+Chloridy                       100          mmol/l  100          mmol/l     |   |*|    98-107
+Kontroloval:
+MUDr. Bohumil Hromada</p></div>"
 
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #cs

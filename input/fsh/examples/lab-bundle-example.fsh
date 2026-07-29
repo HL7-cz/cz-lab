@@ -539,7 +539,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
-* valueCodeableConcept = $sct#260385009 "Negative"
+* valueCodeableConcept = $sct#260385009 "negativní"
 * interpretation = $ObservationInterpretation#NEG "Negative"
 
 Instance: Observation-antiHAVIgG
@@ -553,7 +553,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
-* valueCodeableConcept = $sct#10828004 "Positive"
+* valueCodeableConcept = $sct#10828004 "pozitivní"
 * interpretation = $ObservationInterpretation#POS "Positive"
 
 Instance: Observation-AntiHCV
@@ -567,7 +567,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * specimen = Reference(urn:uuid:9014ce97-a357-4a4a-b0e0-32e7ba85801d)
 * performer = Reference(urn:uuid:a03d1fcb-c3dc-4c3f-803f-3b7ae3b5e47a)
-* valueCodeableConcept = $sct#260385009 "Negative"
+* valueCodeableConcept = $sct#260385009 "negativní"
 * interpretation = $ObservationInterpretation#NEG "Negative"
 
 

@@ -1,5 +1,5 @@
 Profile: CZ_CompositionLabReport
-Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
+Parent: CompositionLabReportEu
 Id: cz-composition-lab-report
 Title: "Composition: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report in the scope of the Czech national interoperability project."
@@ -10,7 +10,6 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 * . ^short = "Laboratory Report composition"
 * . ^definition = "Laboratory Report composition.\r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
-* insert ImposeProfile($Composition-eu-lab)
 * insert SetFmmandStatusRule ( 0, draft )
 
 
@@ -21,25 +20,34 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 
 * extension contains $compositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(CZ_ServiceRequestLab)
-* extension contains $information-recipient named information-recipient 0..*
-* extension[information-recipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
-* extension contains $diagnosticReportReference named diagnosticReport 1..1
-* extension[diagnosticReport].valueReference only Reference(CZ_DiagnosticReportLab)
-* extension[diagnosticReport].valueReference 1..1
-* extension[diagnosticReport].valueReference.reference 1..
-
-  * ^comment = """Added to the FHIR R4 guide to strictly conform with the R4 rules for document bundle resources inclusion.
-  Using this extension implies to accept a circular reference Composition to/from DiagnosticReport.
-  In R5 this is represented natively by Composition.diagnosticReport; here it is represented through the R4 laboratory extension used by EU lab."""
 
 * text ^short = "Narrative text"
 
 * insert ReportIdentifierRule
 * insert ReportStatusRule
-* insert ReportCategoryRule // HK: composition category seems to be related to the CDA Document Class.
-                            // In case of lab report, only one value is relevant for this purpose, LOINC 26436-6 	Laboratory Studies (set)
-                            // We might discuss if other categorization purposes would be useful or not.
-/* * category = $loinc#26436-6 "Laboratory Studies (set)" */
+
+* category[studyType] from http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab (required)
+* category[studyType] ^binding.extension[0].extension[0].url = "key"
+* category[studyType] ^binding.extension[=].extension[=].valueId = lab-document-types
+* category[studyType] ^binding.extension[=].extension[+].url = "purpose"
+* category[studyType] ^binding.extension[=].extension[=].valueCode = #candidate 
+* category[studyType] ^binding.extension[=].extension[+].url = "valueSet"
+* category[studyType] ^binding.extension[=].extension[=].valueCanonical = "https://ncez.mzcr.cz/terminology/ValueSet/lab-document-types"
+* category[studyType] ^binding.extension[=].extension[+].url = "documentation"
+* category[studyType] ^binding.extension[=].extension[=].valueMarkdown = "V českém národním kontextu je výčet pro study type širší než evropská varianta."
+* category[studyType] ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
+
+* category contains documentCategory 1..*
+* category[documentCategory] from $documentCategory
+* category[documentCategory] = $loinc#11502-2
+
+* category[specialty] from CZ_LabSpecialityTypesVS
+* category[specialty]
+  * ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
+  * ^definition = "Laboratory specialty is an attribute of any laboratory setting representing professional qualification of the laboratory to execute certain kind of laboratory tests."
+  * ^comment = "Specialty could be used as parameter for searching/querying of laboratory test results."
+
 
 * insert ReportTypeRule ( type ) // fixed LOINC code for all types of reports but allow also lab specialty to be present
 
@@ -59,7 +67,7 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 * attester 0.. // RH - should attester be 1.. or 0..? - since author is also required?
-  * party only Reference(CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+  * party only Reference(CZ_PractitionerRoleCore)
   * ^short = "Attests the report accuracy"
   * mode ^short = "The type of attestation"
   * time ^short = "When the report was attested by the party"
@@ -82,69 +90,5 @@ Description: "Clinical document used to represent a Laboratory Report in the sco
 
 * confidentiality 1..1
 
-// ServiceRequest and/or RequestGroup
-
-/*  IS THE SLICE NEEDED IN THIS CASE ?
-// check with the XDlab structure */
-
-* section 1..
-  * ^slicing.discriminator[+].type = #pattern
-  * ^slicing.discriminator[=].path = "$this.code"
-  * ^slicing.ordered = false
-  * ^slicing.rules = #open
-  * ^definition = """The \"body\" of the report is organized as a tree of up to two levels of sections: top level sections represent laboratory specialties. A top level section SHALL contain either one text block carrying all the text results produced for this specialty along with Laboratory Data Entries or a set of Laboratory Report Item Sections. In the first case the specialty section happens to also be a leaf section. In the latter case, each (second level) leaf section contained in the (top level) specialty section represents a Report Item: i.e., a battery, a specimen study (especially in microbiology), or an individual test. In addition, any leaf section SHALL contain a Laboratory Data Entries containing the observations of that section in a machine-readable format."""
-* section.author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-/*
-Variant 2: Text and Entry - With this option, the Laboratory Specialty Section text SHALL be present and not blank. This narrative block SHALL present to the human reader, all the observations produced for this Specialty, using the various structures available in the CDA Narrative Block schema (NarrativeBlock.xsd): tables, lists, paragraphs, hyperlinks, footnotes, references to attached or embedded multimedia objects. The narrative block is fully derived from the entry containing the machine-readable result data. Additionally, a single Laboratory Report Data Processing Entry SHALL be present with attribute typeCode=\"DRIV\". This entry contains the machine-readable result data from which the narrative block of this section is derived.""" */
 
 
-// --------------------------------------
-// Common rules for all the sections
-// ---------------------------------
-
-* insert SectionCommonRules
-
-// -------------------------------------
-// Attachment section  0 .. 1
-// -------------------------------------
-
-* section contains attachment ..*
-* section[attachment]
-  * ^short = "Additional data associated with this report"
-  * ^definition = """A list of additional data associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens."""
-  * code = $loinc#77599-9
-  * text 0..0
-  * entry 1..
-  * entry only Reference(Binary or DocumentReference)
-  * section 0..0
-* section[attachment].author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-
-// -------------------------------------
-// Annotation section  0 .. 1
-// -------------------------------------
-
-* section contains annotations ..* // check if ..1 or ..*
-* section[annotations]
-  * ^short = "Annotation comment"
-  * ^definition = """Narrative expression of comments accompanying the report, such as suggestions for evaluation, technical notes from the laboratory, etc.
-
-Examples:
-Suggestion: This result should be evaluated in relation to the patient's medical history and clinical condition.
-Technical note: A list of accredited examination(s) is available at www.laboratory.com. """
-
-  * code = http://loinc.org#48767-8
-  * text 1..
-  * entry 0..0
-  * section 0..0
-* section[annotations].author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-
-
-
-
-/*  TO DO Header
-- add optional data enterer
-- defiend rules for attester to distiguish Authenticators and Legal Auth
-- ordering provider mapped into the order details
-- add Lab DocumentationOf.serviceEvent details
-- ComponentOf.encounter define details in Encounter profile
-*/

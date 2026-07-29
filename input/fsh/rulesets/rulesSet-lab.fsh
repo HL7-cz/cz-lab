@@ -49,22 +49,21 @@ RuleSet: ReportCategoryRule
   * ^definition = "Specifies the Report Category: usually Laboratory"
   * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
 * category only $CodeableConcept-uv-ips
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and Study type. Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
 * category contains studyType 0..*
-* category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from CZ_LabStudyTypesVS
 * category[studyType]
   * ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
   * ^definition = "Laboratory services, i.e., results of tests performed, could be characterized using typology of services, commonly called study types. Study type could be seen as an attribute or grouping mechanism that assigns a common clinical sense to certain types of laboratory test results., e.g., Hemoglobin, Platelet count, etc. belongs to 'Hematology study'."
   * ^comment = "In comparison to the laboratory specialty which is an attribute of laboratory, study type is a categorization of laboratory service. It needs to be mentioned that classification of test to study types in not standardized."
-
-// "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
+* category contains documentCategory 1..*
+* category[documentCategory] from $documentCategory
+* category[documentCategory] = $loinc#11502-2
 
 * category contains specialty 0..*
-* category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from CZ_LabSpecialityTypesVS
 * category[specialty]
   * ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"

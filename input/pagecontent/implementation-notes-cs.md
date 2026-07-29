@@ -70,9 +70,8 @@ V těle dokumentu jsou podporovány dvě strukturní varianty, které mohou být
 
 - **Varianta 1 – `section[lab-no-subsections]` (plochá sekce)**: vrcholová sekce příslušné laboratorní odbornosti, která přímo obsahuje jak narativní text (`section.text`), tak strojově čitelné `entry` odkazy na instance `CZ_ObservationResultLaboratory`. Další podsekce nejsou povoleny.
 - **Varianta 2 – `section[lab-subsections]` (strukturovaná sekce)**: vrcholová sekce laboratorní odbornosti, která sama nenese text ani entries, ale sdružuje několik listových podsekcí (typicky podle baterie, typu vzorku či jednotlivého vyšetření). Každá listová podsekce nese vlastní narativní text a `entry` odkazy na `CZ_ObservationResultLaboratory`.
-- **`section[annotations]` (sekce poznámek, fixní kód LOINC `48767-8`)**: nepovinná čistě narativní sekce určená pro laboratorní komentáře, technické poznámky, odkazy na akreditace apod. Nesmí obsahovat `entry` ani podsekce.
 
-Kódy sekcí v obou variantách jsou (preferred) vázány na value set `CZ_LabStudyTypesVS` (laboratorní odbornosti).
+Kódy sekcí ve variantách 1 a 2 jsou (preferred) vázány na value set `CZ_LabStudyTypesVS` (laboratorní odbornosti).
 
 ### Popis obsahu CZ_DiagnosticReportLab
 
@@ -87,7 +86,8 @@ Nese:
 - odkazy na analyzované vzorky `specimen` (`CZ_SpecimenLab`),
 - odkazy na vytvořené výsledky `result` (`CZ_ObservationResultLaboratory`),
 - `performer` zprávy (laboratorní pracovník / organizace) a případně `resultsInterpreter`,
-- časy platnosti (`effective[x]`) a vydání zprávy (`issued`).
+- časy platnosti (`effective[x]`) a vydání zprávy (`issued`),
+- `text` zprávy (celkový popis včetně poznámek).
 
 ### Popis obsahu CZ_ObservationResultLaboratory
 

@@ -57,6 +57,7 @@ Description: "An example of a minimal laboratory report Composition"
 * status = #final
 * type = $loinc#11502-2 //"Laboratory report"
 * date = "2023-01-24T09:30:00+02:00"
+* category[documentCategory] = $loinc#11502-2
 
 * title = "Laboratorní nález"
 * confidentiality = #N

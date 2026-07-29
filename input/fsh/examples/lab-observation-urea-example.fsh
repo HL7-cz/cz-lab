@@ -60,7 +60,7 @@ Description: "Example of a numeric lab result including measurement uncertainty,
 * referenceRange[0].age.high.unit = "a"
 //* referenceRange[0].type = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
 
-* referenceRange[0].appliesTo[0] = $sct#248152002 "Female"
+* referenceRange[0].appliesTo[0] = $sct#248152002 "žena"
 
 // kalibrátor
 * extension[ObservationCertifiedRefMaterialCodeable].valueCodeableConcept = http://nibsc.org#11/222 "Urea, certified reference material, 10 mmol/L"

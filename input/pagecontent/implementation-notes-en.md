@@ -70,7 +70,6 @@ Two structural variants of the body are supported and may coexist within one rep
 
 - **Variant 1 – `section[lab-no-subsections]` (flat section)**: a top-level laboratory specialty section that directly contains both the human-readable narrative (`section.text`) and the machine-readable `entry` references to `CZ_ObservationResultLaboratory` instances. No further sub-sections are allowed.
 - **Variant 2 – `section[lab-subsections]` (structured section)**: a top-level laboratory specialty section that contains no narrative or entries of its own, but groups several leaf sub-sections (typically per battery, specimen study or individual test). Each leaf sub-section carries its own narrative and `entry` references to `CZ_ObservationResultLaboratory`.
-- **`section[annotations]` (annotation section, fixed code LOINC `48767-8`)**: optional narrative-only section dedicated to laboratory comments, technical notes, accreditation references etc. It SHALL NOT contain `entry` or sub-sections.
 
 The section codes in both variants are bound (preferred) to the `CZ_LabStudyTypesVS` value set (laboratory specialties).
 
@@ -87,7 +86,8 @@ It carries:
 - the analyzed `specimen` references (`CZ_SpecimenLab`),
 - the produced `result` references (`CZ_ObservationResultLaboratory`),
 - the `performer` of the report (laboratory practitioner / organization) and any `resultsInterpreter`,
-- effective times (`effective[x]`) and `issued` time of the report.
+- effective times (`effective[x]`) and `issued` time of the report,
+- `text` of the message (complete description, including notes).
 
 ### Description of content CZ_ObservationResultLaboratory
 
