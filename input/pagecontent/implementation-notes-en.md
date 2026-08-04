@@ -23,7 +23,7 @@ classDiagram
   CZ_BundleLab *-- "0..*" CZ_Provenance
   CZ_BundleLab *-- "0..*" CZ_ObservationResultLaboratory
   CZ_BundleLab *-- "0..*" CZ_SpecimenLab
-  CZ_BundleLab *-- "0..*" BodyStructureCz
+  CZ_BundleLab *-- "0..*" BodyStructureCzCore
   CZ_BundleLab *-- "0..*" CZ_Attachment
 
   CZ_DiagnosticReportLab --> CZ_CompositionLabReport: extension[diagnosticReport-composition]
@@ -54,7 +54,7 @@ classDiagram
   CZ_ObservationResultLaboratory --> CZ_SpecimenLab: specimen
   CZ_ObservationResultLaboratory --> CZ_PractitionerCore: performer
   CZ_ObservationResultLaboratory --> CZ_DeviceObserver: device
-  CZ_ObservationResultLaboratory --> BodyStructureCz: bodyStructure
+  CZ_ObservationResultLaboratory --> BodyStructureCzCore: bodyStructure
 
   CZ_SpecimenLab --> CZ_PatientCore: subject
   CZ_SpecimenLab --> CZ_PractitionerCore: collection.collector
@@ -70,7 +70,6 @@ Two structural variants of the body are supported and may coexist within one rep
 
 - **Variant 1 – `section[lab-no-subsections]` (flat section)**: a top-level laboratory specialty section that directly contains both the human-readable narrative (`section.text`) and the machine-readable `entry` references to `CZ_ObservationResultLaboratory` instances. No further sub-sections are allowed.
 - **Variant 2 – `section[lab-subsections]` (structured section)**: a top-level laboratory specialty section that contains no narrative or entries of its own, but groups several leaf sub-sections (typically per battery, specimen study or individual test). Each leaf sub-section carries its own narrative and `entry` references to `CZ_ObservationResultLaboratory`.
-- **`section[annotations]` (annotation section, fixed code LOINC `48767-8`)**: optional narrative-only section dedicated to laboratory comments, technical notes, accreditation references etc. It SHALL NOT contain `entry` or sub-sections.
 
 The section codes in both variants are bound (preferred) to the `CZ_LabStudyTypesVS` value set (laboratory specialties).
 
@@ -87,7 +86,8 @@ It carries:
 - the analyzed `specimen` references (`CZ_SpecimenLab`),
 - the produced `result` references (`CZ_ObservationResultLaboratory`),
 - the `performer` of the report (laboratory practitioner / organization) and any `resultsInterpreter`,
-- effective times (`effective[x]`) and `issued` time of the report.
+- effective times (`effective[x]`) and `issued` time of the report,
+- `text` of the message (complete description, including notes).
 
 ### Description of content CZ_ObservationResultLaboratory
 
@@ -110,7 +110,7 @@ It carries:
 
 - the `type` of the specimen (preferred binding to the CZ specimen type value set, secondary HL7 v2-0487 codes are allowed as a mapping),
 - the `subject` (patient),
-- collection details: `collection.collectedDateTime`/`collectedPeriod`, `collection.bodySite` (or `BodyStructureCz` reference), `collection.method`, `collection.collector`,
+- collection details: `collection.collectedDateTime`/`collectedPeriod`, `collection.bodySite` (or `BodyStructureCzCore` reference), `collection.method`, `collection.collector`,
 - container, processing and the `receivedTime` in the laboratory.
 
 ### Description of content CZ_ServiceRequestLab

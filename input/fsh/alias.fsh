@@ -32,6 +32,7 @@ Alias: $performer-function = http://terminology.hl7.org/CodeSystem/v3-Participat
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
 Alias: $mkn-10-list = https://terminology.ncez.mzcr.cz/ValueSet/mkn-10
+Alias: $documentCategory = https://ncez.mzcr.cz/terminology/ValueSet/document-category
 //Alias: $nclp-vs = https://nclp.ncez.mzcr.cz/ValueSet/nclppol
 
 //----------- Profiles
