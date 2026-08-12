@@ -1,6 +1,6 @@
 Profile: CZ_ObservationResultLaboratory
 Parent: CZ_MedicalTestResultCore
-Id: cz-observation-result-laboratory
+Id: observation-resultlab-cz-lab
 Title: "Observation Laboratory (CZ)"
 Description: """This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies.
 
@@ -59,21 +59,21 @@ This observation may represent the result of a simple laboratory test such as he
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
-* category[studyType] from CZ_LabStudyTypesVS
+* category[studyType] from $CZ_LabStudyType
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
-* category[specialty] from CZ_LabSpecialityTypesVS
+* category[specialty] from CZ_LabSpecialty
 * category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 
 * code
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".\r\n\r\nThe implementer SHALL adhere to the preferred codes to use.\r\nThe recommended codification used is NCLP. It is allowed to use multiple codes within the FHIR CodeableConcept datatype. But the first code given must follow the following rules.(Other codes given will be for information purposes.)\r\n\r\nThe actual observation is preferably coded in NCLP \r\n\r\nIf that is not possible, laboratory may send its own local code plus obligatory a text element to further explain. \r\n\r\nIf that is not possible the kind of observation is expressed only in text (allowed but NOT RECOMMENDED)"
 * code ^comment = "In the context of this Observation-laboratory profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
-* code from CZ_NclpLabpolVS (required)
+* code from $nclp-vs (required)
 
 * effective[x] 1..
 * effective[x] only dateTime or Period
-* effective[x] obeys cz-lab-3 // efective datetime musí být uveden s přesností alespoň na den
+* effective[x] obeys cz-lab-3 // effective datetime musí být uveden s přesností alespoň na den
 * effective[x].extension ^slicing.discriminator.type = #value
 * effective[x].extension ^slicing.discriminator.path = "url"
 * effective[x].extension ^slicing.rules = #open
@@ -105,7 +105,7 @@ That's why it is important to explicitly include informaiton about measurement m
 //* referenceRange.extension contains CZ_ReferenceRangeComment named Comment 0..*
 
 * hasMember only Reference(CZ_ObservationResultLaboratory)
-* hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
+* hasMember ^definition = "A reference to another Observation profiled by CZ_ObservationResultLaboratory. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
 * issued ^short = "Date/Time this result was made available"
 
@@ -115,7 +115,7 @@ That's why it is important to explicitly include informaiton about measurement m
 
 * component
   * code only $CodeableConcept-uv-ips
-  * code from CZ_NclpLabpolVS (preferred)
+  * code from $nclp-vs (preferred)
   * insert ObservationResultsValueCz
 
 
