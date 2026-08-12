@@ -1,5 +1,5 @@
 
-On the following page, you will find notes on implementing the laboratory report. They concern the creation of the bundle, its composition and filling these profiles with the relevant data.
+This page provides implementation notes for the laboratory report. They cover assembling the document Bundle and its Composition and populating the individual profiles with the appropriate data.
 
 ### Contents overview
 
@@ -40,8 +40,8 @@ classDiagram
   CZ_CompositionLabReport --> CZ_OrganizationCore: custodian
   CZ_CompositionLabReport --> CZ_PatientCore: subject
   CZ_CompositionLabReport --> CZ_Encounter: encounter
-  CZ_CompositionLabReport --> CZ_ObservationResultLaboratory: section[lab-no-subsections].entry
-  CZ_CompositionLabReport --> CZ_ObservationResultLaboratory: section[lab-subsections].section.entry
+  CZ_CompositionLabReport --> CZ_ObservationResultLaboratory: section.entry
+  CZ_CompositionLabReport --> CZ_ObservationResultLaboratory: section.section.entry
 
   CZ_DiagnosticReportLab --> CZ_PatientCore: subject
   CZ_DiagnosticReportLab --> CZ_ServiceRequestLab: basedOn
@@ -68,10 +68,10 @@ The report is represented as a FHIR Bundle of type `document` that contains the 
 
 Two structural variants of the body are supported and may coexist within one report:
 
-- **Variant 1 – `section[lab-no-subsections]` (flat section)**: a top-level laboratory specialty section that directly contains both the human-readable narrative (`section.text`) and the machine-readable `entry` references to `CZ_ObservationResultLaboratory` instances. No further sub-sections are allowed.
-- **Variant 2 – `section[lab-subsections]` (structured section)**: a top-level laboratory specialty section that contains no narrative or entries of its own, but groups several leaf sub-sections (typically per battery, specimen study or individual test). Each leaf sub-section carries its own narrative and `entry` references to `CZ_ObservationResultLaboratory`.
+- **Variant 1 – flat section**: a top-level section that directly contains both human-readable narrative text (`section.text`) and machine-readable `entry` elements referencing `CZ_ObservationResultLaboratory` instances. No further subsections are allowed.
+- **Variant 2 – structured section**: a top-level laboratory specialty section that contains mandatory narrative text (`section.text`) and groups several leaf subsections (typically by battery/panel—a group of related tests that are usually ordered together—specimen type, or another specified grouping of tests), but contains no `entry` elements of its own. Each leaf subsection must contain its own narrative text or at least one `entry` referencing `CZ_ObservationResultLaboratory`; both may be present.
 
-The section codes in both variants are bound (preferred) to the `CZ_LabStudyTypesVS` value set (laboratory specialties).
+The section codes in both variants are bound (preferred) to the `CZ_LabSectionCodes` value set (laboratory specialties and laboratory study types).
 
 ### Description of content CZ_DiagnosticReportLab
 
@@ -91,7 +91,7 @@ It carries:
 
 ### Description of content CZ_ObservationResultLaboratory
 
-`CZ_ObservationResultLaboratory` represents a single laboratory finding (result). One report typically contains many such observations, organized into sections by laboratory specialty. The profile is the conformance target of every `entry` in laboratory sections and of every `result` referenced from `CZ_DiagnosticReportLab`.
+`CZ_ObservationResultLaboratory` represents a single laboratory finding (result). One report typically contains many such observations, organized into sections by laboratory specialty or laboratory study type. Every `CZ_ObservationResultLaboratory` instance SHALL be referenced through an `entry` in a laboratory section of the Composition and through `result` in `CZ_DiagnosticReportLab`.
 
 It carries:
 
@@ -104,12 +104,13 @@ It carries:
 
 ### Description of content CZ_SpecimenLab
 
-`CZ_SpecimenLab` represents a biological specimen taken from the patient and analysed in the laboratory. Specimens are referenced from `CZ_DiagnosticReportLab.specimen` and, where relevant, from `CZ_ObservationResultLaboratory.specimen`.
+`CZ_SpecimenLab` represents a biological specimen taken from, or otherwise related to, the patient and analyzed in the laboratory. Specimens not collected directly from the patient—for example, a catheter specimen, an air sample, or a parasite—are further specified using the `specimen.focus` extension, which references the relevant resource (Device, animal specimen, and so on). Specimens are referenced from `CZ_DiagnosticReportLab.specimen` and, where relevant, from `CZ_ObservationResultLaboratory.specimen`.
 
 It carries:
 
 - the `type` of the specimen (preferred binding to the CZ specimen type value set, secondary HL7 v2-0487 codes are allowed as a mapping),
 - the `subject` (patient),
+- `extension[focus]` (animal specimen represented by RelatedPerson, Device, or Substance),
 - collection details: `collection.collectedDateTime`/`collectedPeriod`, `collection.bodySite` (or `BodyStructureCzCore` reference), `collection.method`, `collection.collector`,
 - container, processing and the `receivedTime` in the laboratory.
 
@@ -120,7 +121,7 @@ It carries:
 It carries:
 
 - the order `identifier` (placer / filler),
-- the requested test(s) `code` (LOINC / NČLP),
+- the requested test `code` (NČLP),
 - the `subject`, `encounter` and `requester`,
 - the `priority`, `authoredOn`, clinical context (`reasonCode`/`reasonReference`) and any specimen reference.
 

@@ -40,8 +40,8 @@ classDiagram
   CZ_CompositionLabReport --> CZ_OrganizationCore: custodian
   CZ_CompositionLabReport --> CZ_PatientCore: subject
   CZ_CompositionLabReport --> CZ_Encounter: encounter
-  CZ_CompositionLabReport --> CZ_ObservationResultLaboratory: section[lab-no-subsections].entry
-  CZ_CompositionLabReport --> CZ_ObservationResultLaboratory: section[lab-subsections].section.entry
+  CZ_CompositionLabReport --> CZ_ObservationResultLaboratory: section.entry
+  CZ_CompositionLabReport --> CZ_ObservationResultLaboratory: section.section.entry
 
   CZ_DiagnosticReportLab --> CZ_PatientCore: subject
   CZ_DiagnosticReportLab --> CZ_ServiceRequestLab: basedOn
@@ -68,10 +68,10 @@ Zpráva je reprezentována jako FHIR Bundle typu `document`, který obsahuje res
 
 V těle dokumentu jsou podporovány dvě strukturní varianty, které mohou být v jedné zprávě i kombinovány:
 
-- **Varianta 1 – `section[lab-no-subsections]` (plochá sekce)**: vrcholová sekce příslušné laboratorní odbornosti, která přímo obsahuje jak narativní text (`section.text`), tak strojově čitelné `entry` odkazy na instance `CZ_ObservationResultLaboratory`. Další podsekce nejsou povoleny.
-- **Varianta 2 – `section[lab-subsections]` (strukturovaná sekce)**: vrcholová sekce laboratorní odbornosti, která sama nenese text ani entries, ale sdružuje několik listových podsekcí (typicky podle baterie, typu vzorku či jednotlivého vyšetření). Každá listová podsekce nese vlastní narativní text a `entry` odkazy na `CZ_ObservationResultLaboratory`.
+- **Varianta 1 – plochá sekce**: vrcholová sekce, která přímo obsahuje jak narativní text (`section.text`), tak strojově čitelné `entry` s odkazy na instance `CZ_ObservationResultLaboratory`. Další podsekce nejsou povoleny.
+- **Varianta 2 – strukturovaná sekce**: vrcholová sekce laboratorní odbornosti obsahuje povinný narativní text (`section.text`) a sdružuje několik listových podsekcí (typicky podle baterie/panelu (skupiny souvisejících - obvykle společně objednaných - testů), typu vzorku či jinak specifikovaných skupin vyšetření), ale sama neobsahuje žádné `entry`. Každá listová podsekce musí obsahovat vlastní narativní text nebo alespoň jedno `entry` s odkazem na `CZ_ObservationResultLaboratory`; obojí může být přítomno současně.
 
-Kódy sekcí ve variantách 1 a 2 jsou (preferred) vázány na value set `CZ_LabStudyTypesVS` (laboratorní odbornosti).
+Kódy sekcí ve variantách 1 a 2 jsou (preferred) vázány na value set `CZ_LabSectionCodes` (laboratorní odbornosti a typy laboratorních studií).
 
 ### Popis obsahu CZ_DiagnosticReportLab
 
@@ -91,7 +91,7 @@ Nese:
 
 ### Popis obsahu CZ_ObservationResultLaboratory
 
-`CZ_ObservationResultLaboratory` reprezentuje jeden laboratorní nález (výsledek). Jedna zpráva typicky obsahuje řadu těchto observací organizovaných do sekcí podle laboratorní odbornosti. Profil je cílem konformity každé `entry` v laboratorních sekcích a každého `result` referovaného z `CZ_DiagnosticReportLab`.
+`CZ_ObservationResultLaboratory` reprezentuje jeden laboratorní nález (výsledek). Jedna zpráva typicky obsahuje řadu těchto observací organizovaných do sekcí podle laboratorní odbornosti či typu laboratorní studie. Všechny instance profilu CZ_ObservationResultLaboratory musí být referencovány prostřednictvím `entry` v laboratorních sekcích kompozice a `result` v  `CZ_DiagnosticReportLab`.
 
 Nese:
 
@@ -104,23 +104,24 @@ Nese:
 
 ### Popis obsahu CZ_SpecimenLab
 
-`CZ_SpecimenLab` reprezentuje biologický vzorek odebraný pacientovi a analyzovaný v laboratoři. Vzorky jsou odkazovány z `CZ_DiagnosticReportLab.specimen` a tam, kde je to relevantní, i z `CZ_ObservationResultLaboratory.specimen`.
+`CZ_SpecimenLab` reprezentuje biologický vzorek odebraný pacientovi nebo s pacientem související a analyzovaný v laboratoři. Vzorky, které nejsou odebrány přímo pacientovi - např.vzorek katetru, vzorek vzduchu či parazit jsou upřesněny pomocí extenze specimen.focus, která referencuje příslušné zdroje (device, specimen-animal atd.) Vzorky jsou odkazovány z `CZ_DiagnosticReportLab.specimen` a tam, kde je to relevantní, i z `CZ_ObservationResultLaboratory.specimen`.
 
 Nese:
 
 - `type` vzorku (preferred binding na český value set typů vzorků, sekundární HL7 v2-0487 kódy jsou povoleny jako mapování),
 - `subject` (pacient),
+- extension[focus] (vzorek zvířete (relatedPerson), device, substance)
 - detaily odběru: `collection.collectedDateTime`/`collectedPeriod`, `collection.bodySite` (případně referenci na `BodyStructureCzCore`), `collection.method`, `collection.collector`,
 - nádobu, zpracování a `receivedTime` v laboratoři.
 
 ### Popis obsahu CZ_ServiceRequestLab
 
-`CZ_ServiceRequestLab` reprezentuje laboratorní žádanku, která vyšetření iniciovala. Je odkazována z Composition skrze `extension[basedOn-order-or-requisition]` a z `CZ_DiagnosticReportLab.basedOn`.
+`CZ_ServiceRequestLab` reprezentuje požadovaný laboratorní test, který vyšetření inicioval. Je odkazována z Composition skrze `extension[basedOn-order-or-requisition]` a z `CZ_DiagnosticReportLab.basedOn`.
 
 Nese:
 
 - `identifier` žádanky (placer / filler),
-- `code` požadovaného vyšetření (LOINC / NČLP),
+- `code` požadovaného vyšetření (NČLP),
 - `subject`, `encounter` a `requester`,
 - `priority`, `authoredOn`, klinický kontext (`reasonCode`/`reasonReference`) a případně referenci na vzorek.
 
