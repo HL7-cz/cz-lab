@@ -1,6 +1,6 @@
 Profile: CZ_DiagnosticReportLab
 Parent: CZ_DiagnosticReportCore
-Id: cz-diagnostic-report-lab
+Id: diagnosticReport-cz-lab
 Title: "DiagnosticReport: Laboratory Report"
 Description: "Diagnostic Report used to represent an entry of a Laboratory Report, including its context, for the scope of the Czech national interoperability project."
 * ^publisher = "HL7 CZ"
@@ -42,7 +42,7 @@ Description: "Diagnostic Report used to represent an entry of a Laboratory Repor
 * presentedForm 1..*
 * obeys presentedform-01
 * presentedForm ^short = "Entire report as issued (pdf recommended)"
-
+* imagingStudy 0..0
 * media
   * ^short = "Additional data (like images, diagrams or documents) associated with this report"
   * ^definition = "A list of additional data, other then presented form of the report, associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."
@@ -55,6 +55,10 @@ Description: "Diagnostic Report used to represent an entry of a Laboratory Repor
   * link
     * ^short = "Reference to the image or data"
     * ^definition = "A reference to the image or data associated with this report."
+    * reference 0..0
+    * type 0..0
+    * identifier 0..0
+
     * extension contains $diagnosticReport-link-xver named link 0..1
     * extension[link]
       * ^definition = "Reference to a DocumentReference containing additional information/attachments associated with this report."
