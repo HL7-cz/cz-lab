@@ -16,15 +16,15 @@ endlegend
 class "Vizuální podoba dokumentu" <<LogicalModel>> [[StructureDefinition-LogPresentedFormCz.html]]
 class "Přílohy" <<LogicalModel>> [[StructureDefinition-LogAttachmentsCz.html]]
 
-class "cz-diagnostic-report-lab.presentedForm" <<Profile>> [[StructureDefinition-cz-diagnostic-report-lab.html]]
+class "diagnostic-report-lab.presentedForm" <<Profile>> [[StructureDefinition-diagnosticReport-cz-lab.html]]
 class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
 
 "Vizuální podoba dokumentu" -- "Přílohy"
-"Vizuální podoba dokumentu" <|. "cz-diagnostic-report-lab.presentedForm"
+"Vizuální podoba dokumentu" <|. "diagnosticReport-cz-lab.presentedForm"
 "Přílohy" <|. "cz-attachment"
 
 "Vizuální podoba dokumentu" -r[hidden]-> "Přílohy"
-"Vizuální podoba dokumentu" -d[hidden]-> "cz-diagnostic-report-lab.presentedForm"
+"Vizuální podoba dokumentu" -d[hidden]-> "diagnosticReport-cz-lab.presentedForm"
 "Přílohy" -d[hidden]-> "cz-attachment"
 
 @enduml
