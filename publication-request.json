@@ -1,0 +1,17 @@
+{
+  "package-id": "hl7.fhir.cz.lab",
+  "version": "1.0.0",
+  "path": "https://hl7.cz/fhir/lab/1.0.0",
+  "mode": "milestone",
+  "status": "release",
+  "sequence": "Release 1",
+  "first": true,
+  "ci-build": "https://build.fhir.org/ig/HL7-cz/lab",
+  "category": "Laboratory Report",
+  "desc": "This is the Edition 1 STU1 release.",
+  "introduction": "This guide defines profiles that represent a FHIR Laboratory Report in the Czech Republic context fully compatible with the current version of the EHDS EEHRxF format. It covers all types of result reports of any type of laboratory service. However, support for histopathology and genetic structured laboratory test result reporting is rather limited.",
+  "title": "Czech FHIR Laboratory Report",
+  "registry-description": "Czech National Laboratory Report FHIR IG R4 version 1.0.0, derived from HL7 EU Laboratory Report IG 2.0.0",
+  "registry-country": "cz",
+  "registry-authority": "HL7 Czech Republic"
+}
