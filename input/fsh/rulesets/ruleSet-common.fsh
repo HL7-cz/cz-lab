@@ -11,7 +11,7 @@ RuleSet: ImposeProfile ( profile )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile].valueCanonical = {profile}
 
 RuleSet: SectionElementsRules
-* code from CZ_LabStudyTypesVS (preferred)
+* code from $CZ_LabStudyType (preferred)
 * text ^short = "Text summary of the section, for human interpretation."
 * entry only Reference(CZ_ObservationResultLaboratory)
 // * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
@@ -34,4 +34,10 @@ RuleSet: LOINCCopyrightForVS
 
 RuleSet: NPUCopyrightForVS
 * ^copyright = "This material contains content from NPU Terminology (http://npu-terminology.org). NPU is copyright International Federation of Clinical Chemistry (IFCC) and International Union of Pure and Applied Chemistry (IUPAC) and is available at no cost under the license at https://www.labterm.dk/."
+* ^experimental = false
+
+RuleSet: SNOMEDandLOINCCopyrightForVS
+* ^copyright = """This value set includes content from SNOMED CT and LOINC.
+SNOMED CT is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"""
 * ^experimental = false
