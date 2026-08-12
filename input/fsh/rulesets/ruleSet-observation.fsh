@@ -27,7 +27,28 @@ RuleSet: ObservationResultsValueCz
 * valueQuantity ^sliceName = "valueQuantity"
 * valueCodeableConcept only $CodeableConcept-uv-ips
 // * valueCodeableConcept MS
-* valueCodeableConcept from CZ_NclpMtvVS (preferred)
+* valueCodeableConcept from CZ_LabResultCodes (preferred)
+* valueCodeableConcept ^sliceName = "valueCodeableConcept"
+* valueCodeableConcept ^binding.extension[0].extension[0].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "cz-lab-result-codes"
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "purpose"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = Canonical(CZ_LabResultCodes)
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Preferred Czech binding for laboratory result values encoded as CodeableConcept using the SNOMED CT."
+* valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* valueCodeableConcept ^binding.extension[+].extension[0].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "cz-nclp-mtv"
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "purpose"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = Canonical(CZ_NclpMtvVS)
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to NCLP-MTV valueset."
+* valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
+/* * valueCodeableConcept from CZ_NclpMtvVS (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
@@ -57,3 +78,4 @@ RuleSet: ObservationResultsValueCz
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a microorganisms value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+ */
