@@ -8,9 +8,9 @@ Description: "Document Reference Lab Report - document reference to the lab bund
 * masterIdentifier.value = "LR12345678"
 * status = #current
 * docStatus = #final
-* type = $loinc#11502-2 "Laboratory report"
-* category = $loinc#26436-6 "Laboratory studies (set)"
-* subject = Reference(urn:uuid:8f79bf84-41e1-485f-95b8-813fe993974d)
+* type = $loinc#11502-2 //"Laboratory report"
+* category = $loinc#26436-6 "laboratorní vyšetření" //"Laboratory studies (set)"
+* subject = Reference(urn:uuid:6c8f7d5f-34bd-4c20-9ed8-df628e9a88a8)
 * author[0] = Reference(urn:uuid:4ee94491-4a3a-402c-a110-74ac3adb0012)
 * custodian = Reference(urn:uuid:4ee94491-4a3a-402c-a110-74ac3adb0012)
 * context.period.start = "2019-10-17T09:53:00+01:00"
