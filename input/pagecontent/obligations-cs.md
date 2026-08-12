@@ -49,7 +49,6 @@ Byli specifikováni aktéři ve těchto rolích:
 - Povinnosti pro profil Encounter ([CZ_EncounterObligationsLab](StructureDefinition-cz-encounter-obl-lab.html))
 - Povinnosti pro profil Observation Result ([CZ_ObservationResultObligationsLab](StructureDefinition-cz-observationResult-obl-lab.html))
 - Povinnosti pro profil Organizace ([CZ_OrganizationObligationsLab](StructureDefinition-cz-organization-obl-lab.html))
-- Povinnosti pro profil Zvířecí pacient ([CZ_PatientAnimalObligationsLab](StructureDefinition-cz-patientAnimal-obl-lab.html))
 - Povinnosti pro profil Praktik ([CZ_PractitionerObligationsLab](StructureDefinition-cz-practitioner-obl-lab.html))
 - Povinnosti pro profil Role praktika ([CZ_PractitionerRoleObligationsImg](StructureDefinition-cz-practitionerRole-obl-img.html))
 - Povinnosti pro profil Související osoba ([CZ_RelatedPersonObligationsImg](StructureDefinition-cz-relatedPerson-obl-img.html))
