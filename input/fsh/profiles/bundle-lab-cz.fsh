@@ -48,7 +48,7 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry[diagnosticReport].resource only CZ_DiagnosticReportLab
 
 * entry contains patient 1..1
-* entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
+* entry[patient].resource only CZ_PatientCore
 
 * entry contains observation 0..*
 * entry[observation].resource only CZ_ObservationResultLaboratory
@@ -159,4 +159,3 @@ Invariant: one-dr
 Description: "A laboratory report SHALL include one and only one DiagnosticReport"
 Expression: "entry.resource.ofType(DiagnosticReport).count() = 1"
 Severity:    #error
-
