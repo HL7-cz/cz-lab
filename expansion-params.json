@@ -8,7 +8,7 @@
     },
     {
       "name": "includeDesignations",
-      "valueBoolean": true
+      "valueBoolean": false
     },
     {
       "name": "system-version",
