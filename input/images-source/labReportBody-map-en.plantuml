@@ -14,20 +14,20 @@ legend right
 endlegend
 class "Laboratory Report Body" <<LogicalModel>> [[StructureDefinition-LabReportCz.html]]
 
-class "cz-service-request-lab" <<Profile>> [[StructureDefinition-cz-service-request-lab.html]]
+class "service-request-cz-lab" <<Profile>> [[StructureDefinition-service-request-cz-lab.html]]
 class "cz-specimen-lab" <<Profile>> [[StructureDefinition-cz-specimen-lab.html]]
-class "cz-observation-result-laboratory" <<Profile>> [[StructureDefinition-cz-observation-result-laboratory.html]]
-class "cz-diagnostic-report-lab" <<Profile>> [[StructureDefinition-cz-diagnostic-report-lab.html]]
-class "cz-composition-lab-report" <<Profile>> [[StructureDefinition-cz-composition-lab-report.html]]
+class "cz-observation-result-laboratory" <<Profile>> [[StructureDefinition-observation-resultlab-cz-lab.html]]
+class "diagnosticReport-cz-lab" <<Profile>> [[StructureDefinition-diagnosticReport-cz-lab.html]]
+class "composition-cz-lab" <<Profile>> [[StructureDefinition-composition-cz-lab.html]]
 
-"Laboratory Report Body" <|. "cz-service-request-lab"
+"Laboratory Report Body" <|. "service-request-cz-lab"
 "Laboratory Report Body" <|. "cz-specimen-lab"
 "Laboratory Report Body" <|. "cz-observation-result-laboratory"
-"Laboratory Report Body" <|. "cz-diagnostic-report-lab"
-"Laboratory Report Body" <|. "cz-composition-lab-report"
+"Laboratory Report Body" <|. "diagnosticReport-cz-lab"
+"Laboratory Report Body" <|. "composition-cz-lab"
 
-"cz-service-request-lab" -d[hidden]-> "cz-specimen-lab"
+"service-request-cz-lab" -d[hidden]-> "cz-specimen-lab"
 "cz-specimen-lab" -d[hidden]-> "cz-observation-result-laboratory"
-"cz-observation-result-laboratory" -d[hidden]-> "cz-diagnostic-report-lab"
-"cz-diagnostic-report-lab" -d[hidden]-> "cz-composition-lab-report"
+"cz-observation-result-laboratory" -d[hidden]-> "diagnosticReport-cz-lab"
+"diagnosticReport-cz-lab" -d[hidden]-> "composition-cz-lab"
 @enduml

@@ -15,8 +15,8 @@ endlegend
 class "Hlavička laboratorní zprávy" <<LogicalModel>> [[StructureDefinition-LogLabReportCz.html]]
 
 class "cz-bundle-lab" <<Profile>> [[StructureDefinition-cz-bundle-lab.html]]
-class "cz-composition-lab-report" <<Profile>> [[StructureDefinition-cz-composition-lab-report.html]]
-class "cz-diagnostic-report-lab" <<Profile>> [[StructureDefinition-cz-diagnostic-report-lab.html]]
+class "composition-cz-lab" <<Profile>> [[StructureDefinition-composition-cz-lab.html]]
+class "diagnosticReport-cz-lab" <<Profile>> [[StructureDefinition-diagnosticReport-cz-lab.html]]
 class "cz-patient" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
@@ -24,17 +24,17 @@ class "cz-practitionerRole-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/
 class "cz-organization-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
 
 "Hlavička laboratorní zprávy" <|. "cz-bundle-lab"
-"Hlavička laboratorní zprávy" <|. "cz-composition-lab-report"
-"Hlavička laboratorní zprávy" <|. "cz-diagnostic-report-lab"
+"Hlavička laboratorní zprávy" <|. "composition-cz-lab"
+"Hlavička laboratorní zprávy" <|. "diagnosticReport-cz-lab"
 "Hlavička laboratorní zprávy" <|. "cz-patient"
 "Hlavička laboratorní zprávy" <|. "cz-coverage"
 "Hlavička laboratorní zprávy" <|. "cz-practitioner-core"
 "Hlavička laboratorní zprávy" <|. "cz-practitionerRole-core"
 "Hlavička laboratorní zprávy" <|. "cz-organization-core"
 
-"cz-bundle-lab" -d[hidden]-> "cz-composition-lab-report"
-"cz-composition-lab-report" -d[hidden]-> "cz-diagnostic-report-lab"
-"cz-diagnostic-report-lab" -d[hidden]-> "cz-patient"
+"cz-bundle-lab" -d[hidden]-> "composition-cz-lab"
+"composition-cz-lab" -d[hidden]-> "diagnosticReport-cz-lab"
+"diagnosticReport-cz-lab" -d[hidden]-> "cz-patient"
 "cz-patient" -d[hidden]-> "cz-coverage"
 "cz-coverage" -d[hidden]-> "cz-practitioner-core"
 "cz-practitioner-core" -d[hidden]-> "cz-practitionerRole-core"
