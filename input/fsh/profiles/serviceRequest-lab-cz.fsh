@@ -1,6 +1,6 @@
 Profile: CZ_ServiceRequestLab
 Parent: ServiceRequest
-Id: cz-service-request-lab
+Id: service-request-cz-lab
 Title: "ServiceRequest: Laboratory Order"
 Description: "ServiceRequest used to represent a Laboratory Order for the scope of the Czech national interoperability project."
 
@@ -18,10 +18,10 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
 * category 1..
 
 * code 1..
-* code from CZ_NclpLabpolVS (required)
+* code from $nclp-vs (required)
 
 * subject 1..
-* subject only Reference(CZ_PatientAnimal or CZ_PatientCore or Group or Device or CZ_LocationCore)
+* subject only Reference(CZ_PatientCore or Group or Device or CZ_LocationCore)
 
 * requisition ^short = "Composite Request ID."
 
