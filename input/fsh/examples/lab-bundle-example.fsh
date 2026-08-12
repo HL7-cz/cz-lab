@@ -94,7 +94,7 @@ Description: "An example of a laboratory report Composition for a glucose result
 * identifier.value = "LR123456"
 * language = #cs
 * status = #final
-* type = $loinc#11502-2 //"Laboratory report"
+* type = $loinc#11502-2 "laboratorní nález" //"Laboratory report"
 * category[documentCategory] = $loinc#11502-2
 * category[studyType] = $loinc#26436-6 //"Laboratory studies (set)"
 * title = "Laboratorní nález"
@@ -109,7 +109,7 @@ Description: "An example of a laboratory report Composition for a glucose result
 // Sekce: Moč
 * section[+]
   * title = "Moč"
-  * code = $loinc#18719-5 //"Chemistry studies (set)"
+  * code = $loinc#18719-5 "biochemické laboratorní vyšetření"  //"Chemistry studies (set)"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Výsledky vyšetření moči</div>"
   * entry[+] = Reference(urn:uuid:172bc194-10b5-4e82-a9c3-2936b3b2523e) // spec. hmotnost
@@ -118,7 +118,7 @@ Description: "An example of a laboratory report Composition for a glucose result
 // Sekce: Biochemie s podsekcemi
 * section[+]
   * title = "Biochemie"
-  * code = $loinc#18719-5 //"Chemistry studies (set)"
+  * code = $loinc#18719-5 "biochemické laboratorní vyšetření" //"Chemistry studies (set)"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Biochemie</div>"
   * section[+]
@@ -131,14 +131,14 @@ Description: "An example of a laboratory report Composition for a glucose result
     * entry[+] = Reference(urn:uuid:5e058858-c126-4f0e-9202-ece18d3c9c3e) // chloridy
   * section[+]
     * title = "Markery zánětu"
-    * code = $loinc#18719-5 //"Chemistry studies (set)"
+    * code = $loinc#18719-5 "biochemické laboratorní vyšetření" //"Chemistry studies (set)"
     * text.status = #generated
     * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Markery zánětu</div>"
     * entry[+] = Reference(urn:uuid:e2d39425-bc9b-4fcd-88fb-3499d14d8670) // CRP
     * entry[+] = Reference(urn:uuid:f53d66a1-c9c4-4b58-b04b-3c86a2ec0c16) // prokalcitonin
   * section[+]
     * title = "Serologická vyšetření"
-    * code = $loinc#18719-5 //"Chemistry studies (set)"
+    * code = $loinc#18719-5 "biochemické laboratorní vyšetření" //"Chemistry studies (set)"
     * text.status = #generated
     * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Serologická vyšetření</div>"
     * entry[+] = Reference(urn:uuid:b0f7fc5d-d204-4e1c-b72f-83736e73efa4) // anti-HAV-IgM
@@ -148,7 +148,7 @@ Description: "An example of a laboratory report Composition for a glucose result
 // Sekce: Hematologie
 * section[+]
   * title = "Hematologie"
-  * code = $loinc#18723-7 //"Hematology studies (set)"
+  * code = $loinc#18723-7 "hematologické laboratorní vyšetření" //"Hematology studies (set)"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Výsledky krevního obrazu</div>"
   * entry[+] = Reference(urn:uuid:a6c9f96b-23ea-4644-aadc-b11b8d3a17e2) // leukocyty
@@ -171,8 +171,8 @@ Description: "Example of DiagnosticReport for lab result"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:05f95a04-cb07-4bd2-8833-c40521f1182c)
 * extension[DiagnosticReportCompositionR5].valueReference.type = "Composition"
 * status = #final
-* code = $loinc#11502-2 //"Laboratory report"
-* category[studyType] = $loinc#26436-6 //"Laboratory studies (set)"
+* code = $loinc#11502-2 "laboratorní nález" //"Laboratory report"
+* category[studyType] = $loinc#26436-6 "laboratorní vyšetření" //"Laboratory studies (set)"
 
 * effectiveDateTime = "2025-04-24T08:45:00+01:00"
 * issued = "2025-04-24T09:30:00+01:00"
@@ -366,7 +366,7 @@ Usage: #inline
 * id = "9014ce97-a357-4a4a-b0e0-32e7ba85801d"
 * text.status = #empty
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">-</div>"
-* type = http://terminology.hl7.org/CodeSystem/v2-0487#BLDV "Blood venous"
+* type = $sct#122555007 "vzorek žilní krve"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * receivedTime = "2025-04-24T09:30:00+02:00"
 * collection.collectedDateTime = "2025-04-24T08:00:00+02:00"
@@ -379,7 +379,7 @@ Usage: #inline
 * id = "b7a2f9d3-760f-4a89-bbbf-12199808f2e5"
 * text.status = #empty
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vzorek nesrážlivé žilní krve pro hematologii</div>"
-* type = http://terminology.hl7.org/CodeSystem/v2-0487#BLDV "Blood venous"
+* type = $sct#122555007 "vzorek žilní krve"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * receivedTime = "2025-04-24T09:30:00+02:00"
 * collection.collectedDateTime = "2025-04-24T08:00:00+02:00"
@@ -392,7 +392,7 @@ Usage: #inline
 * id = "04bb3e5b-83fb-41a5-b260-c91cdba5df80"
 * text.status = #empty
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">-</div>"
-* type = http://terminology.hl7.org/CodeSystem/v2-0487#URINM "Urine, Midstream"
+* type = $sct#258574006 "vzorek ze středního proudu moči"
 * subject = Reference(urn:uuid:11af8e2a-3e10-426e-b80f-4c9f9c7de3c9)
 * receivedTime = "2025-04-24T09:30:00+02:00"
 * collection.collectedDateTime = "2025-04-24T08:15:00+02:00"
