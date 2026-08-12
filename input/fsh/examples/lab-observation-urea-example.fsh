@@ -10,7 +10,7 @@ Description: "Example of a numeric lab result including measurement uncertainty,
 
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * category[studyType] = $loinc#18719-5	//"Chemistry studies (set)"
-//* category[specialty] = 
+//* category[specialty] =
 
 * code.coding[0].system = $nclp
 * code.coding[0].code = #03086
@@ -81,7 +81,7 @@ Description: "BioAnalyt 6000 analyzer"
 * deviceName[0].name = "BioAnalyt 6000"
 * deviceName[0].type = #manufacturer-name
 * manufacturer = "Best manufacturer"
-* type = $sct#706168006 //"Automated clinical chemistry analyzer"
+* type = $sct#11987000 "klinický biochemický analyzátor" //"Automated clinical chemistry analyzer"
 
 
 // Testovací souprava - kit
