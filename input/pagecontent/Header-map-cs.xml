@@ -59,13 +59,13 @@
       </div>
     </div>
 
-    <h3>Hlavička -&gt; FHIR profily (CZ LAB)</h3>
+    <!-- <h3>Hlavička -&gt; FHIR profily (CZ LAB)</h3> -->
 
     <p>
       Tato stránka uvádí kompletní mapovací řádky pro hlavičku laboratorní zprávy podle header ConceptMap definic použitých v tomto implementačním průvodci.
     </p>
 
-    <h4 id="model">Přehled modelu</h4>
+    <h3>Přehled modelu</h3>
 
     <p>{% include labReportHead-map-cs.svg %}</p>
 

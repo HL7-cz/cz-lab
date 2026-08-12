@@ -59,13 +59,13 @@
       </div>
     </div>
 
-    <h3>Header -&gt; FHIR profiles (CZ LAB)</h3>
+    <!-- <h3>Header -&gt; FHIR profiles (CZ LAB)</h3> -->
 
     <p>
       This page lists the complete mapping rows for the laboratory report header, following the header-related ConceptMap definitions used in this guide.
     </p>
 
-    <h4 id="model">Model Overview</h4>
+    <h3>Model Overview</h3>
 
     <p>{% include labReportHead-map-en.svg %}</p>
 

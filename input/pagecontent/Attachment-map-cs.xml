@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
 
-  <head>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>Přílohy -&gt; FHIR profily (CZ LAB)</title>
-
     <style type="text/css">
       .model-map-block { margin: 0 0 1rem 0; }
       .callout-wrapper {
@@ -46,26 +42,25 @@
       .relsub { background: #c9bed1; }
       .tgt-sub { background: #cf8398; }
     </style>
-  </head>
 
-  <body>
+
 
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>Přehled:</strong>
-          Tato stránka rozepisuje kompletní mapování částí A.3 a A.4 podle laboratorních ConceptMap definic pro presented form i další přílohy.
+          Tato stránka obsahuje kompletní mapování částí A.3 a A.4 logického informačního modelu laboratorní zprávy dle ConceptMap definic pro presented form a další typy příloh.
         </div>
       </div>
     </div>
 
-    <h3>Přílohy -&gt; FHIR profily (CZ LAB)</h3>
+    <!-- <h3>Přílohy -&gt; FHIR profily (CZ LAB)</h3> -->
 
     <p>
-      Tato stránka uvádí kompletní mapovací řádky pro vizuální podobu laboratorní zprávy a další přílohy podle attachment ConceptMap definic použitých v tomto implementačním průvodci.
+      Tato stránka obsahuje kompletní mapování části logického modelu pro vizuální podobu laboratorní zprávy a další typy příloh.
     </p>
 
-    <h4 id="model">Přehled modelu</h4>
+    <h3 id="model">Přehled modelu</h3>
 
     <p>{% include labReportAttach-map-cs.svg %}</p>
 
@@ -117,6 +112,4 @@
         </tbody>
       </table>
     </div>
-
-  </body>
 </div>

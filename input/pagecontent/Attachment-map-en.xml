@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
 
-  <head>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>Attachments -&gt; FHIR profiles (CZ LAB)</title>
-
     <style type="text/css">
       .model-map-block { margin: 0 0 1rem 0; }
       .callout-wrapper {
@@ -46,9 +42,7 @@
       .relsub { background: #c9bed1; }
       .tgt-sub { background: #cf8398; }
     </style>
-  </head>
 
-  <body>
 
     <div class="model-map-block">
       <div class="callout-wrapper">
@@ -59,13 +53,13 @@
       </div>
     </div>
 
-    <h3>Attachments -&gt; FHIR profiles (CZ LAB)</h3>
+    <!-- <h3>Attachments -&gt; FHIR profiles (CZ LAB)</h3> -->
 
     <p>
       This page lists the complete mapping rows for the presented form and additional attachments, following the attachment ConceptMap definitions used in this guide.
     </p>
 
-    <h4 id="model">Model Overview</h4>
+    <h3>Model Overview</h3>
 
     <p>{% include labReportAttach-map-en.svg %}</p>
 
@@ -118,5 +112,4 @@
       </table>
     </div>
 
-  </body>
 </div>
