@@ -9,7 +9,7 @@ RuleSet: ReportStatusRule
 
 RuleSet: ReportEncounterRule
 /* * encounter obeys labRpt-enc */
-* encounter only Reference(Encounter)
+* encounter only Reference(CZ_EncounterCore)
   * ^short = "The healthcare event which this Laboratory Report is about (when test ordered)."
   * ^definition = """The healthcare event (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."""
   * ^comment = """This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).
@@ -37,7 +37,7 @@ RuleSet: ReportTypeRule (element)
 * {element} 1..
 /* * {element}  obeys labRpt-code */
 * {element}  only $CodeableConcept-uv-ips
-* {element}  from CZ_LabReportTypesVS (preferred) // value set to be revised add alternative value sets
+* {element}  from CZ_LabReportTypes (preferred) // value set to be revised add alternative value sets
   * ^short = "Type of (Laboratory) Report"
   * ^definition = "Specifies that it refers to a Laboratory Report"
   * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
@@ -54,7 +54,7 @@ RuleSet: ReportCategoryRule
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and Study type. Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
 * category contains studyType 0..*
-* category[studyType] from CZ_LabStudyTypesVS
+* category[studyType] from $CZ_LabStudyType
 * category[studyType]
   * ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
   * ^definition = "Laboratory services, i.e., results of tests performed, could be characterized using typology of services, commonly called study types. Study type could be seen as an attribute or grouping mechanism that assigns a common clinical sense to certain types of laboratory test results., e.g., Hemoglobin, Platelet count, etc. belongs to 'Hematology study'."
@@ -64,7 +64,7 @@ RuleSet: ReportCategoryRule
 * category[documentCategory] = $loinc#11502-2
 
 * category contains specialty 0..*
-* category[specialty] from CZ_LabSpecialityTypesVS
+* category[specialty] from CZ_LabSpecialty
 * category[specialty]
   * ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
   * ^definition = "Laboratory specialty is an attribute of any laboratory setting representing professional qualification of the laboratory to execute certain kind of laboratory tests."
