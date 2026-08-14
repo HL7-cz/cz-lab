@@ -10,10 +10,22 @@ A definition for CodeSystem 'https://ncez.mzcr.cz/nclp/CodeSystem/nclpmtv' could
 # A definition for CodeSystem 'https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar' could not be found, so the code cannot be validated
 %A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated%
 
+# NCLP MTV CodeSystem and ValueSet are not yet available to the terminology server
+Error from https://tx.hl7.cz/r4: Error: A definition for CodeSystem 'https://ncez.mzcr.cz/nclp/CodeSystem/nclpmtv' could not be found, so the value set cannot be expanded
+
+# Inherited from CZ Patient Core: identifier type is intentionally fixed as a complete CodeableConcept
+For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
+
+# Obligation profile of the Address data type cannot be represented as a standalone FHIR resource example
+The Implementation Guide contains no examples for this data type profile
+
 # Known wrong display names - terminology issue
 %for http://loinc.org%
 %for http://snomed.info/sct#%
 %There are no valid display names found for the code urn:iso:std:iso:3166#%
+
+# Czech preferred term contains parentheses but is not an SNOMED CT FSN
+This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [všeobecná patologie (specializace)] and examples for no FSN: [klinická biochemie, hematologie, transfuzní lékařství, klinická imunologie, klinická mikrobiologie])
 
 # Suppress information on deprecated extensions - this comes from cz-core profile
 %The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 is deprecated%
@@ -25,6 +37,33 @@ A definition for CodeSystem 'https://ncez.mzcr.cz/nclp/CodeSystem/nclpmtv' could
 
 # Composition.section slice is open
 %This element does not match any known slice defined in the profile https://hl7.cz/fhir/lab/StructureDefinition/composition-cz-lab|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+
+# EU DiagnosticReport category and effective[x] slicing is open; CZ documentCategory and effectiveDateTime are intentional
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# CZ DiagnosticReport effective[x] slicing is open; effectiveDateTime is intentional beside the effectivePeriod slice
+This element does not match any known slice defined in the profile https://hl7.cz/fhir/lab/StructureDefinition/diagnosticReport-cz-lab|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# EU Composition slicing is open; CZ documentCategory and regular coded laboratory sections are intentional
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# EU Observation extension slicing is open; CZ accreditation and EU-supported uncertaintyType are intentional
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# FHIR R4 pattern discriminators; changing the local $this discriminator to value may break snapshot generation
+The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# Composition and DiagnosticReport examples are intentionally embedded in document Bundles
+The Implementation Guide contains no explicitly linked examples for this profile
+
+# R5 cross-version DiagnosticReport.composition permits both the R5 compatibility profile and base R4 Composition
+%among choices: http://hl7.org/fhir/5.0/StructureDefinition/profile-Composition|0.1.0, http://hl7.org/fhir/StructureDefinition/Composition|4.0.1%
+
+# The intensional microorganism value set is intentionally too large for a complete publication-time expansion
+%The value set 'https://ncez.mzcr.cz/terminology/ValueSet/cz-microorganism|1.0.0' expansion has too many codes to produce%
+
+# The expansion parameters fragment is generated for publisher configuration but is not included in an IG page
+The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
 
 # Missing Czech translations of the value sets
 %There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation%
@@ -59,6 +98,21 @@ This element does not match any known slice defined in the profile http://hl7.or
 # Preferred binding differences - CZ NCLP as primary coding
 %None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab|2.0.0), and a coding is recommended to come from this value set%
 
+# Composition sections are intentionally profiled as open; these valid LOINC section codes need not belong to the preferred CZ value set
+%None of the codings provided are in the value set 'Laboratory Report Section Codes (CZ)' (https://ncez.mzcr.cz/terminology/ValueSet/cz-lab-section-codes|1.0.0), and a coding is recommended to come from this value set%
+
+# NCLP MTV CodeSystem and ValueSet are not yet available; AB+ cannot currently be validated against the preferred and additional bindings
+None of the codings provided are in the value set 'Laboratory Result Codes (CZ)' (https://ncez.mzcr.cz/terminology/ValueSet/cz-lab-result-codes|1.0.0), and a coding is recommended to come from this value set (codes = https://ncez.mzcr.cz/nclp/CodeSystem/nclpmtv#AB+)
+None of the codings provided are in the value set 'Results Coded Values Laboratory/Pathology - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips|2.0.1), and a coding is recommended to come from this value set (codes = https://ncez.mzcr.cz/nclp/CodeSystem/nclpmtv#AB+)
+None of the codings provided are in the value set 'Laboratory Presence and Absence Findings' (http://hl7.eu/fhir/laboratory/ValueSet/lab-presenceAbsence-eu-lab|2.0.0) specified in an additional binding, and a coding is recommended to come from this value set (codes = https://ncez.mzcr.cz/nclp/CodeSystem/nclpmtv#AB+)
+
+# CZ laboratory study types are additional Observation categories beside the required laboratory category
+None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set (codes = http://loinc.org#26436-6)
+None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set (codes = http://loinc.org#18719-5)
+
+# National NCLP order code is intentional beside the preferred EU Laboratory Order binding
+None of the codings provided are in the value set 'Laboratory Order' (http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab|2.0.0), and a coding is recommended to come from this value set (codes = https://ncez.mzcr.cz/nclp/CodeSystem/nclppol#01898)
+
 # SNOMED CT terminology server version validation issues - valid warning, intentionally suppressed due to external TX server version availability
 # A definition for CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/%
 
@@ -68,3 +122,29 @@ This element does not match any known slice defined in the profile http://hl7.or
 %Pinned the version of http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference to 1.3.0 from choices of 1.2.0 (hl7.fhir.eu.extensions.r4#1.2.0), 1.3.0 (hl7.fhir.eu.extensions.r4#1.3.0)%
 %Pinned the version of http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips to 2.0.1 from choices of 2.0.0 (hl7.fhir.uv.ips#2.0.0), 2.0.1 (hl7.fhir.uv.ips#2.0.1)%
 %Pinned the version of http://hl7.org/fhir/StructureDefinition/note to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)%
+%Pinned the version of http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition to 0.1.0 from choices of 0.0.1-snapshot-2 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)%
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/alternate-reference to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)%
+%Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
+%Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/organization-eu to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
+%Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
+%Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
+%Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
+%Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
+%Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu-core to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
+%Pinned the version of http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.note to 0.1.0 from choices of 0.0.1-snapshot-2 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)%
+%Pinned the version of http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.bodyStructure to 0.1.0 from choices of 0.0.1-snapshot-2 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)%
+%Pinned the version of http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy to 0.1.0 from choices of 0.0.1-snapshot-2 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)%
+%Pinned the version of http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value to 0.1.0 from choices of 0.0.1-snapshot-2 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)%
+%Pinned the version of http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device to 0.1.0 from choices of 0.0.1-snapshot-2 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)%
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/data-absent-reason to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)%
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)%
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)%
+
+# EU Laboratory 2.0.0 still references patient-animal-eu-core, removed from EU Base 2.0.0; the ballot package is required as a compatibility dependency
+The ImplementationGuide uses package hl7.fhir.eu.base#2.0.0-ballot released on 2025-12-19, but the most recent appropriate version is 2.0.0. This reference is getting old and the more recent version should be considered
+
+# Ignore missing examples
+The Implementation Guide contains no examples for this profile
+
+# Publisher generated texts
+Hyperlink scheme 'file' in 'file:///web/publishing/work/task-89/draft/output/StructureDefinition-CodeableConcept-uv-ips.html' at 'div/table/tr/td/a' for 'CodeableConceptIPS(2.0.1)' is not a widely supported protocol and should be checked

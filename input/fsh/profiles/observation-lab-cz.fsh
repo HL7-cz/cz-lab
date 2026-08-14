@@ -8,7 +8,7 @@ This observation may represent the result of a simple laboratory test such as he
 """
 
 * insert ImposeProfile($Observation-resultslab-eu-lab)
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 2, trial-use )
 
 //* ^url = "https://ncez.mzcr.cz/standards/fhir/ig/lab/StructureDefinition/cz-observation-laboratory"
 //* ^publisher = "Národní centrum elektronického zdravotnictví"

@@ -4,7 +4,7 @@ Id: cz-organization-obl-lab
 Title:    "Organization: Obligations"
 Description: "This profile defines obligations for an organization in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+// * insert SetFmmandStatusRule ( 0, informative)
 
 // L1 Creator Obligations ============>
 * identifier[KRPZS] insert OblCreator(#SHALL:populate-if-known,L1)

@@ -9,7 +9,7 @@ Description: "Diagnostic Report used to represent an entry of a Laboratory Repor
 * . ^definition = "Laboratory Report DiagnosticReport"
 
 * insert ImposeProfile($DiagnosticReport-eu-lab)
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 2, trial-use )
 
 * extension[DiagnosticReportCompositionR5]
   * ^short = "Associated Lab Report Composition"

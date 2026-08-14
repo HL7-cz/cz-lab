@@ -3,7 +3,7 @@ Id: AttachmentsCz
 Title: "A.4 - Additional attachments"
 Description: """Laboratory Report - Laboratory Report additional attachments - A.4"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+// * insert SetFmmandStatusRule ( 1, draft )
 
 * contentType 0..1 CodeableConcept "A.4.1 Type of content" """Type of content - MIME type is required"""
 * language 0..1 CodeableConcept "A.4.2 Language of content" """Language of content - HL7 valueset of languages is required"""

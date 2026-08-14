@@ -5,7 +5,7 @@ Logical: LogEnSubjectLabEhnCz
 Id: SubjectCz
 Title: "A.1.1, A1.2 - Subject of care"
 Description:  """Patient or Subject of care. Sections A1.1 and A1.2 of the eHN guideline."""
-* insert SetFmmandStatusRule ( 1, draft )
+// * insert SetFmmandStatusRule ( 1, draft )
 * identification 1..1 Base "A.1.1 Identification of the patient/subject" """A.1.1 Identification of the patient/subject"""
 * identification.givenName 1..* string "A.1.1.1 Given name" """The given name/first name of the patient (also known as forename or first name). This field can contain more than one element. """
 * identification.familyName 1..* string "A.1.1.2 Familyname/surname" """The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present."""
@@ -25,9 +25,9 @@ If different, 'physiological gender' should be communicated elsewhere
 * contact.telecom 0..* ContactPoint "A.1.2.2 Telecom" """Telecommunication contact information (e-mail, phone number, etc.) associated to a person. Multiple telecommunication addresses might be provided. - Preferred system(s): """
 
 * contact.preferredPhysician 0..* Base "A.1.2.3 preferred physician" """The registering general practitioner or another physician who can provide information about the patient. Particularly important for patients with rare diseases."""
-* contact.preferredPhysician.Identifier 1..1 Identifier "A.1.2.3.1 Identification of the preferred physician" """Identification number of the health care professional according to the National Register of Health Care Professionals (NRZP)."""
-* contact.preferredPhysician.Name 1..1 HumanName "A.1.2.3.2 Name of the preferred physician" """The name of the physician with whom the patient is under the care of or who is registering the patient."""
-* contact.preferredPhysician.Specialty 0..* CodeableConcept "A.1.2.3.3 Specialty of the preferred physician" """Specialization of the doctor (Practical medicine for children and adolescents, General medicine for adults, internal medicine, gynaecology and obstetrics, etc.)
+* contact.preferredPhysician.identifier 1..1 Identifier "A.1.2.3.1 Identification of the preferred physician" """Identification number of the health care professional according to the National Register of Health Care Professionals (NRZP)."""
+* contact.preferredPhysician.name 1..1 HumanName "A.1.2.3.2 Name of the preferred physician" """The name of the physician with whom the patient is under the care of or who is registering the patient."""
+* contact.preferredPhysician.specialty 0..* CodeableConcept "A.1.2.3.3 Specialty of the preferred physician" """Specialization of the doctor (Practical medicine for children and adolescents, General medicine for adults, internal medicine, gynaecology and obstetrics, etc.)
 - Preferred system(s): NR-ZP Specializace lékařů"""
 * contact.preferredPhysician.providerIdentifierName 0..1 string "A.1.2.3.4 Identification and name of the provider the doctor represents" """Identifier (IČO, NRPZS) and name of the provider the doctor represents"""
 * contact.preferredPhysician.providerAddress 0..1 Address "A.1.2.3.5 Provider address" """Mailing, home and/or office address. Addresses are always a sequence of parts of an address (e.g. address line, country, zip code, city), although the format of the postal address may vary depending on the country. The address may contain information about the type of address; if this attribute is not present, it is assumed to be a default address usable for any purpose."""

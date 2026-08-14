@@ -7,7 +7,7 @@ Description: "Czech profile for attachment. "
 * . ^short = "Lab Report attachment"
 * . ^definition = "Lab Report attachment."
 
-* insert SetFmmandStatusRule ( 0, draft )
+// * insert SetFmmandStatusRule ( 0, draft )
 
 * content
 * content.contentType MS

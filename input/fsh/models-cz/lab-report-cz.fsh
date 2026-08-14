@@ -5,7 +5,7 @@ Logical: LogCzLabReportEhnCz
 Id: LogLabReportCz
 Title: "A - Laboratorní zpráva"
 Description:  """Zpráva z laboratorního vyšetření"""
-* insert SetFmmandStatusRule ( 1, draft )
+// * insert SetFmmandStatusRule ( 1, draft )
 * hlavicka 1..1 Base "A.1 Hlavička dokumentu" """A.1 Záhlaví dokumentu s administrativními údaji"""
 * hlavicka.pacient 1..1 LogSubjectCz "A.1.1 - A1.2 Pacient/subjekt" """A.1.1 Identifikace pacienta and A.1.2 Kontaktní informace pacienta"""
 * hlavicka.zdravotniPojisteni 0..1 LogPayerCz "A.1.3 Zdravotní pojištění" """A.1.3 Informace o zdravotním pojištění"""

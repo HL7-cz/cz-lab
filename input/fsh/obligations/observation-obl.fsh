@@ -3,7 +3,7 @@ Parent: CZ_ObservationResultLaboratory
 Id: cz-observationResult-obl-lab
 Title:    "Observation: Obligations"
 Description: "This profile defines obligations for an observation result in FHIR for the purpose of this guide."
-* insert SetFmmandStatusRule ( 0, informative)
+// * insert SetFmmandStatusRule ( 0, informative)
 
 * note insert OblCreator(#SHOULD:able-to-populate,L2)
 * hasMember insert OblCreator(#SHOULD:able-to-populate,L2)

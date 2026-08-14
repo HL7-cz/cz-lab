@@ -5,7 +5,7 @@ Title:    "Specimen: Obligations"
 Description: "This profile defines obligations for a specimen in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, informative)
+// * insert SetFmmandStatusRule ( 0, informative)
 
 //* identifier insert OblCreator(#SHOULD:able-to-populate,L1)
 //* type insert OblCreator(#SHOULD:able-to-populate,L1)
@@ -31,7 +31,7 @@ Description: "This profile defines obligations for a specimen in FHIR for the pu
 * type insert OblCreator(#SHALL:able-to-populate,L3)
 * collection.collectedDateTime insert OblCreator(#SHALL:able-to-populate,L3)
 * collection.bodySite insert OblCreator(#SHALL:able-to-populate,L3)
-* collection.method insert OblCreator(#SHALL:able-to-populate,L3)  
+* collection.method insert OblCreator(#SHALL:able-to-populate,L3)
 * receivedTime insert OblCreator(#SHALL:able-to-populate,L3)
 
 * identifier insert OblConsumer(#SHOULD:display,L2)

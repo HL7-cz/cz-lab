@@ -6,7 +6,7 @@ Description: "Czech profile for document reference containing DASTA lab structur
 
 * . ^short = "DASTA Lab Report Document Reference"
 * . ^definition = "Document reference containing DASTA structure lab Report."
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 2, trial-use )
 * insert ReportTypeRule ( type ) // fixed LOINC code for all types of reports but allow also lab specialty to be present
 //* insert ReportSubjectRule
 * insert ReportIdentifierRule

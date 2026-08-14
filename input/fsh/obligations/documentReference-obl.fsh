@@ -5,7 +5,7 @@ Title:    "DocumentReference: Obligations"
 Description: "This profile defines obligations for a bundle in FHIR for the purpose of this guide."
 
 
-* insert SetFmmandStatusRule ( 0, informative)
+// * insert SetFmmandStatusRule ( 0, informative)
 
 * status insert OblCreator(#SHALL:able-to-populate,L1)
 * subject insert OblCreator(#SHALL:able-to-populate,L1)

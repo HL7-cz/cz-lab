@@ -24,6 +24,7 @@ Description: "Example of a lab result – numeric, scale-based evaluation, preli
 * basedOn = Reference(urn:uuid:5f9c2e8d-0b74-4dbb-8af3-3e6d2c1191a7)
 
 * effectiveDateTime = "2025-04-24T08:45:00+02:00"
+* effectiveDateTime.extension[ClinicallyRelevantTime].valueCoding = $sct#399445004
 * issued = "2025-04-24T09:30:00+02:00"
 
 * valueQuantity.value = 5.2

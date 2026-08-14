@@ -5,7 +5,7 @@ Title: "Specimen Laboratory (CZ)"
 Description: "Czech profile for a specimen in a laboratory report. In some laboratory reports, specimen information is allowed to be minimal as many informations concerning the specimen are implied by the observations done."
 //* ^url = "https://ncez.mzcr.cz/standards/fhir/ig/lab/StructureDefinition/cz-specimen-lab"
 * ^version = "0.0.1"
-* ^status = #draft
+* ^status = #active
 * ^date = "2022-09-27T14:58:00+01:00"
 * ^publisher = "Národní centrum elektronického zdravotnictví"
 * ^contact.telecom.system = #url
@@ -14,7 +14,7 @@ Description: "Czech profile for a specimen in a laboratory report. In some labor
 //* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 
 * insert ImposeProfile($Specimen-eu-lab)
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 2, trial-use )
 
 // EU lab 2.0.0 alignment – type SHALL be present and preferably from the EU lab specimen types value set
 * type 1..1

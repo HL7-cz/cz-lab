@@ -13,7 +13,7 @@ Description: "Laboratory study types"
 * ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-lab-study-type"
 
 * insert LOINCCopyrightForVS
-* $loinc#18716-1 "alergologické laboratorní vyšetření"  // není v Evropském číselníku
+//* $loinc#18716-1 "alergologické laboratorní vyšetření"  // není v Evropském číselníku
 * $loinc#18717-9 "transfuzní laboratorní vyšetření"
 * $loinc#18719-5 "biochemické laboratorní vyšetření"
 * $loinc#18722-9 "reprodukční laboratorní vyšetření"

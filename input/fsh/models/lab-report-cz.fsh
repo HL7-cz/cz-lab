@@ -5,7 +5,7 @@ Logical: LogEnLabReportEhnCz
 Id: LabReportCz
 Title: "A - Laboratory Report"
 Description:  """Laboratory Report. eHN guideline model."""
-* insert SetFmmandStatusRule ( 1, draft )
+// * insert SetFmmandStatusRule ( 1, draft )
 * header 1..1 Base "A.1 Report header data elements" """A.1 Report header data elements"""
 * header.subject 1..1 SubjectCz "A.1.1 - A1.2 Patient/subject" """A.1.1 Identification of the patient/subject and A.1.2 Patient/subject related contact information  """
 * header.payer 0..1 PayerCz "A.1.3 Health insurance and payment information" """A.1.3 Health insurance and payment information"""

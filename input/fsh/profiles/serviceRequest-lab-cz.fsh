@@ -9,7 +9,7 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
 * . ^definition = "Laboratory Order for Laboratory Report."
 
 * insert ImposeProfile($ServiceRequest-eu-lab)
-* insert SetFmmandStatusRule (0, draft)
+* insert SetFmmandStatusRule (2, trial-use)
 
 
 // add binding for category and code

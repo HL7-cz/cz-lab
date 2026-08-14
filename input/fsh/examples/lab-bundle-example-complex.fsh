@@ -577,7 +577,7 @@ Usage: #inline
 * valueQuantity.value = 1.41
 * valueQuantity.unit = "mL/s na 1,73 m2"
 * valueQuantity.system = $ucum
-* valueQuantity.code = #mL/s/{1.73_m2}
+* valueQuantity.code = #mL/s/(173.10*-2.m2)
 * referenceRange.low.value = 1.33
 * referenceRange.high.value = 2.50
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
@@ -597,7 +597,7 @@ Usage: #inline
 * valueQuantity.value = 1.55
 * valueQuantity.unit = "mL/s na 1,73 m2"
 * valueQuantity.system = $ucum
-* valueQuantity.code = #mL/s/{1.73_m2}
+* valueQuantity.code = #mL/s/(173.10*-2.m2)
 * referenceRange.low.value = 1.33
 * referenceRange.high.value = 2.50
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"

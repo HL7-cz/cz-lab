@@ -5,7 +5,7 @@ Title:    "Diagnostic Report: Obligations"
 Description: "This profile defines obligations for a diagnostic report in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, informative)
+// * insert SetFmmandStatusRule ( 0, informative)
 
 //* status insert OblCreator(#SHALL:able-to-populate,L1)
 //* category insert OblCreator(#SHALL:able-to-populate,L1)

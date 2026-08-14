@@ -25,6 +25,7 @@ RuleSet: ObservationResultsValueCz
 * valueQuantity only Quantity-eu-lab
 // * valueQuantity MS
 * valueQuantity ^sliceName = "valueQuantity"
+* valueQuantity.extension contains $iso21090-uncertaintyType named uncertaintyType 0..1
 * valueCodeableConcept only $CodeableConcept-uv-ips
 // * valueCodeableConcept MS
 * valueCodeableConcept from CZ_LabResultCodes (preferred)

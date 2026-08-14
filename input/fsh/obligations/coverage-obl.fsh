@@ -4,7 +4,7 @@ Id: cz-coverage-obl-lab
 Title:    "Coverage: Obligations"
 Description: "This profile defines obligations for a coverage in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+// * insert SetFmmandStatusRule ( 0, informative)
 
 * payor insert OblCreator(#SHALL:able-to-populate,L2)
 * identifier insert OblCreator(#SHALL:able-to-populate,L2)

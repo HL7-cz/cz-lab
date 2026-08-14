@@ -4,7 +4,7 @@ Id: cz-patient-obl-lab
 Title:    "Patient: Obligations"
 Description: "This profile defines obligations for an human Patient in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+// * insert SetFmmandStatusRule ( 0, informative)
 
 // Creator Obligations L1 ============>
 * identifier[RID] insert OblCreator(#SHALL:able-to-populate,L1)
@@ -45,7 +45,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * address insert OblCreator(#SHALL:able-to-populate,L2) //can-send
 * extension[patient-nationality] insert OblCreator(#SHALL:populate-if-known,L2)
 * communication.language insert OblCreator(#SHOULD:populate-if-known,L2)
-* contact insert OblCreator(#SHOULD:able-to-populate,L2)   
+* contact insert OblCreator(#SHOULD:able-to-populate,L2)
 
 // Consumer obligations L2
 * identifier[RID] insert OblConsumer(#SHALL:process,L2)

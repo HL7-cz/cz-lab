@@ -59,7 +59,7 @@ RuleSet: ReportCategoryRule
   * ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
   * ^definition = "Laboratory services, i.e., results of tests performed, could be characterized using typology of services, commonly called study types. Study type could be seen as an attribute or grouping mechanism that assigns a common clinical sense to certain types of laboratory test results., e.g., Hemoglobin, Platelet count, etc. belongs to 'Hematology study'."
   * ^comment = "In comparison to the laboratory specialty which is an attribute of laboratory, study type is a categorization of laboratory service. It needs to be mentioned that classification of test to study types in not standardized."
-* category contains documentCategory 1..*
+* category contains documentCategory 1..1
 * category[documentCategory] from $documentCategory
 * category[documentCategory] = $loinc#11502-2
 

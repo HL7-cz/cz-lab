@@ -10,7 +10,7 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * . ^definition = "Laboratory Result Report Bundle. \r\nA container for a collection of resources in the laboratory result document."
 
 * insert ImposeProfile($Bundle-eu-lab)
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 2, trial-use )
 
 * obeys one-comp
 * obeys one-dr

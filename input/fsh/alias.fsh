@@ -23,7 +23,7 @@ Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
-Alias: $drzar = https://ncez.mzcr.cz/terminology/CodeSystem/cz-drzar
+Alias: $drzar = https://ncez.mzcr.cz/terminology/CodeSystem/drzar
 Alias: $hl7CoverageType = http://terminology.hl7.org/CodeSystem/coverage-type
 Alias: $mkn-10 = https://uzis.cz/terminology/CodeSystem/mkn-10
 Alias: $performer-function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
@@ -33,6 +33,9 @@ Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-
 Alias: $mkn-10-list = https://uzis.cz/terminology/ValueSet/mkn-10
 Alias: $documentCategory = https://ncez.mzcr.cz/terminology/ValueSet/document-category
 Alias: $nclp-vs = https://ncez.mzcr.cz/nclp/ValueSet/nclppol
+Alias: $CZ_LabSpecimenAdditive = https://ncez.mzcr.cz/terminology/ValueSet/cz-lab-specimen-additive
+Alias: $LabSpecimenTypesCzVs = https://ncez.mzcr.cz/terminology/ValueSet/lab-specimenType
+Alias: $CZ_LabStudyType = https://ncez.mzcr.cz/terminology/ValueSet/cz-lab-study-type
 
 //----------- Profiles
 // Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
@@ -41,6 +44,7 @@ Alias: $nclp-vs = https://ncez.mzcr.cz/nclp/ValueSet/nclppol
 Alias: $clinicaldocument = http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+Alias: $iso21090-uncertaintyType = http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType
 
 
 //----------- EU lab profiles
@@ -51,7 +55,6 @@ Alias: $Patient-eu-core = http://hl7.eu/fhir/base/StructureDefinition/Patient-eu
 Alias: $Address-eu = http://hl7.eu/fhir/laboratory/StructureDefinition/Address-eu
 Alias: $HumanName-eu = http://hl7.eu/fhir/laboratory/StructureDefinition/HumanName-eu
 Alias: $Specimen-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab
-Alias: $substance-additive-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-additive-substance-eu-lab
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
 Alias: $Bundle-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab
 Alias: $Practitioner-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab
@@ -64,15 +67,12 @@ Alias: $MedicalTestResult-eu-core   = http://hl7.eu/fhir/base/StructureDefinitio
 Alias: $Device-measuring-eu-lab     = http://hl7.eu/fhir/laboratory/StructureDefinition/Device-measuring-eu-lab
 Alias: $Device-specimen-eu-lab      = http://hl7.eu/fhir/laboratory/StructureDefinition/Device-specimen-eu-lab
 Alias: $animal-specimen-eu-lab      = http://hl7.eu/fhir/laboratory/StructureDefinition/animal-specimen-eu-lab
-Alias: $SpecimenAdditiveSubstance-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-additive-substance-eu-lab
+Alias: $SpecimenAdditiveSubstance-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Substance-additive-eu-lab
 Alias: $LaboratoryAccreditedEu      = http://hl7.eu/fhir/laboratory/StructureDefinition/laboratory-accredited-eu
 Alias: $DeviceLabTestKit-eu-lab     = http://hl7.eu/fhir/laboratory/StructureDefinition/device-lab-test-kit
 Alias: $ObservationCRMCodeable-eu-lab  = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterial-codeable
 Alias: $ObservationCRMIdentifier-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterial-identifier
 Alias: $SpecimenFocus-eu-lab        = http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-focus
-
-Alias: $LabSpecimenTypesCzVs           = https://ncez.mzcr.cz/terminology/ValueSet/lab-specimenType
-Alias: $CZ_LabStudyType                = https://ncez.mzcr.cz/terminology/ValueSet/cz-lab-study-type
 
 //----------- EU lab 2.0.0 – new value sets
 //Alias: $LabPresenceAbsenceEuVs       = http://hl7.eu/fhir/laboratory/ValueSet/lab-presenceAbsence-eu
@@ -109,7 +109,7 @@ Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinit
 Alias: $individual-genderIdentity         = http://hl7.org/fhir/StructureDefinition/individual-genderIdentity
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
-Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note
+Alias: $note-url                          = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.note
 Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
 Alias: $obligation                        = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo

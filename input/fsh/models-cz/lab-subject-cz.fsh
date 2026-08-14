@@ -5,7 +5,7 @@ Logical: LogCzSubjectLabEhnCz
 Id: LogSubjectCz
 Title: "A.1.1, A1.2 - Pacient"
 Description:  """Pacient"""
-* insert SetFmmandStatusRule ( 1, draft )
+// * insert SetFmmandStatusRule ( 1, draft )
 * identifikace 1..1 Base "A.1.1 Identifikace pacienta" """A.1.1 Identifikace pacienta"""
 * identifikace.jmeno 1..* string "A.1.1.1 Křestní jméno" """Křestní jméno"""
 * identifikace.prijmeni 1..* string "A.1.1.2 Příjmení" """Příjmení"""

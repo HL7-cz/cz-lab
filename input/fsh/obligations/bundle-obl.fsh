@@ -4,7 +4,7 @@ Id: cz-bundle-obl-lab
 Title:    "Bundle: Obligations"
 Description: "This profile defines obligations for a bundle in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+// * insert SetFmmandStatusRule ( 0, informative)
 
 * identifier insert OblCreator(#SHALL:able-to-populate,L1)
 * timestamp insert OblCreator(#SHALL:able-to-populate,L1)
